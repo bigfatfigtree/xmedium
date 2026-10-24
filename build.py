@@ -127,7 +127,7 @@ MARQUEE = """<div class="marquee"><div>Launch <span>&bull;</span> <i>Reinvent</i
 home = """
 <section class="hero5 window" data-pal="em">
 <div class="wrap"><div class="calm">
-<p class="kicker rv">Extra Medium &middot; Studio &amp; Labs &middot; Virginia Beach</p>
+<p class="kicker rv">Extra Medium &middot; Studio &amp; Labs</p>
 <h1 id="typer">We make businesses <span id="tw" class="it gtext">un-ignorable.</span></h1>
 <p class="lede rv">A strategy, creative, growth and technology studio. We launch, reinvent and grow businesses &mdash; and we build our own products to prove we know how. Founder-led, senior-only, no theater.</p>
 <div class="cta-row rv"><a class="btn" href="/contact/">Start a conversation</a><a class="btn ink" href="/labs/signl/">Meet SIGNL, our flagship</a></div>
@@ -136,13 +136,13 @@ home = """
 <div><b>20+ yrs</b><span>Every side of the table</span></div>
 <div><b>1 live</b><span>Product of our own &mdash; SIGNL</span></div>
 <div><b>3 shapes</b><span>Fractional &middot; project &middot; ongoing</span></div>
-<div><b>US + UK</b><span>Virginia Beach &middot; Chicago &middot; London</span></div>
+<div><b>US + UK</b><span>Chicago &middot; London</span></div>
 </div>
 </div></div>
 </section>
 <section class="glance"><div class="wrap">
 <p class="def rv"><b>Extra Medium</b> is a founder-led creative studio and product lab in Virginia Beach, Virginia. We launch, reinvent and grow businesses &mdash; brand, creative, growth and technology under one roof &mdash; and through Extra Medium Labs we build and operate our own products, led by SIGNL, the local creator marketing platform.</p>
-<div class="facts rv"><span>Founded by Jeff Rimmer</span><span>20+ years, every side of the table</span><span>Virginia Beach &middot; Chicago &middot; London</span><span>Clients: startups to Fortune 100</span></div>
+<div class="facts rv"><span>Founded by Jeff Rimmer</span><span>20+ years, every side of the table</span><span>Chicago &middot; London</span><span>Clients: startups to Fortune 100</span></div>
 </div></section>
 <section class="window snack-hero" data-pal="em"><div class="wrap">
 <div class="snack-panel rv">
