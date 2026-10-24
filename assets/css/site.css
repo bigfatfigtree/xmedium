@@ -71,10 +71,10 @@ body.menu-open{overflow:hidden}
 .scrollcue{position:absolute;right:34px;bottom:34px;z-index:3;color:#fff;font-family:var(--mono);font-size:.64rem;letter-spacing:.3em;text-transform:uppercase;writing-mode:vertical-rl;display:flex;align-items:center;gap:12px}
 .scrollcue::after{content:"";width:1px;height:56px;background:linear-gradient(#fff,transparent);animation:cue 1.8s ease-in-out infinite}
 @keyframes cue{0%,100%{transform:scaleY(.4);transform-origin:top}50%{transform:scaleY(1)}}
-.hero-meta{margin-top:56px;display:flex;gap:0;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.35);padding-top:20px}
+.hero-meta{margin-top:56px;display:flex;gap:0;flex-wrap:wrap;border-top:1px solid rgba(42,18,32,.16);padding-top:20px}
 .hero-meta div{padding-right:30px;margin-right:30px}
 .hero-meta b{display:block;font-size:1.55rem;letter-spacing:-.01em}
-.hero-meta span{font-family:var(--mono);font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.75)}
+.hero-meta span{font-family:var(--mono);font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(42,18,32,.55)}
 /* page hero (subpages) */
 .hero-media{position:relative;min-height:calc(82svh - 69px);display:flex;align-items:flex-end;padding:96px 0 70px;color:#fff;overflow:hidden}
 .hero-media img.bg,.hero-media video.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
@@ -364,3 +364,7 @@ body.noanim section.window{background:linear-gradient(160deg,#ffe9d6,#ffd9e9)}
 .snack-panel .snack-card{margin-top:14px;cursor:pointer}
 .snack-hint{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:#ff3d8a;margin-top:16px}
 @media(max-width:640px){.snack-btn{width:100%}}
+
+/* v8.1: mobile polish — kill sideways leak, gentler reveals on small screens */
+html,body{overflow-x:clip}
+@media(max-width:900px){body.rv-on .rv{transform:translateY(16px);filter:blur(2px);transition:opacity .55s ease,transform .55s ease,filter .55s ease}}
