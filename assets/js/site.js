@@ -38,11 +38,17 @@
   var clock=document.getElementById('vbclock');
   function tickClock(){ try{ var t=new Date().toLocaleTimeString('en-US',{timeZone:'America/New_York',hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false}); document.querySelectorAll('.vbclock').forEach(function(el){el.textContent=t;}); }catch(e){} }
   tickClock(); setInterval(tickClock,1000);
+  /* autoplay hardening: force muted via JS, retry on first touch, hide videos the browser refuses to play (animated stills take over — no dead play-button overlays) */
+  var heroV=document.querySelector('.hero-full video');
+  function markFail(v){ var n=parseInt(v.getAttribute('data-fail')||'0',10)+1; v.setAttribute('data-fail',String(n)); if(n>=2){ v.style.display='none'; } if(v===heroV){ document.body.classList.add('novideo'); } }
+  function tryPlay(v){ if(!v||v.style.display==='none')return; v.muted=true; try{v.setAttribute('muted','');}catch(e){} v.playsInline=true; var p; try{p=v.play();}catch(e){ markFail(v); return; } if(p&&p.catch)p.catch(function(){ markFail(v); }); }
+  if(heroV){ tryPlay(heroV); setTimeout(function(){ if(heroV.paused&&heroV.readyState>=2){ document.body.classList.add('novideo'); heroV.style.display='none'; } },1600); }
+  ['pointerdown','touchstart'].forEach(function(ev){ window.addEventListener(ev,function(){ document.querySelectorAll('video').forEach(function(v){ if(v.style.display==='none'&&parseInt(v.getAttribute('data-fail')||'0',10)<3){ v.style.display=''; } tryPlay(v); }); if(heroV&&!heroV.paused){ document.body.classList.remove('novideo'); } },{passive:true}); });
   /* videos: play when visible, pause when not (mobile-safe, muted autoplay) */
   var vio=new IntersectionObserver(function(es){
     es.forEach(function(en){
       var v=en.target;
-      if(en.isIntersecting){ if(v.paused) v.play().catch(function(){}); }
+      if(en.isIntersecting){ tryPlay(v); }
       else if(!v.paused){ v.pause(); }
     });
   },{threshold:.12});
