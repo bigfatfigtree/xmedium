@@ -49,7 +49,9 @@
     mouse.vx=e.clientX-mouse.px; mouse.vy=e.clientY-mouse.py; mouse.px=mouse.x=e.clientX; mouse.py=mouse.y=e.clientY;
   },{passive:true});
   window.addEventListener('pointerdown',function(e){ burst(e.clientX,e.clientY,0,9); },{passive:true});
-  window.addEventListener('scroll',function(){ measureCalm(); },{passive:true});
+  var lastY=window.scrollY||0,lastStir=0,stirSide=1;
+  window.addEventListener('scroll',function(){ measureCalm(); var y=window.scrollY||0,dy=Math.abs(y-lastY); lastY=y; var now=performance.now();
+    if(dy>14&&now-lastStir>110){ lastStir=now; stirSide*=-1; burst(W*(stirSide>0?0.84:0.16),H*0.45,0,Math.min(11,2.5+dy*0.10)); } },{passive:true});
   /* palette follows sections */
   if('IntersectionObserver' in window){
     var po=new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ palTarget=en.target.getAttribute('data-pal')==='signl'?1:0; } }); },{threshold:.35});

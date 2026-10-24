@@ -340,3 +340,14 @@ body.noanim section.window{background:linear-gradient(160deg,#ffe9d6,#ffd9e9)}
 .hero5::before{content:"";position:absolute;inset:0;background:radial-gradient(52% 42% at 84% 16%,rgba(255,61,138,.20),transparent 70%),radial-gradient(48% 42% at 10% 86%,rgba(255,122,24,.24),transparent 70%),radial-gradient(30% 26% at 58% 92%,rgba(176,80,255,.13),transparent 70%);animation:heroGlow 14s ease-in-out infinite alternate;pointer-events:none}
 @keyframes heroGlow{from{transform:scale(1) translate(0,0)}to{transform:scale(1.12) translate(-2%,2%)}}
 .hero5 .wrap{position:relative}
+/* v6: snack feature panel, mobile stack fix, smaller alive-pill */
+.snack-hero{padding:26px 0 96px}
+.snack-panel{background:linear-gradient(#fff,#fff) padding-box,linear-gradient(120deg,#ff7a18,#ff3d8a) border-box;border:2px solid transparent;border-radius:30px;padding:46px 44px;box-shadow:0 40px 80px -38px rgba(255,61,138,.45)}
+.snack-panel h2{font-size:clamp(2rem,4.6vw,3.4rem);line-height:1.02;letter-spacing:-.02em;margin:10px 0 16px}
+.btn.big{font-size:1.06rem;padding:18px 30px}
+.snack-panel .snack-card{margin-top:30px;max-width:680px}
+.drag-hint{font-size:.64rem;padding:7px 12px;letter-spacing:.06em}
+@media(max-width:900px){
+  .stack-card{position:static;margin-bottom:18px}
+  .snack-panel{padding:32px 24px}
+}

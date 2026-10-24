@@ -88,7 +88,7 @@ if(snackBtn&&snackCard){
     document.getElementById('snackStamp').textContent='Dispensed by Extra Medium - '+d+' - No refunds on genius.';
     snackCard.classList.remove('show'); void snackCard.offsetWidth; snackCard.classList.add('show');
     if(window.__stirBurst){ var r=snackBtn.getBoundingClientRect(); window.__stirBurst(r.left+r.width/2,r.top+r.height/2); }
-    snackBtn.textContent='Dispense another';
+    snackBtn.textContent='Deal me another';
   });
 }
 

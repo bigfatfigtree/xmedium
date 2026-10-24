@@ -102,14 +102,14 @@ def page(title, desc, path, on, body, extra_ld=""):
     print("wrote", out)
 
 def filmstrip():
-    imgs = [("hero-restaurant-night.jpg","A packed local restaurant at night"),
-            ("chef-flame.jpg","A chef working a flame in a kitchen"),
-            ("cocktails-toast.jpg","Friends toasting with cocktails"),
-            ("salon-barber.jpg","Inside a neighborhood barbershop and salon"),
-            ("kitchen-line.jpg","A kitchen line mid-service"),
-            ("street-night.jpg","A city street at night"),
-            ("bar-friends.jpg","Friends gathered at a local bar"),
-            ("creator-cocktail-photo.jpg","A creator photographing a cocktail")]
+    imgs = [("img-surfer.jpg","A surfer inside a turquoise barrel wave"),
+            ("img-tokyo.jpg","A neon Tokyo street at night"),
+            ("concert-poster.jpg","A festival crowd under stage lights"),
+            ("street-night.jpg","A Paris street at night"),
+            ("img-launch.jpg","A rocket launching over a beach at night"),
+            ("img-team.jpg","A team working around a table"),
+            ("img-experiences.jpg","A studio podcast microphone"),
+            ("img-intelligence.jpg","A robotic hand in a network of light")]
     one = "".join(f'<img src="/assets/img/{f}" alt="{a}" loading="lazy">' for f, a in imgs)
     return f'<div class="film" aria-hidden="true"><div class="film-track">{one}{one}</div></div>'
 
@@ -130,7 +130,7 @@ home = """
 <h1 id="typer">We make businesses <span id="tw" class="it gtext">un-ignorable.</span></h1>
 <p class="lede rv">A strategy, creative, growth and technology studio. We launch, reinvent and grow businesses &mdash; and we build our own products to prove we know how. Founder-led, senior-only, no theater.</p>
 <div class="cta-row rv"><a class="btn" href="/contact/">Start a conversation</a><a class="btn ink" href="/labs/signl/">Meet SIGNL, our flagship</a></div>
-<p class="drag-hint rv">Psst &mdash; this page is alive. Drag anywhere. It likes it.</p>
+<p class="drag-hint rv">This page is alive &mdash; tap it, drag it, scroll fast. It reacts.</p>
 <div class="hero-meta rv">
 <div><b>20+ yrs</b><span>Every side of the table</span></div>
 <div><b>1 live</b><span>Product of our own &mdash; SIGNL</span></div>
@@ -142,6 +142,18 @@ home = """
 <section class="glance"><div class="wrap">
 <p class="def rv"><b>Extra Medium</b> is a founder-led creative studio and product lab in Virginia Beach, Virginia. We launch, reinvent and grow businesses &mdash; brand, creative, growth and technology under one roof &mdash; and through Extra Medium Labs we build and operate our own products, led by SIGNL, the local creator marketing platform.</p>
 <div class="facts rv"><span>Founded by Jeff Rimmer</span><span>20+ years, every side of the table</span><span>Virginia Beach &middot; Chicago &middot; London</span><span>Clients: startups to Fortune 100</span></div>
+</div></section>
+<section class="window snack-hero" data-pal="em"><div class="wrap">
+<div class="snack-panel rv">
+<p class="kicker">Try us out &middot; Free</p>
+<h2>Good ideas? We&rsquo;re <span class="it gtext">here all day.</span></h2>
+<p class="lede">This studio runs on ideas &mdash; it&rsquo;s most of what we do, all day long. So take one for a spin: free, no email, no catch. Steal it, use it, watch it work. Then imagine what we come up with on purpose.</p>
+<div class="cta-row"><button class="btn big" id="snackBtn" type="button">Deal me an idea</button></div>
+<div class="snack-card" id="snackCard" aria-live="polite">
+<p class="snack-idea" id="snackIdea"></p>
+<p class="note" id="snackStamp"></p>
+</div>
+</div>
 </div></section>
 """ + MARQUEE + """
 <section class="window" data-pal="signl"><div class="wrap">
@@ -162,7 +174,7 @@ home = """
 <div class="stats"><div><b data-count="37">37</b><span>Founding markets</span></div><div><b data-count="8">8</b><span>Countries</span></div><div><b data-count="500">500</b><span>Followers is enough</span></div></div>
 <div class="cta-row"><a class="btn grad-s" href="/labs/signl/">The SIGNL story</a><a class="btn ink" href="https://joinsignl.com">Visit joinsignl.com</a></div>
 </div>
-<div class="flagship-media"><img src="/assets/img/creator-cocktail-photo.jpg" alt="A creator photographing a cocktail for a local business"></div>
+<div class="flagship-media"><img src="/assets/img/img-creator.jpg" alt="A phone on a tripod, recording content"></div>
 </div></div>
 <p class="note rv">Why lead with our own product? Because a studio that launches its own thing &mdash; brand, platform, pricing, go-to-market, operations &mdash; gives different advice than one that only sells launches. <a href="/labs/">More from Labs &rarr;</a></p>
 </div></section>
@@ -197,15 +209,7 @@ home = """
 <a class="card rv" style="transition-delay:.24s" href="/services/#lead"><span class="num">04 &middot; Lead</span><h3>Become the name</h3><p>Fractional CMO leadership and executive branding for founders who need a senior brain, not another vendor.</p><span class="arrow">Lead &rarr;</span></a>
 </div></div></section>
 
-<section class="window snack-sec" data-pal="em"><div class="wrap">
-<div class="sec-head rv"><p class="kicker">Free samples</p><h2>Stir up <span class="it gtext">an idea.</span></h2>
-<p class="lede">One genuinely usable marketing idea, dispensed free. No email required. (The button also makes the page happy.)</p></div>
-<div class="cta-row rv"><button class="btn" id="snackBtn" type="button">Dispense an idea snack</button></div>
-<div class="snack-card" id="snackCard" aria-live="polite">
-<p class="snack-idea" id="snackIdea"></p>
-<p class="note" id="snackStamp"></p>
-</div>
-</div></section>
+
 
 <div class="band-window window" data-pal="em"><div class="wrap"><p class="kicker">The name is the brief</p><h2 style="max-width:22ch">Boring is a choice. <span class="it">We don&rsquo;t make it.</span></h2></div></div>
 
@@ -244,7 +248,7 @@ print("home done")
 # ============ WORK ============
 work = """
 <section class="hero-media">
-<img class="bg" src="/assets/img/bar-friends.jpg" alt="Friends gathered at a local bar, laughing">
+<img class="bg" src="/assets/img/img-skyline.jpg" alt="A city skyline — the markets our clients play in">
 <div class="shade"></div>
 <div class="wrap"><p class="kicker rv">Work</p>
 <h1 class="rv">Done from <span class="it">both sides</span> of the table.</h1>
@@ -257,7 +261,7 @@ work = """
 <h3 style="font-size:1.7rem;line-height:1.1">Our own product is our newest case study.</h3>
 <p>Brand, platform, pricing, creator operations and go-to-market for a two-sided local marketplace &mdash; designed, built and operated by this studio, on our own money. If you&rsquo;re judging whether we can launch yours, start here.</p>
 <div class="cta-row"><a class="btn grad-s" href="/labs/signl/">Read the SIGNL case study</a></div></div>
-<div class="flagship-media"><img src="/assets/img/creator-cocktail-photo.jpg" alt="A creator photographing a cocktail for a local business"></div>
+<div class="flagship-media"><img src="/assets/img/img-creator.jpg" alt="A phone on a tripod, recording content"></div>
 </div></div>
 <p class="kicker rv">Client stories &mdash; scroll the stack</p>
 <div class="stack-card rv" style="top:96px;background:linear-gradient(120deg,#ff7a18,#ff3d8a)"><span class="tag">Growth</span><h3 style="font-size:1.9rem;margin-top:10px">The consumer brand that needed a growth system, not more ads</h3>
@@ -284,19 +288,19 @@ page("Work: From Startups to Fortune 100 | Extra Medium",
 # ============ SERVICES ============
 services = """
 <section class="hero-media">
-<img class="bg" src="/assets/img/kitchen-line.jpg" alt="A busy kitchen line mid-service">
+<img class="bg" src="/assets/img/img-team.jpg" alt="The Extra Medium team working around a table beneath a sticky-note board">
 <div class="shade"></div>
 <div class="wrap"><p class="kicker rv">The studio</p>
 <h1 class="rv">Whatever the medium. <span class="it">Make it matter.</span></h1>
 <p class="lede rv">We care more about what moves the business than what department it belongs to. Strategy, creative, growth and technology, practiced together by one small senior team.</p></div>
 </section>
 <section><div class="wrap"><div class="grid2">
-<div class="card rv" id="launch"><img class="thumb" src="/assets/img/chef-flame.jpg" alt="A chef working a flame"><span class="num">Chapter 01</span><h3>Launch</h3><p>For things that don&rsquo;t exist yet, or haven&rsquo;t been introduced properly. Positioning, naming, brand identity, website, go-to-market and product launch &mdash; shaped as one arc, because launching something nobody has searched for yet is a different sport.</p></div>
-<div class="card rv" id="reinvent"><img class="thumb" src="/assets/img/street-night.jpg" alt="A city street at night"><span class="num">Chapter 02</span><h3>Reinvent</h3><p>For businesses that moved faster than their brand. Brand strategy, rebranding, messaging and website redesign that close the gap between what the business became and what the market still thinks it is &mdash; without starting from zero.</p></div>
-<div class="card rv" id="grow"><img class="thumb" src="/assets/img/cocktails-toast.jpg" alt="Friends toasting with cocktails"><span class="num">Chapter 03</span><h3>Grow</h3><p>Growth marketing with an owner. Paid media, SEO and AI search, ecommerce and Shopify growth, lifecycle and creator channels &mdash; run as one system against revenue, not separate campaigns reporting vanity numbers.</p></div>
-<div class="card rv" id="lead"><img class="thumb" src="/assets/img/salon-barber.jpg" alt="Inside a neighborhood salon"><span class="num">Chapter 04</span><h3>Lead</h3><p>Fractional CMO leadership for businesses that need a senior marketing brain without another permanent executive seat. Plus executive and personal branding for the founders and physicians leading them.</p></div>
-<div class="card rv" id="intelligence"><span class="num">Chapter 05</span><h3>Intelligence</h3><p>AI consulting, AI agents and automation that connect how a company actually operates &mdash; not another unused tool. Applied AI across marketing, reporting, creative development and workflow, wired into the business instead of demoed at it.</p></div>
-<div class="card rv" id="experiences"><span class="num">Chapter 06</span><h3>Experiences</h3><p>Podcasts, events and experiential marketing &mdash; the things people are still talking about a year later. Strategy and production for shows and moments that build a reputation, not just reach.</p></div>
+<div class="card rv" id="launch"><img class="thumb" src="/assets/img/img-launch.jpg" alt="A rocket launching at night over a beach crowd"><span class="num">Chapter 01</span><h3>Launch</h3><p>For things that don&rsquo;t exist yet, or haven&rsquo;t been introduced properly. Positioning, naming, brand identity, website, go-to-market and product launch &mdash; shaped as one arc, because launching something nobody has searched for yet is a different sport.</p></div>
+<div class="card rv" id="reinvent"><img class="thumb" src="/assets/img/img-reinvent.jpg" alt="Hands reworking a plan across a laptop and an open notebook"><span class="num">Chapter 02</span><h3>Reinvent</h3><p>For businesses that moved faster than their brand. Brand strategy, rebranding, messaging and website redesign that close the gap between what the business became and what the market still thinks it is &mdash; without starting from zero.</p></div>
+<div class="card rv" id="grow"><img class="thumb" src="/assets/img/img-grow.jpg" alt="A strategy table from above — laptops, tablets and live numbers"><span class="num">Chapter 03</span><h3>Grow</h3><p>Growth marketing with an owner. Paid media, SEO and AI search, ecommerce and Shopify growth, lifecycle and creator channels &mdash; run as one system against revenue, not separate campaigns reporting vanity numbers.</p></div>
+<div class="card rv" id="lead"><img class="thumb" src="/assets/img/img-lead.jpg" alt="A founder, arms crossed, smiling at the camera"><span class="num">Chapter 04</span><h3>Lead</h3><p>Fractional CMO leadership for businesses that need a senior marketing brain without another permanent executive seat. Plus executive and personal branding for the founders and physicians leading them.</p></div>
+<div class="card rv" id="intelligence"><img class="thumb" src="/assets/img/img-intelligence.jpg" alt="A robotic hand reaching into a network of light"><span class="num">Chapter 05</span><h3>Intelligence</h3><p>AI consulting, AI agents and automation that connect how a company actually operates &mdash; not another unused tool. Applied AI across marketing, reporting, creative development and workflow, wired into the business instead of demoed at it.</p></div>
+<div class="card rv" id="experiences"><img class="thumb" src="/assets/img/img-experiences.jpg" alt="A studio podcast microphone in dramatic light"><span class="num">Chapter 06</span><h3>Experiences</h3><p>Podcasts, events and experiential marketing &mdash; the things people are still talking about a year later. Strategy and production for shows and moments that build a reputation, not just reach.</p></div>
 </div></div></section>
 <section class="grad-sec"><div class="wrap">
 <div class="sec-head rv"><p class="kicker">How engagements work</p><h2>No giant process.</h2>
@@ -362,7 +366,7 @@ labs = """
 <div class="card rv" style="transition-delay:.08s"><span class="num">02 &middot; In development</span><h3>JAWNRA</h3><p>The world&rsquo;s music, in motion. A global music discovery and chart platform that measures momentum instead of popularity &mdash; the chart that tells you what&rsquo;s about to win, not what already did.</p><span class="arrow"><a href="https://jawnra.com" style="text-decoration:none;color:inherit">jawnra.com &rarr;</a></span></div>
 <div class="card rv" style="transition-delay:.16s"><span class="num">03 &middot; In development</span><h3>hapsta</h3><p>Make something happen. An AI engine for spontaneous real life: tell it what you&rsquo;re looking for and get a Happening &mdash; people, place, activity, time. Software that gets you off the phone and into a room.</p><span class="arrow"><a href="https://hapsta.co" style="text-decoration:none;color:inherit">hapsta.co &rarr;</a></span></div>
 </div></div></section>
-<div class="band-media"><img data-para="0.10" src="/assets/img/hero-restaurant-night.jpg" alt="A packed restaurant seen through its windows at night">
+<div class="band-media"><img data-para="0.10" src="/assets/img/img-tokyo.jpg" alt="A neon city street at night, alive with signs">
 <div class="cap"><div class="wrap"><p class="kicker light">Why a studio builds its own things</p><h2 style="max-width:22ch">Because it keeps us <span class="it">honest.</span></h2></div></div></div>
 <section><div class="wrap"><div class="split">
 <div class="prose rv"><h2 style="margin-bottom:20px">Our money first. <span class="it gtext">Then yours.</span></h2>
@@ -484,7 +488,7 @@ page("About Extra Medium | Studio Founded by Jeff Rimmer",
 # ============ CONTACT ============
 contact = """
 <section class="hero-media" style="min-height:64svh">
-<img class="bg" src="/assets/img/cocktails-toast.jpg" alt="Friends toasting with cocktails">
+<img class="bg" src="/assets/img/img-reinvent.jpg" alt="Hands planning in an open notebook beside a laptop">
 <div class="shade"></div>
 <div class="wrap"><p class="kicker rv">Contact</p>
 <h1 class="rv">What are you trying to <span class="it">make happen?</span></h1>
