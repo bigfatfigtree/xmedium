@@ -1,4 +1,5 @@
 (function(){
+  document.body.classList.add('rv-on');
   var prog=document.getElementById('progress'), glow=document.getElementById('glow');
   var scrolly=document.querySelector('.scrolly'), chaps=document.querySelectorAll('.chap'), cdots=document.querySelectorAll('.chap-dots i'), ccount=document.querySelector('.chap-count');
   var bigw=document.querySelector('.bigword'), bigfill=document.querySelector('.bigword .fillw');
@@ -34,9 +35,30 @@
   var burger=document.querySelector('.burger');
   if(burger){ burger.addEventListener('click',function(){ var open=document.body.classList.toggle('menu-open'); burger.setAttribute('aria-expanded',open?'true':'false'); burger.innerHTML=open?'&#10005;':'&#9776;'; }); }
   document.querySelectorAll('.menu a').forEach(function(a){ a.addEventListener('click',function(){ document.body.classList.remove('menu-open'); }); });
+  /* Virginia Beach clock */
+  var clock=document.getElementById('vbclock');
+  function tickClock(){ try{ var t=new Date().toLocaleTimeString('en-US',{timeZone:'America/New_York',hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false}); document.querySelectorAll('.vbclock').forEach(function(el){el.textContent=t;}); }catch(e){} }
+  tickClock(); setInterval(tickClock,1000);
+  /* reveals + counters */
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(en){
+      if(!en.isIntersecting) return;
+      en.target.classList.add('in'); io.unobserve(en.target);
+      en.target.querySelectorAll('[data-count]').forEach(runCounter);
+      if(en.target.hasAttribute('data-count')) runCounter(en.target);
+    });
+  },{threshold:.18});
+  document.querySelectorAll('.rv, [data-count]').forEach(function(el){io.observe(el);});
+  function runCounter(el){
+    if(el.dataset.done) return; el.dataset.done=1;
+    var target=parseFloat(el.getAttribute('data-count')), suf=el.getAttribute('data-suffix')||'', t0=null, dur=1400;
+    function step(ts){ if(!t0)t0=ts; var p=Math.min((ts-t0)/dur,1), e=1-Math.pow(1-p,3);
+      el.textContent=Math.round(target*e)+suf; if(p<1) requestAnimationFrame(step); }
+    requestAnimationFrame(step);
+  }
 /* THE SENTENCE: the hero corrects itself */
 var tw=document.getElementById('tw');
-if(tw&&!reduced){
+if(tw&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
   var finalWord='un-ignorable.', draftWord='noticeable.';
   tw.textContent=draftWord; tw.classList.remove('gtext'); tw.style.fontStyle='normal'; tw.classList.add('typing');
   function delWord(txt,done){ var i=txt.length; (function d(){ i--; tw.textContent=txt.slice(0,i)||'\u00a0'; if(i>0){ setTimeout(d,34); } else { done(); } })(); }
@@ -69,10 +91,7 @@ if(snackBtn&&snackCard){
     snackBtn.textContent='Dispense another';
   });
 }
-  /* Virginia Beach clock */
-  var clock=document.getElementById('vbclock');
-  function tickClock(){ try{ var t=new Date().toLocaleTimeString('en-US',{timeZone:'America/New_York',hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false}); document.querySelectorAll('.vbclock').forEach(function(el){el.textContent=t;}); }catch(e){} }
-  tickClock(); setInterval(tickClock,1000);
+
   /* autoplay hardening: force muted via JS, retry on first touch, hide videos the browser refuses to play (animated stills take over — no dead play-button overlays) */
   var heroV=document.querySelector('.hero-full video');
   function markFail(v){ var n=parseInt(v.getAttribute('data-fail')||'0',10)+1; v.setAttribute('data-fail',String(n)); if(n>=2){ v.style.display='none'; } if(v===heroV){ document.body.classList.add('novideo'); } }
@@ -96,23 +115,6 @@ if(snackBtn&&snackCard){
       rot.classList.add('flip');
       setTimeout(function(){ wi=(wi+1)%words.length; rot.textContent=words[wi]; rot.classList.remove('flip'); },360);
     },3400);
-  }
-  /* reveals + counters */
-  var io=new IntersectionObserver(function(es){
-    es.forEach(function(en){
-      if(!en.isIntersecting) return;
-      en.target.classList.add('in'); io.unobserve(en.target);
-      en.target.querySelectorAll('[data-count]').forEach(runCounter);
-      if(en.target.hasAttribute('data-count')) runCounter(en.target);
-    });
-  },{threshold:.18});
-  document.querySelectorAll('.rv, [data-count]').forEach(function(el){io.observe(el);});
-  function runCounter(el){
-    if(el.dataset.done) return; el.dataset.done=1;
-    var target=parseFloat(el.getAttribute('data-count')), suf=el.getAttribute('data-suffix')||'', t0=null, dur=1400;
-    function step(ts){ if(!t0)t0=ts; var p=Math.min((ts-t0)/dur,1), e=1-Math.pow(1-p,3);
-      el.textContent=Math.round(target*e)+suf; if(p<1) requestAnimationFrame(step); }
-    requestAnimationFrame(step);
   }
   /* tilt */
   document.querySelectorAll('.tilt').forEach(function(card){

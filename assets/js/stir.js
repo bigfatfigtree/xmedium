@@ -26,7 +26,7 @@
     canvas.width=W*DPR; canvas.height=H*DPR;
     canvas.style.width=W+'px'; canvas.style.height=H+'px';
     ctx.setTransform(DPR,0,0,DPR,0,0);
-    var target=Math.round(Math.min(1500,Math.max(420,(W*H)/2600)));
+    var target=Math.round(Math.min(1500,Math.max(420,(W*H)/1850)));
     while(parts.length<target) parts.push(newPart(true));
     parts.length=target;
     measureCalm();
@@ -67,12 +67,12 @@
     if(slowFrames>90&&parts.length>380){ parts.length=Math.floor(parts.length*0.8); slowFrames=0; }
     t+=0.008;
     palMix+=(palTarget-palMix)*0.02;
-    ctx.fillStyle='rgba(255,248,240,0.16)';
+    ctx.fillStyle='rgba(255,248,240,0.10)';
     ctx.fillRect(0,0,W,H);
     /* idle life: a slow figure-eight emitter stirs the vat */
     var ex=W*0.5+Math.cos(t*0.7)*W*0.30, ey=H*0.42+Math.sin(t*1.4)*H*0.20;
     if(frames%3===0) burst(ex,ey,0,0.55);
-    ctx.lineWidth=1.6; ctx.lineCap='round';
+    ctx.lineWidth=2.3; ctx.lineCap='round';
     for(var i=0;i<parts.length;i++){
       var p=parts[i],a=angle(p.x,p.y);
       p.vx+=Math.cos(a)*0.055; p.vy+=Math.sin(a)*0.055;
@@ -82,8 +82,8 @@
       p.vx*=0.94; p.vy*=0.94;
       var sp=Math.sqrt(p.vx*p.vx+p.vy*p.vy);
       var nx=p.x+p.vx,ny=p.y+p.vy;
-      if(sp>0.25){
-        ctx.strokeStyle=mixPal(Math.min(1,sp/7),Math.min(0.75,0.16+sp*0.09));
+      if(sp>0.16){
+        ctx.strokeStyle=mixPal(Math.min(1,sp/7),Math.min(0.88,0.22+sp*0.11));
         ctx.beginPath(); ctx.moveTo(p.x,p.y); ctx.lineTo(nx,ny); ctx.stroke();
       }
       p.x=nx; p.y=ny; p.life++;
