@@ -304,7 +304,7 @@ img.ph{border-radius:20px;width:100%;height:100%;object-fit:cover;box-shadow:var
 .chap .vstill,.flagship-media .vstill,.band-media .vstill,.hero-media .vstill{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
 body.novideo video{display:none!important}
 /* ===== v5 STIR + SENTENCE ===== */
-#field{position:fixed;inset:0;z-index:0;pointer-events:none}
+#field{position:fixed;inset:0;z-index:-1;pointer-events:none}
 section,footer.site{position:relative;z-index:1}
 section{background:var(--bg)}
 section.window{background:transparent}
