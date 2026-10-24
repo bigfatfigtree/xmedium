@@ -46,7 +46,7 @@ FOOTER = """<footer class="site"><div class="wrap">
 <div><h4>Labs</h4><a href="/labs/">Extra Medium Labs</a><a href="/labs/signl/">SIGNL &mdash; flagship</a><a href="https://joinsignl.com">joinsignl.com</a></div>
 <div><h4>Talk to us</h4><a href="mailto:hello@xmedium.co">hello@xmedium.co</a><a href="/contact/">Start a project</a><a href="https://www.linkedin.com/in/jeffrimmer">Jeff on LinkedIn</a></div>
 </div>
-<div class="foot-base"><span>&copy; 2026 Extra Medium LLC &middot; Virginia Beach &middot; Chicago &middot; London</span><span>SIGNL is a product of Extra Medium Labs.</span></div>
+<div class="foot-base"><span>&copy; 2026 Extra Medium LLC &middot; Virginia Beach &middot; Chicago &middot; London</span><span>SIGNL is a product of Extra Medium Labs. &middot; Stock video via Pexels creators.</span></div>
 </div></footer>
 <script src="/assets/js/site.js"></script></body></html>"""
 
@@ -80,11 +80,13 @@ MARQUEE = """<div class="marquee"><div>Launch <span>&bull;</span> <i>Reinvent</i
 # ============ HOMEPAGE ============
 home = """
 <section class="hero-full">
-<video autoplay muted loop playsinline poster="/assets/img/hero-poster.jpg" src="/assets/video/hero.mp4"></video>
+<video class="hero-vid on" autoplay muted loop playsinline poster="/assets/img/concert-poster.jpg" src="/assets/video/concert.mp4"></video>
+<video class="hero-vid" muted loop playsinline preload="metadata" poster="/assets/img/fashion-poster.jpg" src="/assets/video/fashion.mp4"></video>
+<video class="hero-vid" muted loop playsinline preload="metadata" poster="/assets/img/sail-poster.jpg" src="/assets/video/sail.mp4"></video>
 <div class="shade"></div>
 <div class="wrap">
 <p class="kicker rv">Extra Medium &middot; Strategy, creative, growth &amp; technology studio</p>
-<h1 class="rv">Your business doesn&rsquo;t need more marketing. It needs something <span class="it">worth noticing.</span></h1>
+<h1 class="rv">Your business doesn&rsquo;t need more marketing. It needs something <span class="it">worth <span id="rotword">noticing.</span></span></h1>
 <p class="lede rv" style="transition-delay:.12s">We launch, reinvent and grow businesses &mdash; and we build our own products to prove we know how. Founder-led, senior-only, no theater.</p>
 <div class="cta-row rv" style="transition-delay:.22s"><a class="btn" href="/contact/">Start a conversation</a><a class="btn ghost" href="/work/">See the work</a></div>
 <div class="hero-meta rv" style="transition-delay:.32s">
@@ -93,9 +95,22 @@ home = """
 <div><b>3 shapes</b><span>Fractional &middot; project &middot; ongoing</span></div>
 <div><b>US + UK</b><span>Virginia Beach &middot; Chicago &middot; London</span></div>
 </div></div>
+<div class="hero-dots"><i class="on"></i><i></i><i></i></div>
 <div class="scrollcue">Scroll</div>
 </section>
 """ + MARQUEE + """
+<div class="scrolly"><div class="scrolly-pin">
+<div class="chap on"><video autoplay muted loop playsinline poster="/assets/img/concert-poster.jpg" src="/assets/video/concert.mp4"></video><div class="shade2"></div>
+<div class="txt"><div class="wrap"><p class="kick">01 &middot; Launch</p><div class="big">Make them<br><span style="font-family:var(--serif);font-style:italic;font-weight:400">look up.</span></div><p class="sub">A festival crowd doesn&rsquo;t scroll past. Launches should feel like this &mdash; a moment people point at. We shape, position, build and launch things people can&rsquo;t ignore.</p></div></div></div>
+<div class="chap"><video muted loop playsinline preload="metadata" poster="/assets/img/fashion-poster.jpg" src="/assets/video/fashion.mp4"></video><div class="shade2"></div>
+<div class="txt"><div class="wrap"><p class="kick">02 &middot; Create &amp; Reinvent</p><div class="big">Make it<br><span style="font-family:var(--serif);font-style:italic;font-weight:400">beautiful.</span></div><p class="sub">Brand, film, photography, design &mdash; the craft is the strategy. When the business has outgrown its look, we close the gap without starting from zero.</p></div></div></div>
+<div class="chap"><video muted loop playsinline preload="metadata" poster="/assets/img/city-poster.jpg" src="/assets/video/city.mp4"></video><div class="shade2"></div>
+<div class="txt"><div class="wrap"><p class="kick">03 &middot; Grow</p><div class="big">Make it<br><span style="font-family:var(--serif);font-style:italic;font-weight:400">move.</span></div><p class="sub">Cities don&rsquo;t stop, and neither does a growth system with an owner &mdash; media, search, creators and AI wired into one engine, measured against revenue.</p></div></div></div>
+<div class="chap"><div style="position:absolute;inset:0;background:var(--sgrad)"></div><div class="shade2"></div>
+<div class="txt"><div class="wrap"><p class="kick">04 &middot; Extra Medium Labs</p><div class="big">And when it&rsquo;s ours,<br><span style="font-family:var(--serif);font-style:italic;font-weight:400">we run it.</span></div><p class="sub"><img src="/assets/img/signl-logo.png" alt="SIGNL" style="height:34px;width:auto;margin-bottom:12px">SIGNL is our flagship product &mdash; the local creator platform we built and operate ourselves, live in 37 founding markets. <a href="/labs/signl/" style="color:#fff;font-weight:700">See it &rarr;</a></p></div></div></div>
+<div class="chap-dots"><i class="on"></i><i></i><i></i><i></i></div>
+<div class="chap-count">01 / 04</div>
+</div></div>
 <section><div class="wrap">
 <div class="sec-head rv"><p class="kicker">From our Labs &middot; Flagship product</p><h2>We don&rsquo;t just launch products for clients. <span class="it gtext">We launched our own.</span></h2></div>
 <div class="flagship tilt rv"><div class="flagship-grid">
@@ -107,7 +122,7 @@ home = """
 <div class="stats"><div><b data-count="37">37</b><span>Founding markets</span></div><div><b data-count="8">8</b><span>Countries</span></div><div><b data-count="500">500</b><span>Followers is enough</span></div></div>
 <div class="cta-row"><a class="btn grad-s" href="/labs/signl/">The SIGNL story</a><a class="btn ink" href="https://joinsignl.com">Visit joinsignl.com</a></div>
 </div>
-<div class="flagship-media"><video autoplay muted loop playsinline poster="/assets/img/cafe-poster.jpg" src="/assets/video/cafe.mp4"></video></div>
+<div class="flagship-media"><video autoplay muted loop playsinline poster="/assets/img/fashion-poster.jpg" src="/assets/video/fashion.mp4"></video></div>
 </div></div>
 <p class="note rv">Why lead with our own product? Because a studio that launches its own thing &mdash; brand, platform, pricing, go-to-market, operations &mdash; gives different advice than one that only sells launches. <a href="/labs/">More from Labs &rarr;</a></p>
 </div></section>
@@ -124,6 +139,9 @@ home = """
 <div class="cta-row rv" style="margin-top:36px"><a class="btn" href="/work/">All the work &rarr;</a></div>
 </div></section>
 
+<div class="bigword-sec"><div class="bigword" aria-hidden="true">EXTRA<span class="fillw">EXTRA</span></div>
+<p class="bigword-sub">isn&rsquo;t too much. It&rsquo;s the whole point. Keep scrolling.</p></div>
+
 <section class="grad-sec"><div class="wrap">
 <div class="sec-head rv"><p class="kicker">The studio</p><h2>What are you trying to change?</h2></div>
 <div class="grid4">
@@ -133,8 +151,8 @@ home = """
 <a class="card rv" style="transition-delay:.24s" href="/services/#lead"><span class="num">04 &middot; Lead</span><h3>Become the name</h3><p>Fractional CMO leadership and executive branding for founders who need a senior brain, not another vendor.</p><span class="arrow">Lead &rarr;</span></a>
 </div></div></section>
 
-<div class="band-media"><video data-para="0.10" autoplay muted loop playsinline poster="/assets/img/cafe-poster.jpg" src="/assets/video/bowls.mp4"></video>
-<div class="cap"><div class="wrap"><p class="kicker light">The standard</p><h2 style="max-width:20ch">Real businesses. Real people. <span class="it">Real posts.</span></h2></div></div></div>
+<div class="band-media"><video data-para="0.10" autoplay muted loop playsinline poster="/assets/img/sail-poster.jpg" src="/assets/video/sail.mp4"></video>
+<div class="cap"><div class="wrap"><p class="kicker light">Home waters</p><h2 style="max-width:22ch">Headquartered on the coast in Virginia Beach. <span class="it">Working everywhere.</span></h2></div></div></div>
 
 <section><div class="wrap"><div class="split">
 <div class="rv"><img class="round" src="/assets/img/jeff-rimmer.jpg" alt="Jeff Rimmer, founder of Extra Medium"></div>
@@ -226,7 +244,7 @@ page("Studio: Launch, Reinvent, Grow, Lead | Extra Medium",
 # ============ LABS ============
 labs = """
 <section class="hero-media">
-<video class="bg" autoplay muted loop playsinline poster="/assets/img/cafe-poster.jpg" src="/assets/video/cafe.mp4"></video>
+<video class="bg" autoplay muted loop playsinline poster="/assets/img/concert-poster.jpg" src="/assets/video/concert.mp4"></video>
 <div class="shade"></div>
 <div class="wrap"><p class="kicker rv">Extra Medium Labs</p>
 <h1 class="rv">Things we build when <span class="it">nobody hired us to.</span></h1>
@@ -270,7 +288,7 @@ page("Extra Medium Labs | SIGNL, Our Flagship Product",
 # ============ SIGNL CASE STUDY ============
 signl = """
 <section class="hero-media">
-<video class="bg" autoplay muted loop playsinline poster="/assets/img/cafe-poster.jpg" src="/assets/video/cafe.mp4"></video>
+<video class="bg" autoplay muted loop playsinline poster="/assets/img/city-poster.jpg" src="/assets/video/city.mp4"></video>
 <div class="shade"></div>
 <div class="wrap"><p class="kicker rv">Extra Medium Labs &middot; Flagship &middot; Case study</p>
 <img class="rv" src="/assets/img/signl-logo.png" alt="SIGNL" style="height:60px;width:auto;margin-bottom:26px">
@@ -290,7 +308,7 @@ signl = """
 <p><b>So we built the front door</b> &mdash; a two-sided platform where the standards are the marketing: published pricing, a two-business-day decision on every application, tracked visits, and a Visit Guarantee.</p></div>
 <div class="rv"><img class="round" src="/assets/img/cafe-window-night.jpg" alt="A neighborhood cafe glowing at night"></div>
 </div></div></section>
-<div class="band-media"><video data-para="0.10" autoplay muted loop playsinline poster="/assets/img/hero-poster.jpg" src="/assets/video/hero.mp4"></video>
+<div class="band-media"><video data-para="0.10" autoplay muted loop playsinline poster="/assets/img/concert-poster.jpg" src="/assets/video/concert.mp4"></video>
 <div class="cap"><div class="wrap"><p class="kicker light">Built by the studio</p><h2 style="max-width:24ch">Brand. Product. Platform. Pricing. <span class="it">Go-to-market. Ops.</span></h2></div></div></div>
 <section><div class="wrap"><div class="split">
 <div class="prose rv"><p class="kicker">What we built</p><h2 style="margin-bottom:20px">Everything a launch takes. <span class="it gtext">Ours.</span></h2>

@@ -77,6 +77,38 @@ header.site.scrolled .burger{color:var(--ink)}
 .hero-media .shade{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(42,10,26,.30),rgba(255,61,120,.20) 55%,rgba(255,122,24,.38)),linear-gradient(96deg,rgba(42,10,26,.52),rgba(42,10,26,.05) 62%)}
 .hero-media .lede{color:rgba(255,255,255,.92);margin-top:20px}
 .hero-media .kicker{color:#ffd9c2}
+/* hero montage + rotating word */
+.hero-full video.hero-vid{opacity:0;transition:opacity 1.4s ease}
+.hero-full video.hero-vid.on{opacity:1;animation:kenburns 8s ease forwards}
+@keyframes kenburns{from{transform:scale(1)}to{transform:scale(1.09)}}
+#rotword{display:inline-block;background:linear-gradient(94deg,#ffd9c2,#fff);-webkit-background-clip:text;background-clip:text;color:transparent;transition:opacity .35s,transform .35s}
+#rotword.flip{opacity:0;transform:translateY(14px) rotate(2deg)}
+.hero-dots{position:absolute;left:24px;bottom:30px;z-index:3;display:flex;gap:8px}
+.hero-dots i{width:26px;height:3px;border-radius:2px;background:rgba(255,255,255,.35);transition:background .4s}
+.hero-dots i.on{background:#fff}
+/* scrollytelling */
+.scrolly{position:relative;height:440vh}
+.scrolly-pin{position:sticky;top:0;height:100svh;overflow:hidden;background:#160710}
+.chap{position:absolute;inset:0;opacity:0;transition:opacity .7s ease;pointer-events:none}
+.chap.on{opacity:1;pointer-events:auto}
+.chap video,.chap img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transform:scale(1.06);transition:transform 2.4s ease}
+.chap.on video,.chap.on img{transform:scale(1)}
+.chap .shade2{position:absolute;inset:0;background:linear-gradient(90deg,rgba(22,7,16,.62) 0%,rgba(22,7,16,.12) 62%),linear-gradient(0deg,rgba(22,7,16,.45),transparent 55%)}
+.chap .txt{position:absolute;left:0;right:0;bottom:0;padding:0 0 84px;color:#fff}
+.chap .big{font-size:clamp(2.6rem,7vw,6rem);line-height:.95;font-weight:800;letter-spacing:-.025em;transform:translateY(46px);opacity:0;transition:transform .8s cubic-bezier(.2,.7,.2,1) .15s,opacity .8s .15s}
+.chap.on .big{transform:none;opacity:1}
+.chap .sub{max-width:44ch;color:rgba(255,255,255,.9);margin-top:16px;font-size:clamp(1rem,1.6vw,1.25rem);transform:translateY(30px);opacity:0;transition:transform .8s .3s,opacity .8s .3s}
+.chap.on .sub{transform:none;opacity:1}
+.chap .kick{font-family:var(--mono);font-size:.7rem;letter-spacing:.26em;text-transform:uppercase;color:#ffd9c2}
+.chap-dots{position:absolute;right:30px;top:50%;transform:translateY(-50%);z-index:5;display:flex;flex-direction:column;gap:10px}
+.chap-dots i{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.35);transition:all .4s}
+.chap-dots i.on{background:#fff;transform:scale(1.5)}
+.chap-count{position:absolute;right:30px;bottom:30px;z-index:5;color:#fff;font-family:var(--mono);font-size:.8rem;letter-spacing:.2em}
+/* giant scroll-fill word */
+.bigword-sec{padding:110px 0 90px;text-align:center;overflow:hidden}
+.bigword{position:relative;display:inline-block;font-size:clamp(4.2rem,18.5vw,17rem);font-weight:800;line-height:.88;letter-spacing:-.02em;color:transparent;-webkit-text-stroke:2px rgba(255,61,138,.45);user-select:none}
+.bigword .fillw{position:absolute;inset:0;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-stroke:0;clip-path:inset(0 100% 0 0)}
+.bigword-sub{font-family:var(--serif);font-style:italic;font-size:clamp(1.3rem,3vw,2.1rem);color:var(--mut);margin-top:14px}
 /* reveal */
 .rv{opacity:0;transform:translateY(36px);filter:blur(6px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1),filter .9s}
 .rv.in{opacity:1;transform:none;filter:none}
@@ -114,7 +146,7 @@ a.card:hover{transform:translateY(-5px) rotate(-.4deg);box-shadow:var(--shadow)}
 .film-track img{height:250px;width:380px;object-fit:cover;border-radius:16px;flex:none}
 @keyframes film{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 /* marquee text */
-.marquee{padding:22px 0;overflow:hidden;white-space:nowrap;background:var(--grad);color:#fff;transform:rotate(-1.2deg) scale(1.02)}
+.marquee{padding:22px 0;overflow:hidden;white-space:nowrap;background:var(--grad);color:#fff}
 .marquee div{display:inline-block;font-weight:800;font-size:1.45rem;letter-spacing:-.01em;animation:mq 26s linear infinite}
 .marquee span{margin:0 20px;opacity:.65}
 .marquee i{font-family:var(--serif);font-style:italic;font-weight:400}
