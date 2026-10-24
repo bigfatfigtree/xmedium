@@ -149,10 +149,14 @@ home = """
 <p class="kicker">Try us out &middot; Free</p>
 <h2>Good ideas? We&rsquo;re <span class="it gtext">here all day.</span></h2>
 <p class="lede">This studio runs on ideas &mdash; it&rsquo;s most of what we do, all day long. So take one for a spin: free, no email, no catch. Steal it, use it, watch it work. Then imagine what we come up with on purpose.</p>
-<div class="cta-row"><button class="btn big" id="snackBtn" type="button">Deal me an idea</button></div>
-<div class="snack-card" id="snackCard" aria-live="polite">
-<p class="snack-idea" id="snackIdea"></p>
-<p class="note" id="snackStamp"></p>
+<div class="cta-row"><button class="btn big snack-btn" id="snackBtn" type="button"><span id="snackBtnLabel">Deal me another</span> <span class="snack-spin" aria-hidden="true">&#8635;</span></button></div>
+<p class="snack-micro">This is a toy, not a form. One tap = one idea. Nothing to sign, nothing to buy &mdash; just proof.</p>
+<div class="snack-meta" aria-hidden="true"><span>From the idea machine</span><span id="snackCount">N&ordm; 04 / 10</span></div>
+<div class="snack-slot" aria-hidden="true"></div>
+<div class="snack-card show" id="snackCard" aria-live="polite" title="Tap for another idea">
+<p class="snack-idea" id="snackIdea">Name a menu item after the regular who orders it most. Never take it off.</p>
+<p class="note" id="snackStamp">Dispensed by Extra Medium &middot; No refunds on genius.</p>
+<p class="snack-hint" aria-hidden="true">Tap the card for another &rarr;</p>
 </div>
 </div>
 </div></section>

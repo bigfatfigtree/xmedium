@@ -92,16 +92,19 @@ if(snackBtn&&snackCard){
     'Print your first-ever terrible idea on the wall. Confidence is a brand asset.',
     'Give one customer a skip-the-line-forever pass for a dollar. Film everyone reacting.'
   ];
-  var lastIdea=-1;
-  snackBtn.addEventListener('click',function(){
+  var lastIdea=3; /* matches the pre-dealt card in the HTML */
+  function dealSnack(fromEl){
     var i; do{ i=Math.floor(Math.random()*ideas.length); }while(i===lastIdea); lastIdea=i;
     document.getElementById('snackIdea').textContent=ideas[i];
     var d=new Date().toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'});
     document.getElementById('snackStamp').textContent='Dispensed by Extra Medium - '+d+' - No refunds on genius.';
+    var cnt=document.getElementById('snackCount'); if(cnt){ cnt.textContent='N\u00ba 0'+(i+1)+' / 10'; }
     snackCard.classList.remove('show'); void snackCard.offsetWidth; snackCard.classList.add('show');
-    if(window.__stirBurst){ var r=snackBtn.getBoundingClientRect(); window.__stirBurst(r.left+r.width/2,r.top+r.height/2); }
-    snackBtn.textContent='Deal me another';
-  });
+    if(window.__stirBurst&&fromEl){ var r=fromEl.getBoundingClientRect(); window.__stirBurst(r.left+r.width/2,r.top+r.height/2); }
+    var lbl=document.getElementById('snackBtnLabel'); if(lbl){ lbl.textContent='Deal me another'; }
+  }
+  snackBtn.addEventListener('click',function(){ dealSnack(snackBtn); });
+  snackCard.addEventListener('click',function(){ dealSnack(snackCard); });
 }
 
   /* autoplay hardening: force muted via JS, retry on first touch, hide videos the browser refuses to play (animated stills take over — no dead play-button overlays) */
