@@ -1,0 +1,2 @@
+build.py is the generator — edit content there, run python3 build.py, commit the output.
+__pycache__/
