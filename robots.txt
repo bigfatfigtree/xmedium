@@ -1,3 +1,33 @@
+# Extra Medium — xmedium.co
+# Search engines and AI search crawlers are welcome. We publish for people and for the machines that answer them.
+
 User-agent: *
 Allow: /
+
+# AI search (retrieval) — allowed, so Extra Medium can be cited in AI answers
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+# AI training crawlers — allowed (visibility compounds; content is public marketing material)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
 Sitemap: https://xmedium.co/sitemap.xml

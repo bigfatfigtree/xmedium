@@ -6,36 +6,80 @@ ROOT = pathlib.Path(__file__).parent
 
 FONTS = '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;600;700;800&family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">'
 
-def head(title, desc, path):
+ORG_LD = """<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":["Organization","ProfessionalService"],"@id":"https://xmedium.co/#org",
+"name":"Extra Medium","legalName":"Extra Medium LLC","url":"https://xmedium.co/",
+"logo":"https://xmedium.co/assets/img/em-logo.png","email":"hello@xmedium.co",
+"slogan":"Whatever the medium. Make it matter.",
+"description":"Extra Medium is a founder-led strategy, creative, growth and technology studio and product lab based in Virginia Beach, Virginia. It launches, reinvents and grows businesses for clients, and builds its own products in Extra Medium Labs, including SIGNL, the local creator marketing platform.",
+"foundingLocation":"Virginia Beach, Virginia, US",
+"address":{"@type":"PostalAddress","addressLocality":"Virginia Beach","addressRegion":"VA","addressCountry":"US"},
+"geo":{"@type":"GeoCoordinates","latitude":36.852984,"longitude":-75.977418},
+"areaServed":["Virginia Beach","Hampton Roads","Chicago","London","United States","United Kingdom"],
+"founder":{"@id":"https://xmedium.co/#jeff"},
+"sameAs":["https://www.linkedin.com/in/jeffrimmer"],
+"knowsAbout":["Brand strategy","Rebranding","Growth marketing","Fractional CMO","Website design and development","Ecommerce and Shopify","Paid media","SEO and AI search optimization","AI consulting and automation","Go-to-market strategy","Product launches","Executive branding","Podcasts","Experiential marketing","Local creator marketing"]},
+{"@type":"Person","@id":"https://xmedium.co/#jeff","name":"Jeff Rimmer","jobTitle":"Founder & Principal",
+"worksFor":{"@id":"https://xmedium.co/#org"},"url":"https://xmedium.co/about/",
+"sameAs":["https://www.linkedin.com/in/jeffrimmer"]},
+{"@type":"WebSite","@id":"https://xmedium.co/#site","url":"https://xmedium.co/","name":"Extra Medium","publisher":{"@id":"https://xmedium.co/#org"},"inLanguage":"en-US"}
+]}
+</script>"""
+
+def crumb_ld(items):
+    lis = ",".join('{"@type":"ListItem","position":%d,"name":"%s","item":"https://xmedium.co%s"}' % (i + 1, n, u) for i, (n, u) in enumerate(items))
+    return '<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[' + lis + ']}</script>'
+
+def head(title, desc, path, extra_ld=""):
     return f"""<!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{title}</title>
 <meta name="description" content="{desc}">
+<meta name="author" content="Extra Medium LLC">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <link rel="canonical" href="https://xmedium.co{path}">
+<meta name="geo.region" content="US-VA"><meta name="geo.placename" content="Virginia Beach">
+<meta name="geo.position" content="36.852984;-75.977418"><meta name="ICBM" content="36.852984, -75.977418">
 <meta property="og:type" content="website"><meta property="og:site_name" content="Extra Medium">
+<meta property="og:locale" content="en_US">
 <meta property="og:title" content="{title}"><meta property="og:description" content="{desc}">
 <meta property="og:url" content="https://xmedium.co{path}">
 <meta property="og:image" content="https://xmedium.co/assets/img/em-logo.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{title}"><meta name="twitter:description" content="{desc}">
+<meta name="twitter:image" content="https://xmedium.co/assets/img/em-logo.png">
 <meta name="theme-color" content="#ff3d8a">
 <link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="preload" as="image" href="/assets/img/montage-poster.jpg">
 <link rel="stylesheet" href="/assets/css/site.css">
 {FONTS}
-<script type="application/ld+json">{{"@context":"https://schema.org","@type":"Organization","name":"Extra Medium","legalName":"Extra Medium LLC","url":"https://xmedium.co/","logo":"https://xmedium.co/assets/img/em-logo.png","email":"hello@xmedium.co","founder":{{"@type":"Person","name":"Jeff Rimmer"}},"address":{{"@type":"PostalAddress","addressLocality":"Virginia Beach","addressRegion":"VA","addressCountry":"US"}}}}</script>
-</head><body><div id="progress"></div><div id="glow"></div>"""
+{ORG_LD}
+{extra_ld}
+</head><body><div id="progress"></div><div id="glow"></div><div id="cursor"></div>"""
 
 def header(on=""):
     def cls(k): return ' class="on"' if on == k else ""
     return f"""<header class="site"><div class="wrap nav">
 <a class="brand" href="/"><img src="/assets/img/em-logo.png" alt="Extra Medium logo"><span>extra medium<small>Studio &amp; Labs</small></span></a>
-<button class="burger" aria-label="Menu" onclick="document.querySelector('.nav nav').classList.toggle('open')">&#9776;</button>
+<button class="burger" aria-label="Open menu" aria-expanded="false">&#9776;</button>
 <nav>
 <a href="/work/"{cls('work')}>Work</a>
 <a href="/services/"{cls('services')}>Studio</a>
 <a href="/labs/"{cls('labs')}>Labs</a>
 <a href="/about/"{cls('about')}>About</a>
 <a href="/contact/" class="btn small">Start a conversation</a>
-</nav></div></header>"""
+</nav></div></header>
+<div class="menu" aria-hidden="true">
+<a class="mlink" style="transition-delay:.05s" href="/work/"><i>01</i>Work</a>
+<a class="mlink" style="transition-delay:.12s" href="/services/"><i>02</i>Studio</a>
+<a class="mlink" style="transition-delay:.19s" href="/labs/"><i>03</i>Labs</a>
+<a class="mlink" style="transition-delay:.26s" href="/labs/signl/"><i>04</i>SIGNL</a>
+<a class="mlink" style="transition-delay:.33s" href="/about/"><i>05</i>About</a>
+<a class="mlink" style="transition-delay:.40s" href="/contact/"><i>06</i>Contact</a>
+<div class="mfoot"><span>Virginia Beach <span class="vbclock">--:--:--</span> ET</span><a href="mailto:hello@xmedium.co">hello@xmedium.co</a><a href="https://www.linkedin.com/in/jeffrimmer">LinkedIn</a></div>
+</div>"""
 
 FOOTER = """<footer class="site"><div class="wrap">
 <a href="/contact/" style="text-decoration:none"><div class="foot-big">Let&rsquo;s make<br>something <span style="font-family:var(--serif);font-style:italic;font-weight:400">extra.</span></div></a>
@@ -46,12 +90,12 @@ FOOTER = """<footer class="site"><div class="wrap">
 <div><h4>Labs</h4><a href="/labs/">Extra Medium Labs</a><a href="/labs/signl/">SIGNL &mdash; flagship</a><a href="https://joinsignl.com">joinsignl.com</a></div>
 <div><h4>Talk to us</h4><a href="mailto:hello@xmedium.co">hello@xmedium.co</a><a href="/contact/">Start a project</a><a href="https://www.linkedin.com/in/jeffrimmer">Jeff on LinkedIn</a></div>
 </div>
-<div class="foot-base"><span>&copy; 2026 Extra Medium LLC &middot; Virginia Beach &middot; Chicago &middot; London</span><span>SIGNL is a product of Extra Medium Labs. &middot; Stock video via Pexels creators.</span></div>
+<div class="foot-base"><span>&copy; 2026 Extra Medium LLC &middot; Virginia Beach &middot; Chicago &middot; London</span><span>Virginia Beach <span class="vbclock">--:--:--</span> ET &middot; SIGNL is a product of Extra Medium Labs. &middot; Stock video via Pexels creators.</span></div>
 </div></footer>
 <script src="/assets/js/site.js"></script></body></html>"""
 
-def page(title, desc, path, on, body):
-    html = head(title, desc, path) + header(on) + body + FOOTER
+def page(title, desc, path, on, body, extra_ld=""):
+    html = head(title, desc, path, extra_ld) + header(on) + body + FOOTER
     out = ROOT / (path.strip("/") + "/index.html" if path.strip("/") else "index.html")
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(html)
@@ -80,13 +124,13 @@ MARQUEE = """<div class="marquee"><div>Launch <span>&bull;</span> <i>Reinvent</i
 # ============ HOMEPAGE ============
 home = """
 <section class="hero-full">
-<video class="hero-vid on" autoplay muted loop playsinline poster="/assets/img/concert-poster.jpg" src="/assets/video/concert.mp4"></video>
-<video class="hero-vid" muted loop playsinline preload="metadata" poster="/assets/img/fashion-poster.jpg" src="/assets/video/fashion.mp4"></video>
-<video class="hero-vid" muted loop playsinline preload="metadata" poster="/assets/img/sail-poster.jpg" src="/assets/video/sail.mp4"></video>
+<div class="mesh" aria-hidden="true"><i></i><i></i><i></i></div>
+<video class="montage" autoplay muted loop playsinline preload="auto" poster="/assets/img/montage-poster.jpg" src="/assets/video/montage.mp4"></video>
+<div class="grain" aria-hidden="true"></div>
 <div class="shade"></div>
 <div class="wrap">
 <p class="kicker rv">Extra Medium &middot; Strategy, creative, growth &amp; technology studio</p>
-<h1 class="rv">Your business doesn&rsquo;t need more marketing. It needs something <span class="it">worth <span id="rotword">noticing.</span></span></h1>
+<h1><span class="line"><span>Your business doesn&rsquo;t need</span></span><span class="line"><span>more marketing. It needs</span></span><span class="line"><span>something <span class="it">worth <span id="rotword">noticing.</span></span></span></span></h1>
 <p class="lede rv" style="transition-delay:.12s">We launch, reinvent and grow businesses &mdash; and we build our own products to prove we know how. Founder-led, senior-only, no theater.</p>
 <div class="cta-row rv" style="transition-delay:.22s"><a class="btn" href="/contact/">Start a conversation</a><a class="btn ghost" href="/work/">See the work</a></div>
 <div class="hero-meta rv" style="transition-delay:.32s">
@@ -95,19 +139,30 @@ home = """
 <div><b>3 shapes</b><span>Fractional &middot; project &middot; ongoing</span></div>
 <div><b>US + UK</b><span>Virginia Beach &middot; Chicago &middot; London</span></div>
 </div></div>
-<div class="hero-dots"><i class="on"></i><i></i><i></i></div>
 <div class="scrollcue">Scroll</div>
 </section>
+<section class="glance"><div class="wrap">
+<p class="def rv"><b>Extra Medium</b> is a founder-led creative studio and product lab in Virginia Beach, Virginia. We launch, reinvent and grow businesses &mdash; brand, creative, growth and technology under one roof &mdash; and through Extra Medium Labs we build and operate our own products, led by SIGNL, the local creator marketing platform.</p>
+<div class="facts rv"><span>Founded by Jeff Rimmer</span><span>20+ years, every side of the table</span><span>Virginia Beach &middot; Chicago &middot; London</span><span>Clients: startups to Fortune 100</span></div>
+</div></section>
 """ + MARQUEE + """
 <div class="scrolly"><div class="scrolly-pin">
 <div class="chap on"><video autoplay muted loop playsinline poster="/assets/img/concert-poster.jpg" src="/assets/video/concert.mp4"></video><div class="shade2"></div>
 <div class="txt"><div class="wrap"><p class="kick">01 &middot; Launch</p><div class="big">Make them<br><span style="font-family:var(--serif);font-style:italic;font-weight:400">look up.</span></div><p class="sub">A festival crowd doesn&rsquo;t scroll past. Launches should feel like this &mdash; a moment people point at. We shape, position, build and launch things people can&rsquo;t ignore.</p></div></div></div>
-<div class="chap"><video muted loop playsinline preload="metadata" poster="/assets/img/fashion-poster.jpg" src="/assets/video/fashion.mp4"></video><div class="shade2"></div>
+<div class="chap"><video autoplay muted loop playsinline preload="metadata" poster="/assets/img/ink-poster.jpg" src="/assets/video/ink.mp4"></video><div class="shade2"></div>
 <div class="txt"><div class="wrap"><p class="kick">02 &middot; Create &amp; Reinvent</p><div class="big">Make it<br><span style="font-family:var(--serif);font-style:italic;font-weight:400">beautiful.</span></div><p class="sub">Brand, film, photography, design &mdash; the craft is the strategy. When the business has outgrown its look, we close the gap without starting from zero.</p></div></div></div>
-<div class="chap"><video muted loop playsinline preload="metadata" poster="/assets/img/city-poster.jpg" src="/assets/video/city.mp4"></video><div class="shade2"></div>
+<div class="chap"><video autoplay muted loop playsinline preload="metadata" poster="/assets/img/city-poster.jpg" src="/assets/video/city.mp4"></video><div class="shade2"></div>
 <div class="txt"><div class="wrap"><p class="kick">03 &middot; Grow</p><div class="big">Make it<br><span style="font-family:var(--serif);font-style:italic;font-weight:400">move.</span></div><p class="sub">Cities don&rsquo;t stop, and neither does a growth system with an owner &mdash; media, search, creators and AI wired into one engine, measured against revenue.</p></div></div></div>
 <div class="chap"><div style="position:absolute;inset:0;background:var(--sgrad)"></div><div class="shade2"></div>
-<div class="txt"><div class="wrap"><p class="kick">04 &middot; Extra Medium Labs</p><div class="big">And when it&rsquo;s ours,<br><span style="font-family:var(--serif);font-style:italic;font-weight:400">we run it.</span></div><p class="sub"><img src="/assets/img/signl-logo.png" alt="SIGNL" style="height:34px;width:auto;margin-bottom:12px">SIGNL is our flagship product &mdash; the local creator platform we built and operate ourselves, live in 37 founding markets. <a href="/labs/signl/" style="color:#fff;font-weight:700">See it &rarr;</a></p></div></div></div>
+<div class="txt"><div class="wrap"><div class="cols">
+<div><p class="kick">04 &middot; Extra Medium Labs</p><div class="big">And when it&rsquo;s ours,<br><span style="font-family:var(--serif);font-style:italic;font-weight:400">we run it.</span></div><p class="sub">SIGNL is our flagship product &mdash; the local creator platform we built and operate ourselves. <a href="/labs/signl/" style="color:#fff;font-weight:700">See it &rarr;</a></p></div>
+<div class="prodcard"><img src="/assets/img/signl-logo.png" alt="SIGNL">
+<div class="prow"><b>The offer</b><span>A business makes an offer</span></div>
+<div class="prow"><b>The visit</b><span>A local creator shows up</span></div>
+<div class="prow"><b>The post</b><span>Honest, within 48 hours</span></div>
+<div class="prow"><b>The proof</b><span>Every visit tracked</span></div>
+<div class="pstats"><div><b>37</b><span>Founding markets</span></div><div><b>8</b><span>Countries</span></div><div><b>500</b><span>Followers is enough</span></div></div>
+</div></div></div></div></div>
 <div class="chap-dots"><i class="on"></i><i></i><i></i><i></i></div>
 <div class="chap-count">01 / 04</div>
 </div></div>
@@ -122,7 +177,7 @@ home = """
 <div class="stats"><div><b data-count="37">37</b><span>Founding markets</span></div><div><b data-count="8">8</b><span>Countries</span></div><div><b data-count="500">500</b><span>Followers is enough</span></div></div>
 <div class="cta-row"><a class="btn grad-s" href="/labs/signl/">The SIGNL story</a><a class="btn ink" href="https://joinsignl.com">Visit joinsignl.com</a></div>
 </div>
-<div class="flagship-media"><video autoplay muted loop playsinline poster="/assets/img/fashion-poster.jpg" src="/assets/video/fashion.mp4"></video></div>
+<div class="flagship-media"><video autoplay muted loop playsinline poster="/assets/img/ink-poster.jpg" src="/assets/video/ink.mp4"></video></div>
 </div></div>
 <p class="note rv">Why lead with our own product? Because a studio that launches its own thing &mdash; brand, platform, pricing, go-to-market, operations &mdash; gives different advice than one that only sells launches. <a href="/labs/">More from Labs &rarr;</a></p>
 </div></section>
@@ -151,8 +206,8 @@ home = """
 <a class="card rv" style="transition-delay:.24s" href="/services/#lead"><span class="num">04 &middot; Lead</span><h3>Become the name</h3><p>Fractional CMO leadership and executive branding for founders who need a senior brain, not another vendor.</p><span class="arrow">Lead &rarr;</span></a>
 </div></div></section>
 
-<div class="band-media"><video data-para="0.10" autoplay muted loop playsinline poster="/assets/img/sail-poster.jpg" src="/assets/video/sail.mp4"></video>
-<div class="cap"><div class="wrap"><p class="kicker light">Home waters</p><h2 style="max-width:22ch">Headquartered on the coast in Virginia Beach. <span class="it">Working everywhere.</span></h2></div></div></div>
+<div class="band-media"><video autoplay muted loop playsinline poster="/assets/img/marble-poster.jpg" src="/assets/video/marble.mp4"></video>
+<div class="cap"><div class="wrap"><p class="kicker light">The name is the brief</p><h2 style="max-width:22ch">Boring is a choice. <span class="it">We don&rsquo;t make it.</span></h2></div></div></div>
 
 <section><div class="wrap"><div class="split">
 <div class="rv"><img class="round" src="/assets/img/jeff-rimmer.jpg" alt="Jeff Rimmer, founder of Extra Medium"></div>
@@ -161,11 +216,27 @@ home = """
 <p><b>Extra Medium came from wanting to do the useful parts without all the theater.</b> Founder-led. Built around the right people for the problem. Every engagement led personally.</p>
 <div class="cta-row"><a class="btn" href="/about/">The longer version &rarr;</a></div></div>
 </div></div></section>
+<section style="padding-top:20px"><div class="wrap">
+<div class="sec-head rv"><p class="kicker">Straight answers</p><h2>Asked, <span class="it gtext">answered.</span></h2></div>
+<div class="faq rv">
+<details><summary>What does Extra Medium do?</summary><p>Extra Medium is a strategy, creative, growth and technology studio based in Virginia Beach, Virginia. We launch new businesses and products, reinvent brands that have outgrown their look, and run growth systems &mdash; paid media, search, creators and AI &mdash; measured against revenue, not vanity metrics.</p></details>
+<details><summary>What is Extra Medium Labs?</summary><p>Extra Medium Labs is where the studio builds and operates its own products instead of only advising clients. Its flagship is SIGNL, a local creator marketing platform live in 37 founding markets across 8 countries, where local businesses comp or pay local creators to visit and post honestly, with every visit tracked.</p></details>
+<details><summary>Who does Extra Medium work with?</summary><p>Founder-led and high-growth companies, pre-launch startups, manufacturers, consumer brands and established enterprises up to Fortune 100 scale &mdash; across consumer products, ecommerce, healthcare, retail, media, music, hospitality, professional services and SaaS. The common thread is ambition, not industry.</p></details>
+<details><summary>How does an engagement start?</summary><p>With a conversation, not a proposal. Engagements take three shapes: fractional CMO leadership, a defined project such as a launch or rebrand, or ongoing growth work. If we are not the right fit, we say so &mdash; and usually know who is.</p></details>
+</div></div></section>
 """ + CTA
 
-page("Extra Medium | Strategy, Growth & AI Studio in Virginia Beach",
+FAQ_HOME_LD = """<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"What does Extra Medium do?","acceptedAnswer":{"@type":"Answer","text":"Extra Medium is a strategy, creative, growth and technology studio based in Virginia Beach, Virginia. We launch new businesses and products, reinvent brands that have outgrown their look, and run growth systems — paid media, search, creators and AI — measured against revenue, not vanity metrics."}},
+{"@type":"Question","name":"What is Extra Medium Labs?","acceptedAnswer":{"@type":"Answer","text":"Extra Medium Labs is where the studio builds and operates its own products. Its flagship is SIGNL, a local creator marketing platform live in 37 founding markets across 8 countries, where local businesses comp or pay local creators to visit and post honestly, with every visit tracked."}},
+{"@type":"Question","name":"Who does Extra Medium work with?","acceptedAnswer":{"@type":"Answer","text":"Founder-led and high-growth companies, pre-launch startups, manufacturers, consumer brands and established enterprises up to Fortune 100 scale, across consumer products, ecommerce, healthcare, retail, media, music, hospitality, professional services and SaaS."}},
+{"@type":"Question","name":"How does an engagement start?","acceptedAnswer":{"@type":"Answer","text":"With a conversation, not a proposal. Engagements take three shapes: fractional CMO leadership, a defined project such as a launch or rebrand, or ongoing growth work."}}]}
+</script>"""
+
+page("Extra Medium | Strategy, Creative, Growth & AI Studio in Virginia Beach",
      "Extra Medium is a strategy, creative, growth and technology studio in Virginia Beach. We launch, reinvent and grow businesses — and build our own products, led by flagship product SIGNL.",
-     "/", "home", home)
+     "/", "home", home, FAQ_HOME_LD)
 print("home done")
 
 # ============ WORK ============
@@ -206,7 +277,7 @@ work = """
 
 page("Work: From Startups to Fortune 100 | Extra Medium",
      "Extra Medium case stories: growth systems, brand reinvention, enterprise launches and our own products, from pre-launch startups to Fortune 100 partners.",
-     "/work/", "work", work)
+     "/work/", "work", work, crumb_ld([("Home", "/"), ("Work", "/work/")]))
 
 # ============ SERVICES ============
 services = """
@@ -235,11 +306,29 @@ services = """
 </div>
 <p class="note rv" style="margin-top:28px">Full capability list: brand strategy &middot; rebranding &middot; growth marketing &middot; fractional CMO &middot; website design &amp; development &middot; ecommerce &amp; Shopify &middot; paid media &middot; SEO &amp; AI search &middot; AI consulting, agents &amp; automation &middot; go-to-market &middot; product launches &middot; executive branding &middot; podcasts &middot; experiential.</p>
 </div></section>
+<section style="padding-top:0"><div class="wrap">
+<div class="sec-head rv"><p class="kicker">Studio questions</p><h2>Before you <span class="it gtext">ask.</span></h2></div>
+<div class="faq rv">
+<details><summary>How much does it cost to work with Extra Medium?</summary><p>It depends on the shape. Fractional leadership is a monthly engagement, projects are scoped with a clear price range after the first conversation, and ongoing growth work is a monthly system with one owner. We do not publish a rate card because the honest price follows the actual problem &mdash; the first conversation is free and specific.</p></details>
+<details><summary>How fast can a launch or rebrand ship?</summary><p>Focused launches and rebrands typically run in weeks, not quarters, because one senior team owns strategy, creative and build together with no handoffs. Exact timing is set in the first conversation once the destination is clear.</p></details>
+<details><summary>Do you only work with Virginia Beach companies?</summary><p>No. Extra Medium is headquartered in Virginia Beach, Virginia, with presence in Chicago and London, and clients across the US and UK. Most engagements run remotely with in-person time when it matters.</p></details>
+<details><summary>What makes you different from a typical agency?</summary><p>Three things: every engagement is led personally by the founder; the team is senior-only with no account-manager telephone game; and the studio builds its own products in Extra Medium Labs &mdash; led by SIGNL &mdash; so its advice is tested on its own money first.</p></details>
+</div></div></section>
 """ + CTA
+
+SERVICES_LD = """<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ItemList","name":"Extra Medium studio services","itemListElement":[
+{"@type":"Service","position":1,"name":"Launch","provider":{"@id":"https://xmedium.co/#org"},"description":"Positioning, naming, brand identity, website and go-to-market for new businesses and products.","url":"https://xmedium.co/services/#launch"},
+{"@type":"Service","position":2,"name":"Reinvent","provider":{"@id":"https://xmedium.co/#org"},"description":"Brand strategy, rebranding, messaging and website redesign for businesses that outgrew their brand.","url":"https://xmedium.co/services/#reinvent"},
+{"@type":"Service","position":3,"name":"Grow","provider":{"@id":"https://xmedium.co/#org"},"description":"Growth marketing run as one system: paid media, SEO and AI search, ecommerce, lifecycle and creator channels.","url":"https://xmedium.co/services/#grow"},
+{"@type":"Service","position":4,"name":"Lead — Fractional CMO","provider":{"@id":"https://xmedium.co/#org"},"description":"Fractional CMO leadership and executive branding for founder-led and high-growth companies.","url":"https://xmedium.co/services/#lead"},
+{"@type":"Service","position":5,"name":"Intelligence — AI consulting","provider":{"@id":"https://xmedium.co/#org"},"description":"AI consulting, agents and automation wired into how a company actually operates.","url":"https://xmedium.co/services/#intelligence"},
+{"@type":"Service","position":6,"name":"Experiences","provider":{"@id":"https://xmedium.co/#org"},"description":"Podcasts, events and experiential marketing that build reputation, not just reach.","url":"https://xmedium.co/services/#experiences"}]}
+</script>""" + crumb_ld([("Home", "/"), ("Studio", "/services/")])
 
 page("Studio: Launch, Reinvent, Grow, Lead | Extra Medium",
      "Extra Medium studio services: launch, reinvention, growth marketing, fractional CMO leadership, AI and experiences — one senior team, three engagement shapes.",
-     "/services/", "services", services)
+     "/services/", "services", services, SERVICES_LD)
 
 # ============ LABS ============
 labs = """
@@ -283,7 +372,7 @@ labs = """
 
 page("Extra Medium Labs | SIGNL, Our Flagship Product",
      "Extra Medium Labs builds the studio's own products. Flagship: SIGNL, the live local creator marketing platform. Plus ventures in development: Roon, JAWNRA and hapsta.",
-     "/labs/", "labs", labs)
+     "/labs/", "labs", labs, crumb_ld([("Home", "/"), ("Labs", "/labs/")]))
 
 # ============ SIGNL CASE STUDY ============
 signl = """
@@ -295,6 +384,7 @@ signl = """
 <h1 class="rv">Get talked about by the people your city <span class="it">actually follows.</span></h1>
 <p class="lede rv">SIGNL is the local creator marketing platform built, branded and operated by Extra Medium. Local businesses comp or pay creators who live in their city to visit and post honestly &mdash; and every visit is tracked.</p>
 <div class="cta-row rv"><a class="btn grad-s" href="https://joinsignl.com">Visit joinsignl.com</a><a class="btn ghost" href="https://app.joinsignl.com">Open the app</a></div>
+<p class="note rv" style="color:rgba(255,255,255,.85);margin-top:22px">Case study by Jeff Rimmer, Founder &middot; Extra Medium Labs &middot; October 2026</p>
 <div class="hero-meta rv">
 <div><b>Live</b><span>Platform &amp; founding markets</span></div>
 <div><b data-count="37">37</b><span>Founding markets, 8 countries</span></div>
@@ -308,7 +398,7 @@ signl = """
 <p><b>So we built the front door</b> &mdash; a two-sided platform where the standards are the marketing: published pricing, a two-business-day decision on every application, tracked visits, and a Visit Guarantee.</p></div>
 <div class="rv"><img class="round" src="/assets/img/cafe-window-night.jpg" alt="A neighborhood cafe glowing at night"></div>
 </div></div></section>
-<div class="band-media"><video data-para="0.10" autoplay muted loop playsinline poster="/assets/img/concert-poster.jpg" src="/assets/video/concert.mp4"></video>
+<div class="band-media"><video autoplay muted loop playsinline poster="/assets/img/concert-poster.jpg" src="/assets/video/concert.mp4"></video>
 <div class="cap"><div class="wrap"><p class="kicker light">Built by the studio</p><h2 style="max-width:24ch">Brand. Product. Platform. Pricing. <span class="it">Go-to-market. Ops.</span></h2></div></div></div>
 <section><div class="wrap"><div class="split">
 <div class="prose rv"><p class="kicker">What we built</p><h2 style="margin-bottom:20px">Everything a launch takes. <span class="it gtext">Ours.</span></h2>
@@ -340,7 +430,14 @@ signl = """
 
 page("SIGNL — Flagship Product of Extra Medium Labs",
      "SIGNL is the live local creator marketing platform built and operated by Extra Medium Labs: local businesses comp or pay local creators to visit and post honestly, every visit tracked.",
-     "/labs/signl/", "labs", signl)
+     "/labs/signl/", "labs", signl, """<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"SIGNL — Flagship Product of Extra Medium Labs",
+"description":"SIGNL is the live local creator marketing platform built and operated by Extra Medium Labs: local businesses comp or pay local creators to visit and post honestly, every visit tracked.",
+"author":{"@id":"https://xmedium.co/#jeff"},"publisher":{"@id":"https://xmedium.co/#org"},
+"datePublished":"2026-10-23","dateModified":"2026-10-23","mainEntityOfPage":"https://xmedium.co/labs/signl/",
+"image":"https://xmedium.co/assets/img/em-logo.png",
+"about":{"@type":"SoftwareApplication","name":"SIGNL","applicationCategory":"BusinessApplication","url":"https://joinsignl.com","creator":{"@id":"https://xmedium.co/#org"}}}
+</script>""" + crumb_ld([("Home", "/"), ("Labs", "/labs/"), ("SIGNL", "/labs/signl/")]))
 print("part 2 done")
 
 # ============ ABOUT ============
@@ -378,7 +475,7 @@ about = """
 
 page("About Extra Medium | Studio Founded by Jeff Rimmer",
      "Extra Medium is a founder-led strategy, creative, growth and technology studio founded by Jeff Rimmer — 20+ years on every side of the marketing table, now building SIGNL in its own Labs.",
-     "/about/", "about", about)
+     "/about/", "about", about, crumb_ld([("Home", "/"), ("About", "/about/")]))
 
 # ============ CONTACT ============
 contact = """
@@ -415,7 +512,7 @@ contact = """
 
 page("Contact | Extra Medium",
      "Start a conversation with Extra Medium — studio projects, fractional CMO, or Labs and SIGNL partnerships. Replies usually within one business day.",
-     "/contact/", "contact", contact)
+     "/contact/", "contact", contact, crumb_ld([("Home", "/"), ("Contact", "/contact/")]))
 
 # 404 gets the new treatment too
 pathlib.Path(ROOT / "404.html").write_text("""<!DOCTYPE html>
