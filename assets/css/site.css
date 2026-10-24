@@ -51,7 +51,7 @@ header.site .nav{display:flex;align-items:center;justify-content:space-between;g
 .btn.small{padding:10px 20px;font-size:.9rem}
 .burger{display:none;width:48px;height:48px;border-radius:50%;border:1.5px solid rgba(42,18,32,.3);background:#fff;color:var(--ink);font-size:1.3rem;cursor:pointer;line-height:1;position:relative;z-index:120}
 body.menu-open .burger{background:var(--ink);color:#fff;border-color:var(--ink)}
-.menu{position:fixed;inset:0;z-index:110;background:linear-gradient(140deg,#ff7a18,#ff3d8a 58%,#c86bff);color:#fff;display:flex;flex-direction:column;justify-content:center;padding:110px 7vw 42px;opacity:0;pointer-events:none;transition:opacity .45s ease}
+.menu{position:fixed;inset:0;z-index:90;background:linear-gradient(140deg,#ff7a18,#ff3d8a 58%,#c86bff);color:#fff;display:flex;flex-direction:column;justify-content:center;padding:110px 7vw 42px;opacity:0;pointer-events:none;transition:opacity .45s ease}
 body.menu-open .menu{opacity:1;pointer-events:auto}
 .menu a.mlink{display:block;font-size:clamp(2.5rem,10vw,4.4rem);font-weight:800;letter-spacing:-.025em;line-height:1.12;color:#fff;text-decoration:none;transform:translateY(28px);opacity:0;transition:transform .55s cubic-bezier(.2,.7,.2,1),opacity .55s}
 body.menu-open .menu a.mlink{transform:none;opacity:1}

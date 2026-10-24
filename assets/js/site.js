@@ -32,7 +32,7 @@
   onScroll();
   /* menu */
   var burger=document.querySelector('.burger');
-  if(burger){ burger.addEventListener('click',function(){ document.body.classList.toggle('menu-open'); }); }
+  if(burger){ burger.addEventListener('click',function(){ var open=document.body.classList.toggle('menu-open'); burger.setAttribute('aria-expanded',open?'true':'false'); burger.innerHTML=open?'&#10005;':'&#9776;'; }); }
   document.querySelectorAll('.menu a').forEach(function(a){ a.addEventListener('click',function(){ document.body.classList.remove('menu-open'); }); });
   /* Virginia Beach clock */
   var clock=document.getElementById('vbclock');
