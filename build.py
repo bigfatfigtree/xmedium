@@ -92,10 +92,12 @@ FOOTER = """<footer class="site"><div class="wrap">
 </div>
 <div class="foot-base"><span>&copy; 2026 Extra Medium LLC &middot; Virginia Beach &middot; Chicago &middot; London</span><span>Virginia Beach <span class="vbclock">--:--:--</span> ET &middot; SIGNL is a product of Extra Medium Labs. &middot; Stock video via Pexels creators.</span></div>
 </div></footer>
-<script src="/assets/js/site.js"></script></body></html>"""
+<script src="/assets/js/stir.js" defer></script><script src="/assets/js/site.js"></script></body></html>"""
 
 def page(title, desc, path, on, body, extra_ld=""):
-    html = head(title, desc, path, extra_ld) + header(on) + body + FOOTER
+    pal = "signl" if path.startswith("/labs") else "em"
+    canvas = '<canvas id="field" data-pal="' + pal + '" aria-hidden="true"></canvas>'
+    html = head(title, desc, path, extra_ld) + header(on) + canvas + body + FOOTER
     out = ROOT / (path.strip("/") + "/index.html" if path.strip("/") else "index.html")
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(html)
@@ -123,7 +125,6 @@ MARQUEE = """<div class="marquee"><div>Launch <span>&bull;</span> <i>Reinvent</i
 
 # ============ HOMEPAGE ============
 home = """
-<canvas id="field" aria-hidden="true"></canvas>
 <section class="hero5 window" data-pal="em">
 <div class="wrap"><div class="calm">
 <p class="kicker rv">Extra Medium &middot; Studio &amp; Labs &middot; Virginia Beach</p>
@@ -229,7 +230,6 @@ home = """
 <details><summary>Who does Extra Medium work with?</summary><p>Founder-led and high-growth companies, pre-launch startups, manufacturers, consumer brands and established enterprises up to Fortune 100 scale &mdash; across consumer products, ecommerce, healthcare, retail, media, music, hospitality, professional services and SaaS. The common thread is ambition, not industry.</p></details>
 <details><summary>How does an engagement start?</summary><p>With a conversation, not a proposal. Engagements take three shapes: fractional CMO leadership, a defined project such as a launch or rebrand, or ongoing growth work. If we are not the right fit, we say so &mdash; and usually know who is.</p></details>
 </div></div></section>
-<script src="/assets/js/stir.js" defer></script>
 """ + CTA
 
 FAQ_HOME_LD = """<script type="application/ld+json">
@@ -254,7 +254,12 @@ work = """
 <h1 class="rv">Done from <span class="it">both sides</span> of the table.</h1>
 <p class="lede rv">Built brands from inside the building. Built companies from nothing. Sat across from agencies, founders and executive teams. We know what good advice looks like &mdash; and what survives Monday morning.</p></div>
 </section>
-<section><div class="wrap">
+<section class="window" data-pal="em"><div class="wrap">
+<div class="receipt" aria-label="How we have worked">
+<span class="stamp" data-stamp data-d="0">Operator first, advisor second.</span>
+<span class="stamp" data-stamp data-d="1">Fortune 100 to pre-launch, same standard.</span>
+<span class="stamp" data-stamp data-d="2">Names on request. Receipts below.</span>
+</div>
 <div class="flagship tilt rv" style="margin-bottom:64px"><div class="flagship-grid">
 <div class="flagship-copy"><span class="badge">From our Labs &middot; Live</span>
 <img class="logo" src="/assets/img/signl-logo.png" alt="SIGNL">
@@ -292,9 +297,9 @@ services = """
 <div class="shade"></div>
 <div class="wrap"><p class="kicker rv">The studio</p>
 <h1 class="rv">Whatever the medium. <span class="it">Make it matter.</span></h1>
-<p class="lede rv">We care more about what moves the business than what department it belongs to. Strategy, creative, growth and technology, practiced together by one small senior team.</p></div>
+<p class="lede rv"><span data-typer data-draft="We do a bit of everything." data-final="We do the right thing, in order.">We do the right thing, in order.</span> Strategy, creative, growth and technology, practiced together by one small senior team.</p></div>
 </section>
-<section><div class="wrap"><div class="grid2">
+<section class="window" data-pal="em"><div class="wrap"><div class="grid2">
 <div class="card rv" id="launch"><img class="thumb" src="/assets/img/img-launch.jpg" alt="A rocket launching at night over a beach crowd"><span class="num">Chapter 01</span><h3>Launch</h3><p>For things that don&rsquo;t exist yet, or haven&rsquo;t been introduced properly. Positioning, naming, brand identity, website, go-to-market and product launch &mdash; shaped as one arc, because launching something nobody has searched for yet is a different sport.</p></div>
 <div class="card rv" id="reinvent"><img class="thumb" src="/assets/img/img-reinvent.jpg" alt="Hands reworking a plan across a laptop and an open notebook"><span class="num">Chapter 02</span><h3>Reinvent</h3><p>For businesses that moved faster than their brand. Brand strategy, rebranding, messaging and website redesign that close the gap between what the business became and what the market still thinks it is &mdash; without starting from zero.</p></div>
 <div class="card rv" id="grow"><img class="thumb" src="/assets/img/img-grow.jpg" alt="A strategy table from above — laptops, tablets and live numbers"><span class="num">Chapter 03</span><h3>Grow</h3><p>Growth marketing with an owner. Paid media, SEO and AI search, ecommerce and Shopify growth, lifecycle and creator channels &mdash; run as one system against revenue, not separate campaigns reporting vanity numbers.</p></div>
@@ -346,7 +351,12 @@ labs = """
 <h1 class="rv">Things we build when <span class="it">nobody hired us to.</span></h1>
 <p class="lede rv">Labs is where the studio puts its own money where its advice is. One flagship product, live and operating. A small number of ventures behind it. Nothing else &mdash; a flagship only means something if most things aren&rsquo;t one.</p></div>
 </section>
-<section><div class="wrap">
+<section class="window" data-pal="signl"><div class="wrap">
+<div class="receipt" aria-label="Why Labs exists">
+<span class="stamp" data-stamp data-d="0">Advice is cheap.</span>
+<span class="stamp" data-stamp data-d="1">So we built the thing.</span>
+<span class="stamp" data-stamp data-d="2">Now we run it.</span>
+</div>
 <div class="flagship tilt rv"><div class="flagship-grid">
 <div class="flagship-copy"><span class="badge">00 &middot; Flagship &middot; Live</span>
 <img class="logo" src="/assets/img/signl-logo.png" alt="SIGNL">
@@ -399,7 +409,7 @@ signl = """
 <div><b data-count="500">500</b><span>Followers is enough</span></div>
 <div><b>$299&ndash;999</b><span>Published business plans / mo</span></div>
 </div></div></section>
-<section><div class="wrap"><div class="split">
+<section class="window" data-pal="signl"><div class="wrap"><div class="split">
 <div class="prose rv"><p class="kicker">The problem</p><h2 style="margin-bottom:20px">Influencer marketing <span class="it gtext">skipped local.</span></h2>
 <p>A neighborhood restaurant doesn&rsquo;t need a creator with two million followers in another state. It needs the 2,000 people within walking distance who decide where Friday night happens &mdash; and those people follow <b>neighbors, not influencers</b>.</p>
 <p>Meanwhile local creators with small, fiercely local audiences had no front door: brands couldn&rsquo;t find them, couldn&rsquo;t book them properly, and couldn&rsquo;t tell what a visit brought in.</p>
@@ -465,7 +475,7 @@ about = """
 <p>He founded Extra Medium to give ambitious businesses one senior partner who thinks like an owner, builds like a studio and measures like an operator. He leads every engagement personally, works from Virginia Beach, and travels regularly to Chicago and the UK.</p>
 <div class="cta-row"><a class="btn" href="https://www.linkedin.com/in/jeffrimmer">LinkedIn</a><a class="btn ink" href="/work/">See the work</a></div></div>
 </div></div></section>
-<section style="background:var(--bg2)"><div class="wrap">
+<section class="window" data-pal="em"><div class="wrap">
 <div class="sec-head rv"><p class="kicker">A word about the name</p><h2>Medium is a compliment <span class="it gtext">nobody wants.</span></h2>
 <p class="lede">We believe boring is a choice, and we don&rsquo;t make it. We believe extra isn&rsquo;t too much &mdash; it&rsquo;s the whole point. And great businesses are built when someone connects every medium together: brand and growth, story and intelligence, leadership and experience. The medium changes. The idea doesn&rsquo;t.</p></div>
 <div class="sec-head rv" style="margin-bottom:8px"><p class="kicker">How we work</p><h2>Principles, <span class="it gtext">not process decks.</span></h2></div>
@@ -492,9 +502,9 @@ contact = """
 <div class="shade"></div>
 <div class="wrap"><p class="kicker rv">Contact</p>
 <h1 class="rv">What are you trying to <span class="it">make happen?</span></h1>
-<p class="lede rv">A project, a bigger problem, a product of your own you want built the way we built SIGNL &mdash; or Labs business. All reasonable ways to start.</p></div>
+<p class="lede rv"><span data-typer data-draft="Send us a brief." data-final="Just start the conversation.">Just start the conversation.</span> A project, a bigger problem, a product of your own you want built the way we built SIGNL &mdash; or Labs business. All reasonable ways to start.</p></div>
 </section>
-<section><div class="wrap"><div class="split" style="align-items:start">
+<section class="window" data-pal="em"><div class="wrap"><div class="split" style="align-items:start">
 <div class="rv">
 <form class="lead" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/contact/?sent=1">
 <input type="hidden" name="form-name" value="contact"><p hidden><label>Don&rsquo;t fill this out: <input name="bot-field"></label></p>

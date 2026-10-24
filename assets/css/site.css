@@ -351,3 +351,5 @@ body.noanim section.window{background:linear-gradient(160deg,#ffe9d6,#ffd9e9)}
   .stack-card{position:static;margin-bottom:18px}
   .snack-panel{padding:32px 24px}
 }
+/* v7: typed-final gradient for correcting lines on subpages */
+.typed-final{font-family:var(--serif);font-style:italic;font-weight:500;background:linear-gradient(94deg,#ff7a18,#ff3d8a);-webkit-background-clip:text;background-clip:text;color:transparent}

@@ -35,6 +35,18 @@
   var burger=document.querySelector('.burger');
   if(burger){ burger.addEventListener('click',function(){ var open=document.body.classList.toggle('menu-open'); burger.setAttribute('aria-expanded',open?'true':'false'); burger.innerHTML=open?'&#10005;':'&#9776;'; }); }
   document.querySelectorAll('.menu a').forEach(function(a){ a.addEventListener('click',function(){ document.body.classList.remove('menu-open'); }); });
+
+  /* correcting lines (subpages): draft -> delete -> final */
+  document.querySelectorAll('[data-typer]').forEach(function(el){
+    if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var draft=el.getAttribute('data-draft'), fin=el.getAttribute('data-final');
+    if(!draft||!fin) return;
+    var started=false;
+    function del(t,done){ var i=t.length; (function d(){ i--; el.textContent=t.slice(0,i)||'\u00a0'; if(i>0){ setTimeout(d,24); } else { done(); } })(); }
+    function typ(t,done){ var i=0; (function tp(){ i++; el.textContent=t.slice(0,i); if(i<t.length){ setTimeout(tp,32); } else if(done){ done(); } })(); }
+    var ob=new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting&&!started){ started=true; el.textContent=draft; setTimeout(function(){ del(draft,function(){ el.classList.add('typed-final'); typ(fin); }); },750); ob.disconnect(); } }); },{threshold:.45});
+    ob.observe(el);
+  });
   /* Virginia Beach clock */
   var clock=document.getElementById('vbclock');
   function tickClock(){ try{ var t=new Date().toLocaleTimeString('en-US',{timeZone:'America/New_York',hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false}); document.querySelectorAll('.vbclock').forEach(function(el){el.textContent=t;}); }catch(e){} }
