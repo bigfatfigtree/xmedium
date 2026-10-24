@@ -34,6 +34,41 @@
   var burger=document.querySelector('.burger');
   if(burger){ burger.addEventListener('click',function(){ var open=document.body.classList.toggle('menu-open'); burger.setAttribute('aria-expanded',open?'true':'false'); burger.innerHTML=open?'&#10005;':'&#9776;'; }); }
   document.querySelectorAll('.menu a').forEach(function(a){ a.addEventListener('click',function(){ document.body.classList.remove('menu-open'); }); });
+/* THE SENTENCE: the hero corrects itself */
+var tw=document.getElementById('tw');
+if(tw&&!reduced){
+  var finalWord='un-ignorable.', draftWord='noticeable.';
+  tw.textContent=draftWord; tw.classList.remove('gtext'); tw.style.fontStyle='normal'; tw.classList.add('typing');
+  function delWord(txt,done){ var i=txt.length; (function d(){ i--; tw.textContent=txt.slice(0,i)||'\u00a0'; if(i>0){ setTimeout(d,34); } else { done(); } })(); }
+  function typeWord(txt,done){ var i=0; (function tp(){ i++; tw.textContent=txt.slice(0,i); if(i<txt.length){ setTimeout(tp,52); } else { done(); } })(); }
+  setTimeout(function(){ delWord(draftWord,function(){ tw.classList.add('gtext'); tw.style.fontStyle='italic'; typeWord(finalWord,function(){ tw.classList.remove('typing'); tw.classList.add('boom'); }); }); },1150);
+}
+/* IDEA SNACK dispenser */
+var snackBtn=document.getElementById('snackBtn'), snackCard=document.getElementById('snackCard');
+if(snackBtn&&snackCard){
+  var ideas=[
+    'Rename your loyalty program after your best customer. Watch what happens.',
+    'Put your worst review on a t-shirt. Sell it. People love a brand that can take a punch.',
+    'Your About page is where brands go to be boring. Rewrite it as a letter to one person.',
+    'Name a menu item after the regular who orders it most. Never take it off.',
+    'Stop posting your product. Post the moment right before your customer needs it.',
+    'Send your happiest customer a handwritten note with nothing to buy. Screenshot the reply. That is your ad.',
+    'Let customers name your next special and vote in public. Their friends become your reach.',
+    'Make your out-of-office reply so good people forward it. Most brands waste their funniest surface.',
+    'Print your first-ever terrible idea on the wall. Confidence is a brand asset.',
+    'Give one customer a skip-the-line-forever pass for a dollar. Film everyone reacting.'
+  ];
+  var lastIdea=-1;
+  snackBtn.addEventListener('click',function(){
+    var i; do{ i=Math.floor(Math.random()*ideas.length); }while(i===lastIdea); lastIdea=i;
+    document.getElementById('snackIdea').textContent=ideas[i];
+    var d=new Date().toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'});
+    document.getElementById('snackStamp').textContent='Dispensed by Extra Medium - '+d+' - No refunds on genius.';
+    snackCard.classList.remove('show'); void snackCard.offsetWidth; snackCard.classList.add('show');
+    if(window.__stirBurst){ var r=snackBtn.getBoundingClientRect(); window.__stirBurst(r.left+r.width/2,r.top+r.height/2); }
+    snackBtn.textContent='Dispense another';
+  });
+}
   /* Virginia Beach clock */
   var clock=document.getElementById('vbclock');
   function tickClock(){ try{ var t=new Date().toLocaleTimeString('en-US',{timeZone:'America/New_York',hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false}); document.querySelectorAll('.vbclock').forEach(function(el){el.textContent=t;}); }catch(e){} }
@@ -88,6 +123,7 @@
     card.addEventListener('mouseleave',function(){card.style.transform='';});
   });
   if(fine){
+
     /* glow + cursor ring + magnetic buttons */
     var ring=document.getElementById('cursor'), mx=innerWidth/2,my=innerHeight/2,rx=mx,ry=my;
     window.addEventListener('mousemove',function(e){
