@@ -7,13 +7,14 @@
 <meta property="og:type" content="website"><meta property="og:site_name" content="Extra Medium">
 <meta property="og:title" content="Contact | Extra Medium"><meta property="og:description" content="Start a conversation with Extra Medium — studio projects, fractional CMO, or Labs and SIGNL partnerships. Replies usually within one business day.">
 <meta property="og:url" content="https://xmedium.co/contact/">
-<meta name="theme-color" content="#07070d">
+<meta property="og:image" content="https://xmedium.co/assets/img/em-logo.png">
+<meta name="theme-color" content="#ff3d8a">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="stylesheet" href="/assets/css/site.css">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Extra Medium","legalName":"Extra Medium LLC","url":"https://xmedium.co/","email":"hello@xmedium.co","founder":{"@type":"Person","name":"Jeff Rimmer"},"address":{"@type":"PostalAddress","addressLocality":"Virginia Beach","addressRegion":"VA","addressCountry":"US"}}</script>
-</head><body><header class="site"><div class="wrap nav">
-<a class="brand" href="/">extra<em>medium</em></a>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;600;700;800&family=Instrument+Serif:ital@0;1&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Extra Medium","legalName":"Extra Medium LLC","url":"https://xmedium.co/","logo":"https://xmedium.co/assets/img/em-logo.png","email":"hello@xmedium.co","founder":{"@type":"Person","name":"Jeff Rimmer"},"address":{"@type":"PostalAddress","addressLocality":"Virginia Beach","addressRegion":"VA","addressCountry":"US"}}</script>
+</head><body><div id="progress"></div><div id="glow"></div><header class="site"><div class="wrap nav">
+<a class="brand" href="/"><img src="/assets/img/em-logo.png" alt="Extra Medium logo"><span>extra medium<small>Studio &amp; Labs</small></span></a>
 <button class="burger" aria-label="Menu" onclick="document.querySelector('.nav nav').classList.toggle('open')">&#9776;</button>
 <nav>
 <a href="/work/">Work</a>
@@ -22,13 +23,15 @@
 <a href="/about/">About</a>
 <a href="/contact/" class="btn small">Start a conversation</a>
 </nav></div></header>
-<section class="hero"><div class="wrap">
-<p class="kicker">Contact</p>
-<h1>What are you trying to <span>make happen?</span></h1>
-<p class="lede">A project, a bigger problem, a product of your own you want built the way we built SIGNL &mdash; or Labs business. All reasonable ways to start. Don&rsquo;t know what you need? Good. That&rsquo;s our job.</p>
-</div></section>
-<section style="padding-top:0"><div class="wrap"><div class="split" style="align-items:start">
-<div>
+<section class="hero-media" style="min-height:64svh">
+<img class="bg" src="/assets/img/cocktails-toast.jpg" alt="Friends toasting with cocktails">
+<div class="shade"></div>
+<div class="wrap"><p class="kicker rv">Contact</p>
+<h1 class="rv">What are you trying to <span class="it">make happen?</span></h1>
+<p class="lede rv">A project, a bigger problem, a product of your own you want built the way we built SIGNL &mdash; or Labs business. All reasonable ways to start.</p></div>
+</section>
+<section><div class="wrap"><div class="split" style="align-items:start">
+<div class="rv">
 <form class="lead" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/contact/?sent=1">
 <input type="hidden" name="form-name" value="contact"><p hidden><label>Don&rsquo;t fill this out: <input name="bot-field"></label></p>
 <div><label for="name">Your name</label><input id="name" name="name" required autocomplete="name"></div>
@@ -40,8 +43,9 @@
 <button class="btn" type="submit">Send it</button>
 <p class="note">Usually replies within one business day. If it&rsquo;s urgent, email <a href="mailto:hello@xmedium.co">hello@xmedium.co</a>.</p>
 </form></div>
-<div class="prose">
-<p class="kicker">Prefer email?</p><h2 style="margin-bottom:18px">hello@xmedium.co</h2>
+<div class="prose rv">
+<img src="/assets/img/em-logo.png" alt="Extra Medium logo" style="width:96px;height:96px;border-radius:22px;margin-bottom:24px">
+<p class="kicker">Prefer email?</p><h2 style="margin-bottom:18px">hello@<span class="gtext">xmedium.co</span></h2>
 <p><b>Studio</b> &mdash; launches, reinventions, growth systems, fractional leadership.</p>
 <p><b>Labs</b> &mdash; SIGNL partnerships, founding markets, venture collaborations.</p>
 <p>Virginia Beach (HQ) &middot; Chicago &middot; London. Most engagements run remotely, with in-person time when it matters.</p>
@@ -49,12 +53,14 @@
 </div>
 </div></div></section>
 <footer class="site"><div class="wrap">
+<a href="/contact/" style="text-decoration:none"><div class="foot-big">Let&rsquo;s make<br>something <span style="font-family:var(--serif);font-style:italic;font-weight:400">extra.</span></div></a>
 <div class="foot-grid">
-<div><a class="brand" href="/">extra<em>medium</em></a>
-<p style="color:var(--mut);margin-top:14px;max-width:32ch">A strategy, creative, growth and technology studio. We build businesses people can&rsquo;t ignore &mdash; for clients, and for ourselves.</p></div>
+<div><a class="brand" href="/"><img src="/assets/img/em-logo.png" alt="Extra Medium logo"><span>extra medium<small>Studio &amp; Labs</small></span></a>
+<p style="color:rgba(255,255,255,.85);margin-top:16px;max-width:32ch">A strategy, creative, growth and technology studio. We build businesses people can&rsquo;t ignore &mdash; for clients, and for ourselves.</p></div>
 <div><h4>Studio</h4><a href="/work/">Work</a><a href="/services/">What we do</a><a href="/about/">About</a><a href="/contact/">Contact</a></div>
 <div><h4>Labs</h4><a href="/labs/">Extra Medium Labs</a><a href="/labs/signl/">SIGNL &mdash; flagship</a><a href="https://joinsignl.com">joinsignl.com</a></div>
 <div><h4>Talk to us</h4><a href="mailto:hello@xmedium.co">hello@xmedium.co</a><a href="/contact/">Start a project</a><a href="https://www.linkedin.com/in/jeffrimmer">Jeff on LinkedIn</a></div>
 </div>
 <div class="foot-base"><span>&copy; 2026 Extra Medium LLC &middot; Virginia Beach &middot; Chicago &middot; London</span><span>SIGNL is a product of Extra Medium Labs.</span></div>
-</div></footer></body></html>
+</div></footer>
+<script src="/assets/js/site.js"></script></body></html>
