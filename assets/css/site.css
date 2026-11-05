@@ -508,3 +508,17 @@ h1,h2{font-family:var(--serif);font-weight:400;letter-spacing:-.01em}
 .vband h2{color:#fff8f0}
 .vband .kicker{color:var(--powder)}
 .band-window.vband{padding:150px 0}
+
+/* The Extra Idea — footer email capture (inside the finale, all pages) */
+.fin-idea{display:grid;grid-template-columns:1.1fr 1fr;gap:34px;align-items:center;padding:34px 0 6px;border-top:1px solid rgba(255,248,240,.25);margin-top:30px}
+.fin-idea-h{font-family:var(--serif);font-weight:400;font-size:2rem;color:#fff8f0;margin-bottom:8px}
+.fin-idea-txt p{color:rgba(255,248,240,.85);max-width:44ch}
+.idea-label{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.idea-row{display:flex;gap:10px}
+.idea-row input{flex:1;min-width:0;background:#fff8f0;border:none;border-radius:99px;padding:14px 20px;font:inherit;color:var(--ink)}
+.idea-row input::placeholder{color:rgba(42,18,32,.45)}
+.idea-btn{white-space:nowrap}
+.idea-micro{font-size:.82rem;color:rgba(255,248,240,.65);margin-top:10px}
+.idea-done{font-family:var(--serif);font-size:1.35rem;color:#fff8f0;padding:10px 0}
+@media(max-width:820px){.fin-idea{grid-template-columns:1fr}}
+@media(max-width:480px){.idea-row{flex-direction:column}.idea-btn{width:100%}}

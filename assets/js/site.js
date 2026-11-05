@@ -181,3 +181,18 @@ document.querySelectorAll('video[data-autoplay]').forEach(function(v){
   v.addEventListener('error',function(){ v.style.display='none'; },true);
   document.addEventListener('pointerdown',function h(){ tp(); document.removeEventListener('pointerdown',h); });
 });
+
+/* The Extra Idea: footer email capture — inline submit, stays on the page */
+(function(){
+  var form=document.querySelector('.idea-form'); if(!form) return;
+  var DONE='<p class="idea-done">You&rsquo;re in. First idea lands this week &mdash; steal it well.</p>';
+  if(/[?&]idea=1/.test(location.search)){ form.innerHTML=DONE; return; }
+  form.addEventListener('submit',function(ev){
+    ev.preventDefault();
+    var email=form.querySelector('input[name="email"]').value;
+    var body=new URLSearchParams(); body.set('form-name','extra-idea'); body.set('email',email); body.set('bot-field','');
+    fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:body.toString()})
+      .then(function(r){ form.innerHTML = r.ok ? DONE : '<p class="idea-done">Hmm, that didn&rsquo;t go through &mdash; try hello@xmedium.co instead.</p>'; })
+      .catch(function(){ form.innerHTML='<p class="idea-done">Hmm, that didn&rsquo;t go through &mdash; try hello@xmedium.co instead.</p>'; });
+  });
+})();
