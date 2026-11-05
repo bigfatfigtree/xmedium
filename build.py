@@ -129,22 +129,29 @@ MARQUEE = """<div class="marquee"><div>Launch <span>&bull;</span> <i>Reinvent</i
 
 # ============ HOMEPAGE ============
 home = """
-<section class="splash window" data-pal="em"><div class="calm splash-in">
-<div class="splash-word" aria-hidden="true">extra<br>medium<span class="dot">.</span></div>
-<p class="splash-cue">Scroll <span class="cue-arrow">&darr;</span></p>
+<section class="vhero" id="vhero"><div class="vhero-stage">
+<img class="vhero-poster" src="/assets/img/hero-poster.jpg" alt="" aria-hidden="true">
+<video id="heroVideo" muted loop playsinline autoplay preload="auto" aria-hidden="true"><source src="/assets/video/hero-montage.mp4" type="video/mp4"></video>
+<canvas id="heroCanvas" aria-hidden="true"></canvas>
+<div class="vhero-scrim" aria-hidden="true"></div>
+<div class="vhero-copy">
+<p class="vhero-kick">Extra Medium &middot; Studio &amp; Labs</p>
+<h1 class="vhero-h"><span class="vh-line vh-a">extra</span><span class="vh-line vh-b">medium<span class="dot">.</span></span></h1>
+<p class="vhero-sub">A strategy, creative, growth and technology studio &mdash; in motion, like everything we make.</p>
+</div>
 </div></section>
 <section class="mani window" data-pal="em"><div class="wrap"><div class="calm">
 <p class="kicker rv">Extra Medium &middot; Studio &amp; Labs</p>
-<h1 id="typer">We make businesses <span id="tw" class="it gtext">un-ignorable.</span></h1>
+<h2>We make businesses <span class="it gtext">un-ignorable.</span></h2>
 <p class="lede rv">A strategy, creative, growth and technology studio. We launch, reinvent and grow businesses &mdash; and we build our own products to prove we know how. Founder-led, senior-only, no theater.</p>
 <p class="def rv"><b>Extra Medium</b> is a founder-led creative studio and product lab in Virginia Beach, Virginia. We launch, reinvent and grow businesses &mdash; brand, creative, growth and technology under one roof &mdash; and through Extra Medium Labs we build and operate our own products, led by SIGNL, the local creator marketing platform.</p>
 <div class="facts rv"><span>Founded by Jeff Rimmer</span><span>20+ years, every side of the table</span><span>Chicago &middot; London</span><span>Clients: startups to Fortune 100</span></div>
-<p class="drag-hint rv">That sentence corrected itself. Keep scrolling &mdash; it gets better.</p>
 <div class="doors rv">
 <a class="door" href="/services/"><span class="door-k">The Studio</span><span class="door-t">Launch, reinvent &amp; grow your business</span><span class="door-a">&rarr;</span></a>
 <a class="door" href="/labs/"><span class="door-k">The Labs</span><span class="door-t">Products we build &amp; run ourselves</span><span class="door-a">&rarr;</span></a>
 </div>
 </div></div></section>
+<section class="strip" aria-hidden="true"><div class="strip-track"><img src="/assets/img/img-launch.jpg" alt="" loading="lazy"><img src="/assets/img/img-grow.jpg" alt="" loading="lazy"><img src="/assets/img/img-team.jpg" alt="" loading="lazy"><img src="/assets/img/img-experiences.jpg" alt="" loading="lazy"><img src="/assets/img/img-tokyo.jpg" alt="" loading="lazy"><img src="/assets/img/img-surfer.jpg" alt="" loading="lazy"><img src="/assets/img/img-skyline.jpg" alt="" loading="lazy"><img src="/assets/img/img-creator.jpg" alt="" loading="lazy"><img src="/assets/img/img-launch.jpg" alt="" loading="lazy"><img src="/assets/img/img-grow.jpg" alt="" loading="lazy"><img src="/assets/img/img-team.jpg" alt="" loading="lazy"><img src="/assets/img/img-experiences.jpg" alt="" loading="lazy"><img src="/assets/img/img-tokyo.jpg" alt="" loading="lazy"><img src="/assets/img/img-surfer.jpg" alt="" loading="lazy"><img src="/assets/img/img-skyline.jpg" alt="" loading="lazy"><img src="/assets/img/img-creator.jpg" alt="" loading="lazy"></div></section>
 <section class="window snack-hero" data-pal="em"><div class="wrap">
 <div class="snack-panel rv">
 <p class="kicker">Try us out &middot; Free</p>
@@ -172,7 +179,7 @@ home = """
 <span class="stamp" data-stamp data-d="4"><s class="strike">Influencers.</s> Neighbors.</span>
 </div>
 <article class="palcard rv">
-<div class="pal-media"><img src="/assets/img/img-creator.jpg" alt="A phone on a tripod, recording content"></div>
+<div class="pal-media"><img src="/assets/img/img-creator.jpg" alt="A creator setting up a phone on a tripod to record"><video class="palvid" data-autoplay muted loop playsinline preload="metadata" poster="/assets/img/img-creator.jpg" aria-hidden="true"><source src="/assets/video/signl-creator.mp4" type="video/mp4"></video></div>
 <div class="pal-cap">
 <div class="pal-name"><img class="logo" src="/assets/img/signl-logo.png" alt="SIGNL"><span class="pal-handle">@joinsignl &middot; live now &middot; founding markets forming</span></div>
 <h3 style="font-size:1.7rem;line-height:1.1">Local creator marketing, city by city.</h3>
@@ -213,7 +220,7 @@ home = """
 
 
 
-<div class="band-window window" data-pal="em"><div class="wrap"><p class="kicker">The name is the brief</p><h2 style="max-width:22ch">Boring is a choice. <span class="it">We don&rsquo;t make it.</span></h2></div></div>
+<div class="band-window vband window" data-pal="em"><video class="bandvid" data-autoplay muted loop playsinline preload="metadata" poster="/assets/img/img-launch.jpg" aria-hidden="true"><source src="/assets/video/concert.mp4" type="video/mp4"></video><div class="wrap"><p class="kicker">The name is the brief</p><h2 style="max-width:22ch">Boring is a choice. <span class="it">We don&rsquo;t make it.</span></h2></div></div>
 
 <section><div class="wrap"><div class="split">
 <div class="rv"><img class="round" src="/assets/img/jeff-rimmer.jpg" alt="Jeff Rimmer, founder of Extra Medium"></div>
@@ -298,7 +305,7 @@ services = """
 <div class="shade"></div>
 <div class="wrap"><p class="kicker rv">The studio</p>
 <h1 class="rv">Whatever the medium. <span class="it">Make it matter.</span></h1>
-<p class="lede rv"><span data-typer data-draft="We do a bit of everything." data-final="We do the right thing, in order.">We do the right thing, in order.</span> Strategy, creative, growth and technology, practiced together by one small senior team.</p></div>
+<p class="lede rv"><span class="typed-final">We do the right thing, in order.</span> Strategy, creative, growth and technology, practiced together by one small senior team.</p></div>
 </section>
 <section class="window" data-pal="em"><div class="wrap"><div class="grid2">
 <div class="card rv" id="launch"><img class="thumb" src="/assets/img/img-launch.jpg" alt="A rocket launching at night over a beach crowd"><span class="num">Chapter 01</span><h3>Launch</h3><p>For things that don&rsquo;t exist yet, or haven&rsquo;t been introduced properly. Positioning, naming, brand identity, website, go-to-market and product launch &mdash; shaped as one arc, because launching something nobody has searched for yet is a different sport.</p></div>
@@ -503,7 +510,7 @@ contact = """
 <div class="shade"></div>
 <div class="wrap"><p class="kicker rv">Contact</p>
 <h1 class="rv">What are you trying to <span class="it">make happen?</span></h1>
-<p class="lede rv"><span data-typer data-draft="Send us a brief." data-final="Just start the conversation.">Just start the conversation.</span> A project, a bigger problem, a product of your own you want built the way we built SIGNL &mdash; or Labs business. All reasonable ways to start.</p></div>
+<p class="lede rv"><span class="typed-final">Just start the conversation.</span> A project, a bigger problem, a product of your own you want built the way we built SIGNL &mdash; or Labs business. All reasonable ways to start.</p></div>
 </section>
 <section class="window" data-pal="em"><div class="wrap"><div class="split" style="align-items:start">
 <div class="rv">

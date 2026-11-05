@@ -36,17 +36,6 @@
   if(burger){ burger.addEventListener('click',function(){ var open=document.body.classList.toggle('menu-open'); burger.setAttribute('aria-expanded',open?'true':'false'); burger.innerHTML=open?'&#10005;':'&#9776;'; }); }
   document.querySelectorAll('.menu a').forEach(function(a){ a.addEventListener('click',function(){ document.body.classList.remove('menu-open'); }); });
 
-  /* correcting lines (subpages): draft -> delete -> final */
-  document.querySelectorAll('[data-typer]').forEach(function(el){
-    if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    var draft=el.getAttribute('data-draft'), fin=el.getAttribute('data-final');
-    if(!draft||!fin) return;
-    var started=false;
-    function del(t,done){ var i=t.length; (function d(){ i--; el.textContent=t.slice(0,i)||'\u00a0'; if(i>0){ setTimeout(d,24); } else { done(); } })(); }
-    function typ(t,done){ var i=0; (function tp(){ i++; el.textContent=t.slice(0,i); if(i<t.length){ setTimeout(tp,32); } else if(done){ done(); } })(); }
-    var ob=new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting&&!started){ started=true; el.textContent=draft; setTimeout(function(){ del(draft,function(){ el.classList.add('typed-final'); typ(fin); }); },750); ob.disconnect(); } }); },{threshold:.45});
-    ob.observe(el);
-  });
   /* Virginia Beach clock */
   var clock=document.getElementById('vbclock');
   function tickClock(){ try{ var t=new Date().toLocaleTimeString('en-US',{timeZone:'America/New_York',hour:'2-digit',minute:'2-digit',second:'2-digit',hour12:false}); document.querySelectorAll('.vbclock').forEach(function(el){el.textContent=t;}); }catch(e){} }
@@ -68,18 +57,6 @@
       el.textContent=Math.round(target*e)+suf; if(p<1) requestAnimationFrame(step); }
     requestAnimationFrame(step);
   }
-/* THE SENTENCE: the hero corrects itself */
-var tw=document.getElementById('tw');
-if(tw&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
-  var finalWord='un-ignorable.', draftWord='noticeable.';
-  tw.textContent=draftWord; tw.classList.remove('gtext'); tw.style.fontStyle='normal'; tw.classList.add('typing');
-  function delWord(txt,done){ var i=txt.length; (function d(){ i--; tw.textContent=txt.slice(0,i)||'\u00a0'; if(i>0){ setTimeout(d,34); } else { done(); } })(); }
-  function typeWord(txt,done){ var i=0; (function tp(){ i++; tw.textContent=txt.slice(0,i); if(i<txt.length){ setTimeout(tp,52); } else { done(); } })(); }
-  var sentenceStarted=false;
-  function startSentence(){ if(sentenceStarted) return; sentenceStarted=true; delWord(draftWord,function(){ tw.classList.add('gtext'); tw.style.fontStyle='italic'; typeWord(finalWord,function(){ tw.classList.remove('typing'); tw.classList.add('boom'); }); }); }
-  if('IntersectionObserver' in window){ var sob=new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ sob.disconnect(); setTimeout(startSentence,350); } }); },{threshold:.35}); sob.observe(tw); setTimeout(startSentence,9000); }
-  else { setTimeout(startSentence,1150); }
-}
 /* IDEA SNACK dispenser */
 var snackBtn=document.getElementById('snackBtn'), snackCard=document.getElementById('snackCard');
 if(snackBtn&&snackCard){
@@ -161,3 +138,46 @@ if(snackBtn&&snackCard){
     document.querySelectorAll('.rv').forEach(function(el){el.classList.add('in');});
   }
 })();
+
+/* V11 HERO: one montage video, canvas slices that break apart on scroll */
+(function(){
+  var wrap=document.getElementById('vhero'); if(!wrap) return;
+  var stage=wrap.querySelector('.vhero-stage'), canvas=document.getElementById('heroCanvas'), vid=document.getElementById('heroVideo');
+  var lineA=wrap.querySelector('.vh-a'), lineB=wrap.querySelector('.vh-b'), copy=wrap.querySelector('.vhero-copy');
+  var reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function tryPlay(){ try{ vid.muted=true; var pr=vid.play(); if(pr&&pr.catch) pr.catch(function(){}); }catch(e){} }
+  if(!reduced){ tryPlay(); vid.addEventListener('canplay',tryPlay); document.addEventListener('pointerdown',function h(){ tryPlay(); document.removeEventListener('pointerdown',h); }); }
+  if(!canvas||!canvas.getContext) return;
+  var ctx=canvas.getContext('2d'), W=0, H=0, DPR=1;
+  function size(){ DPR=Math.min(window.devicePixelRatio||1,1.5); W=stage.clientWidth; H=stage.clientHeight; canvas.width=Math.round(W*DPR); canvas.height=Math.round(H*DPR); }
+  size(); window.addEventListener('resize',size);
+  var STRIPS=6, dirs=[1,-0.7,0.55,-0.9,0.75,-1], visible=true, raf=null;
+  function ease(p){ return p*p*(3-2*p); }
+  function draw(){
+    raf=null; if(!visible) return;
+    var r=wrap.getBoundingClientRect(), total=wrap.offsetHeight-window.innerHeight;
+    var p=total>0?(-r.top/total):0; p=p<0?0:p>1?1:p; p=reduced?0:ease(p);
+    if(lineA){ lineA.style.transform='translateY('+(-p*84)+'px)'; lineB.style.transform='translateY('+(p*84)+'px)'; copy.style.opacity=Math.max(0,1-p*1.6); }
+    ctx.setTransform(DPR,0,0,DPR,0,0); ctx.clearRect(0,0,W,H);
+    if(vid.readyState>=2){
+      var vw=vid.videoWidth||1280, vh=vid.videoHeight||720, s=Math.max(W/vw,H/vh), dw=vw*s, dh=vh*s, ox=(W-dw)/2, oy=(H-dh)/2, sw=vw/STRIPS, sdw=dw/STRIPS;
+      ctx.globalAlpha=1-p*0.22;
+      for(var i=0;i<STRIPS;i++){ ctx.drawImage(vid, i*sw,0,sw,vh, ox+i*sdw+(i-(STRIPS-1)/2)*p*16, oy+dirs[i]*p*H*0.17, sdw+0.6, dh); }
+      ctx.globalAlpha=1;
+    }
+    raf=requestAnimationFrame(draw);
+  }
+  function kick(){ if(raf===null&&visible) raf=requestAnimationFrame(draw); }
+  if('IntersectionObserver' in window){ new IntersectionObserver(function(es){ es.forEach(function(en){ visible=en.isIntersecting; if(visible) kick(); }); }).observe(wrap); }
+  document.addEventListener('visibilitychange',function(){ visible=!document.hidden; if(visible) kick(); });
+  window.addEventListener('scroll',kick,{passive:true});
+  kick();
+})();
+/* V11: harden every background video (SIGNL card, concert band) */
+document.querySelectorAll('video[data-autoplay]').forEach(function(v){
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  function tp(){ try{ v.muted=true; var pr=v.play(); if(pr&&pr.catch) pr.catch(function(){}); }catch(e){} }
+  tp(); v.addEventListener('canplay',tp);
+  v.addEventListener('error',function(){ v.style.display='none'; },true);
+  document.addEventListener('pointerdown',function h(){ tp(); document.removeEventListener('pointerdown',h); });
+});
