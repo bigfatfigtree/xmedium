@@ -96,11 +96,11 @@ FOOTER = """<footer class="finale"><div class="wrap">
 <div class="fin-word" aria-hidden="true">extra medium</div>
 <div class="fin-base"><span>&copy; 2026 Extra Medium LLC &middot; Virginia Beach &middot; Chicago &middot; London</span><span>SIGNL is a product of Extra Medium Labs.</span></div>
 </div></footer>
-<script src="/assets/js/stir.js" defer></script><script src="/assets/js/site.js"></script></body></html>"""
+<script src="/assets/js/site.js"></script></body></html>"""
 
 def page(title, desc, path, on, body, extra_ld=""):
     pal = "signl" if path.startswith("/labs") else "em"
-    canvas = '<canvas id="field" data-pal="' + pal + '" aria-hidden="true"></canvas>'
+    canvas = ''  # v10: pigment retired — flat cream, Palette-true
     html = head(title, desc, path, extra_ld) + header(on) + canvas + body + FOOTER
     out = ROOT / (path.strip("/") + "/index.html" if path.strip("/") else "index.html")
     out.parent.mkdir(parents=True, exist_ok=True)

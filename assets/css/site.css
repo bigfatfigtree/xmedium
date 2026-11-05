@@ -442,3 +442,36 @@ h1,h2{font-family:var(--serif);font-weight:400;letter-spacing:-.01em}
 @media(max-width:480px){.mani .facts span{font-size:.78rem;padding:6px 12px}}
 .finale .brand img{height:46px;width:auto}
 @media(max-width:900px){.fin-brand{grid-column:1/-1}}
+
+/* ================= v10: PALETTE-TRUE — cream, powder blue, ink, royal finale. Orange-pink system retired. ================= */
+:root{--powder:#a9c9ee;--steel:#5b84c4;--royal:#2238e6}
+#progress{background:var(--royal)}
+.kicker,.tag{color:var(--steel)}
+.gtext{background:none;color:#7aa7e0;-webkit-text-fill-color:#7aa7e0}
+.btn{background:var(--ink);color:#fff8f0;box-shadow:0 18px 34px -16px rgba(42,18,32,.45)}
+.card .arrow{background:none;color:var(--royal);-webkit-text-fill-color:var(--royal)}
+.stats div b{background:none;color:var(--royal);-webkit-text-fill-color:var(--royal)}
+/* splash: one flat color, empty room */
+.splash-word{background:none;color:var(--powder);-webkit-text-fill-color:var(--powder)}
+.splash-cue{color:var(--ink)}
+/* manifesto + doors */
+.door-k{color:var(--steel)}
+.drag-hint{border-color:rgba(42,18,32,.45);color:var(--ink)}
+/* menu + marquee */
+.menu{background:var(--royal)}
+.marquee{background:var(--bg);color:var(--ink);border-top:1.5px solid var(--ink);border-bottom:1.5px solid var(--ink)}
+/* offers: from gradient block to quiet cream */
+.grad-sec{background:var(--bg2);color:var(--ink)}
+.grad-sec h2,.grad-sec .lede,.grad-sec p{color:var(--ink)}
+.grad-sec .kicker{color:var(--steel)}
+.grad-sec .stats div b{color:var(--royal);-webkit-text-fill-color:var(--royal)}
+.grad-sec .stats div span{color:var(--mut)}
+.sc-row.xl{background:var(--ink);color:#fff8f0;box-shadow:0 24px 44px -22px rgba(42,18,32,.5)}
+/* subpage CTA band: the blue moment */
+.band{background:var(--royal)}
+/* snack machine in the new palette */
+.snack-panel{background:#fff;border:1.5px solid var(--ink);box-shadow:0 30px 60px -30px rgba(42,18,32,.28)}
+.snack-slot{background:var(--powder);box-shadow:none}
+/* finale: flat royal, powder word */
+.finale{background:var(--royal)}
+.fin-word{color:var(--powder)}
