@@ -131,7 +131,7 @@ MARQUEE = """<div class="marquee"><div>Launch <span>&bull;</span> <i>Reinvent</i
 home = """
 <section class="vhero" id="vhero"><div class="vhero-stage">
 <img class="vhero-poster" src="/assets/img/hero-poster.jpg" alt="" aria-hidden="true">
-<video id="heroVideo" muted loop playsinline autoplay preload="auto" aria-hidden="true"><source src="/assets/video/hero-montage.mp4" type="video/mp4"></video>
+<video id="heroVideo" muted loop playsinline autoplay preload="auto" aria-hidden="true"><source src="/assets/video/hero-montage-v2.mp4" type="video/mp4"></video>
 <canvas id="heroCanvas" aria-hidden="true"></canvas>
 <div class="vhero-scrim" aria-hidden="true"></div>
 <div class="vhero-copy">
