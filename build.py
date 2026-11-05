@@ -131,7 +131,7 @@ MARQUEE = """<div class="marquee"><div>Launch <span>&bull;</span> <i>Reinvent</i
 home = """
 <section class="splash window" data-pal="em"><div class="calm splash-in">
 <div class="splash-word" aria-hidden="true">extra<br>medium<span class="dot">.</span></div>
-<p class="splash-cue">Scroll &mdash; the page is alive <span class="cue-arrow">&darr;</span></p>
+<p class="splash-cue">Scroll <span class="cue-arrow">&darr;</span></p>
 </div></section>
 <section class="mani window" data-pal="em"><div class="wrap"><div class="calm">
 <p class="kicker rv">Extra Medium &middot; Studio &amp; Labs</p>
@@ -139,7 +139,7 @@ home = """
 <p class="lede rv">A strategy, creative, growth and technology studio. We launch, reinvent and grow businesses &mdash; and we build our own products to prove we know how. Founder-led, senior-only, no theater.</p>
 <p class="def rv"><b>Extra Medium</b> is a founder-led creative studio and product lab in Virginia Beach, Virginia. We launch, reinvent and grow businesses &mdash; brand, creative, growth and technology under one roof &mdash; and through Extra Medium Labs we build and operate our own products, led by SIGNL, the local creator marketing platform.</p>
 <div class="facts rv"><span>Founded by Jeff Rimmer</span><span>20+ years, every side of the table</span><span>Chicago &middot; London</span><span>Clients: startups to Fortune 100</span></div>
-<p class="drag-hint rv">This page is alive &mdash; tap it, drag it, scroll fast. It reacts.</p>
+<p class="drag-hint rv">That sentence corrected itself. Keep scrolling &mdash; it gets better.</p>
 <div class="doors rv">
 <a class="door" href="/services/"><span class="door-k">The Studio</span><span class="door-t">Launch, reinvent &amp; grow your business</span><span class="door-a">&rarr;</span></a>
 <a class="door" href="/labs/"><span class="door-k">The Labs</span><span class="door-t">Products we build &amp; run ourselves</span><span class="door-a">&rarr;</span></a>
