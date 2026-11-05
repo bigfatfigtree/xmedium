@@ -436,3 +436,8 @@ h1,h2{font-family:var(--serif);font-weight:400;letter-spacing:-.01em}
   .pal-cap{padding:28px 24px 32px}
   .mani{padding:80px 0 64px}
 }
+/* v9.1: facts become pills in the manifesto; footer brand lockup gets room */
+.mani .facts{gap:10px}
+.mani .facts span{border:1px solid var(--line);background:#fff;border-radius:99px;padding:7px 15px;font-size:.86rem}
+.finale .brand img{height:46px;width:auto}
+@media(max-width:900px){.fin-brand{grid-column:1/-1}}
