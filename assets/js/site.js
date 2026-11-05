@@ -75,7 +75,10 @@ if(tw&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
   tw.textContent=draftWord; tw.classList.remove('gtext'); tw.style.fontStyle='normal'; tw.classList.add('typing');
   function delWord(txt,done){ var i=txt.length; (function d(){ i--; tw.textContent=txt.slice(0,i)||'\u00a0'; if(i>0){ setTimeout(d,34); } else { done(); } })(); }
   function typeWord(txt,done){ var i=0; (function tp(){ i++; tw.textContent=txt.slice(0,i); if(i<txt.length){ setTimeout(tp,52); } else { done(); } })(); }
-  setTimeout(function(){ delWord(draftWord,function(){ tw.classList.add('gtext'); tw.style.fontStyle='italic'; typeWord(finalWord,function(){ tw.classList.remove('typing'); tw.classList.add('boom'); }); }); },1150);
+  var sentenceStarted=false;
+  function startSentence(){ if(sentenceStarted) return; sentenceStarted=true; delWord(draftWord,function(){ tw.classList.add('gtext'); tw.style.fontStyle='italic'; typeWord(finalWord,function(){ tw.classList.remove('typing'); tw.classList.add('boom'); }); }); }
+  if('IntersectionObserver' in window){ var sob=new IntersectionObserver(function(es){ es.forEach(function(en){ if(en.isIntersecting){ sob.disconnect(); setTimeout(startSentence,350); } }); },{threshold:.35}); sob.observe(tw); setTimeout(startSentence,9000); }
+  else { setTimeout(startSentence,1150); }
 }
 /* IDEA SNACK dispenser */
 var snackBtn=document.getElementById('snackBtn'), snackCard=document.getElementById('snackCard');

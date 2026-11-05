@@ -368,3 +368,71 @@ body.noanim section.window{background:linear-gradient(160deg,#ffe9d6,#ffd9e9)}
 /* v8.1: mobile polish — kill sideways leak, gentler reveals on small screens */
 html,body{overflow-x:clip}
 @media(max-width:900px){body.rv-on .rv{transform:translateY(16px);filter:blur(2px);transition:opacity .55s ease,transform .55s ease,filter .55s ease}}
+
+/* ================= v9: THE QUIET LOUD (Palette-inspired flow, EM identity) ================= */
+h1,h2{font-family:var(--serif);font-weight:400;letter-spacing:-.01em}
+/* splash: one word, nothing else */
+.splash{min-height:calc(100svh - 84px);display:grid;place-items:center;text-align:center;padding:40px 20px 64px}
+.splash-word{font-family:var(--serif);font-size:clamp(4.6rem,16.5vw,15rem);line-height:.94;letter-spacing:-.015em;background:linear-gradient(96deg,#ff7a18 10%,#ff3d8a 60%,#c86bff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.splash-word .dot{-webkit-text-fill-color:#ff7a18;color:#ff7a18}
+.splash-cue{margin-top:44px;font-family:var(--mono);font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+.cue-arrow{display:inline-block;animation:cuebob 1.8s ease-in-out infinite}
+@keyframes cuebob{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
+/* manifesto: narrow, centered, quiet */
+.mani{padding:110px 0 84px}
+.mani .wrap>.calm,.mani .calm{max-width:700px;margin:0 auto;text-align:center}
+.mani h1{font-size:clamp(2.7rem,6.2vw,4.7rem);line-height:1.03;margin:14px 0 22px}
+.mani .lede{font-size:1.22rem;line-height:1.6}
+.mani .def{font-size:1.02rem;line-height:1.78;color:var(--muted);margin-top:26px}
+.mani .facts{justify-content:center;margin-top:30px}
+.mani .drag-hint{margin:26px auto 0}
+.doors{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:56px;text-align:left}
+.door{display:block;border-top:2px solid var(--ink);padding:16px 34px 6px 0;position:relative;text-decoration:none;color:inherit}
+.door-k{display:block;font-family:var(--mono);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:#ff3d8a;margin-bottom:8px}
+.door-t{font-family:var(--serif);font-size:1.42rem;line-height:1.2}
+.door-a{position:absolute;right:2px;top:16px;font-size:1.3rem;transition:transform .3s ease}
+.door:hover .door-a{transform:translateX(6px)}
+.door:hover .door-t{text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:1px}
+/* centered section heads + receipt */
+.sec-head.center{margin-left:auto;margin-right:auto;text-align:center}
+.sec-head.center .lede{margin-left:auto;margin-right:auto}
+.receipt.center{text-align:center}
+/* roster: SIGNL as the pal card */
+.palcard{background:#fff;border:1px solid var(--line);border-radius:30px;overflow:hidden;box-shadow:0 44px 90px -42px rgba(42,18,32,.35);max-width:880px;margin:0 auto}
+.pal-media img{width:100%;height:min(50vh,460px);object-fit:cover;display:block}
+.pal-cap{padding:38px 42px 44px}
+.pal-name{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.pal-name .logo{height:42px;width:auto}
+.pal-handle{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.pal-cap h3{font-size:1.85rem;line-height:1.12;margin:20px 0 10px}
+.pal-cap p{max-width:56ch}
+/* roster: work cards */
+.roster{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.rcard{background:#fff;border:1px solid var(--line);border-radius:24px;overflow:hidden;text-decoration:none;color:inherit;display:block;transition:transform .35s ease,box-shadow .35s ease}
+.rcard:hover{transform:translateY(-5px);box-shadow:0 34px 60px -30px rgba(42,18,32,.35)}
+.rcard-media img{width:100%;height:190px;object-fit:cover;display:block}
+.rcard-cap{padding:22px 24px 26px}
+.rcard h3{font-size:1.28rem;line-height:1.24;margin:9px 0 8px}
+.rcard-cap p{color:var(--muted);font-size:.98rem;line-height:1.55}
+/* finale footer: the one loud moment */
+.finale{background:linear-gradient(128deg,#ff7a18,#ff3d8a 55%,#c86bff);color:#fff8f0;padding:80px 0 30px;position:relative;z-index:1;margin-top:40px}
+.fin-top{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;border-bottom:1px solid rgba(255,248,240,.35);padding-bottom:26px}
+.fin-cta{font-family:var(--serif);font-size:clamp(1.8rem,3.6vw,2.7rem);color:#fff;text-decoration:none;line-height:1.05}
+.fin-cta:hover{text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:1px}
+.fin-clock{font-family:var(--mono);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,248,240,.85)}
+.fin-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:34px;padding:42px 0 6px}
+.fin-grid h4{font-family:var(--mono);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,248,240,.72);margin-bottom:14px;font-weight:500}
+.fin-grid a{display:block;color:#fff8f0;text-decoration:none;padding:5px 0;font-size:1.02rem}
+.fin-grid a:hover{text-decoration:underline;text-underline-offset:4px}
+.fin-brand p{color:rgba(255,248,240,.88);max-width:34ch;margin-top:16px;line-height:1.6}
+.finale .brand{color:#fff8f0}
+.finale .brand small{color:rgba(255,248,240,.8)}
+.fin-word{font-family:var(--serif);font-size:clamp(3.6rem,12.8vw,12.5rem);line-height:1;text-align:center;color:rgba(255,248,240,.38);white-space:nowrap;margin-top:30px;letter-spacing:-.01em}
+.fin-base{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:.8rem;color:rgba(255,248,240,.78);border-top:1px solid rgba(255,248,240,.3);padding-top:18px;margin-top:16px}
+@media(max-width:900px){
+  .doors{grid-template-columns:1fr}
+  .roster{grid-template-columns:1fr}
+  .fin-grid{grid-template-columns:1fr 1fr}
+  .pal-cap{padding:28px 24px 32px}
+  .mani{padding:80px 0 64px}
+}
