@@ -460,7 +460,7 @@ page("SIGNL — Flagship Product of Extra Medium Labs",
 {"@context":"https://schema.org","@type":"Article","headline":"SIGNL — Flagship Product of Extra Medium Labs",
 "description":"SIGNL is the live local creator marketing platform built and operated by Extra Medium Labs: local businesses comp or pay local creators to visit and post honestly, every visit tracked.",
 "author":{"@id":"https://xmedium.co/#jeff"},"publisher":{"@id":"https://xmedium.co/#org"},
-"datePublished":"2026-10-23","dateModified":"2026-10-23","mainEntityOfPage":"https://xmedium.co/labs/signl/",
+"datePublished":"2026-10-23","dateModified":"2026-11-04","mainEntityOfPage":"https://xmedium.co/labs/signl/",
 "image":"https://xmedium.co/assets/img/em-logo.png",
 "about":{"@type":"SoftwareApplication","name":"SIGNL","applicationCategory":"BusinessApplication","url":"https://joinsignl.com","creator":{"@id":"https://xmedium.co/#org"}}}
 </script>""" + crumb_ld([("Home", "/"), ("Labs", "/labs/"), ("SIGNL", "/labs/signl/")]))
