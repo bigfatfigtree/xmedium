@@ -1,0 +1,157 @@
+{
+ "collage-home": {
+  "pieces": [
+   {
+    "file": "collage-home-s1.webp",
+    "dx": 18,
+    "dy": -58,
+    "rot": 6,
+    "frac": 0.055
+   },
+   {
+    "file": "collage-home-s2.webp",
+    "dx": -46,
+    "dy": 2,
+    "rot": -3,
+    "frac": 0.13
+   },
+   {
+    "file": "collage-home-s3.webp",
+    "dx": 26,
+    "dy": 56,
+    "rot": -6,
+    "frac": 0.069
+   }
+  ],
+  "rest": "collage-home-rest.webp",
+  "bg": "collage-home-bg.jpg"
+ },
+ "collage-labs": {
+  "pieces": [
+   {
+    "file": "collage-labs-s1.webp",
+    "dx": -68,
+    "dy": 20,
+    "rot": -6,
+    "frac": 0.055
+   },
+   {
+    "file": "collage-labs-s2.webp",
+    "dx": -4,
+    "dy": -54,
+    "rot": 3,
+    "frac": 0.135
+   },
+   {
+    "file": "collage-labs-s3.webp",
+    "dx": 66,
+    "dy": 28,
+    "rot": 8,
+    "frac": 0.088
+   }
+  ],
+  "rest": "collage-labs-rest.webp",
+  "bg": "collage-labs-bg.jpg"
+ },
+ "collage-cmo": {
+  "pieces": [
+   {
+    "file": "collage-cmo-p1.webp",
+    "dx": 60,
+    "dy": 15,
+    "rot": 5,
+    "frac": 0.139
+   },
+   {
+    "file": "collage-cmo-p2.webp",
+    "dx": -85,
+    "dy": -3,
+    "rot": -8,
+    "frac": 0.044
+   }
+  ],
+  "rest": "collage-cmo-rest.webp",
+  "bg": "collage-cmo-bg.jpg"
+ },
+ "collage-work": {
+  "pieces": [
+   {
+    "file": "collage-work-p1.webp",
+    "dx": -56,
+    "dy": 32,
+    "rot": 5,
+    "frac": 0.117
+   },
+   {
+    "file": "collage-work-p2.webp",
+    "dx": 76,
+    "dy": -17,
+    "rot": -8,
+    "frac": 0.073
+   },
+   {
+    "file": "collage-work-p3.webp",
+    "dx": -64,
+    "dy": -43,
+    "rot": 5,
+    "frac": 0.053
+   }
+  ],
+  "rest": "collage-work-rest.webp",
+  "bg": "collage-work-bg.jpg"
+ },
+ "collage-about": {
+  "pieces": [
+   {
+    "file": "collage-about-s1.webp",
+    "dx": -30,
+    "dy": -56,
+    "rot": -5,
+    "frac": 0.116
+   },
+   {
+    "file": "collage-about-s2.webp",
+    "dx": 58,
+    "dy": -4,
+    "rot": 6,
+    "frac": 0.044
+   },
+   {
+    "file": "collage-about-s3.webp",
+    "dx": -22,
+    "dy": 58,
+    "rot": 4,
+    "frac": 0.09
+   }
+  ],
+  "rest": "collage-about-rest.webp",
+  "bg": "collage-about-bg.jpg"
+ },
+ "collage-contact": {
+  "pieces": [
+   {
+    "file": "collage-contact-s1.webp",
+    "dx": -56,
+    "dy": -18,
+    "rot": -6,
+    "frac": 0.218
+   },
+   {
+    "file": "collage-contact-s2.webp",
+    "dx": 58,
+    "dy": 20,
+    "rot": 7,
+    "frac": 0.029
+   },
+   {
+    "file": "collage-contact-p2.webp",
+    "dx": 62,
+    "dy": 49,
+    "rot": -8,
+    "frac": 0.041
+   }
+  ],
+  "rest": "collage-contact-rest.webp",
+  "bg": "collage-contact-bg.jpg"
+ }
+}

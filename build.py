@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Extra Medium v12 — "Collage": B&W photography over flat color, animated.
 Edit content here, run `python3 build.py`, commit the output."""
-import pathlib
+import pathlib, re
 ROOT = pathlib.Path(__file__).parent
 
 FONTS = '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">'
@@ -54,7 +54,7 @@ def head(title, desc, path, extra_ld=""):
 <meta name="twitter:image" content="https://xmedium.co/assets/img/og-collage.jpg">
 <meta name="theme-color" content="#f5f1ea">
 <link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="stylesheet" href="/assets/css/site.css">
+<link rel="stylesheet" href="/assets/css/site.css?v=14">
 {FONTS}
 {ORG_LD}
 {extra_ld}
@@ -111,9 +111,26 @@ FOOTER = """<footer class="finale">
 <div class="fin-base"><span>&copy; 2026 Extra Medium LLC &middot; Virginia Beach &middot; Chicago &middot; London</span><span class="fin-clock">Virginia Beach <span class="vbclock">--:--</span> ET</span><span>Magpie is a product of Extra Medium Labs.</span></div>
 </div></div>
 </footer>
-<script src="/assets/js/site.js"></script></body></html>"""
+<script src="/assets/js/site.js?v=14"></script></body></html>"""
+
+
+import json as _json, os as _os
+LAYERS = _json.load(open(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), "layers.json")))
+
+def layers_fig(key, alt):
+    m = LAYERS[key]
+    parts = ['<figure class="frame bleed rv"><div class="layers" data-layers>']
+    parts.append(f'<img class="lbg" src="/assets/img/{m["bg"]}" alt="" aria-hidden="true">')
+    parts.append(f'<img class="lrest" src="/assets/img/{m["rest"]}" alt="" aria-hidden="true">')
+    for i, pc in enumerate(m["pieces"]):
+        a = alt if i == 0 else ""
+        h = "" if i == 0 else ' aria-hidden="true"'
+        parts.append(f'<img class="lp" src="/assets/img/{pc["file"]}" data-dx="{pc["dx"]}" data-dy="{pc["dy"]}" data-rot="{pc["rot"]}" alt="{a}"{h}>')
+    parts.append("</div></figure>")
+    return "".join(parts)
 
 def page(title, desc, path, on, body, extra_ld=""):
+    body = re.sub(r"\[\[layers:([a-z-]+)\|([^\]]*)\]\]", lambda m: layers_fig(m.group(1), m.group(2)), body)
     html = head(title, desc, path, extra_ld) + header(on) + body + FOOTER
     out = ROOT / (path.strip("/") + "/index.html" if path.strip("/") else "index.html")
     out.parent.mkdir(parents=True, exist_ok=True)
@@ -140,7 +157,7 @@ home = """
 <div class="btns rv"><a class="btn p" href="/contact/">Start a project</a><a class="btn" href="/work/">See the work</a></div>
 <div style="position:relative">
 """ + BADGE + """
-<figure class="frame bleed rv"><div class="layers" data-layers><img class="lbg" src="/assets/img/collage-home-bg.jpg" alt="" aria-hidden="true"><img class="lfg" src="/assets/img/collage-home-fg.webp" alt="Black and white collage of a marble statue head merged with a bird, over a magenta field"></div></figure>
+[[layers:collage-home|Black and white collage of a marble statue head merged with a bird, over a magenta field]]
 </div>
 <p class="def rv"><b>Extra Medium</b> is a founder-led marketing agency, fractional CMO practice and product lab in Virginia Beach, Virginia. We launch, reinvent and grow businesses &mdash; brand, creative, growth and technology under one roof &mdash; and through Extra Medium Labs we build and operate our own products, led by Magpie, the local creator marketing platform.</p>
 <div class="facts rv"><span>20+ years, every side of the table</span><span>Virginia Beach &middot; Chicago &middot; London</span><span>Clients: startups to Fortune 100</span></div>
@@ -156,7 +173,7 @@ home = """
 <div class="idxrow rv"><div class="num">06</div><div><div class="sq" style="background:var(--blue)"></div><h3>Experiences</h3><p>Podcasts, events and experiential marketing &mdash; the things people are still talking about a year later.</p></div><img class="thumb" src="/assets/img/img-experiences.jpg" alt="A studio podcast microphone in dramatic light" loading="lazy"></div>
 </div></section>
 <section class="cmo"><div class="wrap">
-<figure class="frame bleed rv fxf"><img data-plx="0.08" src="/assets/img/collage-cmo.webp" alt="Black and white collage of a vintage microphone and a hand tuning a retro television, over deep teal"></figure>
+[[layers:collage-cmo|Black and white collage of a vintage microphone and a hand tuning a retro television, over deep teal]]
 <h2 class="rv">A CMO, <span class="it">fractionally.</span></h2>
 <p class="rv">Most growing companies don&rsquo;t need another executive seat. They need a senior marketing brain in the room &mdash; owning the strategy, directing the team and the agencies, and answering for the number. That&rsquo;s the Lead practice, and it&rsquo;s led personally by our founder.</p>
 <ul>
@@ -175,7 +192,7 @@ home = """
 <div class="cta-row rv"><a class="btn" href="/work/">All the work &rarr;</a></div>
 </div></section>
 <section class="magsec"><div class="wrap">
-<figure class="frame bleed rv"><div class="layers" data-layers><img class="lbg" src="/assets/img/collage-labs-bg.jpg" alt="" aria-hidden="true"><img class="lfg" src="/assets/img/collage-labs-fg.webp" alt="Black and white collage of a bird perched on a marble statue head beside a vintage camera, over electric blue"></div></figure>
+[[layers:collage-labs|Black and white collage of a bird perched on a marble statue head beside a vintage camera, over electric blue]]
 <img class="logo rv" src="/assets/img/magpie-logo.png" alt="Magpie">
 <p class="lede rv">From Extra Medium Labs: local businesses comp or pay creators who actually live in their city to visit and post honestly &mdash; and every visit is tracked. 500 followers is enough when they&rsquo;re the right 500.</p>
 <div class="trio rv"><img src="/assets/img/sample-portrait-sofia.jpg" alt="A Magpie creator" loading="lazy"><img src="/assets/img/sample-portrait-jordan.jpg" alt="A Magpie creator" loading="lazy"><img src="/assets/img/sample-portrait-priya.jpg" alt="A Magpie creator" loading="lazy"></div>
@@ -218,7 +235,7 @@ work = """
 <p class="kick rv">Work</p>
 <h1 class="rv">Done from <span class="it">both sides</span> of the table.</h1>
 <p class="lede rv">Built brands from inside the building. Built companies from nothing. Sat across from agencies, founders and executive teams. We know what good advice looks like &mdash; and what survives Monday morning.</p>
-<figure class="frame bleed rv fxf"><img data-plx="0.1" src="/assets/img/collage-work.webp" alt="Black and white collage of chess pieces, a pointing hand and a telescope, over a sunny yellow field"></figure>
+[[layers:collage-work|Black and white collage of chess pieces, a pointing hand and a telescope, over a sunny yellow field]]
 </div></section>
 <section><div class="wrap">
 <div class="receipt rv" aria-label="How we have worked">
@@ -249,7 +266,7 @@ services = """
 <p class="kick rv">The studio</p>
 <h1 class="rv">Whatever the medium. <span class="it">Make it matter.</span></h1>
 <p class="lede rv">We do the right thing, in order. Strategy, creative, growth and technology, practiced together by one small senior team.</p>
-<figure class="frame bleed rv fxf"><img data-plx="0.08" src="/assets/img/collage-cmo.webp" alt="Black and white collage of a vintage microphone and a hand tuning a retro television, over deep teal"></figure>
+[[layers:collage-cmo|Black and white collage of a vintage microphone and a hand tuning a retro television, over deep teal]]
 </div></section>
 <section><div class="wrap">
 <div class="sec-head rv"><h2>Six <span class="it">chapters</span></h2><span class="mono">Services</span></div>
@@ -309,7 +326,7 @@ labs = """
 <p class="kick rv">Extra Medium Labs</p>
 <h1 class="rv">Things we build when <span class="it">nobody hired us to.</span></h1>
 <p class="lede rv">Labs is where the studio puts its own money where its advice is. One flagship product, live and operating. A small number of ventures behind it. Nothing else &mdash; a flagship only means something if most things aren&rsquo;t one.</p>
-<figure class="frame bleed rv"><div class="layers" data-layers><img class="lbg" src="/assets/img/collage-labs-bg.jpg" alt="" aria-hidden="true"><img class="lfg" src="/assets/img/collage-labs-fg.webp" alt="Black and white collage of a bird perched on a marble statue head beside a vintage camera, over electric blue"></div></figure>
+[[layers:collage-labs|Black and white collage of a bird perched on a marble statue head beside a vintage camera, over electric blue]]
 </div></section>
 <section><div class="wrap">
 <div class="receipt rv" aria-label="Why Labs exists">
@@ -426,7 +443,7 @@ about = """
 <p class="kick rv">About Extra Medium</p>
 <h1 class="rv" style="max-width:18ch">A studio for businesses becoming <span class="it">who they were meant to be.</span></h1>
 <p class="lede rv">Most agencies will tell you what they do. We&rsquo;d rather talk about where you&rsquo;re going. But since you asked &mdash; here is who we are, and why it works.</p>
-<figure class="frame bleed rv fxf"><img data-plx="0.08" src="/assets/img/collage-about.webp" alt="Black and white collage of a typewriter, a rotary telephone and a marble statue head, over magenta"></figure>
+[[layers:collage-about|Black and white collage of a typewriter, a rotary telephone and a marble statue head, over magenta]]
 </div></section>
 <section><div class="wrap"><div class="split">
 <div class="rv"><img class="round" src="/assets/img/jeff-rimmer.jpg" alt="Jeff Rimmer, founder and principal of Extra Medium"></div>
@@ -463,7 +480,7 @@ contact = """
 <p class="kick rv">Contact</p>
 <h1 class="rv">What are you trying to <span class="it">make happen?</span></h1>
 <p class="lede rv">Just start the conversation. A project, a bigger problem, a product of your own you want built the way we built Magpie &mdash; or Labs business. All reasonable ways to start.</p>
-<figure class="frame bleed rv fxf"><img data-plx="0.08" src="/assets/img/collage-contact.webp" alt="Black and white collage of a bird carrying an envelope, a mailbox and a megaphone, over deep teal"></figure>
+[[layers:collage-contact|Black and white collage of a bird carrying an envelope, a mailbox and a megaphone, over deep teal]]
 </div></section>
 <section><div class="wrap"><div class="split" style="align-items:start">
 <div class="rv">
@@ -497,7 +514,7 @@ print("contact done")
 # 404 in the new system
 pathlib.Path(ROOT / "404.html").write_text("""<!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Not found | Extra Medium</title><link rel="icon" href="/favicon.ico" sizes="any"><link rel="stylesheet" href="/assets/css/site.css">
+<title>Not found | Extra Medium</title><link rel="icon" href="/favicon.ico" sizes="any"><link rel="stylesheet" href="/assets/css/site.css?v=14">
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"></head>
 <body><section class="phero"><div class="wrap"><p class="kick">404</p><h1>This page is a Small. <span class="it">We don&rsquo;t stock those.</span></h1>
 <p class="lede">It doesn&rsquo;t exist anymore &mdash; the site was rebuilt around the work and our flagship product. Try one of these:</p>
