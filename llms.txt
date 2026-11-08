@@ -10,7 +10,7 @@
 
 ## Labs
 - [Extra Medium Labs](https://xmedium.co/labs/): The studio's product lab. Flagship: Magpie. In development: Roon (memory-keeping), JAWNRA (music discovery), hapsta (spontaneous real-life plans).
-- [Magpie case study](https://xmedium.co/labs/magpie/): Magpie is a local creator marketing platform built and operated by Extra Medium. Local businesses comp or pay creators who live in their city (500 followers is enough; tiers Neighbors 500–2k, Locals 2k–15k, Headliners 15k+) to visit and post honestly within 48 hours; every visit is tracked to register spend. Business plans are published at $299/$599/$999 per month; paid bookings pay creators 97%. Product site: https://magpielocal.com, app: https://app.magpielocal.com. Operated by Extra Medium LLC.
+- [Magpie case study](https://xmedium.co/labs/magpie/): Magpie is a local creator marketing platform built and operated by Extra Medium. Local businesses comp or pay creators who live in their city (500 followers is enough; tiers Neighbors 500–2k, Locals 2k–15k, Headliners 15k+) to visit and post honestly within 48 hours; every visit is tracked to register spend. Business plans and pricing are published on the product site; paid bookings pay creators 97%. Product site: https://magpielocal.com, app: https://app.magpielocal.com. Operated by Extra Medium LLC.
 
 ## Key facts
 - Headquarters: Virginia Beach, Virginia, US; presence in Chicago and London; clients across the US and UK.
