@@ -113,6 +113,13 @@ FOOTER = """<footer class="finale">
 </footer>
 <script src="/assets/js/site.js?v=14"></script></body></html>"""
 
+# Pages that already end with their own CTA band use this footer (band headline
+# removed, Extra Idea form kept) so the CTA never doubles up.
+FOOTER_PLAIN = FOOTER.replace("""<h2 class="rv">Start a <span class="it">conversation.</span></h2>
+<p class="rv">A project, a bigger problem, or a marketing seat you need filled by someone senior. The first conversation is free and specific.</p>
+<div class="cta-row rv"><a class="btn white" href="/contact/">Start a project</a><a class="btn ghost" href="mailto:hello@xmedium.co">hello@xmedium.co</a></div>
+""", "")
+
 
 import json as _json, os as _os
 LAYERS = _json.load(open(_os.path.join(_os.path.dirname(_os.path.abspath(__file__)), "layers.json")))
@@ -131,7 +138,8 @@ def layers_fig(key, alt):
 
 def page(title, desc, path, on, body, extra_ld=""):
     body = re.sub(r"\[\[layers:([a-z-]+)\|([^\]]*)\]\]", lambda m: layers_fig(m.group(1), m.group(2)), body)
-    html = head(title, desc, path, extra_ld) + header(on) + body + FOOTER
+    footer = FOOTER_PLAIN if ('class="ctaband"' in body or 'name="contact"' in body) else FOOTER
+    html = head(title, desc, path, extra_ld) + header(on) + body + footer
     out = ROOT / (path.strip("/") + "/index.html" if path.strip("/") else "index.html")
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(html)
