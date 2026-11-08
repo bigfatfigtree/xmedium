@@ -23,9 +23,9 @@ Jeff Rimmer is Founder & Principal of Extra Medium, with more than 20 years in m
 
 Client work spans pre-launch startups, founder-led growth brands, makers and manufacturers, and Fortune 500 retail — including a growth system for a high-growth nutritional supplement brand, global marketing and post-acquisition brand integration for a radiation-protection manufacturer, ecommerce and app optimization for a Fortune 500 retailer's three banners, an enterprise licensing launch for a music company (early adopters included Microsoft and Baylor University), and the B2B positioning and website for a contract manufacturer's brand-creation division.
 
-## Extra Medium Labs and SIGNL
+## Extra Medium Labs and Magpie
 
-Extra Medium Labs is the studio's product lab, where it builds and operates its own products. The flagship product is SIGNL (https://joinsignl.com), a local creator marketing platform:
+Extra Medium Labs is the studio's product lab, where it builds and operates its own products. The flagship product is Magpie (https://magpielocal.com), a local creator marketing platform:
 
 - Problem: influencer marketing skipped local; neighborhood businesses need the local creators their customers actually follow.
 - How it works: a business makes an offer (a comped visit or a paid booking); a local creator visits; the creator posts honestly (one post or reel plus two stories within 48 hours, disclosed); the business sees tracked results (register spend counted, media value modeled and labeled).

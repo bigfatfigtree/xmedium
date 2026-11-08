@@ -12,7 +12,7 @@ ORG_LD = """<script type="application/ld+json">
 "name":"Extra Medium","legalName":"Extra Medium LLC","url":"https://xmedium.co/",
 "logo":"https://xmedium.co/assets/img/em-logo.png","email":"hello@xmedium.co",
 "slogan":"Whatever the medium. Make it matter.",
-"description":"Extra Medium is a founder-led strategy, creative, growth and technology studio and product lab based in Virginia Beach, Virginia. It launches, reinvents and grows businesses for clients, and builds its own products in Extra Medium Labs, including SIGNL, the local creator marketing platform.",
+"description":"Extra Medium is a founder-led strategy, creative, growth and technology studio and product lab based in Virginia Beach, Virginia. It launches, reinvents and grows businesses for clients, and builds its own products in Extra Medium Labs, including Magpie, the local creator marketing platform.",
 "foundingLocation":"Virginia Beach, Virginia, US",
 "address":{"@type":"PostalAddress","addressLocality":"Virginia Beach","addressRegion":"VA","addressCountry":"US"},
 "geo":{"@type":"GeoCoordinates","latitude":36.852984,"longitude":-75.977418},
@@ -75,7 +75,7 @@ def header(on=""):
 <a class="mlink" style="transition-delay:.05s" href="/work/"><i>01</i>Work</a>
 <a class="mlink" style="transition-delay:.12s" href="/services/"><i>02</i>Studio</a>
 <a class="mlink" style="transition-delay:.19s" href="/labs/"><i>03</i>Labs</a>
-<a class="mlink" style="transition-delay:.26s" href="/labs/signl/"><i>04</i>SIGNL</a>
+<a class="mlink" style="transition-delay:.26s" href="/labs/magpie/"><i>04</i>Magpie</a>
 <a class="mlink" style="transition-delay:.33s" href="/about/"><i>05</i>About</a>
 <a class="mlink" style="transition-delay:.40s" href="/contact/"><i>06</i>Contact</a>
 <div class="mfoot"><span>Virginia Beach <span class="vbclock">--:--:--</span> ET</span><a href="mailto:hello@xmedium.co">hello@xmedium.co</a><a href="https://www.linkedin.com/in/jeffrimmer">LinkedIn</a></div>
@@ -99,11 +99,11 @@ FOOTER = """<footer class="finale"><div class="wrap">
 <div class="fin-brand"><a class="brand" href="/"><img src="/assets/img/em-logo.png" alt="Extra Medium logo"><span>extra medium<small>Studio &amp; Labs</small></span></a>
 <p>A strategy, creative, growth and technology studio. We build businesses people can&rsquo;t ignore &mdash; for clients, and for ourselves.</p></div>
 <div><h4>Explore</h4><a href="/work/">Work</a><a href="/services/">Studio</a><a href="/labs/">Labs</a><a href="/about/">About</a><a href="/contact/">Contact</a></div>
-<div><h4>Labs</h4><a href="/labs/signl/">SIGNL &mdash; flagship</a><a href="https://joinsignl.com">joinsignl.com</a><a href="/labs/">All ventures</a></div>
+<div><h4>Labs</h4><a href="/labs/magpie/">Magpie &mdash; flagship</a><a href="https://magpielocal.com">magpielocal.com</a><a href="/labs/">All ventures</a></div>
 <div><h4>Connect</h4><a href="mailto:hello@xmedium.co">hello@xmedium.co</a><a href="https://www.linkedin.com/in/jeffrimmer">LinkedIn</a><a href="/contact/">Start a project</a></div>
 </div>
 <div class="fin-word" aria-hidden="true">extra medium</div>
-<div class="fin-base"><span>&copy; 2026 Extra Medium LLC &middot; Virginia Beach &middot; Chicago &middot; London</span><span>SIGNL is a product of Extra Medium Labs.</span></div>
+<div class="fin-base"><span>&copy; 2026 Extra Medium LLC &middot; Virginia Beach &middot; Chicago &middot; London</span><span>Magpie is a product of Extra Medium Labs.</span></div>
 </div></footer>
 <script src="/assets/js/site.js"></script></body></html>"""
 
@@ -153,7 +153,7 @@ home = """
 <p class="kicker rv">Extra Medium &middot; Studio &amp; Labs</p>
 <h2>We make businesses <span class="it gtext">un-ignorable.</span></h2>
 <p class="lede rv">A strategy, creative, growth and technology studio. We launch, reinvent and grow businesses &mdash; and we build our own products to prove we know how. Founder-led, senior-only, no theater.</p>
-<p class="def rv"><b>Extra Medium</b> is a founder-led creative studio and product lab in Virginia Beach, Virginia. We launch, reinvent and grow businesses &mdash; brand, creative, growth and technology under one roof &mdash; and through Extra Medium Labs we build and operate our own products, led by SIGNL, the local creator marketing platform.</p>
+<p class="def rv"><b>Extra Medium</b> is a founder-led creative studio and product lab in Virginia Beach, Virginia. We launch, reinvent and grow businesses &mdash; brand, creative, growth and technology under one roof &mdash; and through Extra Medium Labs we build and operate our own products, led by Magpie, the local creator marketing platform.</p>
 <div class="facts rv"><span>Founded by Jeff Rimmer</span><span>20+ years, every side of the table</span><span>Chicago &middot; London</span><span>Clients: startups to Fortune 100</span></div>
 <div class="doors rv">
 <a class="door" href="/services/"><span class="door-k">The Studio</span><span class="door-t">Launch, reinvent &amp; grow your business</span><span class="door-a">&rarr;</span></a>
@@ -179,8 +179,8 @@ home = """
 </div></section>
 """ + MARQUEE + """
 <section class="window" data-pal="signl"><div class="wrap">
-<div class="sec-head center rv"><p class="kicker">From our Labs &middot; The flagship</p><h2>Meet <span class="it gtext">SIGNL.</span></h2><p class="lede">Every studio has a roster. Ours has one name on it &mdash; the product we built, launched and run ourselves.</p></div>
-<div class="receipt center" aria-label="How SIGNL works">
+<div class="sec-head center rv"><p class="kicker">From our Labs &middot; The flagship</p><h2>Meet <span class="it gtext">Magpie.</span></h2><p class="lede">Every studio has a roster. Ours has one name on it &mdash; the product we built, launched and run ourselves.</p></div>
+<div class="receipt center" aria-label="How Magpie works">
 <span class="stamp" data-stamp data-d="0">A business makes an offer.</span>
 <span class="stamp" data-stamp data-d="1">A neighbor shows up.</span>
 <span class="stamp" data-stamp data-d="2">Posts honestly. Within 48 hours.</span>
@@ -188,13 +188,13 @@ home = """
 <span class="stamp" data-stamp data-d="4"><s class="strike">Influencers.</s> Neighbors.</span>
 </div>
 <article class="palcard rv">
-<div class="pal-media"><img src="/assets/img/img-creator.jpg" alt="A creator setting up a phone on a tripod to record"><video class="palvid" data-autoplay muted loop playsinline preload="metadata" poster="/assets/img/img-creator.jpg" aria-hidden="true"><source src="/assets/video/signl-creator.mp4" type="video/mp4"></video></div>
+<div class="pal-media"><img src="/assets/img/dining-room-busy.jpg" alt="A packed local dining room at night — the kind of business Magpie sends its creators to"></div>
 <div class="pal-cap">
-<div class="pal-name"><img class="logo" src="/assets/img/signl-logo.png" alt="SIGNL"><span class="pal-handle">@joinsignl &middot; live now &middot; founding markets forming</span></div>
+<div class="pal-name"><img class="logo" src="/assets/img/magpie-logo.png" alt="Magpie"><span class="pal-handle">@magpielocal &middot; live now &middot; founding markets forming</span></div>
 <h3 style="font-size:1.7rem;line-height:1.1">Local creator marketing, city by city.</h3>
 <p>Local businesses comp or pay creators who actually live in their city to visit and post honestly &mdash; and every visit is tracked. 500 followers is enough when they&rsquo;re the right 500.</p>
 <div class="stats"><div><b data-count="45">45</b><span>Founding markets</span></div><div><b data-count="13">13</b><span>Countries</span></div><div><b data-count="500">500</b><span>Followers is enough</span></div></div>
-<div class="cta-row"><a class="btn grad-s" href="/labs/signl/">The SIGNL story</a><a class="btn ink" href="https://joinsignl.com">Visit joinsignl.com</a></div>
+<div class="cta-row"><a class="btn grad-s" href="/labs/magpie/">The Magpie story</a><a class="btn ink" href="https://magpielocal.com">Visit magpielocal.com</a></div>
 </div></article>
 <p class="note rv">Why lead with our own product? Because a studio that launches its own thing &mdash; brand, platform, pricing, go-to-market, operations &mdash; gives different advice than one that only sells launches. <a href="/labs/">More from Labs &rarr;</a></p>
 </div></section>
@@ -205,7 +205,7 @@ home = """
 <div class="roster rv">
 <a class="rcard" href="/work/"><div class="rcard-media"><img src="/assets/img/img-grow.jpg" alt="A strategy table from above &mdash; laptops, tablets and live numbers" loading="lazy"></div><div class="rcard-cap"><span class="tag">Growth system</span><h3>The consumer brand that needed a growth system, not more ads</h3><p>Growth became a system with an owner, not a pile of campaigns.</p></div></a>
 <a class="rcard" href="/work/"><div class="rcard-media"><img src="/assets/img/img-reinvent.jpg" alt="Hands reworking a plan across a laptop and an open notebook" loading="lazy"></div><div class="rcard-cap"><span class="tag">Reinvention</span><h3>The manufacturer that had to become one brand</h3><p>One brand, one digital foundation, international expansion supported.</p></div></a>
-<a class="rcard" href="/work/"><div class="rcard-media"><img src="/assets/img/img-launch.jpg" alt="A rocket launching at night over a beach crowd" loading="lazy"></div><div class="rcard-cap"><span class="tag">Our own launch</span><h3>The platform we launched ourselves</h3><p>Seed funding to 900,000 users. SIGNL is us doing it again, in public.</p></div></a>
+<a class="rcard" href="/work/"><div class="rcard-media"><img src="/assets/img/img-launch.jpg" alt="A rocket launching at night over a beach crowd" loading="lazy"></div><div class="rcard-cap"><span class="tag">Our own launch</span><h3>The platform we launched ourselves</h3><p>Seed funding to 900,000 users. Magpie is us doing it again, in public.</p></div></a>
 </div>
 <div class="cta-row rv" style="margin-top:36px"><a class="btn" href="/work/">All the work &rarr;</a></div>
 </div></section>
@@ -243,7 +243,7 @@ home = """
 <div class="sec-head rv"><p class="kicker">Straight answers</p><h2>Asked, <span class="it gtext">answered.</span></h2></div>
 <div class="faq rv">
 <details><summary>What does Extra Medium do?</summary><p>Extra Medium is a strategy, creative, growth and technology studio based in Virginia Beach, Virginia. We launch new businesses and products, reinvent brands that have outgrown their look, and run growth systems &mdash; paid media, search, creators and AI &mdash; measured against revenue, not vanity metrics.</p></details>
-<details><summary>What is Extra Medium Labs?</summary><p>Extra Medium Labs is where the studio builds and operates its own products instead of only advising clients. Its flagship is SIGNL, a local creator marketing platform live in 45 founding markets across 13 countries, where local businesses comp or pay local creators to visit and post honestly, with every visit tracked.</p></details>
+<details><summary>What is Extra Medium Labs?</summary><p>Extra Medium Labs is where the studio builds and operates its own products instead of only advising clients. Its flagship is Magpie, a local creator marketing platform live in 45 founding markets across 13 countries, where local businesses comp or pay local creators to visit and post honestly, with every visit tracked.</p></details>
 <details><summary>Who does Extra Medium work with?</summary><p>Founder-led and high-growth companies, pre-launch startups, manufacturers, consumer brands and established enterprises up to Fortune 100 scale &mdash; across consumer products, ecommerce, healthcare, retail, media, music, hospitality, professional services and SaaS. The common thread is ambition, not industry.</p></details>
 <details><summary>How does an engagement start?</summary><p>With a conversation, not a proposal. Engagements take three shapes: fractional CMO leadership, a defined project such as a launch or rebrand, or ongoing growth work. If we are not the right fit, we say so &mdash; and usually know who is.</p></details>
 </div></div></section>
@@ -252,13 +252,13 @@ home = """
 FAQ_HOME_LD = """<script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
 {"@type":"Question","name":"What does Extra Medium do?","acceptedAnswer":{"@type":"Answer","text":"Extra Medium is a strategy, creative, growth and technology studio based in Virginia Beach, Virginia. We launch new businesses and products, reinvent brands that have outgrown their look, and run growth systems — paid media, search, creators and AI — measured against revenue, not vanity metrics."}},
-{"@type":"Question","name":"What is Extra Medium Labs?","acceptedAnswer":{"@type":"Answer","text":"Extra Medium Labs is where the studio builds and operates its own products. Its flagship is SIGNL, a local creator marketing platform live in 45 founding markets across 13 countries, where local businesses comp or pay local creators to visit and post honestly, with every visit tracked."}},
+{"@type":"Question","name":"What is Extra Medium Labs?","acceptedAnswer":{"@type":"Answer","text":"Extra Medium Labs is where the studio builds and operates its own products. Its flagship is Magpie, a local creator marketing platform live in 45 founding markets across 13 countries, where local businesses comp or pay local creators to visit and post honestly, with every visit tracked."}},
 {"@type":"Question","name":"Who does Extra Medium work with?","acceptedAnswer":{"@type":"Answer","text":"Founder-led and high-growth companies, pre-launch startups, manufacturers, consumer brands and established enterprises up to Fortune 100 scale, across consumer products, ecommerce, healthcare, retail, media, music, hospitality, professional services and SaaS."}},
 {"@type":"Question","name":"How does an engagement start?","acceptedAnswer":{"@type":"Answer","text":"With a conversation, not a proposal. Engagements take three shapes: fractional CMO leadership, a defined project such as a launch or rebrand, or ongoing growth work."}}]}
 </script>"""
 
 page("Extra Medium | Strategy, Creative, Growth & AI Studio in Virginia Beach",
-     "Extra Medium is a strategy, creative, growth and technology studio in Virginia Beach. We launch, reinvent and grow businesses — and build our own products, led by flagship product SIGNL.",
+     "Extra Medium is a strategy, creative, growth and technology studio in Virginia Beach. We launch, reinvent and grow businesses — and build our own products, led by flagship product Magpie.",
      "/", "home", home, FAQ_HOME_LD)
 print("home done")
 
@@ -279,10 +279,10 @@ work = """
 </div>
 <div class="flagship tilt rv" style="margin-bottom:64px"><div class="flagship-grid">
 <div class="flagship-copy"><span class="badge">From our Labs &middot; Live</span>
-<img class="logo" src="/assets/img/signl-logo.png" alt="SIGNL">
+<img class="logo" src="/assets/img/magpie-logo.png" alt="Magpie">
 <h3 style="font-size:1.7rem;line-height:1.1">Our own product is our newest case study.</h3>
 <p>Brand, platform, pricing, creator operations and go-to-market for a two-sided local marketplace &mdash; designed, built and operated by this studio, on our own money. If you&rsquo;re judging whether we can launch yours, start here.</p>
-<div class="cta-row"><a class="btn grad-s" href="/labs/signl/">Read the SIGNL case study</a></div></div>
+<div class="cta-row"><a class="btn grad-s" href="/labs/magpie/">Read the Magpie case study</a></div></div>
 <div class="flagship-media"><img src="/assets/img/img-creator.jpg" alt="A phone on a tripod, recording content"></div>
 </div></div>
 <p class="kicker rv">Client stories &mdash; scroll the stack</p>
@@ -340,7 +340,7 @@ services = """
 <details><summary>How much does it cost to work with Extra Medium?</summary><p>It depends on the shape. Fractional leadership is a monthly engagement, projects are scoped with a clear price range after the first conversation, and ongoing growth work is a monthly system with one owner. We do not publish a rate card because the honest price follows the actual problem &mdash; the first conversation is free and specific.</p></details>
 <details><summary>How fast can a launch or rebrand ship?</summary><p>Focused launches and rebrands typically run in weeks, not quarters, because one senior team owns strategy, creative and build together with no handoffs. Exact timing is set in the first conversation once the destination is clear.</p></details>
 <details><summary>Do you only work with Virginia Beach companies?</summary><p>No. Extra Medium is headquartered in Virginia Beach, Virginia, with presence in Chicago and London, and clients across the US and UK. Most engagements run remotely with in-person time when it matters.</p></details>
-<details><summary>What makes you different from a typical agency?</summary><p>Three things: every engagement is led personally by the founder; the team is senior-only with no account-manager telephone game; and the studio builds its own products in Extra Medium Labs &mdash; led by SIGNL &mdash; so its advice is tested on its own money first.</p></details>
+<details><summary>What makes you different from a typical agency?</summary><p>Three things: every engagement is led personally by the founder; the team is senior-only with no account-manager telephone game; and the studio builds its own products in Extra Medium Labs &mdash; led by Magpie &mdash; so its advice is tested on its own money first.</p></details>
 </div></div></section>
 """ + CTA
 
@@ -376,12 +376,12 @@ labs = """
 </div>
 <div class="flagship tilt rv"><div class="flagship-grid">
 <div class="flagship-copy"><span class="badge">00 &middot; Flagship &middot; Live</span>
-<img class="logo" src="/assets/img/signl-logo.png" alt="SIGNL">
+<img class="logo" src="/assets/img/magpie-logo.png" alt="Magpie">
 <h3 style="font-size:1.8rem;line-height:1.08">Local creator marketing, city by city.</h3>
 <p>Influencer marketing skipped local. The creators who move a neighborhood business live there &mdash; and 500 local followers beat 500,000 strangers. A business makes an offer, a creator visits, posts honestly within 48 hours, and every visit is tracked down to register spend.</p>
 <div class="stats"><div><b data-count="45">45</b><span>Founding markets</span></div><div><b data-count="13">13</b><span>Countries</span></div><div><b>$299+</b><span>Published pricing</span></div></div>
-<div class="cta-row"><a class="btn grad-s" href="/labs/signl/">The full case study</a><a class="btn ink" href="https://joinsignl.com">joinsignl.com</a></div></div>
-<div class="flagship-media"><img src="/assets/img/cafe-window-night.jpg" alt="A neighborhood cafe glowing at night"></div>
+<div class="cta-row"><a class="btn grad-s" href="/labs/magpie/">The full case study</a><a class="btn ink" href="https://magpielocal.com">magpielocal.com</a></div></div>
+<div class="flagship-media"><img src="/assets/img/table-phone-photo.jpg" alt="A creator photographing a dish at a local restaurant table"></div>
 </div></div>
 <p class="note rv">Status, honestly: live platform, founding rosters forming market by market, home market Virginia Beach activating first. Operated by Extra Medium LLC. Pricing, standards and the Visit Guarantee are published on the product site &mdash; because that&rsquo;s how products should behave.</p>
 </div></section>
@@ -404,21 +404,21 @@ labs = """
 </div></div></section>
 """
 
-page("Extra Medium Labs | SIGNL, Our Flagship Product",
-     "Extra Medium Labs builds the studio's own products. Flagship: SIGNL, the live local creator marketing platform. Plus ventures in development: Roon, JAWNRA and hapsta.",
+page("Extra Medium Labs | Magpie, Our Flagship Product",
+     "Extra Medium Labs builds the studio's own products. Flagship: Magpie, the live local creator marketing platform. Plus ventures in development: Roon, JAWNRA and hapsta.",
      "/labs/", "labs", labs, crumb_ld([("Home", "/"), ("Labs", "/labs/")]))
 
-# ============ SIGNL CASE STUDY ============
+# ============ Magpie CASE STUDY ============
 signl = """
 <section class="hero-media">
 <img class="vstill" src="/assets/img/city-poster.jpg" alt="" aria-hidden="true">
 <video class="bg" autoplay muted loop playsinline webkit-playsinline poster="/assets/img/city-poster.jpg" src="/assets/video/city.mp4"></video>
 <div class="shade"></div>
 <div class="wrap"><p class="kicker rv">Extra Medium Labs &middot; Flagship &middot; Case study</p>
-<img class="rv" src="/assets/img/signl-logo.png" alt="SIGNL" style="height:60px;width:auto;margin-bottom:26px">
+<img class="rv" src="/assets/img/magpie-logo.png" alt="Magpie" style="height:60px;width:auto;margin-bottom:26px">
 <h1 class="rv">Get talked about by the people your city <span class="it">actually follows.</span></h1>
-<p class="lede rv">SIGNL is the local creator marketing platform built, branded and operated by Extra Medium. Local businesses comp or pay creators who live in their city to visit and post honestly &mdash; and every visit is tracked.</p>
-<div class="cta-row rv"><a class="btn grad-s" href="https://joinsignl.com">Visit joinsignl.com</a><a class="btn ghost" href="https://app.joinsignl.com">Open the app</a></div>
+<p class="lede rv">Magpie is the local creator marketing platform built, branded and operated by Extra Medium. Local businesses comp or pay creators who live in their city to visit and post honestly &mdash; and every visit is tracked.</p>
+<div class="cta-row rv"><a class="btn grad-s" href="https://magpielocal.com">Visit magpielocal.com</a><a class="btn ghost" href="https://app.magpielocal.com">Open the app</a></div>
 <p class="note rv" style="color:rgba(255,255,255,.85);margin-top:22px">Case study by Jeff Rimmer, Founder &middot; Extra Medium Labs &middot; October 2026</p>
 <div class="hero-meta rv">
 <div><b>Live</b><span>Platform &amp; founding markets</span></div>
@@ -431,13 +431,13 @@ signl = """
 <p>A neighborhood restaurant doesn&rsquo;t need a creator with two million followers in another state. It needs the 2,000 people within walking distance who decide where Friday night happens &mdash; and those people follow <b>neighbors, not influencers</b>.</p>
 <p>Meanwhile local creators with small, fiercely local audiences had no front door: brands couldn&rsquo;t find them, couldn&rsquo;t book them properly, and couldn&rsquo;t tell what a visit brought in.</p>
 <p><b>So we built the front door</b> &mdash; a two-sided platform where the standards are the marketing: published pricing, a two-business-day decision on every application, tracked visits, and a Visit Guarantee.</p></div>
-<div class="rv"><img class="round" src="/assets/img/cafe-window-night.jpg" alt="A neighborhood cafe glowing at night"></div>
+<div class="rv"><img class="round" src="/assets/img/sample-portrait-sofia.jpg" alt="A Magpie creator — the neighbor a local business is really booking"></div>
 </div></div></section>
 <div class="band-media"><img class="vstill" src="/assets/img/concert-poster.jpg" alt="" aria-hidden="true"><video autoplay muted loop playsinline webkit-playsinline poster="/assets/img/concert-poster.jpg" src="/assets/video/concert.mp4"></video>
 <div class="cap"><div class="wrap"><p class="kicker light">Built by the studio</p><h2 style="max-width:24ch">Brand. Product. Platform. Pricing. <span class="it">Go-to-market. Ops.</span></h2></div></div></div>
 <section><div class="wrap"><div class="split">
 <div class="prose rv"><p class="kicker">What we built</p><h2 style="margin-bottom:20px">Everything a launch takes. <span class="it gtext">Ours.</span></h2>
-<p><b>Brand &amp; naming</b> &mdash; SIGNL, a one-word invented name with its gradient identity system, designed here.</p>
+<p><b>Brand &amp; naming</b> &mdash; Magpie, a one-word invented name with its gradient identity system, designed here.</p>
 <p><b>Product &amp; platform</b> &mdash; creator applications with automatic tiering (Neighbors 500&ndash;2k, Locals 2k&ndash;15k, Headliners 15k+, stacked across platforms), business onboarding, and the offer &rarr; visit &rarr; post &rarr; tracked-outcome lifecycle.</p></div>
 <div class="prose rv"><p><b>Business model</b> &mdash; two lanes: comped visits, and paid bookings where creators keep 97%. Published plans at $299 / $599 / $999 a month.</p>
 <p><b>Go-to-market</b> &mdash; city-by-city founding rosters, hand-picked market by market, home market Virginia Beach first. <b>Operations</b> &mdash; run daily by this studio, under Extra Medium LLC.</p>
@@ -452,27 +452,27 @@ signl = """
 <div class="step rv" style="transition-delay:.21s"><b>04 &middot; The proof</b><h3>The business sees what it brought in</h3><p>Every visit tracked. Register spend counted at the till; media value modeled and labeled as modeled.</p></div>
 </div></div></section>
 <section><div class="wrap">
-<div class="sec-head rv"><p class="kicker">Why it&rsquo;s the flagship</p><h2>SIGNL is the studio&rsquo;s <span class="it gtext">proof of work.</span></h2>
-<p class="lede">Every discipline we sell is inside this product, exercised on our own budget. When a client asks whether we can launch their thing, SIGNL is the answer we can point at.</p></div>
+<div class="sec-head rv"><p class="kicker">Why it&rsquo;s the flagship</p><h2>Magpie is the studio&rsquo;s <span class="it gtext">proof of work.</span></h2>
+<p class="lede">Every discipline we sell is inside this product, exercised on our own budget. When a client asks whether we can launch their thing, Magpie is the answer we can point at.</p></div>
 <div class="grid3">
-<a class="card rv" href="https://joinsignl.com/businesses.html"><span class="num">For businesses</span><h3>Put a visit in front of local creators</h3><p>Founding businesses join the list now and activate when their market opens.</p><span class="arrow">joinsignl.com &rarr;</span></a>
-<a class="card rv" style="transition-delay:.08s" href="https://joinsignl.com/creators.html"><span class="num">For creators</span><h3>500 followers is enough</h3><p>Free for creators, always. Get comped or paid by the businesses near you.</p><span class="arrow">joinsignl.com &rarr;</span></a>
+<a class="card rv" href="https://magpielocal.com/businesses.html"><span class="num">For businesses</span><h3>Put a visit in front of local creators</h3><p>Founding businesses join the list now and activate when their market opens.</p><span class="arrow">magpielocal.com &rarr;</span></a>
+<a class="card rv" style="transition-delay:.08s" href="https://magpielocal.com/creators.html"><span class="num">For creators</span><h3>500 followers is enough</h3><p>Free for creators, always. Get comped or paid by the businesses near you.</p><span class="arrow">magpielocal.com &rarr;</span></a>
 <a class="card rv" style="transition-delay:.16s" href="/contact/"><span class="num">For your launch</span><h3>Want this done for your product?</h3><p>That&rsquo;s the studio side. Same team, same standards, your budget this time.</p><span class="arrow">Start a conversation &rarr;</span></a>
 </div>
-<p class="note rv">SIGNL is a product of Extra Medium Labs, operated by Extra Medium LLC. Status: live, in founding-market formation; full platform terms apply at market launch.</p>
+<p class="note rv">Magpie is a product of Extra Medium Labs, operated by Extra Medium LLC. Status: live, in founding-market formation; full platform terms apply at market launch.</p>
 </div></section>
 """
 
-page("SIGNL — Flagship Product of Extra Medium Labs",
-     "SIGNL is the live local creator marketing platform built and operated by Extra Medium Labs: local businesses comp or pay local creators to visit and post honestly, every visit tracked.",
-     "/labs/signl/", "labs", signl, """<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Article","headline":"SIGNL — Flagship Product of Extra Medium Labs",
-"description":"SIGNL is the live local creator marketing platform built and operated by Extra Medium Labs: local businesses comp or pay local creators to visit and post honestly, every visit tracked.",
+page("Magpie — Flagship Product of Extra Medium Labs",
+     "Magpie is the live local creator marketing platform built and operated by Extra Medium Labs: local businesses comp or pay local creators to visit and post honestly, every visit tracked.",
+     "/labs/magpie/", "labs", signl, """<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Magpie — Flagship Product of Extra Medium Labs",
+"description":"Magpie is the live local creator marketing platform built and operated by Extra Medium Labs: local businesses comp or pay local creators to visit and post honestly, every visit tracked.",
 "author":{"@id":"https://xmedium.co/#jeff"},"publisher":{"@id":"https://xmedium.co/#org"},
-"datePublished":"2026-10-23","dateModified":"2026-11-04","mainEntityOfPage":"https://xmedium.co/labs/signl/",
+"datePublished":"2026-10-23","dateModified":"2026-11-07","mainEntityOfPage":"https://xmedium.co/labs/magpie/",
 "image":"https://xmedium.co/assets/img/em-logo.png",
-"about":{"@type":"SoftwareApplication","name":"SIGNL","applicationCategory":"BusinessApplication","url":"https://joinsignl.com","creator":{"@id":"https://xmedium.co/#org"}}}
-</script>""" + crumb_ld([("Home", "/"), ("Labs", "/labs/"), ("SIGNL", "/labs/signl/")]))
+"about":{"@type":"SoftwareApplication","name":"Magpie","applicationCategory":"BusinessApplication","url":"https://magpielocal.com","creator":{"@id":"https://xmedium.co/#org"}}}
+</script>""" + crumb_ld([("Home", "/"), ("Labs", "/labs/"), ("Magpie", "/labs/magpie/")]))
 print("part 2 done")
 
 # ============ ABOUT ============
@@ -487,7 +487,7 @@ about = """
 <section><div class="wrap"><div class="split">
 <div class="rv"><img class="round" src="/assets/img/jeff-rimmer.jpg" alt="Jeff Rimmer, founder and principal of Extra Medium"></div>
 <div class="prose rv"><p class="kicker">Founder &amp; Principal</p><h2 style="margin-bottom:20px">Jeff <span class="it gtext">Rimmer</span></h2>
-<p><b>More than twenty years in marketing, on every side of the table.</b> Inside startups and inside Fortune 100 companies. Founder of several businesses of his own &mdash; including a music platform taken from a blank page to hundreds of thousands of users, and now SIGNL, built in our own Labs. And the outside partner to clients across that same range, from a founder with a napkin sketch to enterprise teams serving millions.</p>
+<p><b>More than twenty years in marketing, on every side of the table.</b> Inside startups and inside Fortune 100 companies. Founder of several businesses of his own &mdash; including a music platform taken from a blank page to hundreds of thousands of users, and now Magpie, built in our own Labs. And the outside partner to clients across that same range, from a founder with a napkin sketch to enterprise teams serving millions.</p>
 <p>That mix is the point. Jeff can write the positioning, direct the creative, build the growth engine and wire the intelligence underneath it &mdash; and has done each of those jobs for real, with his own budget on the line. Deepest experience: music and entertainment, retail and ecommerce, healthcare and wellness &mdash; three industries where attention is expensive and trust is everything.</p>
 <p>He founded Extra Medium to give ambitious businesses one senior partner who thinks like an owner, builds like a studio and measures like an operator. He leads every engagement personally, works from Virginia Beach, and travels regularly to Chicago and the UK.</p>
 <div class="cta-row"><a class="btn" href="https://www.linkedin.com/in/jeffrimmer">LinkedIn</a><a class="btn ink" href="/work/">See the work</a></div></div>
@@ -501,7 +501,7 @@ about = """
 <div class="rv"><b>02</b><h3>Creative on the surface, structured underneath</h3><p>Memorable work that is also disciplined: clear positioning, clean architecture, honest measurement.</p></div>
 <div class="rv"><b>03</b><h3>Operators, not vendors</h3><p>We have owned budgets, teams and P&amp;Ls. We make recommendations we would make with our own money &mdash; and say the uncomfortable thing when it needs saying.</p></div>
 <div class="rv"><b>04</b><h3>Connect the dots</h3><p>Brand, growth, technology and experiences are one system. We work across them because that is where the leverage is.</p></div>
-<div class="rv"><b>05</b><h3>Real experience only</h3><p>What we publish and advise comes from work we have actually done. No borrowed case studies, no invented results. SIGNL is the standing proof.</p></div>
+<div class="rv"><b>05</b><h3>Real experience only</h3><p>What we publish and advise comes from work we have actually done. No borrowed case studies, no invented results. Magpie is the standing proof.</p></div>
 <div class="rv"><b>06</b><h3>A conversation, not a proposal</h3><p>Engagements begin with a real conversation. If we are not the right fit, we will tell you who might be.</p></div>
 </div>
 <p class="note rv" style="margin-top:34px">Headquartered in Virginia Beach, Virginia, with presence in Chicago and London. Clients across the US and UK.</p>
@@ -509,7 +509,7 @@ about = """
 """ + CTA
 
 page("About Extra Medium | Studio Founded by Jeff Rimmer",
-     "Extra Medium is a founder-led strategy, creative, growth and technology studio founded by Jeff Rimmer — 20+ years on every side of the marketing table, now building SIGNL in its own Labs.",
+     "Extra Medium is a founder-led strategy, creative, growth and technology studio founded by Jeff Rimmer — 20+ years on every side of the marketing table, now building Magpie in its own Labs.",
      "/about/", "about", about, crumb_ld([("Home", "/"), ("About", "/about/")]))
 
 # ============ CONTACT ============
@@ -519,7 +519,7 @@ contact = """
 <div class="shade"></div>
 <div class="wrap"><p class="kicker rv">Contact</p>
 <h1 class="rv">What are you trying to <span class="it">make happen?</span></h1>
-<p class="lede rv"><span class="typed-final">Just start the conversation.</span> A project, a bigger problem, a product of your own you want built the way we built SIGNL &mdash; or Labs business. All reasonable ways to start.</p></div>
+<p class="lede rv"><span class="typed-final">Just start the conversation.</span> A project, a bigger problem, a product of your own you want built the way we built Magpie &mdash; or Labs business. All reasonable ways to start.</p></div>
 </section>
 <section class="window" data-pal="em"><div class="wrap"><div class="split" style="align-items:start">
 <div class="rv">
@@ -529,7 +529,7 @@ contact = """
 <div><label for="email">Email</label><input id="email" name="email" type="email" required autocomplete="email"></div>
 <div><label for="kind">What is this about?</label><select id="kind" name="kind">
 <option>A project for the studio</option><option>A bigger problem / not sure yet</option>
-<option>Fractional CMO</option><option>Labs &mdash; SIGNL</option><option>Labs &mdash; partnership or another venture</option><option>Something else</option></select></div>
+<option>Fractional CMO</option><option>Labs &mdash; Magpie</option><option>Labs &mdash; partnership or another venture</option><option>Something else</option></select></div>
 <div><label for="msg">Tell us what&rsquo;s going on</label><textarea id="msg" name="message" required></textarea></div>
 <button class="btn" type="submit">Send it</button>
 <p class="note">Usually replies within one business day. If it&rsquo;s urgent, email <a href="mailto:hello@xmedium.co">hello@xmedium.co</a>.</p>
@@ -538,7 +538,7 @@ contact = """
 <img src="/assets/img/em-logo.png" alt="Extra Medium logo" style="width:96px;height:96px;border-radius:22px;margin-bottom:24px">
 <p class="kicker">Prefer email?</p><h2 style="margin-bottom:18px">hello@<span class="gtext">xmedium.co</span></h2>
 <p><b>Studio</b> &mdash; launches, reinventions, growth systems, fractional leadership.</p>
-<p><b>Labs</b> &mdash; SIGNL partnerships, founding markets, venture collaborations.</p>
+<p><b>Labs</b> &mdash; Magpie partnerships, founding markets, venture collaborations.</p>
 <p>Virginia Beach (HQ) &middot; Chicago &middot; London. Most engagements run remotely, with in-person time when it matters.</p>
 <p class="note">Extra Medium LLC, Virginia Beach, Virginia.</p>
 </div>
@@ -546,7 +546,7 @@ contact = """
 """
 
 page("Contact | Extra Medium",
-     "Start a conversation with Extra Medium — studio projects, fractional CMO, or Labs and SIGNL partnerships. Replies usually within one business day.",
+     "Start a conversation with Extra Medium — studio projects, fractional CMO, or Labs and Magpie partnerships. Replies usually within one business day.",
      "/contact/", "contact", contact, crumb_ld([("Home", "/"), ("Contact", "/contact/")]))
 
 # 404 gets the new treatment too
@@ -557,6 +557,6 @@ pathlib.Path(ROOT / "404.html").write_text("""<!DOCTYPE html>
 <body><section class="hero-media"><img class="bg" src="/assets/img/street-night.jpg" alt="A city street at night"><div class="shade"></div>
 <div class="wrap"><p class="kicker">404</p><h1>This page is a Small. <span class="it">We don&rsquo;t stock those.</span></h1>
 <p class="lede">It doesn&rsquo;t exist anymore &mdash; the site was rebuilt around the work and our flagship product. Try one of these:</p>
-<div class="cta-row" style="margin-top:28px"><a class="btn" href="/">Home</a><a class="btn ghost" href="/labs/signl/">SIGNL, our flagship</a><a class="btn ghost" href="/work/">Work</a></div>
+<div class="cta-row" style="margin-top:28px"><a class="btn" href="/">Home</a><a class="btn ghost" href="/labs/magpie/">Magpie, our flagship</a><a class="btn ghost" href="/work/">Work</a></div>
 </div></section></body></html>""")
 print("part 3 done")
