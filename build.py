@@ -140,7 +140,7 @@ home = """
 <div class="btns rv"><a class="btn p" href="/contact/">Start a project</a><a class="btn" href="/work/">See the work</a></div>
 <div style="position:relative">
 """ + BADGE + """
-<figure class="frame bleed rv"><img data-plx="0.12" src="/assets/img/collage-home.webp" alt="Black and white collage of a marble statue head merged with a bird, over a magenta field"></figure>
+<figure class="frame bleed rv"><div class="layers" data-layers><img class="lbg" src="/assets/img/collage-home-bg.jpg" alt="" aria-hidden="true"><img class="lfg" src="/assets/img/collage-home-fg.webp" alt="Black and white collage of a marble statue head merged with a bird, over a magenta field"></div></figure>
 </div>
 <p class="def rv"><b>Extra Medium</b> is a founder-led marketing agency, fractional CMO practice and product lab in Virginia Beach, Virginia. We launch, reinvent and grow businesses &mdash; brand, creative, growth and technology under one roof &mdash; and through Extra Medium Labs we build and operate our own products, led by Magpie, the local creator marketing platform.</p>
 <div class="facts rv"><span>20+ years, every side of the table</span><span>Virginia Beach &middot; Chicago &middot; London</span><span>Clients: startups to Fortune 100</span></div>
@@ -156,7 +156,7 @@ home = """
 <div class="idxrow rv"><div class="num">06</div><div><div class="sq" style="background:var(--blue)"></div><h3>Experiences</h3><p>Podcasts, events and experiential marketing &mdash; the things people are still talking about a year later.</p></div><img class="thumb" src="/assets/img/img-experiences.jpg" alt="A studio podcast microphone in dramatic light" loading="lazy"></div>
 </div></section>
 <section class="cmo"><div class="wrap">
-<figure class="frame bleed rv"><img data-plx="0.08" src="/assets/img/collage-cmo.webp" alt="Black and white collage of a vintage microphone and a hand tuning a retro television, over deep teal"></figure>
+<figure class="frame bleed rv fxf"><img data-plx="0.08" src="/assets/img/collage-cmo.webp" alt="Black and white collage of a vintage microphone and a hand tuning a retro television, over deep teal"></figure>
 <h2 class="rv">A CMO, <span class="it">fractionally.</span></h2>
 <p class="rv">Most growing companies don&rsquo;t need another executive seat. They need a senior marketing brain in the room &mdash; owning the strategy, directing the team and the agencies, and answering for the number. That&rsquo;s the Lead practice, and it&rsquo;s led personally by our founder.</p>
 <ul>
@@ -175,7 +175,7 @@ home = """
 <div class="cta-row rv"><a class="btn" href="/work/">All the work &rarr;</a></div>
 </div></section>
 <section class="magsec"><div class="wrap">
-<figure class="frame bleed rv"><img data-plx="0.1" src="/assets/img/collage-labs.webp" alt="Black and white collage of a bird perched on a marble statue head beside a vintage camera, over electric blue"></figure>
+<figure class="frame bleed rv"><div class="layers" data-layers><img class="lbg" src="/assets/img/collage-labs-bg.jpg" alt="" aria-hidden="true"><img class="lfg" src="/assets/img/collage-labs-fg.webp" alt="Black and white collage of a bird perched on a marble statue head beside a vintage camera, over electric blue"></div></figure>
 <img class="logo rv" src="/assets/img/magpie-logo.png" alt="Magpie">
 <p class="lede rv">From Extra Medium Labs: local businesses comp or pay creators who actually live in their city to visit and post honestly &mdash; and every visit is tracked. 500 followers is enough when they&rsquo;re the right 500.</p>
 <div class="trio rv"><img src="/assets/img/sample-portrait-sofia.jpg" alt="A Magpie creator" loading="lazy"><img src="/assets/img/sample-portrait-jordan.jpg" alt="A Magpie creator" loading="lazy"><img src="/assets/img/sample-portrait-priya.jpg" alt="A Magpie creator" loading="lazy"></div>
@@ -218,7 +218,7 @@ work = """
 <p class="kick rv">Work</p>
 <h1 class="rv">Done from <span class="it">both sides</span> of the table.</h1>
 <p class="lede rv">Built brands from inside the building. Built companies from nothing. Sat across from agencies, founders and executive teams. We know what good advice looks like &mdash; and what survives Monday morning.</p>
-<figure class="frame bleed rv"><img data-plx="0.1" src="/assets/img/collage-work.webp" alt="Black and white collage of chess pieces, a pointing hand and a telescope, over a sunny yellow field"></figure>
+<figure class="frame bleed rv fxf"><img data-plx="0.1" src="/assets/img/collage-work.webp" alt="Black and white collage of chess pieces, a pointing hand and a telescope, over a sunny yellow field"></figure>
 </div></section>
 <section><div class="wrap">
 <div class="receipt rv" aria-label="How we have worked">
@@ -249,7 +249,7 @@ services = """
 <p class="kick rv">The studio</p>
 <h1 class="rv">Whatever the medium. <span class="it">Make it matter.</span></h1>
 <p class="lede rv">We do the right thing, in order. Strategy, creative, growth and technology, practiced together by one small senior team.</p>
-<figure class="frame bleed rv"><img data-plx="0.08" src="/assets/img/collage-cmo.webp" alt="Black and white collage of a vintage microphone and a hand tuning a retro television, over deep teal"></figure>
+<figure class="frame bleed rv fxf"><img data-plx="0.08" src="/assets/img/collage-cmo.webp" alt="Black and white collage of a vintage microphone and a hand tuning a retro television, over deep teal"></figure>
 </div></section>
 <section><div class="wrap">
 <div class="sec-head rv"><h2>Six <span class="it">chapters</span></h2><span class="mono">Services</span></div>
@@ -309,7 +309,7 @@ labs = """
 <p class="kick rv">Extra Medium Labs</p>
 <h1 class="rv">Things we build when <span class="it">nobody hired us to.</span></h1>
 <p class="lede rv">Labs is where the studio puts its own money where its advice is. One flagship product, live and operating. A small number of ventures behind it. Nothing else &mdash; a flagship only means something if most things aren&rsquo;t one.</p>
-<figure class="frame bleed rv"><img data-plx="0.1" src="/assets/img/collage-labs.webp" alt="Black and white collage of a bird perched on a marble statue head beside a vintage camera, over electric blue"></figure>
+<figure class="frame bleed rv"><div class="layers" data-layers><img class="lbg" src="/assets/img/collage-labs-bg.jpg" alt="" aria-hidden="true"><img class="lfg" src="/assets/img/collage-labs-fg.webp" alt="Black and white collage of a bird perched on a marble statue head beside a vintage camera, over electric blue"></div></figure>
 </div></section>
 <section><div class="wrap">
 <div class="receipt rv" aria-label="Why Labs exists">
@@ -426,7 +426,7 @@ about = """
 <p class="kick rv">About Extra Medium</p>
 <h1 class="rv" style="max-width:18ch">A studio for businesses becoming <span class="it">who they were meant to be.</span></h1>
 <p class="lede rv">Most agencies will tell you what they do. We&rsquo;d rather talk about where you&rsquo;re going. But since you asked &mdash; here is who we are, and why it works.</p>
-<figure class="frame bleed rv"><img data-plx="0.08" src="/assets/img/collage-about.webp" alt="Black and white collage of a typewriter, a rotary telephone and a marble statue head, over magenta"></figure>
+<figure class="frame bleed rv fxf"><img data-plx="0.08" src="/assets/img/collage-about.webp" alt="Black and white collage of a typewriter, a rotary telephone and a marble statue head, over magenta"></figure>
 </div></section>
 <section><div class="wrap"><div class="split">
 <div class="rv"><img class="round" src="/assets/img/jeff-rimmer.jpg" alt="Jeff Rimmer, founder and principal of Extra Medium"></div>
@@ -463,7 +463,7 @@ contact = """
 <p class="kick rv">Contact</p>
 <h1 class="rv">What are you trying to <span class="it">make happen?</span></h1>
 <p class="lede rv">Just start the conversation. A project, a bigger problem, a product of your own you want built the way we built Magpie &mdash; or Labs business. All reasonable ways to start.</p>
-<figure class="frame bleed rv"><img data-plx="0.08" src="/assets/img/collage-contact.webp" alt="Black and white collage of a bird carrying an envelope, a mailbox and a megaphone, over deep teal"></figure>
+<figure class="frame bleed rv fxf"><img data-plx="0.08" src="/assets/img/collage-contact.webp" alt="Black and white collage of a bird carrying an envelope, a mailbox and a megaphone, over deep teal"></figure>
 </div></section>
 <section><div class="wrap"><div class="split" style="align-items:start">
 <div class="rv">
