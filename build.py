@@ -143,17 +143,9 @@ home = """
 <figure class="frame bleed rv"><img data-plx="0.12" src="/assets/img/collage-home.webp" alt="Black and white collage of a marble statue head merged with a bird, over a magenta field"></figure>
 </div>
 <p class="def rv"><b>Extra Medium</b> is a founder-led marketing agency, fractional CMO practice and product lab in Virginia Beach, Virginia. We launch, reinvent and grow businesses &mdash; brand, creative, growth and technology under one roof &mdash; and through Extra Medium Labs we build and operate our own products, led by Magpie, the local creator marketing platform.</p>
-<div class="facts rv"><span>Founded by Jeff Rimmer</span><span>20+ years, every side of the table</span><span>Virginia Beach &middot; Chicago &middot; London</span><span>Clients: startups to Fortune 100</span></div>
+<div class="facts rv"><span>20+ years, every side of the table</span><span>Virginia Beach &middot; Chicago &middot; London</span><span>Clients: startups to Fortune 100</span></div>
 </div></section>
 """ + MARQUEE + """
-<section style="padding-top:0"><div class="wrap">
-<div class="stats-band" aria-label="Track record">
-<div class="stat rv"><b><span data-count="20">20</span>+</b><span>Years in marketing</span></div>
-<div class="stat rv"><b><span data-count="900">900</span>K</b><span>Users, platform we launched</span></div>
-<div class="stat rv"><b><span data-count="3">3</span></b><span>Startups founded</span></div>
-<div class="stat rv"><b><span data-count="45">45</span></b><span>Markets, our own product</span></div>
-</div>
-</div></section>
 <section><div class="wrap">
 <div class="sec-head rv"><h2>What we <span class="it">do</span></h2><span class="mono">The agency</span></div>
 <div class="idxrow rv"><div class="num">01</div><div><div class="sq" style="background:var(--mag)"></div><h3>Launch</h3><p>Positioning, naming, brand identity, website and go-to-market for things that don&rsquo;t exist yet &mdash; shaped as one arc.</p></div><img class="thumb" src="/assets/img/img-launch.jpg" alt="A rocket launching at night over a beach crowd" loading="lazy"></div>
@@ -234,12 +226,6 @@ work = """
 <span class="stamp">Fortune 100 to pre-launch, same standard.</span>
 <span class="stamp">Names on request. Receipts below.</span>
 </div>
-<div class="flagship rv"><div class="flagship-grid">
-<div class="flagship-copy"><span class="badge">From our Labs &middot; Live</span>
-<img class="logo" src="/assets/img/magpie-logo.png" alt="Magpie">
-<h3 style="font-size:1.7rem;line-height:1.1">Our own product is our newest case study.</h3>
-<p>Brand, platform, pricing, creator operations and go-to-market for a two-sided local marketplace &mdash; designed, built and operated by this studio, on our own money. If you&rsquo;re judging whether we can launch yours, start here.</p>
-<div class="cta-row"><a class="btn p" href="/labs/magpie/">Read the Magpie case study</a></div></div>
 <div class="flagship-media"><img src="/assets/img/img-creator.jpg" alt="A phone on a tripod, recording content"></div>
 </div></div>
 <div class="sec-head rv" style="margin-top:52px"><h2>Client <span class="it">stories</span></h2><span class="mono">The receipts</span></div>
