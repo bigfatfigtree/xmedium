@@ -54,7 +54,7 @@ def head(title, desc, path, extra_ld=""):
 <meta name="twitter:image" content="https://xmedium.co/assets/img/og-collage.jpg">
 <meta name="theme-color" content="#f5f1ea">
 <link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="stylesheet" href="/assets/css/site.css?v=15">
+<link rel="stylesheet" href="/assets/css/site.css?v=16">
 {FONTS}
 {ORG_LD}
 {extra_ld}
@@ -81,6 +81,7 @@ def header(on=""):
 <a class="mlink" style="transition-delay:.26s" href="/labs/magpie/"><i>04</i>Magpie</a>
 <a class="mlink" style="transition-delay:.33s" href="/about/"><i>05</i>About</a>
 <a class="mlink" style="transition-delay:.40s" href="/contact/"><i>06</i>Contact</a>
+<a class="mlink" style="transition-delay:.47s" href="/magazine/"><i>07</i>Magazine</a>
 <div class="mfoot"><span>Virginia Beach <span class="vbclock">--:--</span> ET</span><a href="mailto:hello@xmedium.co">hello@xmedium.co</a><a href="https://www.linkedin.com/in/jeffrimmer">LinkedIn</a></div>
 </div>"""
 
@@ -103,7 +104,7 @@ FOOTER = """<footer class="finale">
 <div class="fin-grid">
 <div class="fin-brand"><a class="brand" href="/"><img src="/assets/img/em-logo.png" alt="Extra Medium logo"><span>extra medium<small>Studio &amp; Labs</small></span></a>
 <p>A marketing agency and product lab. We build businesses people can&rsquo;t ignore &mdash; for clients, and for ourselves.</p></div>
-<div><h4>Explore</h4><a href="/work/">Work</a><a href="/services/">Studio</a><a href="/labs/">Labs</a><a href="/about/">About</a><a href="/contact/">Contact</a></div>
+<div><h4>Explore</h4><a href="/work/">Work</a><a href="/services/">Studio</a><a href="/labs/">Labs</a><a href="/about/">About</a><a href="/magazine/">Magazine</a><a href="/contact/">Contact</a></div>
 <div><h4>Labs</h4><a href="/labs/magpie/">Magpie &mdash; flagship</a><a href="https://magpielocal.com">magpielocal.com</a><a href="/labs/">All ventures</a></div>
 <div><h4>Connect</h4><a href="mailto:hello@xmedium.co">hello@xmedium.co</a><a href="https://www.linkedin.com/in/jeffrimmer">LinkedIn</a><a href="/contact/">Start a project</a></div>
 </div>
@@ -216,7 +217,7 @@ home = """
 <div class="faq">
 <details class="rv"><summary>What does Extra Medium do?</summary><p>Extra Medium is a marketing agency and fractional CMO practice based in Virginia Beach, Virginia. We launch new businesses and products, reinvent brands that have outgrown their look, and run growth systems &mdash; paid media, search, creators and AI &mdash; measured against revenue, not vanity metrics.</p></details>
 <details class="rv"><summary>What is a fractional CMO?</summary><p>A fractional CMO is a senior marketing executive who leads your marketing part-time &mdash; owning strategy, directing your team and agencies, and reporting results &mdash; without the cost of a permanent executive seat. Extra Medium&rsquo;s fractional CMO engagements are led personally by founder Jeff Rimmer.</p></details>
-<details class="rv"><summary>What is Extra Medium Labs?</summary><p>Extra Medium Labs is where the studio builds and operates its own products instead of only advising clients. Its flagship is Magpie, a local creator marketing platform live in 45 founding markets across 13 countries, where local businesses comp or pay local creators to visit and post honestly, with every visit tracked.</p></details>
+<details class="rv"><summary>What is Extra Medium Labs?</summary><p>Extra Medium Labs is where the studio builds and operates its own products instead of only advising clients. Its flagship is Magpie, a local creator marketing platform live in 45 founding markets across 13 countries, where local businesses comp or pay local creators to visit and post honestly, with every visit tracked. Its second live product is Hapsta (hapsta.co), small capped live video rooms where fans hang out or play games with famous people.</p></details>
 <details class="rv"><summary>Who does Extra Medium work with?</summary><p>Founder-led and high-growth companies, pre-launch startups, manufacturers, consumer brands and established enterprises up to Fortune 100 scale &mdash; across consumer products, ecommerce, healthcare, retail, media, music, hospitality, professional services and SaaS. The common thread is ambition, not industry.</p></details>
 <details class="rv"><summary>How does an engagement start?</summary><p>With a conversation, not a proposal. Engagements take three shapes: fractional CMO leadership, a defined project such as a launch or rebrand, or ongoing growth work. If we are not the right fit, we say so &mdash; and usually know who is.</p></details>
 </div>
@@ -227,7 +228,7 @@ FAQ_HOME_LD = """<script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
 {"@type":"Question","name":"What does Extra Medium do?","acceptedAnswer":{"@type":"Answer","text":"Extra Medium is a marketing agency and fractional CMO practice based in Virginia Beach, Virginia. We launch new businesses and products, reinvent brands that have outgrown their look, and run growth systems — paid media, search, creators and AI — measured against revenue, not vanity metrics."}},
 {"@type":"Question","name":"What is a fractional CMO?","acceptedAnswer":{"@type":"Answer","text":"A fractional CMO is a senior marketing executive who leads your marketing part-time — owning strategy, directing your team and agencies, and reporting results — without the cost of a permanent executive seat. Extra Medium's fractional CMO engagements are led personally by founder Jeff Rimmer."}},
-{"@type":"Question","name":"What is Extra Medium Labs?","acceptedAnswer":{"@type":"Answer","text":"Extra Medium Labs is where the studio builds and operates its own products instead of only advising clients. Its flagship is Magpie, a local creator marketing platform live in 45 founding markets across 13 countries, where local businesses comp or pay local creators to visit and post honestly, with every visit tracked."}},
+{"@type":"Question","name":"What is Extra Medium Labs?","acceptedAnswer":{"@type":"Answer","text":"Extra Medium Labs is where the studio builds and operates its own products instead of only advising clients. Its flagship is Magpie, a local creator marketing platform live in 45 founding markets across 13 countries, where local businesses comp or pay local creators to visit and post honestly, with every visit tracked. Its second live product is Hapsta (hapsta.co), small capped live video rooms where fans hang out or play games with famous people."}},
 {"@type":"Question","name":"Who does Extra Medium work with?","acceptedAnswer":{"@type":"Answer","text":"Founder-led and high-growth companies, pre-launch startups, manufacturers, consumer brands and established enterprises up to Fortune 100 scale, across consumer products, ecommerce, healthcare, retail, media, music, hospitality, professional services and SaaS."}},
 {"@type":"Question","name":"How does an engagement start?","acceptedAnswer":{"@type":"Answer","text":"With a conversation, not a proposal. Engagements take three shapes: fractional CMO leadership, a defined project such as a launch or rebrand, or ongoing growth work."}}]}
 </script>"""
@@ -333,7 +334,7 @@ labs = """
 <section class="phero"><div class="wrap">
 <p class="kick rv">Extra Medium Labs</p>
 <h1 class="rv">Things we build when <span class="it">nobody hired us to.</span></h1>
-<p class="lede rv">Labs is where the studio puts its own money where its advice is. One flagship product, live and operating. A small number of ventures behind it. Nothing else &mdash; a flagship only means something if most things aren&rsquo;t one.</p>
+<p class="lede rv">Labs is where the studio puts its own money where its advice is. Two live products of our own &mdash; one flagship, one core project &mdash; and a small bench behind them. Nothing else. Focus is a feature.</p>
 [[layers:collage-labs|Black and white collage of a bird perched on a marble statue head beside a vintage camera, over electric blue]]
 </div></section>
 <section><div class="wrap">
@@ -354,12 +355,23 @@ labs = """
 <p class="note rv" style="margin-top:22px">Status, honestly: live platform, founding rosters forming market by market, home market Virginia Beach activating first. Operated by Extra Medium LLC. Pricing, standards and the Visit Guarantee are published on the product site &mdash; because that&rsquo;s how products should behave.</p>
 </div></section>
 <section><div class="wrap">
+<div class="flagship rv"><div class="flagship-grid">
+<div class="flagship-copy"><span class="badge">Core project &middot; Live</span>
+<h3 style="font-size:2.4rem;line-height:1.02;margin:10px 0 4px">Hapsta</h3>
+<h3 style="font-size:1.8rem;line-height:1.08">Hang out with your fave. <span class="it">Live, in the room.</span></h3>
+<p>A livestream is a broadcast: thousands watch, the star talks at a crowd. Hapsta is the opposite &mdash; a small, capped, live video room where fans are <b>in it</b> with the star: seen, heard, and called on by name. Some sessions hang out. Some play the star&rsquo;s game, with fans seated in the party. The star sets the price, the length and the room size, and keeps 80%. Our production board runs the talk line, the clock and the recording, so the star just hosts.</p>
+<div class="stats"><div><b><span data-count="80">80</span>%</b><span>Kept by the star</span></div><div><b><span data-count="12">12</span></b><span>Max on camera</span></div><div><b><span data-count="1">1</span></b><span>Link to host</span></div></div>
+<div class="cta-row"><a class="btn p" href="https://hapsta.co">hapsta.co</a><a class="btn" href="/magazine/the-room-got-small/">The story in The Extra</a></div></div>
+<div class="flagship-media"><img src="/assets/img/hapsta-gamer.jpg" alt="A fan playing in a game session, seen over the shoulder"></div>
+</div></div>
+<p class="note rv" style="margin-top:22px">Status, honestly: live at hapsta.co, waitlist open, first sessions forming. Fans request the stars they want, and those requests decide who gets approached first. No payments are live yet &mdash; the waitlist hears first.</p>
+</div></section>
+<section><div class="wrap">
 <div class="sec-head block rv"><p class="kick">In development</p><h2 style="margin-top:14px">The next <span class="it">bench.</span></h2>
-<p class="lede">Three ventures in active development. Everything else we&rsquo;ve explored has been archived off this page &mdash; focus is a feature.</p></div>
-<div class="grid3" style="margin-top:26px">
+<p class="lede">Two ventures in active development. Everything else we&rsquo;ve explored has been archived off this page &mdash; focus is a feature.</p></div>
+<div class="grid2" style="margin-top:26px">
 <div class="card rv"><span class="num">01 &middot; Prototype &middot; Waitlist open</span><h3>Roon</h3><p>The days you&rsquo;d give anything to have back. A memory-keeping app that turns the photos, videos and voice notes a family already has into stories you can step back into &mdash; because storage isn&rsquo;t the problem. Meaning is.</p><span class="arrow"><a href="https://roonapp.co" style="text-decoration:none;color:inherit">roonapp.co &rarr;</a></span></div>
 <div class="card rv" style="transition-delay:.08s"><span class="num">02 &middot; In development</span><h3>JAWNRA</h3><p>The world&rsquo;s music, in motion. A global music discovery and chart platform that measures momentum instead of popularity &mdash; the chart that tells you what&rsquo;s about to win, not what already did.</p><span class="arrow"><a href="https://jawnra.com" style="text-decoration:none;color:inherit">jawnra.com &rarr;</a></span></div>
-<div class="card rv" style="transition-delay:.16s"><span class="num">03 &middot; In development</span><h3>hapsta</h3><p>Make something happen. An AI engine for spontaneous real life: tell it what you&rsquo;re looking for and get a Happening &mdash; people, place, activity, time. Software that gets you off the phone and into a room.</p><span class="arrow"><a href="https://hapsta.co" style="text-decoration:none;color:inherit">hapsta.co &rarr;</a></span></div>
 </div>
 </div></section>
 <div class="band-media"><img class="bandimg" data-plx="0.1" src="/assets/img/img-tokyo.jpg" alt="A neon city street at night, alive with signs">
@@ -374,7 +386,7 @@ labs = """
 """
 
 page("Extra Medium Labs | Magpie, Our Flagship Product",
-     "Extra Medium Labs builds the studio's own products. Flagship: Magpie, the live local creator marketing platform. Plus ventures in development: Roon, JAWNRA and hapsta.",
+     "Extra Medium Labs builds the studio's own products. Flagship: Magpie, the live local creator marketing platform. Core project: Hapsta, live rooms where fans hang out with famous people. In development: Roon and JAWNRA.",
      "/labs/", "labs", labs, crumb_ld([("Home", "/"), ("Labs", "/labs/")]))
 print("labs done")
 
@@ -519,10 +531,342 @@ page("Contact | Extra Medium",
      "/contact/", "contact", contact, crumb_ld([("Home", "/"), ("Contact", "/contact/")]))
 print("contact done")
 
+
+# ============ THE EXTRA — MAGAZINE ============
+def _plain(t):
+    return (t.replace("&rsquo;", "\u2019").replace("&ldquo;", "\u201c").replace("&rdquo;", "\u201d")
+             .replace("&mdash;", "\u2014").replace("&middot;", "\u00b7").replace("&amp;", "&").replace("&hellip;", "\u2026"))
+
+def faq_ld(qas):
+    import json as _j
+    items = ",".join(_j.dumps({"@type": "Question", "name": _plain(q), "acceptedAnswer": {"@type": "Answer", "text": _plain(a)}}) for q, a in qas)
+    return '<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[' + items + "]}</script>"
+
+def article_ld(a):
+    import json as _j
+    d = {"@context": "https://schema.org", "@type": "Article",
+         "headline": _plain(a["title"]), "description": _plain(a["dek"]),
+         "datePublished": a["iso"], "dateModified": a["iso"],
+         "author": {"@type": "Person", "name": "Jeff Rimmer", "jobTitle": "Co-Founder & CEO, Extra Medium"},
+         "publisher": {"@type": "Organization", "name": "Extra Medium", "url": "https://xmedium.co/"},
+         "mainEntityOfPage": "https://xmedium.co/magazine/" + a["slug"] + "/",
+         "articleSection": a["cat"]}
+    return '<script type="application/ld+json">' + _j.dumps(d) + "</script>"
+
+ARTICLES = [
+dict(slug="the-room-got-small", cat="Music & Media", cover=True,
+     title="The Room Got Small: What Happens to Celebrity Access When Fans Stop Watching and Start Showing Up",
+     dek="Hapsta is not another livestream. It is a ticket into a small live room where the star talks with fans instead of at them, and it changes what a famous person is actually selling.",
+     date="November 14, 2026", iso="2026-11-14", mins=4,
+     hero=("img", "/assets/img/hapsta-studio.jpg", "A musician playing acoustic guitar in a recording studio"),
+     pull="Watching is free everywhere now, and it feels like it. Being in the room is the part that got rare.",
+     body="""
+<p>The livestream solved distribution and broke the encounter. A star can reach a million people at once now, and every one of those people knows the star cannot see them. Chat scrolls too fast to read. The comments are a crowd, not a conversation. Fans got infinite access to watch and almost no access to be in it.</p>
+<p>Hapsta, a product from Extra Medium Labs and live now at hapsta.co, starts from the other end. A Hapsta session is a ticket to one live session with a famous person, online, on your phone. The room is capped on purpose. Most sessions are hangouts: a small live video room where the star talks with the people in it. Fans can be seen, heard, and called on by name. It is built to feel less like a broadcast and more like being somewhere.</p>
+<h2>Small is the product</h2>
+<p>The tiers describe how present you are. Room gets you in, watching and talking in the room. Mic puts you in the talk line, able to speak when you are called on. Video puts your camera in the room, capped at 12 people, the closest thing to sitting across from someone. Nobody in the room is anonymous crowd. The cap is not a limitation the product apologizes for. The cap is the product.</p>
+<p>Some sessions are game sessions instead of hangouts. The format is the same ticket, pointed at a different room: fans get a seat in the star&rsquo;s game party and play alongside them, while everyone else watches and talks from the room. The common thread is not the activity. It is the size. A capped room is a place a star can actually host, and a place a fan can actually be noticed.</p>
+[[pull]]
+<h2>The star sets the terms</h2>
+<p>Hapsta does not set prices, because the value of an hour varies too much from one name to the next. The star sets the price, the length, and the room size, and keeps 80% of ticket revenue. One star can run a small room at a high price. Another can run a bigger room cheap. Both are rational, and both are the star&rsquo;s call.</p>
+<p>The work around the session is handled by an AI-assisted production board. It runs the talk line, the clock, the recording, and moderation prompts, so the person hosting does not need to produce their own show while starring in it. There is no streaming setup to buy and no gaming skill required. Talent applies to host; most have 20,000 or more followers somewhere, on any platform. What they bring is the audience and themselves. The platform brings the room and the machinery.</p>
+<h2>Access is being repriced</h2>
+<p>No payments are live on Hapsta yet. Fans join a waitlist and request the stars they want, and those requests decide who gets approached first. That order matters. Instead of booking whoever will say yes and hoping an audience follows, the platform can walk to a star with a room already asking for them. The demand is documented before the pitch is made.</p>
+<p>That is the shift worth watching. For a decade, celebrity access online has been sold by reach: how many people can this post hit. A capped room sells the opposite. It sells scarcity that is real, because a room with 12 cameras in it cannot be scaled without becoming the thing it replaced. The star is not selling impressions. The star is selling an hour of being known by name, and there is a hard limit on how much of that exists.</p>
+<p>Whether fans keep paying for that is an open question, and the waitlist is how Hapsta finds out. But the direction is hard to argue with. Watching is free everywhere now, and it feels like it. Being in the room is the part that got rare.</p>
+"""),
+dict(slug="magpie-announcement", cat="News · Press release", cover=False,
+     title="Extra Medium Labs Launches Magpie, a Local Creator Marketing Platform That Ranks Creators by Local Reach",
+     dek="Magpie is live at magpielocal.com, with founding markets forming now and Hampton Roads first.",
+     date="November 14, 2026", iso="2026-11-14", mins=3,
+     hero=("layers", "collage-labs"),
+     pull="Magpie counts the followers who live near the business. That is a smaller number, and it is the honest one.",
+     body="""
+<p><b>FOR IMMEDIATE RELEASE</b></p>
+<p><b>VIRGINIA BEACH, Va., November 14, 2026</b> &mdash; Extra Medium Labs today announced Magpie, a local creator marketing platform that lets local businesses book local creators for comped experiences or paid posts, and shows each creator&rsquo;s local reach before anyone books. Magpie is live at magpielocal.com, with founding markets forming now and Hampton Roads first.</p>
+<p>Most influencer marketing runs on one number: total followers. Magpie runs on a different one. Every creator profile shows how much of that creator&rsquo;s audience is actually local, and search ranks creators by that local reach ahead of raw follower count. A creator with 800 mostly local followers can outrank an account ten times its size, because for a restaurant, a gym, or a shop, the followers who can walk in are the ones that matter.</p>
+<p>Paid bookings work on the creator&rsquo;s terms. Creators list their own rate, and they keep 97% of every paid booking. The remaining 3% covers payment transaction fees, which is what makes payment immediate instead of net-30. Businesses that prefer to comp can offer an experience instead: a meal, a service, a visit. Either way, the terms are visible before anyone commits.</p>
+<p>More than 100 founding creators joined during the founding period, and signups and interest now span 45 markets in 13 countries. Founding markets are forming in sequence, starting with Hampton Roads, Virginia, where Extra Medium is based.</p>
+<p>The platform includes Maggie, an AI assistant built into every account. Maggie works only from the signed-in user&rsquo;s own account data. She does not pull from other accounts, and she does not surface platform-wide numbers to individual users.</p>
+<p>&ldquo;Local businesses have been priced out of creator marketing and local creators have been overlooked by it, and both problems come from the same place: the industry only counts total followers,&rdquo; said Jeff Rimmer, Co-Founder &amp; CEO of Extra Medium. &ldquo;Magpie counts the followers who live near the business. That is a smaller number, and it is the honest one.&rdquo;</p>
+[[pull]]
+<h2>About Magpie</h2>
+<p>Magpie is a local creator marketing platform built and operated by Extra Medium Labs. Local businesses book local creators for comped experiences or paid posts at the creator&rsquo;s own listed rate, with each creator&rsquo;s local reach shown before booking and ranked above raw follower count. Creators keep 97% of paid bookings. Magpie is live at magpielocal.com.</p>
+<h2>About Extra Medium</h2>
+<p>Extra Medium is a founder-led marketing agency and fractional CMO practice in Virginia Beach, Virginia. Through Extra Medium Labs, the company also builds and operates its own products, including Magpie. The studio works with clients from startups to Fortune 100 companies.</p>
+<p><b>Media contact:</b> hello@xmedium.co</p>
+"""),
+dict(slug="what-a-fractional-cmo-does", cat="Marketing", cover=False,
+     title="What a Fractional CMO Actually Does All Week",
+     dek="It is not a part-time version of a marketing job. It is the whole job, pointed at fewer things, on the days that matter.",
+     date="November 14, 2026", iso="2026-11-14", mins=5,
+     hero=("layers", "collage-cmo"),
+     pull="A strategy that cannot say no is a list.",
+     body="""
+<p>Most founders meet the fractional CMO idea at the same moment: marketing has become too important to improvise and too expensive to staff at the top. A full-time chief marketing officer is a serious executive seat, with a serious salary attached. Hiring a junior marketer and hoping they grow into the strategy is the other option, and it usually ends with a busy calendar and no direction. The fractional model sits between those two. A senior marketing executive embeds in your company part-time, owns the strategy, and runs the function as if the seat were theirs. Because it is, for the hours they are there.</p>
+<h2>Diagnosis before decoration</h2>
+<p>The first weeks are not campaigns. They are an audit. Where does revenue actually come from? Which channels produce customers and which produce reports? Where does money leak: the offer nobody understands, the landing page that loses people, the ad spend pointed at an audience that was never going to buy? A fractional CMO spends real time in the numbers before touching anything creative, because most marketing problems are not creativity problems. They are clarity problems wearing a creative costume. Until the diagnosis is done, every new idea is a guess, and guesses are the most expensive line item a growing company has.</p>
+<h2>One strategy everyone argues from</h2>
+<p>After diagnosis comes the document most companies do not have: a single strategy, written plainly, that every marketing decision gets tested against. Who we serve. What we say. What we will not do this year. This is the unglamorous core of the job, and it is the part that changes everything downstream. Once the strategy exists, the weekly work becomes enforcement. The founder stops re-deciding the direction every Monday. The team stops building three versions of everything. Good ideas that do not fit get killed, and killing them is not a failure of imagination. It is the job. A strategy that cannot say no is a list.</p>
+[[pull]]
+<h2>Running the calendar, managing the people</h2>
+<p>The middle of the week is operational. Launches and campaigns get planned on one calendar instead of five threads. Agencies, freelancers, and vendors get briefed properly, managed tightly, and held to outcomes instead of deliverables, so the founder does not have to do it between everything else. The fractional CMO sits in leadership meetings and translates: here is what marketing can do this quarter, here is what it cannot, here is what the numbers say we should stop funding. That translation, between the boardroom version of growth and the working version, is where a lot of companies quietly lose years. Someone senior has to stand in the middle of it.</p>
+<h2>How this differs from the alternatives</h2>
+<p>A consultant gives advice and leaves. The advice can be excellent, and then it sits in a document while the company goes back to improvising. An agency executes a brief. If the brief is wrong, the agency will execute the wrong thing beautifully, because execution is what you bought. A junior hire works hard and learns on your budget, but they need the strategy set for them, which means the founder becomes the CMO by default, at midnight, without the experience. The fractional CMO is the option that owns the outcome: embedded enough to be accountable, senior enough to set the strategy, and structured so the company pays for leadership hours instead of a full-time executive seat.</p>
+<p>At Extra Medium, the practice is senior-only and founder-led, built on 20+ years across startups to Fortune 100 companies. It also sits inside an agency that builds, so the strategy and the execution live under one roof. The person who writes the plan is in the room when the plan meets reality, and the plan changes accordingly. That is the whole model: fewer hours than a full-time seat, none of them junior.</p>
+"""),
+dict(slug="the-local-advertiser", cat="Media", cover=False,
+     title="The Local Advertiser Didn&rsquo;t Leave. The Audience Did.",
+     dek="For decades a local business bought the paper, the radio station, and the TV spot because that was where the town was paying attention. The town is still paying attention. It is just looking at people now.",
+     date="November 14, 2026", iso="2026-11-14", mins=5,
+     hero=("layers", "collage-work"),
+     pull="The trust that used to attach to the station now attaches to the person.",
+     body="""
+<h2>Where local attention used to live</h2>
+<p>There was a time when buying local media was a simple decision, because there were only a few shelves to buy from. The morning paper landed on every porch that mattered. The radio station played in every truck and kitchen. The evening news was a shared appointment. A restaurant, a car dealer, a furniture store: they bought those outlets not out of loyalty but out of arithmetic. That was where local attention lived, and attention is what advertising has always actually purchased.</p>
+<p>That arithmetic held for decades, and then the audience moved. Not away from the town, and not away from local life. Away from the outlets. Attention went to the phone, and on the phone it did not settle on institutions. It settled on people.</p>
+<h2>The most trusted channel in town is a person</h2>
+<p>Ask a local business owner where their customers hear about things now and the answer is rarely a media brand. It is a person. The neighbor who posts where she eats. The dad who reviews every taco truck in the county. The creator with 3,000 followers, most of them within twenty miles, who actually shows up at the restaurant, eats the food, and posts about it to people who trust her because she is one of them.</p>
+<p>That is not a lesser form of media. In practical terms it is a stronger one. The old local outlets delivered reach and a borrowed credibility. A local creator delivers both in a smaller, denser package: a defined local audience and a voice that audience chose to follow. The trust that used to attach to the station now attaches to the person, and it attaches more firmly, because the relationship feels like what it is: one person talking to people who know her.</p>
+[[pull]]
+<h2>A big market with no shelf</h2>
+<p>The scale of the shift is not in dispute. The creator economy is estimated at $250 billion, growing toward $480 billion by 2027. US creator ad spend is estimated at around $37 billion in 2025, growing roughly 26 percent a year. National brands have built whole departments around buying this attention.</p>
+<p>Local businesses, by and large, have been locked out of it. Not because the value is unclear to them &mdash; they can see exactly who their customers listen to. They have been locked out because there was no shelf to buy it from. No standard way to find the local creators in their market, no way to see how much of a creator&rsquo;s audience is actually local, no clean way to book, brief, and pay them. A national brand buys through platforms and agencies. A restaurant owner was left to slide into someone&rsquo;s messages and hope. So the money mostly stayed in the old channels even as the audience drained out of them, or it went to boosted posts aimed at everyone and no one.</p>
+<h2>What we built about it</h2>
+<p>That gap is a building problem, so we built. Magpie is the platform our lab made for it: a place where a business can see a local creator&rsquo;s actual local reach before booking them, not a follower count with a guess behind it, and then comp an experience or pay the creator&rsquo;s listed rate, in the open, on standard terms.</p>
+<p>The local advertiser never stopped wanting what they always wanted: the attention of the people nearby, delivered by a voice those people trust. For fifty years that voice belonged to an outlet. Now it belongs to a person. The businesses that figure that out first are not chasing a trend. They are just buying media where the town actually is.</p>
+"""),
+dict(slug="your-logo-is-not-your-brand", cat="Advertising", cover=False,
+     title="Your Logo Is Not Your Brand",
+     dek="A logo is the label on the jar. Your brand is everything inside it, and everything about how the jar gets handed over.",
+     date="November 14, 2026", iso="2026-11-14", mins=5,
+     hero=("layers", "collage-about"),
+     pull="Nobody ever left because of a typeface. They left because the second experience didn&rsquo;t match the first promise.",
+     body="""
+<p>Ask a founder what their brand is and most will point at the logo. Sometimes they&rsquo;ll point at the color palette, or the typeface, or the mood board from the last redesign. All of those things are real, and all of them matter. But none of them is the brand.</p>
+<p>Your brand is the set of expectations a customer carries into every interaction with you, and whether those expectations survive the interaction. It&rsquo;s the work itself. It&rsquo;s how fast you reply to an email, and whether the reply sounds like a person. It&rsquo;s the invoice, clear or confusing. It&rsquo;s the hold music, the packaging tape, the way a problem gets handled when something goes wrong at 4 p.m. on a Friday. The logo is just the label on the jar. It tells people which jar to reach for. It says nothing about what&rsquo;s inside.</p>
+<h2>Why redesigns fail</h2>
+<p>This is why so many rebrands disappoint. A company changes the label and leaves the jar exactly as it was. The operations stay the same, the offer stays the same, the follow-through stays the same, and six months later someone is asking why the new identity didn&rsquo;t move anything.</p>
+<p>It couldn&rsquo;t have. Customers don&rsquo;t experience your identity system. They experience your behavior, in sequence, over time. If the old brand felt unreliable, that feeling wasn&rsquo;t produced by the old typeface. It was produced by missed deadlines, inconsistent quality, and promises the business couldn&rsquo;t keep at volume. A redesign that doesn&rsquo;t touch any of that is a costume change. The market notices for about a week, then goes back to believing its own experience.</p>
+<p>There&rsquo;s a harder version of this problem, too. A sharper logo on an unchanged operation can actually make things worse, because it raises the expectation the operation then fails to meet. The gap between what you look like and what you act like is where trust goes to die.</p>
+[[pull]]
+<h2>What actually compounds</h2>
+<p>The brands that hold up over years are rarely the most designed ones. They&rsquo;re the most consistent ones. A few things do the compounding:</p>
+<p><b>Consistency.</b> The same standard, kept in the tenth interaction as in the first. This sounds simple and is the hardest thing on this list, because consistency is an operations problem, not a design problem.</p>
+<p><b>A point of view.</b> A brand should stand for a specific way of seeing its category, stated plainly enough that a customer could repeat it. If your positioning can&rsquo;t survive being paraphrased by a stranger, it isn&rsquo;t finished.</p>
+<p><b>Promises kept at scale.</b> Every business keeps its promises when it&rsquo;s small and the founder touches everything. The brand is what happens when the founder doesn&rsquo;t. Systems, hiring, and standards are brand work, even though nobody puts them in the brand book.</p>
+<p>None of this makes design unimportant. Design is how the point of view becomes visible, and visible matters. It just comes second in the order of operations, not first.</p>
+<h2>Fix this before anyone opens a design tool</h2>
+<p>When we run a launch or a rebrand, three things get settled before identity work starts, because identity built on unsettled ground has to be rebuilt later.</p>
+<p>First, the offer. What exactly is being sold, to whom, and why is it the right choice for that person? If the team can&rsquo;t answer in two sentences, the logo brief will quietly try to answer it instead, and logos are bad at that job.</p>
+<p>Second, the story. Not a tagline, the actual account of why this business exists and what it changes for the customer. The story is what the identity has to carry. Decide the load before you design the vehicle.</p>
+<p>Third, the proof. What can you point to? Work done, customers served, results you can state without decoration. A launch with proof can afford quiet design. A launch without it tends to ask design to shout, and shouting reads as doubt.</p>
+<p>This is the order we build in on our Launch work: positioning, naming, identity, and go-to-market treated as one arc, not four separate purchases. And it&rsquo;s the discipline behind our Reinvent work, too. A rebrand is a chance to fix the jar and the label in the right order. Most companies only fix the label because it&rsquo;s the part you can see in a presentation. The jar is the part your customers can see.</p>
+"""),
+dict(slug="inside-the-lab", cat="The Lab", cover=False,
+     title="Inside the Lab: Why a Marketing Agency Builds Its Own Products",
+     dek="Extra Medium Labs is where we spend our own money on our own advice, and client work is better for it.",
+     date="November 14, 2026", iso="2026-11-14", mins=5,
+     hero=("layers", "collage-contact"),
+     pull="It&rsquo;s easy to be brave with somebody else&rsquo;s budget.",
+     body="""
+<p>Most agencies sell advice they never have to live on. The campaign ends, the report gets presented, and whether the thinking actually worked becomes somebody else&rsquo;s problem. We wanted a different arrangement, so we built one. Extra Medium Labs is the product arm of this studio, the part of the business where we build and run our own products, with our own budget, on our own deadlines.</p>
+<p>Four products are in the lab right now. Magpie, our flagship, is a live platform for local creator marketing: it connects local businesses with creators in their own market, ranked by how local their audience actually is. Hapsta, live at hapsta.co, runs small, capped live video rooms where fans hang out or play games with famous people; the star sets the price and keeps 80 percent, and it&rsquo;s currently in its waitlist stage. Roon turns the photos, videos, and voice notes a family already has into stories; it&rsquo;s in prototype, with a waitlist open. JAWNRA, a global music discovery and chart platform that measures momentum instead of popularity, is in development.</p>
+<p>Here&rsquo;s what running them does to the client work.</p>
+<h2>It keeps the advice honest</h2>
+<p>When you market your own product, there is no client to blame and no scope to hide behind. The positioning either works in the market or it doesn&rsquo;t, and the invoice for finding out arrives either way. That changes how you give advice. Recommendations get shorter and more specific, because you know exactly which ones you&rsquo;d fund yourself and which ones sound good in a deck.</p>
+<p>Every agency has opinions about what a launch needs. A lab turns those opinions into a track record you can inspect. When we tell a client their offer needs work before their identity does, that&rsquo;s not a philosophy. It&rsquo;s a conclusion we paid to reach.</p>
+[[pull]]
+<h2>Every lesson gets paid for twice</h2>
+<p>Client work teaches you things once, in someone else&rsquo;s context. Your own products teach you the same lesson again, in yours, with your money. Pricing, onboarding, the gap between what users say and what they do, the features that demo well and die quietly: you learn these differently when the P&amp;L has your name on it.</p>
+<p>The transfer runs in both directions. A pattern we prove on a client engagement gets tested against our own products, where the feedback is fast and unfiltered. A mistake we make in the lab becomes a warning we can give a client with a straight face and a specific story attached. Paid for twice, used many times.</p>
+<h2>It&rsquo;s a standing prototype shop</h2>
+<p>A working lab is also infrastructure. We have live products with real signups, real payment flows, real support questions, and real analytics, which means new ideas don&rsquo;t have to be argued in the abstract. A landing page structure, an onboarding sequence, a pricing presentation: we can build it, put it in front of actual users on our own properties, and see what happens before a client spends anything on it.</p>
+<p>That speed matters most at the start of an engagement, when the questions are biggest and the evidence is thinnest. Instead of bringing a client our best guess, we can often bring them something we&rsquo;ve already watched succeed or fail at small scale, and the conversation starts from evidence instead of taste.</p>
+<h2>The same work, for your product</h2>
+<p>None of this makes the lab a side project. It&rsquo;s the reason the studio side works the way it does. The Launch, Reinvent, and Grow engagements we run for clients use the same process we use on Magpie, Hapsta, Roon, and JAWNRA, because it&rsquo;s the only process we have: settle the offer, tell the story plainly, prove it in the market, then make it look like what it is.</p>
+<p>If you&rsquo;re building something and want a team that has to follow its own advice to stay in business, that&rsquo;s the arrangement we&rsquo;re offering. The lab door is the same door as the studio door. Start a conversation and we&rsquo;ll show you both sides of it.</p>
+"""),
+]
+
+def hero_html(a):
+    kind = a["hero"][0]
+    if kind == "layers":
+        return "[[layers:" + a["hero"][1] + "|Magazine story artwork]]"
+    return ('<figure class="frame bleed rv"><img data-plx="0.06" src="' + a["hero"][1] + '" alt="' + a["hero"][2] + '"></figure>')
+
+def art_cards(items):
+    out = []
+    for a in items:
+        out.append('<a class="card rv art-card" href="/magazine/' + a["slug"] + '/"><span class="num">' + a["cat"] + ' &middot; ' + a["date"] + '</span><h3>' + a["title"] + '</h3><p>' + a["dek"] + '</p><span class="arrow">Read &rarr;</span></a>')
+    return "".join(out)
+
+_cover = [a for a in ARTICLES if a.get("cover")][0]
+_rest = [a for a in ARTICLES if not a.get("cover")]
+
+mag_index = """
+<section class="phero mag-mast"><div class="wrap">
+<p class="kick rv">The Extra Medium magazine</p>
+<h1 class="mag-title rv">The <span class="it">Extra.</span></h1>
+<p class="lede rv">Notes on marketing, advertising, music and media &mdash; and dispatches from our own lab. Written by the people doing the work, published when there&rsquo;s something worth saying.</p>
+<p class="art-meta rv">Vol. 01 &middot; November 2026 &middot; Virginia Beach</p>
+</div></section>
+""" + DIVIDER + """
+<section><div class="wrap">
+<p class="kick rv">Cover story &middot; """ + _cover["cat"] + """</p>
+<div class="mag-cover rv">
+""" + hero_html(_cover) + """
+<div class="mag-cover-copy"><h2><a href="/magazine/""" + _cover["slug"] + """/">""" + _cover["title"] + """</a></h2>
+<p class="lede">""" + _cover["dek"] + """</p>
+<p class="art-meta">By Jeff Rimmer &middot; """ + _cover["date"] + """ &middot; """ + str(_cover["mins"]) + """ min read</p>
+<a class="btn p" href="/magazine/""" + _cover["slug"] + """/">Read the cover story</a></div>
+</div>
+</div></section>
+<section><div class="wrap">
+<div class="sec-head block rv"><p class="kick">The latest</p><h2 style="margin-top:14px">This <span class="it">issue.</span></h2></div>
+<div class="grid3" style="margin-top:26px">""" + art_cards(_rest) + """</div>
+</div></section>
+<section><div class="wrap"><div class="split">
+<div class="prose rv"><h2>Why a magazine?</h2>
+<p>Because the answers clients pay for shouldn&rsquo;t live only in decks. The Extra is where Extra Medium publishes its thinking in the open: how marketing actually works, what we&rsquo;re learning from building our own products, and the occasional official announcement when the lab ships something.</p>
+<p>New pieces land here first, then travel to LinkedIn and Instagram. One new article a day, most days.</p></div>
+<div class="prose rv"><h2>Start with the work</h2>
+<p>The magazine is the thinking. The studio is the doing: launches, reinventions, growth systems and fractional CMO leadership for companies from startups to Fortune 100 &mdash; plus a lab that builds its own products, so the advice is always tested at home first.</p>
+<div class="cta-row"><a class="btn p" href="/services/">What the studio does</a><a class="btn" href="/labs/">Inside Labs</a></div></div>
+</div></div></section>
+""" + CTA
+
+import json as _json
+_mag_items = ",".join(_json.dumps({"@type": "ListItem", "position": i + 1, "url": "https://xmedium.co/magazine/" + a["slug"] + "/"}) for i, a in enumerate(ARTICLES))
+_mag_ld = ('<script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"The Extra — the Extra Medium magazine",'
+           '"url":"https://xmedium.co/magazine/","mainEntity":{"@type":"ItemList","itemListElement":[' + _mag_items + "]}}</script>")
+
+page("The Extra — Magazine | Extra Medium",
+     "The Extra is Extra Medium's magazine: marketing, advertising, music, media, and dispatches from the lab that built Magpie and Hapsta.",
+     "/magazine/", "magazine", mag_index, _mag_ld + crumb_ld([("Home", "/"), ("Magazine", "/magazine/")]))
+print("magazine index done")
+
+for _a in ARTICLES:
+    _others = [x for x in ARTICLES if x["slug"] != _a["slug"]][:3]
+    _body = """
+<section class="phero art-head"><div class="wrap">
+<p class="kick rv">""" + _a["cat"] + """ &middot; The Extra</p>
+<h1 class="rv art-title">""" + _a["title"] + """</h1>
+<p class="lede rv art-dek">""" + _a["dek"] + """</p>
+<p class="art-meta rv">By Jeff Rimmer &middot; """ + _a["date"] + """ &middot; """ + str(_a["mins"]) + """ min read</p>
+""" + hero_html(_a) + """
+</div></section>
+<section><div class="wrap"><div class="article-body rv">
+""" + _a["body"].replace("[[pull]]", '<blockquote class="pull">' + _a["pull"] + "</blockquote>") + """
+</div></div></section>
+<section><div class="wrap">
+<div class="sec-head block rv"><p class="kick">Keep reading</p><h2 style="margin-top:14px">More from <span class="it">The Extra.</span></h2></div>
+<div class="grid3" style="margin-top:26px">""" + art_cards(_others) + """</div>
+</div></section>
+""" + CTA
+    page(_a["title"] + " | The Extra",
+         _a["dek"],
+         "/magazine/" + _a["slug"] + "/", "magazine", _body,
+         article_ld(_a) + crumb_ld([("Home", "/"), ("Magazine", "/magazine/"), (_a["cat"], "/magazine/" + _a["slug"] + "/")]))
+    print("article done:", _a["slug"])
+
+# ============ STRAIGHT ANSWERS (search landing pages, not in the menu) ============
+ANSWERS = [
+dict(slug="fractional-cmo", title="What Is a Fractional CMO? | Extra Medium",
+     q="What is a fractional CMO, and what does one actually do?",
+     desc="A fractional CMO is a senior marketing executive embedded part-time. What the job covers, who it fits, and how Extra Medium runs the practice.",
+     answer="A fractional CMO is a senior marketing executive who works inside your company part-time &mdash; typically a set number of days a week &mdash; and owns your marketing strategy and function the way a full-time CMO would, without the full-time executive seat. At Extra Medium the practice is senior-only and founder-led: diagnosis first, one strategy everyone argues from, then running the calendar, the team and the vendors against it.",
+     sections=[
+       ("The job, in one week", "<p>Monday starts with the numbers: where revenue came from, what each channel produced, what gets stopped. The middle of the week is the calendar &mdash; launches, campaigns, the agencies and freelancers briefed and held to outcomes. Leadership meetings get a translator: what marketing can do this quarter, what it can&rsquo;t, and what the evidence says to fund. Underneath all of it is one written strategy that every decision gets tested against, including the decision to kill good ideas that don&rsquo;t fit.</p>"),
+       ("Who it fits", "<p>Companies whose marketing has outgrown improvisation but not the budget for a full-time executive: founders still acting as their own CMO at midnight, teams of juniors with no one setting direction, and businesses spending real money on agencies with nobody senior on their side of the table. It also fits companies between CMOs, where the seat can&rsquo;t sit empty for two quarters.</p>"),
+       ("How it works at Extra Medium", "<p>The Lead practice at Extra Medium pairs the fractional seat with the studio underneath it, so strategy and execution live under one roof: the person who writes the plan is in the room when the plan meets reality. Engagements are shaped as fractional leadership &mdash; a set cadence, a named senior, and the studio&rsquo;s Launch, Reinvent and Grow teams available behind it.</p>"),
+     ],
+     faqs=[
+       ("What is the difference between a fractional CMO and a consultant?", "A consultant advises and leaves; the advice then has to survive contact with your calendar without them. A fractional CMO is embedded and accountable: they own the strategy, run the function on their days, and answer for outcomes in the leadership meeting."),
+       ("How many days a week is a fractional CMO?", "It depends on the size of the function being run. Most engagements are one to three days a week equivalent, weighted toward launches and planning cycles. The shape is set in the first conversation, against what actually needs leading."),
+       ("Do you need an agency as well as a fractional CMO?", "Not necessarily. An agency executes a brief; a fractional CMO writes the brief and judges the work. At Extra Medium the two sit in one company, which removes the hand-off where most strategy gets lost."),
+     ]),
+dict(slug="fractional-cmo-cost", title="How Much Does a Fractional CMO Cost? | Extra Medium",
+     q="How much does a fractional CMO cost?",
+     desc="Fractional CMO pricing, honestly: what drives it, how engagements are usually structured, and what to compare it against.",
+     answer="A fractional CMO is priced as a monthly engagement, set by how many days a week the seat is filled and how much function there is to run. The honest comparison is not the day rate &mdash; it is the cost of the alternatives: a full-time CMO&rsquo;s salary and equity, a year of agency spend aimed by nobody senior, or another year of the founder doing the job at midnight. Fractional leadership exists because it is a fraction of the first and prevents the other two.",
+     sections=[
+       ("What drives the price", "<p>Three things: cadence (how many days a week, and whether launches spike it), scope (strategy only, or strategy plus managing your agencies, freelancers and internal team), and seniority. A genuine CMO-level operator with 20+ years across startups and Fortune 100 companies costs more per day than a mid-level marketer with a new title &mdash; and the difference is the entire point of the model. You are buying judgment that has already made the expensive mistakes somewhere else.</p>"),
+       ("How engagements are usually structured", "<p>Most fractional arrangements run as a monthly retainer with a defined cadence, reviewed quarterly against outcomes. Project-shaped starts are common: a diagnosis and strategy phase first, priced on its own, so both sides can see the size of the job before committing to a cadence. Extra Medium shapes every engagement in the first conversation and puts the number in writing before any work begins. No pricing games, no discovery-call maze.</p>"),
+       ("What to ask before you sign anyone", "<p>Ask who exactly sits in the seat (named person, not a bench), what they will stop you doing in the first month, how they report against revenue rather than activity, and what happens to the strategy when they are not in the room. The answers separate an operator from a deck.</p>"),
+     ],
+     faqs=[
+       ("Is a fractional CMO cheaper than hiring a CMO?", "Yes, in total cost: you pay for leadership days instead of a full-time executive package. The right comparison also counts what a senior seat prevents &mdash; misdirected agency spend, launches without strategy, and junior hires learning on your budget."),
+       ("Do fractional CMOs work on retainer or by the hour?", "Almost always a monthly retainer tied to a cadence. Hourly billing works against the model: you want the CMO thinking about your business between sessions, not watching a clock inside them."),
+       ("How long do companies keep a fractional CMO?", "Long enough to set the strategy, build the calendar and team rhythm, and either hand over to a full-time hire or settle into a steady cadence. Some engagements run a quarter; many run for years at a lighter rhythm."),
+     ]),
+dict(slug="marketing-agency-virginia-beach", title="Marketing Agency in Virginia Beach | Extra Medium",
+     q="A marketing agency in Virginia Beach that works like an owner, not a vendor?",
+     desc="Extra Medium is a founder-led marketing agency in Virginia Beach: launches, reinventions, growth systems and fractional CMO leadership, for startups to Fortune 100.",
+     answer="Extra Medium is a founder-led marketing agency headquartered in Virginia Beach, Virginia. It launches, reinvents and grows businesses &mdash; brand, creative, growth and technology under one roof &mdash; and it also builds its own products in Extra Medium Labs, led by Magpie. The practice is senior-only: the person you meet is the person who does the work, and clients range from pre-launch startups to Fortune 100 companies across the US and UK.",
+     sections=[
+       ("What the studio does", "<p>Six practices, one team. <b>Launch</b>: positioning, naming, identity and go-to-market as one arc. <b>Reinvent</b>: rebrands that fix the offer and story before the label. <b>Grow</b>: ongoing growth systems &mdash; content, campaigns, conversion. <b>Lead</b>: fractional CMO leadership, senior-only. <b>Intelligence</b>: AI consulting, agents and automation that survive contact with real workflows. <b>Experiences</b>: events and moments people actually remember.</p>"),
+       ("Why Hampton Roads companies work with us", "<p>Local matters for some things: knowing the market, being in the room, understanding how business actually moves in Hampton Roads. For everything else, the work travels &mdash; most engagements run remotely with in-person time when it matters, and the client list runs from Virginia Beach to Chicago to London. What doesn&rsquo;t change by geography is the standard: senior people, plain talk, and advice we test on our own products first.</p>"),
+       ("How an engagement starts", "<p>One conversation. Bring the project, the bigger problem, or the marketing seat you need filled. The first conversation is free and specific &mdash; you will leave knowing whether we can help, what we&rsquo;d do first, and what it would cost. If we&rsquo;re not the right fit, we&rsquo;ll say who might be.</p>"),
+     ],
+     faqs=[
+       ("Is Extra Medium only for Virginia Beach clients?", "No. Virginia Beach is home and the first market for our own products, but studio clients are across the US and UK. Local knowledge is an advantage we bring to Hampton Roads work, not a boundary on the practice."),
+       ("What size companies does Extra Medium work with?", "From pre-launch startups to Fortune 100 companies. The common thread is not size; it is a founder or leadership team that wants senior marketing thinking without building a full department first."),
+       ("Does Extra Medium take project work or only retainers?", "Both. Engagements come in three shapes: fractional leadership, defined projects, and ongoing growth. The shape follows the problem, not the other way around."),
+     ]),
+dict(slug="fractional-cmo-vs-agency", title="Fractional CMO vs. Marketing Agency | Extra Medium",
+     q="Fractional CMO or marketing agency: which does your company need?",
+     desc="The honest difference between a fractional CMO and a marketing agency, when you need one, the other, or both, and why Extra Medium is built as both.",
+     answer="An agency executes: give it a brief and it produces campaigns, creative and media. A fractional CMO leads: they own the strategy, write the brief, manage whoever executes, and answer for the outcome. If your problem is that work isn&rsquo;t getting made, you need an agency. If your problem is that nobody senior can say what work should be made, or why, you need the CMO seat filled first &mdash; otherwise the agency will execute the wrong thing beautifully.",
+     sections=[
+       ("The difference, plainly", "<p>Agencies are production capacity plus channel expertise, hired by the project or the month. They are excellent at making things and are structurally rewarded for making more things. A fractional CMO is leadership capacity: diagnosis, strategy, prioritization, vendor management and accountability in the leadership meeting. They are rewarded for outcomes, including the outcome of doing less, better.</p>"),
+       ("When each one is the right buy", "<p>Buy the agency when the strategy is settled and the constraint is hands: a launch date, a content engine, a media plan that needs running. Buy the fractional CMO when the strategy is the constraint: spend spread across channels nobody can connect to revenue, agencies unmanaged, a founder making every marketing decision by default. Buy both, in sequence, when you need the strategy set and then executed without a hand-off &mdash; which is most growing companies, most of the time.</p>"),
+       ("Why Extra Medium is both", "<p>The studio was built so the two never sit in different companies arguing over whose fault the quarter was. The Lead practice sets the strategy; the Launch, Reinvent and Grow practices execute it; and Labs keeps both honest by spending the studio&rsquo;s own money on the same advice. One roof, one accountable team.</p>"),
+     ],
+     faqs=[
+       ("Can a fractional CMO manage our existing agency?", "Yes &mdash; that is one of the highest-value uses of the seat. A senior operator on your side of the table briefs the agency properly, judges the work against strategy, and stops spend that can&rsquo;t defend itself."),
+       ("We already have a marketing manager. Do we still need a fractional CMO?", "Often, yes, and it&rsquo;s the combination that works best: the manager runs the week, the fractional CMO sets the direction, develops the manager, and carries the senior conversations. It&rsquo;s how many companies grow into a full-time seat."),
+       ("What if we choose wrong?", "Start with diagnosis. A short strategy phase shows whether your constraint is direction or production before you commit to either shape. That is how Extra Medium starts most engagements."),
+     ]),
+dict(slug="ai-marketing-consulting", title="AI Marketing Consulting That Ships | Extra Medium",
+     q="How can AI actually help a marketing team, beyond the demos?",
+     desc="Extra Medium's Intelligence practice: AI audits, agents and automation for marketing teams, built by a studio that runs its own AI products in production.",
+     answer="AI helps a marketing team when it is pointed at a specific job with a measurable outcome: research that took a day taking an hour, first drafts that start from your own data instead of a blank page, agents that handle the repetitive middle of a workflow while people keep the judgment calls. Extra Medium&rsquo;s Intelligence practice audits where AI actually pays inside your marketing operation, then builds the agents and automations &mdash; the same discipline we use on our own products, where an AI assistant works from each user&rsquo;s own account data and nothing else.",
+     sections=[
+       ("Where AI pays first", "<p>The wins are boring and compounding: turning customer language into briefs, keeping content calendars fed with researched first drafts, summarizing campaign performance into decisions, qualifying and routing inquiries, and keeping a knowledge base the whole team can actually query. The pattern is the same everywhere &mdash; a clear job, a defined data boundary, a human approving anything that leaves the building.</p>"),
+       ("What we build", "<p>Three shapes of work. <b>AI audits</b>: a map of your marketing workflows with the automation candidates ranked by payoff and risk. <b>Agents</b>: purpose-built assistants on your own data &mdash; like Maggie, the assistant inside Magpie, who answers only from the signed-in user&rsquo;s account data, never from anyone else&rsquo;s. <b>Automation</b>: the connective work between tools you already have, so the system runs while the team does the thinking.</p>"),
+       ("What we don&rsquo;t do", "<p>We don&rsquo;t sell AI as a personality transplant for your brand, and we don&rsquo;t ship anything that publishes, sends or spends without a human in the loop where it matters. AI that can&rsquo;t show its work doesn&rsquo;t go near a client&rsquo;s customers. The standard is the one we run at home: useful, bounded, and honest about what it is.</p>"),
+     ],
+     faqs=[
+       ("Do we need our data cleaned up before starting with AI?", "Some order helps, but a full data project is not a prerequisite. The audit starts from the workflows as they are and identifies the smallest data fixes that unlock the first wins."),
+       ("Will AI replace our marketing team?", "It replaces tasks, not judgment. Teams that adopt it well end up doing more of the work only people can do: strategy, taste, relationships, and the final call."),
+       ("How is this different from buying an AI tool subscription?", "Tools are generic; the value is in the fit to your workflows, your data boundaries and your approval rules. We build that fit, train the team on it, and leave the system documented and owned by you."),
+     ]),
+]
+
+for _an in ANSWERS:
+    _secs = "".join("<h2>" + h + "</h2>" + b for h, b in _an["sections"])
+    _faq_html = "".join('<details class="rv"><summary>' + q + "</summary><p>" + a + "</p></details>" for q, a in _an["faqs"])
+    _abody = """
+<section class="phero"><div class="wrap">
+<p class="kick rv">Straight answers</p>
+<h1 class="rv">""" + _an["q"] + """</h1>
+<div class="answer-first rv"><p>""" + _an["answer"] + """</p></div>
+</div></section>
+<section><div class="wrap"><div class="prose rv">""" + _secs + """</div>
+<h2 class="rv" style="margin:34px 0 6px">Asked <span class="it">often.</span></h2>
+""" + _faq_html + """
+</div></section>
+""" + CTA
+    page(_an["title"], _an["desc"], "/" + _an["slug"] + "/", "", _abody,
+         faq_ld(_an["faqs"]) + crumb_ld([("Home", "/"), ("Answers", "/" + _an["slug"] + "/")]))
+    print("answer done:", _an["slug"])
+
+
 # 404 in the new system
 pathlib.Path(ROOT / "404.html").write_text("""<!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Not found | Extra Medium</title><link rel="icon" href="/favicon.ico" sizes="any"><link rel="stylesheet" href="/assets/css/site.css?v=15">
+<title>Not found | Extra Medium</title><link rel="icon" href="/favicon.ico" sizes="any"><link rel="stylesheet" href="/assets/css/site.css?v=16">
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"></head>
 <body><section class="phero"><div class="wrap"><p class="kick">404</p><h1>This page is a Small. <span class="it">We don&rsquo;t stock those.</span></h1>
 <p class="lede">It doesn&rsquo;t exist anymore &mdash; the site was rebuilt around the work and our flagship product. Try one of these:</p>

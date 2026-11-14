@@ -9,11 +9,27 @@
 - [Contact](https://xmedium.co/contact/): Start a conversation. Email hello@xmedium.co. Replies usually within one business day.
 
 ## Labs
-- [Extra Medium Labs](https://xmedium.co/labs/): The studio's product lab. Flagship: Magpie. In development: Roon (memory-keeping), JAWNRA (music discovery), hapsta (spontaneous real-life plans).
+- [Extra Medium Labs](https://xmedium.co/labs/): The studio's product lab. Flagship: Magpie. Core project: Hapsta (live at hapsta.co — small capped live video rooms where fans hang out or play games with famous people; the star sets the price and keeps 80%). In development: Roon (family memory platform), JAWNRA (music discovery and charts).
 - [Magpie case study](https://xmedium.co/labs/magpie/): Magpie is a local creator marketing platform built and operated by Extra Medium. Local businesses comp or pay creators who live in their city (500 followers is enough; tiers Neighbors 500–2k, Locals 2k–15k, Headliners 15k+) to visit and post honestly within 48 hours; every visit is tracked to register spend. Business plans and pricing are published on the product site; paid bookings pay creators 97%. Product site: https://magpielocal.com, app: https://app.magpielocal.com. Operated by Extra Medium LLC.
 
 ## Key facts
 - Headquarters: Virginia Beach, Virginia, US; presence in Chicago and London; clients across the US and UK.
 - Founder Jeff Rimmer previously founded a digital music platform that grew past 900,000 users.
 - Industries: consumer products, ecommerce, healthcare and medical devices, retail, media and broadcast, music and entertainment, hospitality, professional services, technology and SaaS.
-- Magpie status (October 2026): live platform, founding-market formation, home market Virginia Beach activating first.
+- Magpie status (November 2026): live platform, founding-market formation, home market Virginia Beach activating first.
+
+## Magazine — The Extra (https://xmedium.co/magazine/)
+- The Extra is Extra Medium's magazine: marketing, advertising, music, media, and dispatches from the lab. New article most days.
+- [The Room Got Small](https://xmedium.co/magazine/the-room-got-small/): Hapsta and the shift from watching celebrities to being in the room with them.
+- [Magpie announcement (press release)](https://xmedium.co/magazine/magpie-announcement/): Extra Medium Labs announces Magpie, the local creator marketing platform ranked by local reach.
+- [What a Fractional CMO Actually Does All Week](https://xmedium.co/magazine/what-a-fractional-cmo-does/)
+- [The Local Advertiser Didn't Leave. The Audience Did.](https://xmedium.co/magazine/the-local-advertiser/)
+- [Your Logo Is Not Your Brand](https://xmedium.co/magazine/your-logo-is-not-your-brand/)
+- [Inside the Lab](https://xmedium.co/magazine/inside-the-lab/): why a marketing agency builds its own products.
+
+## Straight answers
+- [What is a fractional CMO?](https://xmedium.co/fractional-cmo/)
+- [How much does a fractional CMO cost?](https://xmedium.co/fractional-cmo-cost/)
+- [Marketing agency in Virginia Beach](https://xmedium.co/marketing-agency-virginia-beach/)
+- [Fractional CMO vs. marketing agency](https://xmedium.co/fractional-cmo-vs-agency/)
+- [AI marketing consulting](https://xmedium.co/ai-marketing-consulting/)
