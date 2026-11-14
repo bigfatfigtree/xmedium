@@ -39,7 +39,7 @@ body.rv-on .rv-r.in{opacity:1;transform:none}
 header.site{position:sticky;top:0;z-index:50;background:rgba(245,241,234,.92);backdrop-filter:blur(10px);border-bottom:1.5px solid var(--line)}
 .nav{display:flex;align-items:center;justify-content:space-between;padding-top:14px;padding-bottom:14px}
 .brand{display:flex;align-items:center;gap:11px;text-decoration:none}
-.brand img{height:42px;width:42px;border-radius:10px}
+.brand img{height:42px;width:auto;border-radius:0}
 .brand span{font-weight:900;font-size:1.14rem;letter-spacing:-.02em;line-height:1}
 .brand small{display:block;font-size:.56rem;letter-spacing:.34em;font-weight:700;margin-top:3px}
 nav.main{display:flex;align-items:center;gap:30px}
@@ -283,3 +283,4 @@ footer.finale{margin-top:64px}
 /* serif wordmark lockup (2026-11-14 brand update) */
 .brand .wm{font-family:"Instrument Serif",serif;font-weight:400;font-size:1.95rem;letter-spacing:-.015em;text-transform:none;line-height:1;white-space:nowrap}
 @media(max-width:900px){.brand .wm{font-size:1.45rem}}
+@media(max-width:900px){.brand img{height:36px}}
