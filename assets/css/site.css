@@ -279,3 +279,7 @@ footer.finale{margin-top:64px}
 .mag-cover-copy h2 a{color:inherit;text-decoration:none}
 .art-card{display:block;text-decoration:none;color:inherit}
 .answer-first{background:#fff;border:2px solid var(--ink);padding:26px 28px;font-size:1.15rem;line-height:1.6;box-shadow:6px 6px 0 var(--ink);margin-top:26px}
+
+/* serif wordmark lockup (2026-11-14 brand update) */
+.brand .wm{font-family:"Instrument Serif",serif;font-weight:400;font-size:1.95rem;letter-spacing:-.015em;text-transform:none;line-height:1;white-space:nowrap}
+@media(max-width:900px){.brand .wm{font-size:1.45rem}}

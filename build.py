@@ -10,7 +10,7 @@ ORG_LD = """<script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
 {"@type":["Organization","ProfessionalService"],"@id":"https://xmedium.co/#org",
 "name":"Extra Medium","legalName":"Extra Medium LLC","url":"https://xmedium.co/",
-"logo":"https://xmedium.co/assets/img/em-logo.png","email":"hello@xmedium.co",
+"logo":"https://xmedium.co/assets/img/em-icon.png","email":"hello@xmedium.co",
 "slogan":"We make businesses un-ignorable.",
 "description":"Extra Medium is a founder-led marketing agency and fractional CMO practice based in Virginia Beach, Virginia — strategy, creative, growth and AI for clients from pre-launch startups to Fortune 100 brands — and the operator of Extra Medium Labs, which builds its own products including Magpie, the local creator marketing platform.",
 "foundingLocation":"Virginia Beach, Virginia, US",
@@ -54,7 +54,7 @@ def head(title, desc, path, extra_ld=""):
 <meta name="twitter:image" content="https://xmedium.co/assets/img/og-collage.jpg">
 <meta name="theme-color" content="#f5f1ea">
 <link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="stylesheet" href="/assets/css/site.css?v=18">
+<link rel="stylesheet" href="/assets/css/site.css?v=19">
 {FONTS}
 {ORG_LD}
 {extra_ld}
@@ -63,7 +63,7 @@ def head(title, desc, path, extra_ld=""):
 def header(on=""):
     def cls(k): return ' class="on"' if on == k else ""
     return f"""<header class="site"><div class="wrap nav">
-<a class="brand" href="/"><img src="/assets/img/em-logo.png" alt="Extra Medium logo"><span>extra medium<small>Studio &amp; Labs</small></span></a>
+<a class="brand" href="/"><img src="/assets/img/em-icon.png" alt="Extra Medium logo"><span class="wm">extra medium.</span></a>
 <nav class="main">
 <a href="/work/"{cls('work')}>Work</a>
 <a href="/services/"{cls('services')}>Studio</a>
@@ -104,7 +104,7 @@ FOOTER = """<footer class="finale">
 </div></div>
 <div class="fin-main"><div class="wrap">
 <div class="fin-grid">
-<div class="fin-brand"><a class="brand" href="/"><img src="/assets/img/em-logo.png" alt="Extra Medium logo"><span>extra medium<small>Studio &amp; Labs</small></span></a>
+<div class="fin-brand"><a class="brand" href="/"><img src="/assets/img/em-icon.png" alt="Extra Medium logo"><span class="wm">extra medium.</span></a>
 <p>A marketing agency and product lab. We build businesses people can&rsquo;t ignore &mdash; for clients, and for ourselves.</p></div>
 <div><h4>Explore</h4><a href="/work/">Work</a><a href="/services/">Studio</a><a href="/labs/">Labs</a><a href="/about/">About</a><a href="/magazine/">Extra Extra</a><a href="/contact/">Contact</a></div>
 <div><h4>Labs</h4><a href="/labs/magpie/">Magpie &mdash; flagship</a><a href="https://magpielocal.com">magpielocal.com</a><a href="/labs/">All ventures</a></div>
@@ -518,7 +518,7 @@ contact = """
 <p class="note">Usually replies within one business day. If it&rsquo;s urgent, email <a href="mailto:hello@xmedium.co">hello@xmedium.co</a>.</p>
 </form></div>
 <div class="prose rv">
-<img class="nogray" src="/assets/img/em-logo.png" alt="Extra Medium logo" style="width:96px;height:96px;border-radius:22px;margin-bottom:24px">
+<img class="nogray" src="/assets/img/em-icon.png" alt="Extra Medium logo" style="width:96px;height:96px;border-radius:22px;margin-bottom:24px">
 <p class="kick">Prefer email?</p><h2>hello@xmedium.co</h2>
 <p><b>Studio</b> &mdash; launches, reinventions, growth systems, fractional leadership.</p>
 <p><b>Labs</b> &mdash; Magpie partnerships, founding markets, venture collaborations.</p>
@@ -1152,7 +1152,7 @@ print("answers hub done")
 # 404 in the new system
 pathlib.Path(ROOT / "404.html").write_text("""<!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Not found | Extra Medium</title><link rel="icon" href="/favicon.ico" sizes="any"><link rel="stylesheet" href="/assets/css/site.css?v=18">
+<title>Not found | Extra Medium</title><link rel="icon" href="/favicon.ico" sizes="any"><link rel="stylesheet" href="/assets/css/site.css?v=19">
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"></head>
 <body><section class="phero"><div class="wrap"><p class="kick">404</p><h1>This page is a Small. <span class="it">We don&rsquo;t stock those.</span></h1>
 <p class="lede">It doesn&rsquo;t exist anymore &mdash; the site was rebuilt around the work and our flagship product. Try one of these:</p>
