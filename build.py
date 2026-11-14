@@ -54,7 +54,7 @@ def head(title, desc, path, extra_ld=""):
 <meta name="twitter:image" content="https://xmedium.co/assets/img/og-collage.jpg">
 <meta name="theme-color" content="#f5f1ea">
 <link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="stylesheet" href="/assets/css/site.css?v=14">
+<link rel="stylesheet" href="/assets/css/site.css?v=15">
 {FONTS}
 {ORG_LD}
 {extra_ld}
@@ -151,7 +151,7 @@ CTA = """<section class="ctaband"><div class="wrap">
 <div class="cta-row rv"><a class="btn white" href="/contact/">Start a conversation</a><a class="btn ghost" href="mailto:hello@xmedium.co">hello@xmedium.co</a></div>
 <p class="note rv" style="color:rgba(255,255,255,.85);margin-top:18px">Usually replies within one business day.</p></div></section>"""
 
-MARQUEE = """<div class="marquee" aria-hidden="true"><div class="track"><span>Launch</span><i>&#10022;</i><span>Reinvent</span><i>&#10022;</i><span>Grow</span><i>&#10022;</i><span>Lead</span><i>&#10022;</i><span>Intelligence</span><i>&#10022;</i><span>Experiences</span><i>&#10022;</i><span>Launch</span><i>&#10022;</i><span>Reinvent</span><i>&#10022;</i><span>Grow</span><i>&#10022;</i><span>Lead</span><i>&#10022;</i><span>Intelligence</span><i>&#10022;</i><span>Experiences</span><i>&#10022;</i></div></div>"""
+DIVIDER = """<div class="divider" aria-hidden="true"><span class="dshape d-disc"></span><span class="dshape d-bar"></span><span class="dshape d-spark"></span><span class="dshape d-tri"></span><span class="dshape d-ring"></span></div>"""
 
 BADGE = """<svg class="badge-rot" viewBox="0 0 100 100" aria-hidden="true"><defs><path id="circ" d="M50,50 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0"/></defs><circle cx="50" cy="50" r="49" fill="#17130e"/><text fill="#f5f1ea" font-size="10.5" font-weight="700" letter-spacing="2.5"><textPath href="#circ">EXTRA MEDIUM &#8226; STUDIO &amp; LABS &#8226; </textPath></text><circle cx="50" cy="50" r="5" fill="#c2187a"/></svg>"""
 
@@ -170,7 +170,7 @@ home = """
 <p class="def rv"><b>Extra Medium</b> is a founder-led marketing agency, fractional CMO practice and product lab in Virginia Beach, Virginia. We launch, reinvent and grow businesses &mdash; brand, creative, growth and technology under one roof &mdash; and through Extra Medium Labs we build and operate our own products, led by Magpie, the local creator marketing platform.</p>
 <div class="facts rv"><span>20+ years, every side of the table</span><span>Virginia Beach &middot; Chicago &middot; London</span><span>Clients: startups to Fortune 100</span></div>
 </div></section>
-""" + MARQUEE + """
+""" + DIVIDER + """
 <section><div class="wrap">
 <div class="sec-head rv"><h2>What we <span class="it">do</span></h2><span class="mono">The agency</span></div>
 <div class="idxrow rv"><div class="num">01</div><div><div class="sq" style="background:var(--mag)"></div><h3>Launch</h3><p>Positioning, naming, brand identity, website and go-to-market for things that don&rsquo;t exist yet &mdash; shaped as one arc.</p></div><img class="thumb" src="/assets/img/img-launch.jpg" alt="A rocket launching at night over a beach crowd" loading="lazy"></div>
@@ -522,7 +522,7 @@ print("contact done")
 # 404 in the new system
 pathlib.Path(ROOT / "404.html").write_text("""<!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Not found | Extra Medium</title><link rel="icon" href="/favicon.ico" sizes="any"><link rel="stylesheet" href="/assets/css/site.css?v=14">
+<title>Not found | Extra Medium</title><link rel="icon" href="/favicon.ico" sizes="any"><link rel="stylesheet" href="/assets/css/site.css?v=15">
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"></head>
 <body><section class="phero"><div class="wrap"><p class="kick">404</p><h1>This page is a Small. <span class="it">We don&rsquo;t stock those.</span></h1>
 <p class="lede">It doesn&rsquo;t exist anymore &mdash; the site was rebuilt around the work and our flagship product. Try one of these:</p>
