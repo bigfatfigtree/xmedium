@@ -54,7 +54,7 @@ def head(title, desc, path, extra_ld=""):
 <meta name="twitter:image" content="https://xmedium.co/assets/img/og-collage.jpg">
 <meta name="theme-color" content="#f5f1ea">
 <link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="stylesheet" href="/assets/css/site.css?v=16">
+<link rel="stylesheet" href="/assets/css/site.css?v=17">
 {FONTS}
 {ORG_LD}
 {extra_ld}
@@ -69,8 +69,10 @@ def header(on=""):
 <a href="/services/"{cls('services')}>Studio</a>
 <a href="/labs/"{cls('labs')}>Labs</a>
 <a href="/about/"{cls('about')}>About</a>
+<a href="/magazine/"{cls('magazine')}>The Extra</a>
 <a href="/contact/" class="btn p small">Start a project</a>
 </nav>
+<a class="nav-extra" href="/magazine/">The Extra</a>
 <button class="burger" aria-label="Open menu" aria-expanded="false">&#9776;</button>
 </div></header>
 <div class="menu" aria-hidden="true">
@@ -81,7 +83,7 @@ def header(on=""):
 <a class="mlink" style="transition-delay:.26s" href="/labs/magpie/"><i>04</i>Magpie</a>
 <a class="mlink" style="transition-delay:.33s" href="/about/"><i>05</i>About</a>
 <a class="mlink" style="transition-delay:.40s" href="/contact/"><i>06</i>Contact</a>
-<a class="mlink" style="transition-delay:.47s" href="/magazine/"><i>07</i>Magazine</a>
+<a class="mlink" style="transition-delay:.47s" href="/magazine/"><i>07</i>The Extra</a>
 <div class="mfoot"><span>Virginia Beach <span class="vbclock">--:--</span> ET</span><a href="mailto:hello@xmedium.co">hello@xmedium.co</a><a href="https://www.linkedin.com/in/jeffrimmer">LinkedIn</a></div>
 </div>"""
 
@@ -104,7 +106,7 @@ FOOTER = """<footer class="finale">
 <div class="fin-grid">
 <div class="fin-brand"><a class="brand" href="/"><img src="/assets/img/em-logo.png" alt="Extra Medium logo"><span>extra medium<small>Studio &amp; Labs</small></span></a>
 <p>A marketing agency and product lab. We build businesses people can&rsquo;t ignore &mdash; for clients, and for ourselves.</p></div>
-<div><h4>Explore</h4><a href="/work/">Work</a><a href="/services/">Studio</a><a href="/labs/">Labs</a><a href="/about/">About</a><a href="/magazine/">Magazine</a><a href="/contact/">Contact</a></div>
+<div><h4>Explore</h4><a href="/work/">Work</a><a href="/services/">Studio</a><a href="/labs/">Labs</a><a href="/about/">About</a><a href="/magazine/">The Extra</a><a href="/contact/">Contact</a></div>
 <div><h4>Labs</h4><a href="/labs/magpie/">Magpie &mdash; flagship</a><a href="https://magpielocal.com">magpielocal.com</a><a href="/labs/">All ventures</a></div>
 <div><h4>Connect</h4><a href="mailto:hello@xmedium.co">hello@xmedium.co</a><a href="https://www.linkedin.com/in/jeffrimmer">LinkedIn</a><a href="/contact/">Start a project</a></div>
 </div>
@@ -359,12 +361,12 @@ labs = """
 <div class="flagship-copy"><span class="badge">Core project &middot; Live</span>
 <h3 style="font-size:2.4rem;line-height:1.02;margin:10px 0 4px">Hapsta</h3>
 <h3 style="font-size:1.8rem;line-height:1.08">Hang out with your fave. <span class="it">Live, in the room.</span></h3>
-<p>A livestream is a broadcast: thousands watch, the star talks at a crowd. Hapsta is the opposite &mdash; a small, capped, live video room where fans are <b>in it</b> with the star: seen, heard, and called on by name. Some sessions hang out. Some play the star&rsquo;s game, with fans seated in the party. The star sets the price, the length and the room size, and keeps 80%. Our production board runs the talk line, the clock and the recording, so the star just hosts.</p>
-<div class="stats"><div><b><span data-count="80">80</span>%</b><span>Kept by the star</span></div><div><b><span data-count="12">12</span></b><span>Max on camera</span></div><div><b><span data-count="1">1</span></b><span>Link to host</span></div></div>
+<p>A livestream is a broadcast: thousands watch, the celebrity talks at a crowd. Hapsta is the opposite &mdash; a small, capped, live video room where fans are <b>in it</b> with the celebrity: seen, heard, and called on by name. Some sessions hang out. Some play the celebrity&rsquo;s game, with fans seated in the party. The celebrity sets the price, the length and the room size, and keeps 80%. Our production board runs the talk line, the clock and the recording, so the celebrity just hosts.</p>
+<div class="stats"><div><b><span data-count="80">80</span>%</b><span>Kept by the celebrity</span></div><div><b><span data-count="12">12</span></b><span>Max on camera</span></div><div><b><span data-count="1">1</span></b><span>Link to host</span></div></div>
 <div class="cta-row"><a class="btn p" href="https://hapsta.co">hapsta.co</a><a class="btn" href="/magazine/the-room-got-small/">The story in The Extra</a></div></div>
 <div class="flagship-media"><img src="/assets/img/hapsta-gamer.jpg" alt="A fan playing in a game session, seen over the shoulder"></div>
 </div></div>
-<p class="note rv" style="margin-top:22px">Status, honestly: live at hapsta.co, waitlist open, first sessions forming. Fans request the stars they want, and those requests decide who gets approached first. No payments are live yet &mdash; the waitlist hears first.</p>
+<p class="note rv" style="margin-top:22px">Status, honestly: live at hapsta.co, waitlist open, first sessions forming. Fans request the celebrities they want, and those requests decide who gets approached first. No payments are live yet &mdash; the waitlist hears first.</p>
 </div></section>
 <section><div class="wrap">
 <div class="sec-head block rv"><p class="kick">In development</p><h2 style="margin-top:14px">The next <span class="it">bench.</span></h2>
@@ -556,23 +558,23 @@ def article_ld(a):
 ARTICLES = [
 dict(slug="the-room-got-small", cat="Music & Media", cover=True,
      title="The Room Got Small: What Happens to Celebrity Access When Fans Stop Watching and Start Showing Up",
-     dek="Hapsta is not another livestream. It is a ticket into a small live room where the star talks with fans instead of at them, and it changes what a famous person is actually selling.",
+     dek="Hapsta is not another livestream. It is a ticket into a small live room where the celebrity talks with fans instead of at them, and it changes what a famous person is actually selling.",
      date="November 14, 2026", iso="2026-11-14", mins=4,
      hero=("img", "/assets/img/hapsta-studio.jpg", "A musician playing acoustic guitar in a recording studio"),
      pull="Watching is free everywhere now, and it feels like it. Being in the room is the part that got rare.",
      body="""
-<p>The livestream solved distribution and broke the encounter. A star can reach a million people at once now, and every one of those people knows the star cannot see them. Chat scrolls too fast to read. The comments are a crowd, not a conversation. Fans got infinite access to watch and almost no access to be in it.</p>
-<p>Hapsta, a product from Extra Medium Labs and live now at hapsta.co, starts from the other end. A Hapsta session is a ticket to one live session with a famous person, online, on your phone. The room is capped on purpose. Most sessions are hangouts: a small live video room where the star talks with the people in it. Fans can be seen, heard, and called on by name. It is built to feel less like a broadcast and more like being somewhere.</p>
+<p>The livestream solved distribution and broke the encounter. A celebrity can reach a million people at once now, and every one of those people knows the celebrity cannot see them. Chat scrolls too fast to read. The comments are a crowd, not a conversation. Fans got infinite access to watch and almost no access to be in it.</p>
+<p>Hapsta, a product from Extra Medium Labs and live now at hapsta.co, starts from the other end. A Hapsta session is a ticket to one live session with a famous person, online, on your phone. The room is capped on purpose. Most sessions are hangouts: a small live video room where the celebrity talks with the people in it. Fans can be seen, heard, and called on by name. It is built to feel less like a broadcast and more like being somewhere.</p>
 <h2>Small is the product</h2>
 <p>The tiers describe how present you are. Room gets you in, watching and talking in the room. Mic puts you in the talk line, able to speak when you are called on. Video puts your camera in the room, capped at 12 people, the closest thing to sitting across from someone. Nobody in the room is anonymous crowd. The cap is not a limitation the product apologizes for. The cap is the product.</p>
-<p>Some sessions are game sessions instead of hangouts. The format is the same ticket, pointed at a different room: fans get a seat in the star&rsquo;s game party and play alongside them, while everyone else watches and talks from the room. The common thread is not the activity. It is the size. A capped room is a place a star can actually host, and a place a fan can actually be noticed.</p>
+<p>Some sessions are game sessions instead of hangouts. The format is the same ticket, pointed at a different room: fans get a seat in the celebrity&rsquo;s game party and play alongside them, while everyone else watches and talks from the room. The common thread is not the activity. It is the size. A capped room is a place a celebrity can actually host, and a place a fan can actually be noticed.</p>
 [[pull]]
-<h2>The star sets the terms</h2>
-<p>Hapsta does not set prices, because the value of an hour varies too much from one name to the next. The star sets the price, the length, and the room size, and keeps 80% of ticket revenue. One star can run a small room at a high price. Another can run a bigger room cheap. Both are rational, and both are the star&rsquo;s call.</p>
+<h2>The celebrity sets the terms</h2>
+<p>Hapsta does not set prices, because the value of an hour varies too much from one name to the next. The celebrity sets the price, the length, and the room size, and keeps 80% of ticket revenue. One celebrity can run a small room at a high price. Another can run a bigger room cheap. Both are rational, and both are the celebrity&rsquo;s call.</p>
 <p>The work around the session is handled by an AI-assisted production board. It runs the talk line, the clock, the recording, and moderation prompts, so the person hosting does not need to produce their own show while starring in it. There is no streaming setup to buy and no gaming skill required. Talent applies to host; most have 20,000 or more followers somewhere, on any platform. What they bring is the audience and themselves. The platform brings the room and the machinery.</p>
 <h2>Access is being repriced</h2>
-<p>No payments are live on Hapsta yet. Fans join a waitlist and request the stars they want, and those requests decide who gets approached first. That order matters. Instead of booking whoever will say yes and hoping an audience follows, the platform can walk to a star with a room already asking for them. The demand is documented before the pitch is made.</p>
-<p>That is the shift worth watching. For a decade, celebrity access online has been sold by reach: how many people can this post hit. A capped room sells the opposite. It sells scarcity that is real, because a room with 12 cameras in it cannot be scaled without becoming the thing it replaced. The star is not selling impressions. The star is selling an hour of being known by name, and there is a hard limit on how much of that exists.</p>
+<p>No payments are live on Hapsta yet. Fans join a waitlist and request the celebrities they want, and those requests decide who gets approached first. That order matters. Instead of booking whoever will say yes and hoping an audience follows, the platform can walk to a celebrity with a room already asking for them. The demand is documented before the pitch is made.</p>
+<p>That is the shift worth watching. For a decade, celebrity access online has been sold by reach: how many people can this post hit. A capped room sells the opposite. It sells scarcity that is real, because a room with 12 cameras in it cannot be scaled without becoming the thing it replaced. The celebrity is not selling impressions. The celebrity is selling an hour of being known by name, and there is a hard limit on how much of that exists.</p>
 <p>Whether fans keep paying for that is an open question, and the waitlist is how Hapsta finds out. But the direction is hard to argue with. Watching is free everywhere now, and it feels like it. Being in the room is the part that got rare.</p>
 """),
 dict(slug="magpie-announcement", cat="News · Press release", cover=False,
@@ -671,7 +673,7 @@ dict(slug="inside-the-lab", cat="The Lab", cover=False,
      pull="It&rsquo;s easy to be brave with somebody else&rsquo;s budget.",
      body="""
 <p>Most agencies sell advice they never have to live on. The campaign ends, the report gets presented, and whether the thinking actually worked becomes somebody else&rsquo;s problem. We wanted a different arrangement, so we built one. Extra Medium Labs is the product arm of this studio, the part of the business where we build and run our own products, with our own budget, on our own deadlines.</p>
-<p>Four products are in the lab right now. Magpie, our flagship, is a live platform for local creator marketing: it connects local businesses with creators in their own market, ranked by how local their audience actually is. Hapsta, live at hapsta.co, runs small, capped live video rooms where fans hang out or play games with famous people; the star sets the price and keeps 80 percent, and it&rsquo;s currently in its waitlist stage. Roon turns the photos, videos, and voice notes a family already has into stories; it&rsquo;s in prototype, with a waitlist open. JAWNRA, a global music discovery and chart platform that measures momentum instead of popularity, is in development.</p>
+<p>Four products are in the lab right now. Magpie, our flagship, is a live platform for local creator marketing: it connects local businesses with creators in their own market, ranked by how local their audience actually is. Hapsta, live at hapsta.co, runs small, capped live video rooms where fans hang out or play games with famous people; the celebrity sets the price and keeps 80 percent, and it&rsquo;s currently in its waitlist stage. Roon turns the photos, videos, and voice notes a family already has into stories; it&rsquo;s in prototype, with a waitlist open. JAWNRA, a global music discovery and chart platform that measures momentum instead of popularity, is in development.</p>
 <p>Here&rsquo;s what running them does to the client work.</p>
 <h2>It keeps the advice honest</h2>
 <p>When you market your own product, there is no client to blame and no scope to hide behind. The positioning either works in the market or it doesn&rsquo;t, and the invoice for finding out arrives either way. That changes how you give advice. Recommendations get shorter and more specific, because you know exactly which ones you&rsquo;d fund yourself and which ones sound good in a deck.</p>
@@ -866,7 +868,7 @@ for _an in ANSWERS:
 # 404 in the new system
 pathlib.Path(ROOT / "404.html").write_text("""<!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Not found | Extra Medium</title><link rel="icon" href="/favicon.ico" sizes="any"><link rel="stylesheet" href="/assets/css/site.css?v=16">
+<title>Not found | Extra Medium</title><link rel="icon" href="/favicon.ico" sizes="any"><link rel="stylesheet" href="/assets/css/site.css?v=17">
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"></head>
 <body><section class="phero"><div class="wrap"><p class="kick">404</p><h1>This page is a Small. <span class="it">We don&rsquo;t stock those.</span></h1>
 <p class="lede">It doesn&rsquo;t exist anymore &mdash; the site was rebuilt around the work and our flagship product. Try one of these:</p>
