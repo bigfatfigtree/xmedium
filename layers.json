@@ -153,5 +153,60 @@
   ],
   "rest": "collage-contact-rest.webp",
   "bg": "collage-contact-bg.jpg"
+ },
+ "collage-extra": {
+  "bg": "collage-extra-bg.jpg",
+  "rest": "collage-extra-rest.webp",
+  "pieces": [
+   {
+    "file": "collage-extra-p1.webp",
+    "dx": -30,
+    "dy": -58,
+    "rot": -6,
+    "frac": 0.304
+   },
+   {
+    "file": "collage-extra-p2.webp",
+    "dx": 58,
+    "dy": -44,
+    "rot": 8,
+    "frac": 0.035
+   },
+   {
+    "file": "collage-extra-p3.webp",
+    "dx": 82,
+    "dy": -16,
+    "rot": -8,
+    "frac": 0.023
+   },
+   {
+    "file": "collage-extra-p4.webp",
+    "dx": 66,
+    "dy": 18,
+    "rot": 5,
+    "frac": 0.031
+   },
+   {
+    "file": "collage-extra-p5.webp",
+    "dx": 26,
+    "dy": 62,
+    "rot": -9,
+    "frac": 0.027
+   },
+   {
+    "file": "collage-extra-p6.webp",
+    "dx": 74,
+    "dy": 40,
+    "rot": 6,
+    "frac": 0.055
+   },
+   {
+    "file": "collage-extra-p7.webp",
+    "dx": 40,
+    "dy": -48,
+    "rot": 14,
+    "frac": 0.035
+   }
+  ]
  }
 }

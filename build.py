@@ -54,7 +54,7 @@ def head(title, desc, path, extra_ld=""):
 <meta name="twitter:image" content="https://xmedium.co/assets/img/og-collage.jpg">
 <meta name="theme-color" content="#f5f1ea">
 <link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="stylesheet" href="/assets/css/site.css?v=17">
+<link rel="stylesheet" href="/assets/css/site.css?v=18">
 {FONTS}
 {ORG_LD}
 {extra_ld}
@@ -69,10 +69,10 @@ def header(on=""):
 <a href="/services/"{cls('services')}>Studio</a>
 <a href="/labs/"{cls('labs')}>Labs</a>
 <a href="/about/"{cls('about')}>About</a>
-<a href="/magazine/"{cls('magazine')}>The Extra</a>
+<a href="/magazine/"{cls('magazine')}>Extra Extra</a>
 <a href="/contact/" class="btn p small">Start a project</a>
 </nav>
-<a class="nav-extra" href="/magazine/">The Extra</a>
+<a class="nav-extra" href="/magazine/">Extra Extra</a>
 <button class="burger" aria-label="Open menu" aria-expanded="false">&#9776;</button>
 </div></header>
 <div class="menu" aria-hidden="true">
@@ -83,7 +83,7 @@ def header(on=""):
 <a class="mlink" style="transition-delay:.26s" href="/labs/magpie/"><i>04</i>Magpie</a>
 <a class="mlink" style="transition-delay:.33s" href="/about/"><i>05</i>About</a>
 <a class="mlink" style="transition-delay:.40s" href="/contact/"><i>06</i>Contact</a>
-<a class="mlink" style="transition-delay:.47s" href="/magazine/"><i>07</i>The Extra</a>
+<a class="mlink" style="transition-delay:.47s" href="/magazine/"><i>07</i>Extra Extra</a>
 <div class="mfoot"><span>Virginia Beach <span class="vbclock">--:--</span> ET</span><a href="mailto:hello@xmedium.co">hello@xmedium.co</a><a href="https://www.linkedin.com/in/jeffrimmer">LinkedIn</a></div>
 </div>"""
 
@@ -106,7 +106,7 @@ FOOTER = """<footer class="finale">
 <div class="fin-grid">
 <div class="fin-brand"><a class="brand" href="/"><img src="/assets/img/em-logo.png" alt="Extra Medium logo"><span>extra medium<small>Studio &amp; Labs</small></span></a>
 <p>A marketing agency and product lab. We build businesses people can&rsquo;t ignore &mdash; for clients, and for ourselves.</p></div>
-<div><h4>Explore</h4><a href="/work/">Work</a><a href="/services/">Studio</a><a href="/labs/">Labs</a><a href="/about/">About</a><a href="/magazine/">The Extra</a><a href="/contact/">Contact</a></div>
+<div><h4>Explore</h4><a href="/work/">Work</a><a href="/services/">Studio</a><a href="/labs/">Labs</a><a href="/about/">About</a><a href="/magazine/">Extra Extra</a><a href="/contact/">Contact</a></div>
 <div><h4>Labs</h4><a href="/labs/magpie/">Magpie &mdash; flagship</a><a href="https://magpielocal.com">magpielocal.com</a><a href="/labs/">All ventures</a></div>
 <div><h4>Connect</h4><a href="mailto:hello@xmedium.co">hello@xmedium.co</a><a href="https://www.linkedin.com/in/jeffrimmer">LinkedIn</a><a href="/contact/">Start a project</a></div>
 </div>
@@ -363,7 +363,7 @@ labs = """
 <h3 style="font-size:1.8rem;line-height:1.08">Hang out with your fave. <span class="it">Live, in the room.</span></h3>
 <p>A livestream is a broadcast: thousands watch, the celebrity talks at a crowd. Hapsta is the opposite &mdash; a small, capped, live video room where fans are <b>in it</b> with the celebrity: seen, heard, and called on by name. Some sessions hang out. Some play the celebrity&rsquo;s game, with fans seated in the party. The celebrity sets the price, the length and the room size, and keeps 80%. Our production board runs the talk line, the clock and the recording, so the celebrity just hosts.</p>
 <div class="stats"><div><b><span data-count="80">80</span>%</b><span>Kept by the celebrity</span></div><div><b><span data-count="12">12</span></b><span>Max on camera</span></div><div><b><span data-count="1">1</span></b><span>Link to host</span></div></div>
-<div class="cta-row"><a class="btn p" href="https://hapsta.co">hapsta.co</a><a class="btn" href="/magazine/the-room-got-small/">The story in The Extra</a></div></div>
+<div class="cta-row"><a class="btn p" href="https://hapsta.co">hapsta.co</a><a class="btn" href="/magazine/the-room-got-small/">The story in Extra Extra</a></div></div>
 <div class="flagship-media"><img src="/assets/img/hapsta-gamer.jpg" alt="A fan playing in a game session, seen over the shoulder"></div>
 </div></div>
 <p class="note rv" style="margin-top:22px">Status, honestly: live at hapsta.co, waitlist open, first sessions forming. Fans request the celebrities they want, and those requests decide who gets approached first. No payments are live yet &mdash; the waitlist hears first.</p>
@@ -708,12 +708,13 @@ _rest = [a for a in ARTICLES if not a.get("cover")]
 
 mag_index = """
 <section class="phero mag-mast"><div class="wrap">
-<p class="kick rv">The Extra Medium magazine</p>
-<h1 class="mag-title rv">The <span class="it">Extra.</span></h1>
+<p class="kick rv">Extra! Extra! Read all about it</p>
+<h1 class="mag-title rv">Extra <span class="it">Extra.</span></h1>
 <p class="lede rv">Notes on marketing, advertising, music and media &mdash; and dispatches from our own lab. Written by the people doing the work, published when there&rsquo;s something worth saying.</p>
 <p class="art-meta rv">Vol. 01 &middot; November 2026 &middot; Virginia Beach</p>
 </div></section>
 """ + DIVIDER + """
+[[layers:collage-extra|Black and white collage of a marble statue wearing a 1920s newsboy cap, mouth open yelling the news, with flying newspaper pages and a megaphone, over a yellow field]]
 <section><div class="wrap">
 <p class="kick rv">Cover story &middot; """ + _cover["cat"] + """</p>
 <div class="mag-cover rv">
@@ -730,7 +731,7 @@ mag_index = """
 </div></section>
 <section><div class="wrap"><div class="split">
 <div class="prose rv"><h2>Why a magazine?</h2>
-<p>Because the answers clients pay for shouldn&rsquo;t live only in decks. The Extra is where Extra Medium publishes its thinking in the open: how marketing actually works, what we&rsquo;re learning from building our own products, and the occasional official announcement when the lab ships something.</p>
+<p>Because the answers clients pay for shouldn&rsquo;t live only in decks. Extra Extra is where Extra Medium publishes its thinking in the open: how marketing actually works, what we&rsquo;re learning from building our own products, and the occasional official announcement when the lab ships something.</p>
 <p>New pieces land here first, then travel to LinkedIn and Instagram. One new article a day, most days.</p></div>
 <div class="prose rv"><h2>Start with the work</h2>
 <p>The magazine is the thinking. The studio is the doing: launches, reinventions, growth systems and fractional CMO leadership for companies from startups to Fortune 100 &mdash; plus a lab that builds its own products, so the advice is always tested at home first.</p>
@@ -740,11 +741,11 @@ mag_index = """
 
 import json as _json
 _mag_items = ",".join(_json.dumps({"@type": "ListItem", "position": i + 1, "url": "https://xmedium.co/magazine/" + a["slug"] + "/"}) for i, a in enumerate(ARTICLES))
-_mag_ld = ('<script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"The Extra — the Extra Medium magazine",'
+_mag_ld = ('<script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Extra Extra — the Extra Medium magazine",'
            '"url":"https://xmedium.co/magazine/","mainEntity":{"@type":"ItemList","itemListElement":[' + _mag_items + "]}}</script>")
 
-page("The Extra — Magazine | Extra Medium",
-     "The Extra is Extra Medium's magazine: marketing, advertising, music, media, and dispatches from the lab that built Magpie and Hapsta.",
+page("Extra Extra — Magazine | Extra Medium",
+     "Extra Extra is Extra Medium's magazine: marketing, advertising, music, media, and dispatches from the lab that built Magpie and Hapsta.",
      "/magazine/", "magazine", mag_index, _mag_ld + crumb_ld([("Home", "/"), ("Magazine", "/magazine/")]))
 print("magazine index done")
 
@@ -752,7 +753,7 @@ for _a in ARTICLES:
     _others = [x for x in ARTICLES if x["slug"] != _a["slug"]][:3]
     _body = """
 <section class="phero art-head"><div class="wrap">
-<p class="kick rv">""" + _a["cat"] + """ &middot; The Extra</p>
+<p class="kick rv">""" + _a["cat"] + """ &middot; Extra Extra</p>
 <h1 class="rv art-title">""" + _a["title"] + """</h1>
 <p class="lede rv art-dek">""" + _a["dek"] + """</p>
 <p class="art-meta rv">By Jeff Rimmer &middot; """ + _a["date"] + """ &middot; """ + str(_a["mins"]) + """ min read</p>
@@ -762,11 +763,11 @@ for _a in ARTICLES:
 """ + _a["body"].replace("[[pull]]", '<blockquote class="pull">' + _a["pull"] + "</blockquote>") + """
 </div></div></section>
 <section><div class="wrap">
-<div class="sec-head block rv"><p class="kick">Keep reading</p><h2 style="margin-top:14px">More from <span class="it">The Extra.</span></h2></div>
+<div class="sec-head block rv"><p class="kick">Keep reading</p><h2 style="margin-top:14px">More from <span class="it">Extra Extra.</span></h2></div>
 <div class="grid3" style="margin-top:26px">""" + art_cards(_others) + """</div>
 </div></section>
 """ + CTA
-    page(_a["title"] + " | The Extra",
+    page(_a["title"] + " | Extra Extra",
          _a["dek"],
          "/magazine/" + _a["slug"] + "/", "magazine", _body,
          article_ld(_a) + crumb_ld([("Home", "/"), ("Magazine", "/magazine/"), (_a["cat"], "/magazine/" + _a["slug"] + "/")]))
@@ -775,6 +776,7 @@ for _a in ARTICLES:
 # ============ STRAIGHT ANSWERS (search landing pages, not in the menu) ============
 ANSWERS = [
 dict(slug="fractional-cmo", title="What Is a Fractional CMO? | Extra Medium",
+     hero="collage-cmo",
      q="What is a fractional CMO, and what does one actually do?",
      desc="A fractional CMO is a senior marketing executive embedded part-time. What the job covers, who it fits, and how Extra Medium runs the practice.",
      answer="A fractional CMO is a senior marketing executive who works inside your company part-time &mdash; typically a set number of days a week &mdash; and owns your marketing strategy and function the way a full-time CMO would, without the full-time executive seat. At Extra Medium the practice is senior-only and founder-led: diagnosis first, one strategy everyone argues from, then running the calendar, the team and the vendors against it.",
@@ -789,6 +791,7 @@ dict(slug="fractional-cmo", title="What Is a Fractional CMO? | Extra Medium",
        ("Do you need an agency as well as a fractional CMO?", "Not necessarily. An agency executes a brief; a fractional CMO writes the brief and judges the work. At Extra Medium the two sit in one company, which removes the hand-off where most strategy gets lost."),
      ]),
 dict(slug="fractional-cmo-cost", title="How Much Does a Fractional CMO Cost? | Extra Medium",
+     hero="collage-work",
      q="How much does a fractional CMO cost?",
      desc="Fractional CMO pricing, honestly: what drives it, how engagements are usually structured, and what to compare it against.",
      answer="A fractional CMO is priced as a monthly engagement, set by how many days a week the seat is filled and how much function there is to run. The honest comparison is not the day rate &mdash; it is the cost of the alternatives: a full-time CMO&rsquo;s salary and equity, a year of agency spend aimed by nobody senior, or another year of the founder doing the job at midnight. Fractional leadership exists because it is a fraction of the first and prevents the other two.",
@@ -803,6 +806,7 @@ dict(slug="fractional-cmo-cost", title="How Much Does a Fractional CMO Cost? | E
        ("How long do companies keep a fractional CMO?", "Long enough to set the strategy, build the calendar and team rhythm, and either hand over to a full-time hire or settle into a steady cadence. Some engagements run a quarter; many run for years at a lighter rhythm."),
      ]),
 dict(slug="marketing-agency-virginia-beach", title="Marketing Agency in Virginia Beach | Extra Medium",
+     hero="collage-home",
      q="A marketing agency in Virginia Beach that works like an owner, not a vendor?",
      desc="Extra Medium is a founder-led marketing agency in Virginia Beach: launches, reinventions, growth systems and fractional CMO leadership, for startups to Fortune 100.",
      answer="Extra Medium is a founder-led marketing agency headquartered in Virginia Beach, Virginia. It launches, reinvents and grows businesses &mdash; brand, creative, growth and technology under one roof &mdash; and it also builds its own products in Extra Medium Labs, led by Magpie. The practice is senior-only: the person you meet is the person who does the work, and clients range from pre-launch startups to Fortune 100 companies across the US and UK.",
@@ -817,6 +821,7 @@ dict(slug="marketing-agency-virginia-beach", title="Marketing Agency in Virginia
        ("Does Extra Medium take project work or only retainers?", "Both. Engagements come in three shapes: fractional leadership, defined projects, and ongoing growth. The shape follows the problem, not the other way around."),
      ]),
 dict(slug="fractional-cmo-vs-agency", title="Fractional CMO vs. Marketing Agency | Extra Medium",
+     hero="collage-about",
      q="Fractional CMO or marketing agency: which does your company need?",
      desc="The honest difference between a fractional CMO and a marketing agency, when you need one, the other, or both, and why Extra Medium is built as both.",
      answer="An agency executes: give it a brief and it produces campaigns, creative and media. A fractional CMO leads: they own the strategy, write the brief, manage whoever executes, and answer for the outcome. If your problem is that work isn&rsquo;t getting made, you need an agency. If your problem is that nobody senior can say what work should be made, or why, you need the CMO seat filled first &mdash; otherwise the agency will execute the wrong thing beautifully.",
@@ -831,6 +836,7 @@ dict(slug="fractional-cmo-vs-agency", title="Fractional CMO vs. Marketing Agency
        ("What if we choose wrong?", "Start with diagnosis. A short strategy phase shows whether your constraint is direction or production before you commit to either shape. That is how Extra Medium starts most engagements."),
      ]),
 dict(slug="ai-marketing-consulting", title="AI Marketing Consulting That Ships | Extra Medium",
+     hero="collage-labs",
      q="How can AI actually help a marketing team, beyond the demos?",
      desc="Extra Medium's Intelligence practice: AI audits, agents and automation for marketing teams, built by a studio that runs its own AI products in production.",
      answer="AI helps a marketing team when it is pointed at a specific job with a measurable outcome: research that took a day taking an hour, first drafts that start from your own data instead of a blank page, agents that handle the repetitive middle of a workflow while people keep the judgment calls. Extra Medium&rsquo;s Intelligence practice audits where AI actually pays inside your marketing operation, then builds the agents and automations &mdash; the same discipline we use on our own products, where an AI assistant works from each user&rsquo;s own account data and nothing else.",
@@ -844,31 +850,309 @@ dict(slug="ai-marketing-consulting", title="AI Marketing Consulting That Ships |
        ("Will AI replace our marketing team?", "It replaces tasks, not judgment. Teams that adopt it well end up doing more of the work only people can do: strategy, taste, relationships, and the final call."),
        ("How is this different from buying an AI tool subscription?", "Tools are generic; the value is in the fit to your workflows, your data boundaries and your approval rules. We build that fit, train the team on it, and leave the system documented and owned by you."),
      ]),
+dict(slug="what-does-a-fractional-cmo-do", title="What Does a Fractional CMO Do? | Extra Medium",
+     q="What does a fractional CMO actually do all week?",
+     desc="What a fractional CMO actually does each week: strategy, priorities, budget, team leadership, and reporting against revenue.",
+     hero="collage-cmo",
+     answer="A fractional CMO owns your marketing the way a full-time CMO would, for a set share of the week. They set the strategy and positioning, decide the priorities and the budget, lead whoever is doing the work, and answer for the results. The difference from a full-time hire is the calendar, not the seniority: same seat, fewer days. Most engagements run one to three days a week, inside your leadership meetings and your numbers.",
+     sections=[
+       ("Strategy and positioning first", "<p>The week starts with decisions, not tasks. A fractional CMO settles who the customer is, what the company promises them, and which few channels deserve the budget. Everything else gets cut or parked. That work turns into a written plan with 90-day priorities, so the team is executing against something instead of improvising. Positioning, pricing input, and the message the whole company uses all sit in this seat. If your company is still deciding whether it needs this at all, the signs are laid out in <a href=\"/when-to-hire-a-fractional-cmo/\">when to hire a fractional CMO</a>.</p>"),
+       ("Leading the people doing the work", "<p>Most growing companies already have hands: a junior marketer or two, an agency, a few freelancers. What they do not have is anyone senior telling those hands what matters. The fractional CMO briefs the agency, reviews the work before it ships, kills the projects that do not serve the plan, and coaches the internal team. Hiring sits here too: writing the marketing job descriptions, interviewing, and deciding who to bring in next. The seat also manages vendors and budgets, so spend stops drifting across tools and retainers nobody is watching.</p>"),
+       ("Reporting against revenue, and building what stays", "<p>The seat sits in your leadership meetings and reports the way an executive does: pipeline, revenue, cost per customer, and what changes next because of them. Not impressions, not activity. A good fractional CMO also builds the systems that outlast the engagement: the dashboard, the planning rhythm, the brief templates, the scorecard the team keeps using. When the engagement ends, the function keeps running. What this cadence costs is covered in <a href=\"/fractional-cmo-cost/\">what a fractional CMO costs</a>; at Extra Medium the seat comes with the studio underneath it, so the strategy and the execution live in one company.</p>"),
+     ],
+     faqs=[
+       ("How many hours a week does a fractional CMO work?", "Published guides put most engagements at one to three days a week, roughly 8 to 24 hours. The right cadence depends on team size and how much is moving: a launch quarter needs more than a steady-state quarter. The cadence is agreed up front and can flex as the work does."),
+       ("Does a fractional CMO do the work themselves or direct it?", "Both, in different proportions. The seat directs: strategy, priorities, briefs, reviews, and the numbers. Hands-on execution (design, copy, media buying, development) usually sits with your team, your agencies, or, at Extra Medium, the studio under the same roof. Expect the CMO to write the plan and the brief, not the social posts."),
+       ("How fast should we see results?", "Published guides put time to value at roughly 30 to 45 days: the audit, the plan, and the first corrections land in the first month or two. Revenue movement takes longer and depends on your sales cycle. Anyone promising a specific return in a specific week is guessing, and you should price that guess accordingly."),
+     ]),
+
+dict(slug="fractional-cmo-vs-full-time-cmo", title="Fractional CMO vs. Full-Time CMO | Extra Medium",
+     q="Fractional CMO or full-time CMO: which is right for your company?",
+     desc="The honest cost and risk comparison between a fractional CMO and a full-time CMO, and the company stages where each one wins.",
+     hero="collage-work",
+     answer="It comes down to workload and risk. A full-time CMO in the US commonly costs $300,000 to $570,000 a year all-in, and the hire takes months to make and a year to unwind if it is wrong. A fractional CMO gives you the same seniority for one to three days a week, at a published market range of $3,000 to $20,000 a month. If marketing genuinely needs an executive forty hours a week, hire full-time. Most companies under that load do not.",
+     sections=[
+       ("The cost math, honestly", "<p>Published 2026 guides put a full-time CMO&rsquo;s total cost in the US at $300,000 to $570,000 a year once salary, bonus, benefits, and equity are counted, before recruiting fees. Fractional retainers in the same guides typically run $3,000 to $20,000 a month depending on cadence and scope, with most small and mid-sized companies landing between $3,000 and $8,000. That is not a rounding difference; it is a different budget category. The full breakdown lives in <a href=\"/fractional-cmo-cost/\">what a fractional CMO costs</a>. Neither option is cheap. The question is which one matches the actual workload.</p>"),
+       ("The risk is asymmetric", "<p>A full-time executive search takes months. Ramp-up takes more months. If the hire is wrong, you lose the better part of a year, plus severance, plus the team&rsquo;s momentum, and then you start the search again. Companies also tend to hire the full-time CMO before they can describe the job, which is how the hire goes wrong. A fractional engagement is a contract: a 3 to 6 month initial term is typical, the cadence can be adjusted, and if the fit is wrong it ends without an org chart to rebuild. You can also use the fractional seat to define the full-time job before you hire it.</p>"),
+       ("When each one wins", "<p>Hire full-time when the load is real: a marketing team large enough to need a daily executive, revenue past roughly $25M, a board and investor cadence that consumes the seat, and decisions that cannot wait two days. Hire fractional when the leadership gap is real but the load is part-time: strategy is missing, agencies are unled, the founder is the default marketer, and the budget cannot carry a $300,000-plus package without starving the work itself. Many companies run fractional for a year or two, then hire full-time once the function is built and the job is obvious.</p>"),
+     ],
+     faqs=[
+       ("Can a fractional CMO become our full-time CMO later?", "Sometimes, and it is a clean way to hire: you have watched the person work for months before either side commits. It is not the default, though. Many fractional CMOs run a portfolio practice by choice. Treat the conversion as a possible outcome to discuss openly, not an assumption to build the engagement on."),
+       ("How long do fractional engagements usually last?", "Published guides describe a 3 to 6 month initial term as typical, with many engagements extending well past a year once the rhythm is working. Time to value is usually 30 to 45 days. If a provider asks for a long lock-in before any work has shipped, that is worth a hard question."),
+       ("What if we already have a marketing manager?", "That is the normal setup, not an obstacle. A fractional CMO gives your manager the senior direction, priorities, and cover they cannot give themselves, and usually makes them more effective rather than redundant. The arrangement to avoid is two people both claiming the strategy seat. One person owns the plan; everyone else owns pieces of it."),
+     ]),
+
+dict(slug="fractional-cmo-vs-consultant", title="Fractional CMO vs. Marketing Consultant | Extra Medium",
+     q="Fractional CMO or marketing consultant: what's the real difference?",
+     desc="The real difference between a fractional CMO and a marketing consultant is ownership: advice that leaves versus leadership that stays.",
+     hero="collage-about",
+     answer="Ownership. A consultant answers a defined question and hands the answer back: an audit, a plan, a recommendation. Then they leave, and your team decides what to do with it. A fractional CMO makes the decision, leads the people doing the work, and is still there next quarter when a call turns out wrong. If you have one well-formed question, hire a consultant. If the gap is ongoing leadership, that is the fractional seat.",
+     sections=[
+       ("Advice versus accountability", "<p>A consulting engagement is scoped as a deliverable. You buy an answer: a market study, a pricing review, a channel audit. The work ends when the document lands, and whether anything changes is your problem. A fractional CMO is scoped as a retainer because the work is a function, not a document. They set the strategy, then stay to run it: leading the team, managing the budget, adjusting when the numbers move. The expertise can be identical. The difference is who is accountable the morning after the recommendation. That is also why consultants are priced per project and fractional CMOs per month.</p>"),
+       ("Where the interim CMO and the advisor fit", "<p>Two neighboring arrangements get mixed into this decision. An interim CMO is full-time but temporary: they fill a CMO-shaped hole that already exists, usually because a permanent leader left or is being recruited, and the function cannot pause. A fractional engagement usually starts earlier, when the company is not yet sure the seat should exist at all. An advisor is lighter still: a few hours a month of access to experience, sometimes for equity, with no operational responsibility. Advisors are useful. They are not leadership, and they should not be priced or judged as if they were.</p>"),
+       ("How to choose, in one pass", "<p>Ask what happens after the answer. If the honest answer is &ldquo;we will know what to do and we have the people to do it,&rdquo; a consultant is the cheaper, correct buy. If the answer is &ldquo;we will still need someone senior deciding, week after week,&rdquo; you are describing the fractional seat. And if the strategy is settled but the work itself is not getting done, neither is the fix; that gap belongs to an agency, which is a different comparison: <a href=\"/fractional-cmo-vs-agency/\">fractional CMO vs. agency</a>. Buy the shape of help that matches the shape of the gap.</p>"),
+     ],
+     faqs=[
+       ("Can a consultant become our fractional CMO?", "It happens, usually after a strategy project lands well and both sides see the ongoing gap. Watch the incentives when it does: the person who sold the diagnosis should not be the only voice deciding the prescription is a retainer. Ask what they would do in the first 90 days and judge that, not the deck."),
+       ("Is a fractional CMO more expensive than a consultant?", "Per month, usually yes; per outcome, not necessarily. A consultant&rsquo;s project fee looks smaller until the recommendations sit unimplemented and get re-bought next year. A fractional retainer costs more because it includes the implementation leadership. Compare total cost over twelve months, including the work that did or did not get done, not the first invoice."),
+       ("How do we know if our problem is advice-shaped or leadership-shaped?", "Look at your last three marketing initiatives. If they failed for lack of a good plan, the problem is advice-shaped. If reasonable plans kept dying in execution, drift, or indecision, the problem is leadership-shaped. Most companies that call us have already bought the plan once. They are missing the person who makes it happen."),
+     ]),
+
+dict(slug="when-to-hire-a-fractional-cmo", title="When to Hire a Fractional CMO | Extra Medium",
+     q="When should you hire a fractional CMO?",
+     desc="The signs a company needs a fractional CMO, the signs it does not, and what a first conversation should cover.",
+     hero="collage-home",
+     answer="When marketing has become a leadership gap rather than a labor gap. The pattern looks like this: the founder is still the default marketing decision-maker, real money is going out the door with nobody able to say what it returned, and agencies or a small team are executing without anyone senior on your side setting direction. You do not need more hands. You need the seat filled, at a fraction of the week and the cost.",
+     sections=[
+       ("The signs, in plain terms", "<p><b>The founder is the marketing department.</b> Every decision waits on the person with the least time to make it. <b>Spend nobody can account for.</b> Money goes to ads, tools, and retainers, and nobody can connect it to revenue. <b>Agencies without a senior counterpart.</b> Work gets executed, but nobody on your side decides whether it is the right work. <b>Growth has stalled or turned unpredictable.</b> Referrals carried you here; they will not carry the next stage. <b>Something big is coming.</b> A launch, a raise, a rebrand, a new market: moments that punish improvised marketing. Two or three of these together is the signal.</p>"),
+       ("When not to hire one", "<p>Three situations argue against it. <b>There is nobody to lead.</b> If there is no team, no agency, and no budget to execute, a strategist is an executive watching an empty channel; buy execution first. <b>The problem is one bounded thing.</b> A website, a logo, a single campaign: hire for that, at a project price. <b>The product itself is still unsettled.</b> If you do not yet know what you are selling or to whom, marketing strategy is premature, because it would lock in answers that are about to change. A good fractional CMO will tell you this in the first conversation rather than sell you the seat.</p>"),
+       ("What happens next, if the signs fit", "<p>The next step is a conversation, not a commitment. At Extra Medium the first conversation is free and specific: we look at your current marketing, name the gap as we see it, and say plainly whether the fractional seat is the right fix or whether something cheaper is. If it is the right fix, the engagement shape and the price go in writing before any work begins. The mechanics of vetting and hiring, including the questions worth asking any provider, are in <a href=\"/how-to-hire-a-fractional-cmo/\">how to hire a fractional CMO</a>. Bring last quarter&rsquo;s numbers if you have them.</p>"),
+     ],
+     faqs=[
+       ("What revenue size fits a fractional CMO?", "There is no universal threshold, but published guides cluster around companies from roughly $1M to $25M in revenue: large enough to have real marketing spend and execution capacity, not yet large enough to need the seat forty hours a week. Below that range the fee can crowd out the work; above it, full-time usually wins."),
+       ("Can a fractional CMO bridge us to a full-time hire?", "Yes, and it is one of the better uses of the model. The fractional seat runs the function now, defines what the full-time job actually is, and can help interview and onboard the permanent hire. Companies that hire the executive first often discover the job they described is not the job they needed."),
+       ("How quickly can an engagement start?", "Faster than any executive hire: there is no search, no notice period, and no relocation. Published guides put time to value at 30 to 45 days once started, most of it the audit and the first plan. At Extra Medium, the first conversation is free, and the engagement shape and price are in writing before work begins."),
+     ]),
+dict(slug="fractional-cmo-for-startups", title="Fractional CMO for Startups | Extra Medium",
+     q="Should a startup hire a fractional CMO?",
+     desc="When a startup actually needs a fractional CMO, what the seat does, and when it is too early.",
+     hero="collage-labs",
+     answer="A startup should hire a fractional CMO after it has a product customers already want, and not before. Past product-market fit, the problem stops being discovery and becomes direction: positioning, a go-to-market plan, the first marketing hires, and a story investors can repeat. A fractional CMO owns those calls a few days a week. Published guides put typical retainers at $3,000 to $20,000 a month, against $300,000 to $570,000 a year loaded for a full-time CMO. Before that fit exists, spend the money on customers, not leadership.",
+     sections=[
+       ("The moment it makes sense", "<p>The signals are consistent. Revenue is coming in, but from scattered efforts nobody planned. The founder is still the marketing department, and marketing is the job that gets done last, after product, hiring, and fundraising. Channels get tried one at a time with no system connecting them, and every agency or freelancer gets briefed by someone who is guessing. That is a leadership gap, not a labor gap. More hands will not fix it, because nobody senior is deciding what the hands should do, in what order, and what to stop doing.</p>"),
+       ("What the seat does at a startup", "<p>Four things, mostly. <b>Positioning</b>: who the product is for and why it wins, said in words a buyer repeats. <b>Go-to-market</b>: which channels get tested first, with what budget, and what result kills or scales each one. <b>First hires</b>: the order matters &mdash; the wrong first marketing hire is an expensive year. And the <b>investor narrative</b>: the growth story in the deck has to match the numbers in the room. At Extra Medium the Lead practice pairs the seat with the studio underneath it, so the same company can also name, brand, and launch the business through our Launch practice when that is what the stage calls for.</p>"),
+       ("The honest warning, and the junior-hire trap", "<p>Before product-market fit, do not hire one. A fractional CMO builds a system: positioning, channels, measurement. Built around the wrong customer, that system just gets you to the wrong answer faster and with more confidence. Early on you need discovery, not direction. The other common mistake is hiring a junior marketer full-time instead. A junior hire can run tasks. They cannot set strategy, judge channels, or tell a founder no &mdash; and they will learn marketing by spending your budget. A senior operator a few days a week costs less and decides better. Smaller companies face a version of the same choice, covered in <a href=\"/fractional-cmo-for-small-business/\">fractional CMO for small business</a>, and the timing signals are laid out in <a href=\"/when-to-hire-a-fractional-cmo/\">when to hire a fractional CMO</a>.</p>"),
+     ],
+     faqs=[
+       ("How early is too early to hire a fractional CMO?", "If you are still figuring out who the customer is and whether they will pay, it is too early. That stage needs customer discovery and cheap experiments, not a marketing system. Once a defined customer is buying and the problem is reaching more of them in an organized way, the seat starts paying for itself."),
+       ("How many days a week does a startup need?", "Most engagements run one to three days a week. A startup setting positioning and a first go-to-market plan usually needs one to two. More days make sense when there is a team to lead, agencies to manage, or a launch in motion. The cadence should follow the workload, not a package."),
+       ("Can a fractional CMO help with fundraising?", "Yes, in a specific way. Investors test whether the growth story and the numbers agree. A fractional CMO sharpens the narrative, builds the marketing metrics behind it, and closes the obvious gaps in the go-to-market plan before you are in the room. They cannot fix a story the numbers contradict."),
+     ]),
+
+dict(slug="fractional-cmo-for-small-business", title="Fractional CMO for Small Business | Extra Medium",
+     q="Does a small business need a fractional CMO?",
+     desc="For owners running marketing themselves: what a fractional CMO changes, and the fee test to run first.",
+     hero="collage-home",
+     answer="A small business needs a fractional CMO when marketing has outgrown the owner&rsquo;s spare time but not the budget for a full-time executive &mdash; for most companies, somewhere in the $1 million to $10 million revenue range. What you are buying is ownership: one plan, one person managing the vendors, and spend that gets accounted for. Published guides put typical retainers at $3,000 to $8,000 a month for companies this size. Run the fee test first: if the fee would eat most of your marketing budget, buy execution instead.",
+     sections=[
+       ("The ceiling on owner-led marketing", "<p>Owner-led marketing works until it doesn&rsquo;t. The owner knows the customers and the offer better than anyone, so early marketing is good. Then the business grows, marketing becomes five jobs &mdash; the website, the ads, the social accounts, the agency, the occasional campaign &mdash; and every one of them gets the owner&rsquo;s leftover attention. Decisions pile up. Vendors get briefed in fragments. Nobody can say what last quarter&rsquo;s spend produced. The ceiling is not effort or talent. It is that marketing has become a leadership job and it is being done in the margins of a different job.</p>"),
+       ("What changes when the seat is filled", "<p>Three things, and they are unglamorous. <b>One plan</b>: every channel and vendor works from the same priorities, set against revenue, not activity. <b>Managed vendors</b>: the agencies and freelancers you already pay get a senior person briefing them, reviewing the work, and cutting what is not performing &mdash; most small businesses get more from the vendors they have before they need new ones. <b>Accounted spend</b>: a monthly read on what went out, what came back, and what changes next. That includes local businesses. A regional firm, a multi-location service company, or a retailer lives on local demand, and local demand is exactly where uncoordinated spend leaks worst.</p>"),
+       ("The sanity rule on fees", "<p>Be suspicious of any leadership hire, including us, until this math works. If your total marketing budget is $2,000 a month, spending most of it on strategy leaves nothing to execute with. That is backwards. Buy execution first &mdash; a good freelancer, a focused agency, one channel done properly &mdash; and add leadership when the spend is large enough that wasting it costs more than the fee. For most businesses that point arrives somewhere around $1 million in revenue. Below the leadership threshold, the honest answer is often a smaller engagement or none. The full cost picture, including what a full-time CMO runs, is in <a href=\"/fractional-cmo-cost/\">what a fractional CMO costs</a>.</p>"),
+     ],
+     faqs=[
+       ("What size business is the right fit for a fractional CMO?", "Published guides put the typical band at roughly $1 million to $25 million in revenue. Small businesses usually land between $1 million and $10 million: large enough that marketing spend is real money, small enough that a full-time CMO at $300,000 or more a year loaded makes no sense. Revenue is a guide, not a gate &mdash; the real test is whether a leadership gap exists."),
+       ("Does a fractional CMO work for a local business?", "Yes. Local businesses often run more marketing pieces than they realize &mdash; search, reviews, social, a website, maybe an agency &mdash; with nobody coordinating them. A fractional CMO sets the plan around how local customers actually choose, manages the vendors, and cuts the spend that is not producing calls, bookings, or sales."),
+       ("We already have an agency. Would a fractional CMO replace it?", "Usually not. Most engagements start by getting more out of the vendors already in place. The fractional CMO sits on your side of the table: setting the strategy the agency executes against, judging the work, and deciding what continues. If an agency is the wrong fit, you will hear that too, with the reasoning in plain terms."),
+     ]),
+
+dict(slug="how-to-hire-a-fractional-cmo", title="How to Hire a Fractional CMO | Extra Medium",
+     q="How do you hire a fractional CMO and choose the right one?",
+     desc="The questions that separate operators from decks, the red flags, and how a good engagement starts.",
+     hero="collage-contact",
+     answer="Hire a named person, not a firm&rsquo;s bench, and interview for operating history, not vocabulary. Ask who exactly will sit in the seat, what they would stop you doing in the first month, how they report against revenue, and what happens to the strategy when they are not in the room. A real operator answers all four concretely. A good engagement then starts with a short diagnosis phase before any retainer &mdash; the plan should be built on your numbers, not a template. Everything else is negotiation.",
+     sections=[
+       ("The questions that separate operators from decks", "<p>Ask these, and weigh the answers literally. <b>Who exactly sits in the seat?</b> A named person with a history you can check &mdash; if the answer is a rotating bench, you are buying an agency with a new label. <b>What will you stop us doing in month one?</b> Operators cut things. Someone who only adds has never owned a budget. <b>How do you report?</b> The answer should end at revenue: pipeline, sales, cost per customer &mdash; not impressions and engagement. <b>What happens when you are not in the room?</b> The strategy has to survive their absence, in writing, with the team able to run it.</p>"),
+       ("Red flags", "<p>Three show up again and again. <b>Decks without operating history</b>: polished frameworks from someone who has never been accountable for a number. Ask what they ran, at what size, and what it returned &mdash; then check. <b>Activity reporting</b>: monthly reports full of posts shipped, campaigns launched, and traffic charts, with no line connecting any of it to revenue. That is a vendor protecting a retainer. <b>Nothing is ever killed</b>: channels only get added, budgets only grow, and every quarter is a building quarter. A CMO who will not cut a channel is not managing your money; they are spending it politely.</p>"),
+       ("How a good engagement starts", "<p>Diagnosis first, retainer second. A serious fractional CMO will want a few weeks inside the business before proposing the plan: the numbers, the customers, the current spend, the team, the vendors. What comes back should be specific &mdash; what is working, what is leaking, what happens in the first 90 days, and what it costs. That is how we work at Extra Medium. The first conversation is free and specific, and the engagement shape and price are put in writing before any work begins. If a provider wants a long contract signed before they have looked at your business, keep looking. For grounding on the role itself, see <a href=\"/what-does-a-fractional-cmo-do/\">what a fractional CMO does</a>.</p>"),
+     ],
+     faqs=[
+       ("Should a fractional CMO be one named person or a team?", "One named person in the seat. Teams are fine underneath &mdash; strategists need execution support, and our own model pairs the seat with a studio &mdash; but accountability has to have a name on it. If the person in your leadership meeting changes month to month, nobody owns the outcome, and outcomes are the entire point of the hire."),
+       ("How long is a typical fractional CMO commitment?", "Most engagements run one to three days a week on a monthly retainer, often with an initial term of a few months so both sides can judge fit. Be wary of long lock-ins demanded up front. The honest structure is a short diagnosis, a defined first phase, and a retainer that continues because it is working, not because the contract says so."),
+       ("What should reporting from a fractional CMO look like?", "One page, monthly, tied to money: spend by channel, what it produced in pipeline or revenue, cost per customer, and what changes next month and why. Supporting detail can sit behind it, but if the first page is activity &mdash; posts, campaigns, traffic &mdash; instead of results, you are being managed, not led."),
+     ]),
+
+dict(slug="marketing-agency-vs-in-house", title="Marketing Agency vs. In-House Team | Extra Medium",
+     q="Should you hire a marketing agency or build an in-house team?",
+     desc="An honest comparison of agency, in-house, and the hybrid most growing companies actually land on.",
+     hero="collage-work",
+     answer="For most growing companies, neither one alone. An agency buys production capacity and channel expertise, and is rewarded for output. An in-house team buys control and context, but no single hire covers strategy, creative, media, and technology &mdash; and a senior team costs more than most owners expect. The structure that usually wins is a hybrid: a lean in-house core, an agency for production, and fractional leadership over both. Which piece you need first depends on whether your gap is hands, skills, or direction.",
+     sections=[
+       ("What an agency is actually for", "<p>An agency is rented capacity: designers, writers, media buyers, and developers you could never justify as full-time seats, available in the mix you need this quarter. Good agencies bring pattern recognition from dozens of businesses like yours. The limits are structural. An agency is rewarded for output &mdash; deliverables shipped, campaigns live &mdash; not for your revenue, and it will rarely tell you to spend less. It also works from a brief. If nobody senior on your side is setting strategy and judging the work, you get competent execution of an unexamined plan, which is the most expensive kind of marketing there is.</p>"),
+       ("What in-house gives you, and what it costs", "<p>In-house buys context no vendor can match: your team knows the customers, hears the sales calls, and feels the product change. Control is real, and for content and customer knowledge it compounds. The problem is coverage and cost. Marketing is now at least four professions &mdash; strategy, creative, media, and technology &mdash; and one hire, however good, is one of them. Owners routinely hire a single marketer and expect all four. A genuinely senior in-house team, even a small one, quickly runs past the loaded cost of a full-time CMO, commonly $300,000 to $570,000 a year for that seat alone. Most growing companies buy the team before they can feed it.</p>"),
+       ("The hybrid most growing companies land on", "<p>The working structure is three layers. <b>A lean in-house core</b>: one or two people who own the customer knowledge, the content, and the day-to-day. <b>An agency or freelancers for production</b>: the specialist output the core cannot cover, scoped tightly. <b>Fractional leadership over both</b>: a fractional CMO setting the plan, briefing the agency, developing the in-house team, and answering for the number &mdash; typically $3,000 to $20,000 a month against a full-time executive package. That is the model Extra Medium is built on: the Lead practice pairs the fractional seat with the studio, so leadership and production sit in one company. The leadership-versus-agency distinction is drawn in detail at <a href=\"/fractional-cmo-vs-agency/\">fractional CMO vs. agency</a>.</p>"),
+     ],
+     faqs=[
+       ("Which is cheaper, an agency or an in-house team?", "An agency, at the start, almost always. You rent exactly the hours and skills you need with no salary, benefits, or recruiting. In-house gets competitive only when your demand for a skill is constant and heavy enough to fill a seat &mdash; and by then the comparison should include management time and the cost of the skills that seat does not have."),
+       ("Can one senior marketing hire replace an agency?", "Rarely. A senior hire brings strategy and judgment, but one person cannot also be the designer, the media buyer, the writer, and the developer at a professional level. What usually happens is the senior hire spends their time doing junior production badly, or managing freelancers with no system. Senior leadership plus rented production beats either one pretending to be both."),
+       ("When does building in-house win outright?", "When marketing is a core, daily, proprietary function of the business &mdash; high-volume content engines, performance media at serious scale, or a product where marketing data is a competitive asset. At that point the volume justifies the seats and the context is worth more than the flexibility. Most companies get there later than they think, and the hybrid carries them until they do."),
+     ]),
+dict(slug="fractional-cmo-hampton-roads", title="Fractional CMO in Hampton Roads | Extra Medium",
+     q="Fractional CMO in Hampton Roads: senior marketing leadership, based here.",
+     desc="Fractional CMO leadership in Hampton Roads from Extra Medium, the Virginia Beach studio led by founder Jeff Rimmer.",
+     hero="collage-cmo",
+     answer="A fractional CMO in Hampton Roads gives a company senior marketing leadership for one to three days a week, without a full-time executive hire. Extra Medium is based in Virginia Beach, so this is home turf: the same studio that launches and grows brands nationally sits in your leadership meetings, sets the plan, and answers for the results. You get a named senior operator, a studio behind the seat, and the shape and price in writing before work begins.",
+     sections=[
+       ("Marketing in a relationship town, until it stops working", "<p>Hampton Roads runs on relationships. Defense and military-adjacent contractors, port and logistics firms, healthcare systems, hospitality groups, and thousands of owner-led businesses have grown for years on referrals, reputation, and who knows whom across the seven cities. That works, until a competitor gets serious about search, a contract gets competed, or the next generation of buyers never hears your name. Then the gap shows: no one senior owns the plan, the website says less than the sales team does, and marketing is a pile of vendor invoices. A fractional CMO closes that gap by setting direction, joining up the pieces, and making the spend answer to revenue.</p>"),
+       ("What working with us looks like here", "<p>Because the studio is here, the cadence is simple. Your fractional CMO is in the room for leadership meetings, planning days, and the moments that need a senior marketer present, not on a screen. Between those days the work runs remotely: strategy, briefs, vendor direction, and reporting. Behind the seat sits the full Extra Medium studio, covering the six practices, Launch, Reinvent, Grow, Lead, Intelligence, and Experiences, so the plan does not wait on hiring. If you are comparing local firms as well, our <a href='/marketing-agency-virginia-beach/'>marketing agency in Virginia Beach</a> page sets out the studio side.</p>"),
+       ("Who it fits in Hampton Roads", "<p>It fits companies that have outgrown founder-led or relationship-led marketing but are not ready for a full-time CMO: a contractor chasing larger awards, a healthcare or hospitality group with locations across the metro, a professional firm whose referrals are thinning, or an owner-led business spending real money with no one senior owning the result. It starts with a first conversation, free and specific, about your market and your numbers. If the seat is the right answer, you get the engagement shape and price in writing before any work begins. If it is not, we say so.</p>"),
+     ],
+     faqs=[
+       ("Are you based in Hampton Roads?", "Yes. Extra Medium is headquartered in Virginia Beach, and Hampton Roads is our home market. Your fractional CMO works from here, in your offices across the seven cities when it matters and remotely day to day. You are not buying a national firm that flies someone in. You are hiring the senior studio down the road, led by founder Jeff Rimmer."),
+       ("How much does a fractional CMO cost in Hampton Roads?", "It is priced as a monthly engagement, not a salary, and it runs a fraction of a full-time CMO package. The exact shape depends on days per week, scope, and how much studio support sits behind the seat. We never quote a number before understanding the work. You get the engagement shape and price in writing before work begins, with no surprises later."),
+       ("How is this different from hiring a local marketing agency?", "An agency executes channels. A fractional CMO owns the plan those channels serve. Extra Medium does both under one roof: the Lead practice puts a senior operator in your leadership seat, and the studio executes the work the plan calls for. That means one accountable conversation about strategy, spend, and results, instead of a vendor reporting on its own activity."),
+     ]),
+
+dict(slug="fractional-cmo-richmond", title="Fractional CMO in Richmond, VA | Extra Medium",
+     q="Fractional CMO in Richmond: what does the seat do for a Richmond company?",
+     desc="Fractional CMO leadership for Richmond, Virginia companies from Extra Medium, two hours away in Virginia Beach and in the room when it matters.",
+     hero="collage-work",
+     answer="A fractional CMO gives a Richmond company senior marketing leadership for one to three days a week, on a monthly cadence, without a full-time executive hire. Extra Medium is headquartered in Virginia Beach, about two hours away: close enough for regular in-person days, senior enough to run the function remotely between them. You get a named operator in your leadership meetings, a studio behind the seat, and the engagement shape and price in writing first.",
+     sections=[
+       ("A capital city with a serious middle layer", "<p>Richmond is the state capital, and it shows in the company mix: finance, insurance, and legal firms with long histories, state-adjacent organizations, and a strong layer of mid-sized companies that sell regionally and nationally from a Richmond base. VCU adds energy, talent, and a steady stream of younger companies. Marketing here usually stalls quietly. The firm is respected, the relationships are old, and the website and story have not kept up with what the company has become. Referrals carry the pipeline until they do not, and nobody senior owns the fix.</p>"),
+       ("What working with Extra Medium looks like from Richmond", "<p>We work with Richmond companies the way the seat actually runs: leadership meetings, planning, and reporting on a weekly rhythm, mostly remote, with regular in-person days in Richmond when the work needs a room. Two hours is an easy drive, and we make it. Behind the fractional CMO sits the full studio, so strategy, brand, web, content, and AI work move without you hiring or managing a bench of vendors. One senior conversation owns the plan, the spend, and the results, and you always know who that conversation is with.</p>"),
+       ("Who it fits in Richmond, and how it starts", "<p>It fits the established firm whose marketing has not kept pace with its reputation, the mid-sized company selling beyond Virginia for the first time, and the growing business where the founder or managing partner is still the default marketing department. It starts with a first conversation, free and specific, about where growth is supposed to come from and what is blocking it. If a fractional CMO is the right answer, the shape and price arrive in writing before work begins. Founder Jeff Rimmer leads the seat himself, with 20+ years across media, startups, and Fortune 100 work.</p>"),
+     ],
+     faqs=[
+       ("Are you based in Richmond?", "No, and we will not pretend otherwise. Extra Medium is headquartered in Virginia Beach, about two hours from Richmond. We work with Richmond companies remotely day to day and in the room for leadership days, planning sessions, and launches. What you get is a senior operator who knows Virginia business, not a local office sign."),
+       ("How often would you be in Richmond in person?", "On the rhythm the work needs. Leadership and planning days are scheduled in person, and launches or major decisions usually get a room, not a video call. Day to day, the seat runs remotely with the same weekly cadence, reporting, and access you would expect from someone on your own team."),
+       ("What does the engagement cost?", "It is a monthly engagement, priced well below a full-time CMO package, and shaped by days per week and scope. We do not quote a number before we understand the company and the work. The first conversation is free, and you receive the engagement shape and price in writing before anything begins."),
+     ]),
+
+dict(slug="fractional-cmo-charlottesville", title="Fractional CMO in Charlottesville, VA | Extra Medium",
+     q="Fractional CMO in Charlottesville: senior marketing leadership for a small, serious market.",
+     desc="Fractional CMO leadership for Charlottesville, Virginia companies from Extra Medium, senior marketing direction for a small, high-trust market.",
+     hero="collage-about",
+     answer="A fractional CMO gives a Charlottesville company senior marketing leadership for one to three days a week, without a full-time executive hire. Extra Medium is headquartered in Virginia Beach and works with Charlottesville companies remotely day to day, in the room when it matters. In a market this small and reputation-driven, the value is judgment: a senior operator who sets the plan carefully, protects the name you have built, and answers for results.",
+     sections=[
+       ("A small market with a long memory", "<p>Charlottesville punches above its size. The University of Virginia anchors the economy and spins out research, health, and technology companies. Around it sit biotech and health firms, wine and hospitality businesses that sell an experience as much as a product, and professional firms built on trust. It is a high-trust, relationship-first culture, and reputation travels fast in both directions. Sloppy marketing is remembered here. So is quiet competence. Most local companies do not need louder marketing. They need a senior person making sure the story, the spend, and the experience line up.</p>"),
+       ("What working with us looks like from Charlottesville", "<p>The seat runs on a monthly cadence, one to three days a week. Day to day we work remotely: strategy, planning, vendor and team direction, and reporting your leadership can actually use. When the work calls for a room, a launch, a planning day, a hard conversation, we are in Charlottesville for it. Behind the fractional CMO is the full Extra Medium studio across Launch, Reinvent, Grow, Intelligence, and Experiences, so a UVA spinout or a hospitality group gets senior leadership and execution without building a marketing department first.</p>"),
+       ("Who it fits here", "<p>It fits the spinout that has outgrown founder-led marketing, the health or biotech firm selling to buyers far beyond Albemarle County, and the established local business whose next customers will find it online before they hear about it at dinner. It also fits companies that need discretion: senior judgment, no noise. It starts with a first conversation, free and specific. If the seat fits, you get the engagement shape and price in writing before work begins. If your real need is smaller, we will tell you that instead.</p>"),
+     ],
+     faqs=[
+       ("Are you based in Charlottesville?", "No. Extra Medium is headquartered in Virginia Beach. We work with Charlottesville companies remotely day to day and travel in for the days that need a room. We will not claim a local office we do not have. What we offer is senior leadership that understands how a small, high-trust market actually works."),
+       ("Can a fractional CMO work for a company our size?", "Usually, yes, and size is the point. Charlottesville companies often need CMO-level judgment long before they can justify a full-time CMO. One to three days a week of senior leadership, with a studio behind it, matches the scale of the market. If your need is really a pair of hands, we will say so honestly."),
+       ("How does it start?", "With a first conversation, free and specific, about your market, your reputation, and where growth should come from next. From there you get a written engagement shape and price before any work begins. No retainer pitch, no pressure. In a town where people talk, we would rather earn the referral than win the argument."),
+     ]),
+
+dict(slug="fractional-cmo-raleigh", title="Fractional CMO in Raleigh & the Triangle | Extra Medium",
+     q="Fractional CMO in Raleigh: marketing leadership for Triangle companies.",
+     desc="Fractional CMO leadership for Raleigh and Triangle companies from Extra Medium, senior marketing direction for teams outgrowing founder-led marketing.",
+     hero="collage-labs",
+     answer="A fractional CMO gives a Raleigh company senior marketing leadership for one to three days a week, without a full-time executive hire. By Raleigh we mean the whole Triangle, Raleigh, Durham, and Chapel Hill, one market. Extra Medium is headquartered in Virginia Beach and works with Triangle companies remotely day to day, in the room when it matters. You get a senior operator who owns the plan, and a studio behind the seat.",
+     sections=[
+       ("Growth is not the problem. Focus is.", "<p>The Triangle is one of the fastest-growing business regions in the country. Research Triangle Park anchors tech and life sciences, Durham and Chapel Hill add research, health, and university spinouts, and transplant talent keeps raising the bar. Companies here rarely lack opportunity. They lack senior marketing focus. The founder still runs marketing between everything else, agencies execute in pieces, and the story changes depending on who wrote the page. A fractional CMO gives a scaling company one accountable owner for positioning, plan, and pipeline before it hires a full executive team.</p>"),
+       ("What working with us looks like from the Triangle", "<p>The seat runs one to three days a week on a monthly cadence. Strategy, planning, team and vendor direction, and reporting run remotely, built into your leadership rhythm. We are in the Triangle in person for planning days, launches, and the decisions that need a room. Behind the fractional CMO sits the Extra Medium studio, covering brand, web, content, and AI, so a company scaling past founder-led marketing gets leadership and execution together, without pausing growth to recruit a department. One plan, one owner, one conversation about results.</p>"),
+       ("Who it fits in Raleigh, Durham, and Chapel Hill", "<p>It fits the tech or life sciences company between funding rounds that needs a real go-to-market plan, the services firm hiring its first marketers and needing someone senior to lead them, and the established Triangle business whose growth has outpaced its brand. It starts with a first conversation, free and specific, about your stage and your numbers. If the seat is right, the engagement shape and price come in writing before work begins. Jeff Rimmer, our founder, brings 20+ years across media, three startups, and Fortune 100 clients.</p>"),
+     ],
+     faqs=[
+       ("Are you based in Raleigh?", "No. Extra Medium is headquartered in Virginia Beach, Virginia. We work with Raleigh and Triangle companies remotely day to day and in person for planning days, launches, and leadership sessions. We know the Triangle as one market, Raleigh, Durham, and Chapel Hill together, and we will never confuse it with Charlotte."),
+       ("Do you work with early-stage Triangle startups?", "Yes, when the company has something real to sell and marketing leadership is the gap. Pre-launch and early growth companies often need positioning and a go-to-market plan more than a full-time CMO. If you are too early for the seat to pay off, we will tell you what to do first instead."),
+       ("What does a fractional CMO cost in Raleigh?", "It is a monthly engagement at a fraction of a full-time CMO package, shaped by days per week and scope. Triangle rates for senior leadership are competitive with any major metro, which is exactly why the fractional shape helps. You get the shape and price in writing before work begins."),
+     ]),
+dict(slug="fractional-cmo-washington-dc", title="Fractional CMO in Washington, DC | Extra Medium",
+     q="Fractional CMO in Washington, DC: who does it fit in this market?",
+     desc="Fractional CMO leadership for Washington, DC associations, nonprofits, contractors and professional services firms, from Extra Medium.",
+     hero="collage-contact",
+     answer="A fractional CMO is a senior marketing leader who works with your organization part-time, usually one to three days a week, and owns the marketing plan the way a full-time CMO would. Extra Medium brings that leadership to Washington organizations whose marketing is about membership, events, policy audiences and credibility as much as pipeline: associations, nonprofits, government contractors and professional services firms. The work is founder-led, run day to day remotely and in the room for board meetings, launches and decisions that need a person present.",
+     sections=[
+       ("What marketing leadership means in Washington", "<p>In DC, marketing rarely answers to a sales quota alone. Associations answer to members and renewal rates; nonprofits to donors, boards and mission; contractors to credibility with agencies and partners; advocacy groups to policy audiences who read carefully. Buying cycles are long, committees are everywhere, and every claim gets checked. That changes the job: positioning has to survive a board packet, events carry real weight, and the plan has to connect membership, attendance and influence, not just leads. A fractional CMO sets that plan, directs the staff and vendors executing it, and reports to leadership in the language boards actually use.</p>"),
+       ("Working with Extra Medium from Washington", "<p>Extra Medium is founder-led and senior-only, which matters in Washington, where the person in the room is the product. Day to day, your fractional CMO works set days each week inside your leadership rhythm: staff meetings, vendor and agency direction, budget decisions and the monthly report your board will actually read. That runs remotely from our Virginia Beach headquarters. Board presentations, planning sessions, launches and sensitive meetings happen in person, in the room. You are never handed to a junior team after the first call. The first conversation is free and specific, and the engagement shape and price are in writing before any work begins.</p>"),
+       ("Who it fits, and how it starts", "<p>It fits an association with a capable marketing team and nobody senior setting its direction. It fits a nonprofit between marketing directors, a contractor whose credibility with agencies and partners has outgrown a coordinator, or a professional services firm where the partners are still the marketing department by default. It does not fit if what you need is hands alone, someone to post and place ads, or a leader in the building five days a week. It starts with a free conversation about your specific situation. If there is a fit, you get the engagement shape and the price in writing, and you decide with the full picture in front of you.</p>"),
+     ],
+     faqs=[
+       ("Are you based in Washington, DC?", "No. Extra Medium is headquartered in Virginia Beach, Virginia, and Washington is one of the markets we work in. Day to day, your fractional CMO works remotely on set days each week. Board meetings, planning sessions, launches and the conversations that need a person in the room happen in person. You get a senior leader without a DC salary, office or headcount attached."),
+       ("What does a fractional CMO engagement cost?", "Fractional engagements are priced as a monthly engagement, based on how many days a week you need and what the role has to own. There is no rate card and no hourly meter. After a first conversation about your situation, you get the shape and the exact price in writing before any work begins, so the decision is made on a real number, not a range."),
+       ("How does the work run day to day?", "On an agreed rhythm, usually one to three days a week. Your fractional CMO sits in your leadership meetings, sets the plan and priorities, directs your staff, agencies and freelancers, owns the marketing budget, and reports results to you and your board monthly. It is the accountability of a chief marketing officer, bought by the fraction instead of the full-time hire."),
+     ]),
+
+dict(slug="fractional-cmo-chicago", title="Fractional CMO in Chicago | Extra Medium",
+     q="Fractional CMO in Chicago: what does it cost, and who does it fit?",
+     desc="Fractional CMO leadership for Chicago companies: published cost ranges, who it fits, and how Extra Medium works with Chicago teams.",
+     hero="collage-work",
+     answer="In Chicago, a fractional CMO gives a growing company senior marketing leadership part-time, usually one to three days a week, for a monthly retainer instead of a full-time executive package. Published Chicago pricing commonly runs $5,000 to $20,000 a month. Extra Medium works with Chicago companies the same way: founder-led, senior-only leadership that owns the plan, the budget and the team&rsquo;s direction, run remotely day to day and in the room when it matters. The exact price is in writing before work begins.",
+     sections=[
+       ("A B2B town that runs on payback math", "<p>Chicago is a B2B town. Manufacturing, logistics, food, distribution and professional services anchor the economy, with a large startup scene layered on top. Marketing buyers here are practical: they expect plain payback math, cost per qualified opportunity and revenue per channel, not impressions and reach. That makes the fractional model a natural fit. Most of these companies have real marketing activity and real spend, but the plan lives in pieces: an agency here, a freelancer there, a sales team working from different assumptions. A fractional CMO joins it up, sets priorities against the numbers, and is accountable for what the spend returns.</p>"),
+       ("What it costs in Chicago", "<p>Published 2026 pricing for Chicago puts fractional CMO retainers commonly between $5,000 and $20,000 a month, depending on days per week and scope. Seasoned operators billing hourly run roughly $200 to $350 an hour. Chicago rates sit about 15 to 20 percent below New York and San Francisco for comparable seniority, which is part of the city&rsquo;s appeal: the leadership is the same caliber, the overhead is not. Extra Medium does not publish a rate card. Your engagement is priced on the days and the remit, and you get the exact figure in writing before any work begins.</p>"),
+       ("Who it fits, and how it starts", "<p>It fits the Chicago pattern well: a manufacturer or distributor with a strong product and marketing that has not kept up, a services firm whose growth still runs on referrals, or a startup past its first traction that needs a plan and a leader before it needs a bigger team. It does not fit if the need is hands alone, or a leader on site five days a week. Working together runs on a weekly cadence, remotely day to day and in the room for planning, launches and board-level moments. It starts with a free conversation, followed by the engagement shape and price in writing.</p>"),
+     ],
+     faqs=[
+       ("Are you based in Chicago?", "Extra Medium is headquartered in Virginia Beach, and Chicago is one of the markets listed on our site because we work with companies there. There is no staffed Chicago office and no junior local team. You work directly with the founder-led senior team: remotely day to day, and in the room in Chicago when the work calls for it."),
+       ("What does a fractional CMO cost in Chicago?", "Published Chicago ranges put retainers commonly at $5,000 to $20,000 a month, with seasoned operators at roughly $200 to $350 an hour, about 15 to 20 percent below coastal rates. Extra Medium prices each engagement on days per week and scope. After a free first conversation, the exact price is in writing before work begins. No surprises, and no hourly meter running."),
+       ("How do we work together if you are not in Chicago?", "On a set rhythm, usually one to three days a week. Leadership meetings, planning and reporting run on video and shared documents; your fractional CMO directs your team and vendors, owns the budget and reports against the numbers monthly. Chicago trips are scheduled around the moments that benefit from a person in the room: kickoffs, planning sessions, launches and board meetings."),
+     ]),
+
+dict(slug="fractional-cmo-london", title="Fractional CMO in London | Extra Medium",
+     q="Fractional CMO in London: how does the model work for UK companies?",
+     desc="Fractional CMO leadership for London scale-ups and PE-backed companies: how the model works, what it costs, and how a US studio runs it.",
+     hero="collage-labs",
+     answer="A fractional CMO is a senior marketing leader who works with a company part-time, typically one to three days a week on a business-to-business contract, and owns the marketing plan without a full-time hire. Extra Medium is a US studio that works with UK companies: you get senior leadership plus a working studio behind it, run on a fixed weekly cadence across the time zones, and in the room in London when it matters. Engagements are priced in writing before work begins.",
+     sections=[
+       ("The densest fractional market in the UK", "<p>London has the deepest bench of growing companies in the UK, and the densest demand for fractional marketing leadership. Scale-ups, fintech and SaaS firms and PE-backed companies share the same shape: real revenue, real spend, investors asking harder questions, and marketing that has outgrown the founder and the first hires without yet justifying a full-time chief marketing officer. The fractional model fits that gap exactly. Senior judgment, a plan the board can interrogate, and a team directed against numbers, bought by the day or the week instead of as a permanent package.</p>"),
+       ("What it costs, and how the contract works", "<p>Published UK figures put fractional CMO day rates typically between £750 and £1,400, with London&rsquo;s senior specialists at £1,000 to £2,500. Monthly retainers run from £3,000 to £15,000 depending on days and remit. Set that against a full-time London CMO at £120,000 to £150,000 base, around £180,000 as a package, before recruitment costs and the months a search takes. Engagements are business-to-business contracts, commonly structured outside IR35, with no permanent headcount added. Extra Medium prices the same way: days and scope agreed up front, the figure in writing before work begins.</p>"),
+       ("Working with a US studio from London", "<p>The honest question is the time zone, and cadence is the answer. Engagements run on fixed days each week, with live meetings scheduled in the overlap, London&rsquo;s afternoon and Virginia&rsquo;s morning, and decisions, documents and reporting moving asynchronously in between. Nothing waits a day for a signature or a steer. When the work needs a person in the room, a launch, a board session, a planning week, we are in London for it. It fits scale-ups and PE-backed firms that need senior marketing ownership now. It starts with a free conversation, then the engagement shape and price in writing.</p>"),
+     ],
+     faqs=[
+       ("Are you based in London?", "No. Extra Medium is a US studio headquartered in Virginia Beach, and London is on our site because we work with UK companies. There is no staffed London office. What you get is senior, founder-led marketing leadership plus a working studio, run on a fixed weekly cadence across the time zones, with London trips for the moments that need a person in the room."),
+       ("What does a fractional CMO cost in London?", "Published UK ranges put day rates typically at £750 to £1,400, with London senior specialists at £1,000 to £2,500, and monthly retainers from £3,000 to £15,000. Extra Medium prices each engagement on days per week and scope, business to business. After a free first conversation, the exact figure is in writing before any work begins."),
+       ("How does the time difference work day to day?", "Engagements run on fixed days with a set weekly rhythm. Live meetings sit in the overlap window, London afternoon and Virginia morning. Between them, plans, documents and reporting move asynchronously, so work is waiting for you at the start of your day rather than the end of it. The cadence is agreed up front, and it does not drift."),
+     ]),
 ]
 
+_ALTS = {
+ "collage-home": "Black and white collage of a marble statue head merged with a bird, over a magenta field",
+ "collage-cmo": "Black and white collage of a vintage microphone and a hand tuning a retro television, over deep teal",
+ "collage-labs": "Black and white collage of a bird perched on a marble statue head beside a vintage camera, over electric blue",
+ "collage-work": "Black and white collage of chess pieces, a pointing hand and a telescope, over a sunny yellow field",
+ "collage-about": "Black and white collage of a typewriter, a rotary telephone and a marble statue head, over magenta",
+ "collage-contact": "Black and white collage of a bird carrying an envelope, a mailbox and a megaphone, over deep teal",
+ "collage-extra": "Black and white collage of a marble statue wearing a 1920s newsboy cap, mouth open yelling the news, with flying newspaper pages and a megaphone, over a yellow field",
+}
 for _an in ANSWERS:
     _secs = "".join("<h2>" + h + "</h2>" + b for h, b in _an["sections"])
     _faq_html = "".join('<details class="rv"><summary>' + q + "</summary><p>" + a + "</p></details>" for q, a in _an["faqs"])
+    _hero = _an.get("hero", "collage-cmo")
     _abody = """
 <section class="phero"><div class="wrap">
 <p class="kick rv">Straight answers</p>
 <h1 class="rv">""" + _an["q"] + """</h1>
 <div class="answer-first rv"><p>""" + _an["answer"] + """</p></div>
 </div></section>
+[[layers:""" + _hero + "|" + _ALTS[_hero] + """]]
 <section><div class="wrap"><div class="prose rv">""" + _secs + """</div>
 <h2 class="rv" style="margin:34px 0 6px">Asked <span class="it">often.</span></h2>
 """ + _faq_html + """
+<p class="rv" style="margin-top:28px"><a href="/answers/">More straight answers &rarr;</a></p>
 </div></section>
 """ + CTA
     page(_an["title"], _an["desc"], "/" + _an["slug"] + "/", "", _abody,
          faq_ld(_an["faqs"]) + crumb_ld([("Home", "/"), ("Answers", "/" + _an["slug"] + "/")]))
     print("answer done:", _an["slug"])
 
+# ============ ANSWERS HUB ============
+_CITY_SLUGS = {"marketing-agency-virginia-beach", "fractional-cmo-hampton-roads", "fractional-cmo-richmond", "fractional-cmo-charlottesville", "fractional-cmo-raleigh", "fractional-cmo-washington-dc", "fractional-cmo-chicago", "fractional-cmo-london"}
+def _ans_cards(items):
+    return "".join('<a class="card rv" href="/' + a["slug"] + '/"><span class="num">Straight answers</span><h3>' + a["q"] + '</h3><p>' + a["desc"] + '</p><span class="arrow">Read &rarr;</span></a>' for a in items)
+_qs = [a for a in ANSWERS if a["slug"] not in _CITY_SLUGS]
+_cs = [a for a in ANSWERS if a["slug"] in _CITY_SLUGS]
+_hub = """
+<section class="phero"><div class="wrap">
+<p class="kick rv">Straight answers</p>
+<h1 class="rv">Questions, <span class="it">answered straight.</span></h1>
+<p class="lede rv">What a fractional CMO is, what one costs, when to hire one, and how the seat works in the markets we serve &mdash; answered the way we&rsquo;d answer in the first conversation, out in the open.</p>
+</div></section>
+<section><div class="wrap">
+<div class="sec-head block rv"><p class="kick">The questions</p><h2 style="margin-top:14px">Before you <span class="it">hire anyone.</span></h2></div>
+<div class="grid3" style="margin-top:26px">""" + _ans_cards(_qs) + """</div>
+</div></section>
+<section><div class="wrap">
+<div class="sec-head block rv"><p class="kick">By market</p><h2 style="margin-top:14px">Fractional CMO, <span class="it">by city.</span></h2></div>
+<div class="grid3" style="margin-top:26px">""" + _ans_cards(_cs) + """</div>
+</div></section>
+""" + CTA
+_hub_items = ",".join(_json.dumps({"@type": "ListItem", "position": i + 1, "url": "https://xmedium.co/" + a["slug"] + "/"}) for i, a in enumerate(ANSWERS))
+_hub_ld = ('<script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Straight Answers — Extra Medium",'
+           '"url":"https://xmedium.co/answers/","mainEntity":{"@type":"ItemList","itemListElement":[' + _hub_items + "]}}</script>")
+page("Straight Answers | Extra Medium",
+     "Straight answers from Extra Medium: what a fractional CMO is, what one costs, when to hire one, and fractional CMO by city — Hampton Roads, Richmond, Charlottesville, Raleigh, Washington DC, Chicago and London.",
+     "/answers/", "", _hub, _hub_ld + crumb_ld([("Home", "/"), ("Answers", "/answers/")]))
+print("answers hub done")
+
+
 
 # 404 in the new system
 pathlib.Path(ROOT / "404.html").write_text("""<!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Not found | Extra Medium</title><link rel="icon" href="/favicon.ico" sizes="any"><link rel="stylesheet" href="/assets/css/site.css?v=17">
+<title>Not found | Extra Medium</title><link rel="icon" href="/favicon.ico" sizes="any"><link rel="stylesheet" href="/assets/css/site.css?v=18">
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"></head>
 <body><section class="phero"><div class="wrap"><p class="kick">404</p><h1>This page is a Small. <span class="it">We don&rsquo;t stock those.</span></h1>
 <p class="lede">It doesn&rsquo;t exist anymore &mdash; the site was rebuilt around the work and our flagship product. Try one of these:</p>
