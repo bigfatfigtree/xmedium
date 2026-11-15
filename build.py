@@ -1151,12 +1151,16 @@ print("answers hub done")
 
 
 # ============ MERCH (first drop — placeholder buy buttons until Stripe links land) ============
-def _merch_card(img, alt, name, desc):
+def _merch_card(img, alt, name, desc, price=None, link=None):
+    if link:
+        note = '<p style="margin-top:14px;font-size:.8rem;font-weight:600;color:var(--soft)">$' + price + '</p>'
+        btn = '<a class="btn" href="' + link + '" style="margin-top:12px">Buy</a>'
+    else:
+        note = '<p style="margin-top:14px;font-size:.8rem;font-weight:600;color:var(--soft)">First drop &mdash; soon.</p>'
+        btn = '<span class="btn" data-buy="PENDING" style="margin-top:12px;opacity:.45">Soon</span>'
     return ('<div class="card rv"><img src="/assets/img/' + img + '" alt="' + alt + '" loading="lazy" '
             'style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;margin-bottom:18px">'
-            '<h3>' + name + '</h3><p>' + desc + '</p>'
-            '<p style="margin-top:14px;font-size:.8rem;font-weight:600;color:var(--soft)">First drop &mdash; soon.</p>'
-            '<span class="btn" data-buy="PENDING" style="margin-top:12px;opacity:.45">Soon</span></div>')
+            '<h3>' + name + '</h3><p>' + desc + '</p>' + note + btn + '</div>')
 
 _merch = """
 <section class="phero"><div class="wrap">
@@ -1171,15 +1175,15 @@ _merch = """
 """ + _merch_card("merch-tee-wordmark.jpg",
                   "Cream t-shirt with the words extra medium. in black serif type across the chest",
                   "The Wordmark Tee",
-                  "Cream tee. Just the wordmark, front and center, in the serif. No shout, no noise.") \
+                  "Cream tee. Just the wordmark, front and center, in the serif. No shout, no noise.", price="35", link="https://buy.stripe.com/3cI3cw9Ip0VV7uH9IX9R606") \
   + _merch_card("merch-tee-wordmark-black.jpg",
                   "Black t-shirt with the words extra medium. in white serif type across the upper chest",
                   "The Wordmark Tee &mdash; Black",
-                  "Black tee. The same serif wordmark, flipped to white. The quiet one, after dark.") \
+                  "Black tee. The same serif wordmark, flipped to white. The quiet one, after dark.", price="35", link="https://buy.stripe.com/3cI3cw9Ip0VV7uH9IX9R606") \
   + _merch_card("merch-tee-lockup.jpg",
                   "Black t-shirt with the yellow newsboy icon and the words extra medium. in white serif across the upper chest",
                   "The Lockup Tee",
-                  "Black tee. The icon and the wordmark together, across the top center. The full masthead, worn.") \
+                  "Black tee. The icon and the wordmark together, across the top center. The full masthead, worn.", price="35", link="https://buy.stripe.com/8x26oIaMt6gf2an1cr9R607") \
   + _merch_card("merch-tee-longsleeve.jpg",
                   "Black long sleeve t-shirt with the yellow newsboy icon and the words extra medium. in white serif across the upper chest",
                   "The Lockup Long Sleeve",
@@ -1187,23 +1191,23 @@ _merch = """
   + _merch_card("merch-tee-backprint.jpg",
                   "Black t-shirt shown front and back: a small white serif wordmark on the front chest and the yellow newsboy icon printed large on the back",
                   "The Back Print Tee",
-                  "Black tee. Small wordmark up front, business in the back &mdash; the newsboy, big, where everyone behind you can read him.") \
+                  "Black tee. Small wordmark up front, business in the back &mdash; the newsboy, big, where everyone behind you can read him.", price="35", link="https://buy.stripe.com/28EcN6f2JfQPdT57AP9R60c") \
   + _merch_card("merch-tee-collage-cloud.jpg",
                   "Washed charcoal t-shirt with a collage of a marble statue profile, a cloud, a blue bar across the eyes and a warped grid",
                   "The Cloud Tee",
-                  "Washed charcoal tee. The statue in profile, a cloud for a thought, and a blue bar where the eyes should be.") \
+                  "Washed charcoal tee. The statue in profile, a cloud for a thought, and a blue bar where the eyes should be.", price="35", link="https://buy.stripe.com/28E14o9Ip9sr5mz7AP9R608") \
   + _merch_card("merch-tee-collage-dove.jpg",
                   "Black t-shirt with a collage of a marble statue bust, a white dove in flight, a magenta field and a checkerboard block",
                   "The Dove Tee",
-                  "Black tee. The statue looks up, the dove takes off, and the magenta does the shouting.") \
+                  "Black tee. The statue looks up, the dove takes off, and the magenta does the shouting.", price="35", link="https://buy.stripe.com/5kQeVe07Pawv6qDcV99R609") \
   + _merch_card("merch-tee-collage-eyes.jpg",
                   "Black t-shirt with a collage band of a marble statue's eyes, blue slash shapes and a grayscale flower",
                   "The Eyes Tee",
-                  "Black tee. Just the statue&rsquo;s eyes, a blue slash, and a flower. It watches back.") \
+                  "Black tee. Just the statue&rsquo;s eyes, a blue slash, and a flower. It watches back.", price="35", link="https://buy.stripe.com/cNi4gAf2JfQPeX9f3h9R60a") \
   + _merch_card("merch-tee-collage-mic.jpg",
                   "Cream t-shirt with a collage of a vintage microphone, a retro TV with static, a blue circle and an eye close-up",
                   "The Mic Tee",
-                  "Cream tee. A vintage mic, a TV full of static, and one eye keeping watch.") \
+                  "Cream tee. A vintage mic, a TV full of static, and one eye keeping watch.", price="35", link="https://buy.stripe.com/4gMaEYaMtgUTg1dg7l9R60b") \
   + _merch_card("merch-hat-trucker.jpg",
                   "Black trucker hat with mesh back and the yellow newsboy shout icon printed on the front foam panel",
                   "The Newsboy Trucker",
