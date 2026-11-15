@@ -72,7 +72,6 @@ def header(on=""):
 <a href="/magazine/"{cls('magazine')}>Extra Extra</a>
 <a href="/contact/" class="btn p small">Start a project</a>
 </nav>
-<a class="nav-extra" href="/magazine/">Extra Extra</a>
 <button class="burger" aria-label="Open menu" aria-expanded="false">&#9776;</button>
 </div></header>
 <div class="menu" aria-hidden="true">
