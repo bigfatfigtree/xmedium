@@ -288,3 +288,32 @@ footer.finale{margin-top:64px}
 /* plain footer (page already ended with its own CTA band): ink idea band, hard cut, no paper gap */
 footer.finale.plain{margin-top:0}
 .fin-cta-band.plain{background:var(--ink)}
+
+/* merch store */
+.shop-grid{display:grid;gap:16px;grid-template-columns:1fr 1fr}
+@media(min-width:900px){.shop-grid{grid-template-columns:repeat(3,1fr)}}
+.pcard{border:1.5px solid var(--line);background:#fff;text-decoration:none;display:block;color:var(--ink);transition:transform .25s var(--ease)}
+.pcard:hover{transform:translateY(-3px)}
+.pcard img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.pcard-b{padding:16px 18px 18px}
+.pcard-b h3{font-size:1.02rem;margin:0 0 4px}
+.pcard-meta{font-size:.78rem;color:var(--soft);font-weight:500}
+.pcard-row{display:flex;justify-content:space-between;align-items:baseline;margin-top:10px}
+.pcard-price{font-weight:800;font-size:1rem}
+.pcard-shop{font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--mag)}
+.pdetail{display:grid;gap:34px}
+@media(min-width:900px){.pdetail{grid-template-columns:1.15fr 1fr;gap:48px}}
+.pgal .pmain{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.pthumbs{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+.pthumbs img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.pprice{font-size:1.5rem;font-weight:800;margin:10px 0 14px}
+.buybox{border:1.5px solid var(--line);background:#fff;padding:20px;margin-top:22px}
+.sizes{display:flex;flex-wrap:wrap;gap:9px;margin-top:12px}
+.sizes a{border:1.5px solid var(--ink);border-radius:99px;padding:11px 19px;font-weight:700;font-size:.86rem;text-decoration:none;color:var(--ink);transition:background .2s,color .2s}
+.sizes a:hover{background:var(--ink);color:var(--paper)}
+.sizes span.off{border:1.5px dashed var(--line);border-radius:99px;padding:11px 19px;font-weight:600;font-size:.86rem;color:var(--soft)}
+.colorlabel{font-size:.68rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--soft);margin:16px 0 0}
+.shipnote{margin-top:16px;font-size:.84rem;line-height:1.55;color:var(--soft)}
+.specs{margin-top:22px;padding-left:18px;line-height:1.75;font-size:.92rem}
+.backlink{display:inline-block;margin-top:26px;font-weight:700;text-decoration:none;color:var(--ink)}
+.pthumbs img.fit{object-fit:contain;background:#fff}

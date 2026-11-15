@@ -54,7 +54,7 @@ def head(title, desc, path, extra_ld=""):
 <meta name="twitter:image" content="https://xmedium.co/assets/img/og-collage.jpg">
 <meta name="theme-color" content="#f5f1ea">
 <link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" href="/assets/img/em-icon-shout.png">
-<link rel="stylesheet" href="/assets/css/site.css?v=21">
+<link rel="stylesheet" href="/assets/css/site.css?v=22">
 {FONTS}
 {ORG_LD}
 {extra_ld}
@@ -1150,17 +1150,145 @@ print("answers hub done")
 
 
 
-# ============ MERCH (first drop — placeholder buy buttons until Stripe links land) ============
-def _merch_card(img, alt, name, desc, price=None, link=None):
-    if link:
-        note = '<p style="margin-top:14px;font-size:.8rem;font-weight:600;color:var(--soft)">$' + price + '</p>'
-        btn = '<a class="btn" href="' + link + '" style="margin-top:12px">Buy</a>'
-    else:
-        note = '<p style="margin-top:14px;font-size:.8rem;font-weight:600;color:var(--soft)">First drop &mdash; soon.</p>'
-        btn = '<span class="btn" data-buy="PENDING" style="margin-top:12px;opacity:.45">Soon</span>'
-    return ('<div class="card rv"><img src="/assets/img/' + img + '" alt="' + alt + '" loading="lazy" '
-            'style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;margin-bottom:18px">'
-            '<h3>' + name + '</h3><p>' + desc + '</p>' + note + btn + '</div>')
+# ============ MERCH — the store ============
+import os as _os
+_LINKS = {}
+for _cand in ("merch-links.json", _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), "merch-links.json")):
+    try:
+        with open(_cand) as _f:
+            _LINKS = _json.load(_f)
+        break
+    except Exception:
+        continue
+_SIZE_ORDER = ["S", "M", "L", "XL", "2XL", "3XL"]
+
+def _pills(key):
+    m = _LINKS.get(key) or {}
+    out = []
+    for s in _SIZE_ORDER:
+        u = m.get(s)
+        if u:
+            out.append('<a href="' + u + '">' + s + '</a>')
+    if not out:
+        return '<span class="off">Checkout opening in a moment</span>'
+    return "".join(out)
+
+def _color_groups(key):
+    m = _LINKS.get(key) or {}
+    groups = []
+    for color, label in (("Natural", "Cream"), ("Black", "Black")):
+        pills = []
+        for s in _SIZE_ORDER:
+            u = m.get(color + " / " + s)
+            if u:
+                pills.append('<a href="' + u + '">' + s + '</a>')
+        if pills:
+            groups.append('<p class="colorlabel">' + label + '</p><div class="sizes">' + "".join(pills) + '</div>')
+    if not groups:
+        return '<div class="sizes"><span class="off">Checkout opening in a moment</span></div>'
+    return "".join(groups)
+
+def _buy_btn(key, price):
+    u = (_LINKS.get(key) or {}).get("One size")
+    if u:
+        return '<div style="margin-top:14px"><a class="btn ink big" href="' + u + '">Buy &mdash; $' + price + '</a></div>'
+    return '<div style="margin-top:14px"><span class="btn" style="opacity:.45">Checkout opening in a moment</span></div>'
+
+_TEE_SPECS = ["Bella + Canvas 3001 unisex tee &mdash; 4.2 oz, soft and light with a little stretch",
+              "Pre-shrunk, side-seamed, tear-away label",
+              "Printed to order, one at a time &mdash; never pulled from a stockpile",
+              "Sizes S&ndash;3XL"]
+_LS_SPECS = ["Bella + Canvas 3501 long sleeve tee &mdash; 4.2 oz, soft with a ribbed cuff",
+             "Pre-shrunk, side-seamed, tear-away label",
+             "Printed to order, one at a time &mdash; never pulled from a stockpile",
+             "Sizes S&ndash;2XL"]
+_HAT_SPECS = ["Otto Cap foam trucker &mdash; foam front, mesh back, snapback closure",
+              "One size fits most",
+              "Printed to order, one at a time &mdash; never pulled from a stockpile"]
+
+PRODUCTS = [
+  {"slug": "wordmark-tee", "key": "wordmark", "name": "The Wordmark Tee", "price": "35",
+   "meta": "Cream or black &middot; S&ndash;3XL",
+   "img": "merch-tee-wordmark.jpg",
+   "alt": "Cream t-shirt with the words extra medium. in black serif type across the chest",
+   "gallery": [("merch-tee-wordmark-black.jpg", "Black t-shirt with the words extra medium. in white serif type across the upper chest", "fit"),
+               ("merch-detail-wordmark.jpg", "The extra medium. wordmark print artwork in black serif on a dark background"),
+               ("merch-detail-wordmark-black.jpg", "The extra medium. wordmark print artwork in white serif on a dark background")],
+   "desc": "Just the wordmark, front and center, in the serif. No shout, no noise &mdash; the masthead, worn plain. Pick your color, then your size.",
+   "specs": _TEE_SPECS, "buy": "color"},
+  {"slug": "lockup-tee", "key": "lockup", "name": "The Lockup Tee", "price": "35",
+   "meta": "Black &middot; S&ndash;3XL",
+   "img": "merch-tee-lockup.jpg",
+   "alt": "Black t-shirt with the yellow newsboy icon and the words extra medium. in white serif across the upper chest",
+   "gallery": [("merch-detail-lockup.jpg", "The lockup print artwork: the yellow newsboy shout icon above the words extra medium. in white serif")],
+   "desc": "The icon and the wordmark together, across the top center. The full masthead, worn &mdash; the newsboy does the shouting, the serif keeps it classy.",
+   "specs": _TEE_SPECS, "buy": "sizes"},
+  {"slug": "lockup-long-sleeve", "key": "longsleeve", "name": "The Lockup Long Sleeve", "price": "45",
+   "meta": "Black &middot; S&ndash;2XL",
+   "img": "merch-tee-longsleeve.jpg",
+   "alt": "Black long sleeve t-shirt with the yellow newsboy icon and the words extra medium. in white serif across the upper chest",
+   "gallery": [("merch-detail-lockup.jpg", "The lockup print artwork: the yellow newsboy shout icon above the words extra medium. in white serif")],
+   "desc": "The lockup on a long sleeve. Same shout, more sleeve &mdash; for the months when the short sleeve gives up.",
+   "specs": _LS_SPECS, "buy": "sizes"},
+  {"slug": "back-print-tee", "key": "backprint", "name": "The Back Print Tee", "price": "35",
+   "meta": "Black &middot; S&ndash;3XL",
+   "img": "merch-tee-backprint.jpg",
+   "alt": "Black t-shirt shown front and back: a small white serif wordmark on the front chest and the yellow newsboy icon printed large on the back",
+   "gallery": [("merch-detail-backprint-front.jpg", "The small white serif wordmark printed on the front chest"),
+               ("merch-detail-backprint-back.jpg", "The yellow newsboy shout icon printed large on the back")],
+   "desc": "Small wordmark up front, business in the back &mdash; the newsboy, big, where everyone behind you can read him.",
+   "specs": _TEE_SPECS, "buy": "sizes"},
+  {"slug": "cloud-tee", "key": "cloud", "name": "The Cloud Tee", "price": "35",
+   "meta": "Black &middot; S&ndash;3XL",
+   "img": "merch-tee-collage-cloud.jpg",
+   "alt": "Black t-shirt with a collage of a marble statue profile, a cloud, a blue bar across the eyes and a warped grid",
+   "gallery": [("merch-detail-cloud.jpg", "The Cloud Tee print artwork: marble statue profile, cloud, blue eye bar and warped grid")],
+   "desc": "The statue in profile, a cloud for a thought, and a blue bar where the eyes should be. From the collage wall, onto a shirt.",
+   "specs": _TEE_SPECS, "buy": "sizes"},
+  {"slug": "dove-tee", "key": "dove", "name": "The Dove Tee", "price": "35",
+   "meta": "Black &middot; S&ndash;3XL",
+   "img": "merch-tee-collage-dove.jpg",
+   "alt": "Black t-shirt with a collage of a marble statue bust, a white dove in flight, a magenta field and a checkerboard block",
+   "gallery": [("merch-detail-dove.jpg", "The Dove Tee print artwork: marble statue bust, white dove, magenta field and checkerboard")],
+   "desc": "The statue looks up, the dove takes off, and the magenta does the shouting.",
+   "specs": _TEE_SPECS, "buy": "sizes"},
+  {"slug": "eyes-tee", "key": "eyes", "name": "The Eyes Tee", "price": "35",
+   "meta": "Black &middot; S&ndash;3XL",
+   "img": "merch-tee-collage-eyes.jpg",
+   "alt": "Black t-shirt with a collage band of a marble statue's eyes, blue slash shapes and a grayscale flower",
+   "gallery": [("merch-detail-eyes.jpg", "The Eyes Tee print artwork: the statue's eyes, blue slashes and a grayscale flower")],
+   "desc": "Just the statue&rsquo;s eyes, a blue slash, and a flower. It watches back.",
+   "specs": _TEE_SPECS, "buy": "sizes"},
+  {"slug": "mic-tee", "key": "mic", "name": "The Mic Tee", "price": "35",
+   "meta": "Cream &middot; S&ndash;3XL",
+   "img": "merch-tee-collage-mic.jpg",
+   "alt": "Cream t-shirt with a collage of a vintage microphone, a retro TV with static, a blue circle and an eye close-up",
+   "gallery": [("merch-detail-mic.jpg", "The Mic Tee print artwork: vintage microphone, retro TV, blue circle and eye close-up")],
+   "desc": "A vintage mic, a TV full of static, and one eye keeping watch. The studio, in collage form.",
+   "specs": _TEE_SPECS, "buy": "sizes"},
+  {"slug": "newsboy-trucker", "key": "trucker_icon", "name": "The Newsboy Trucker", "price": "30",
+   "meta": "Black &middot; One size",
+   "img": "merch-hat-trucker.jpg",
+   "alt": "Black trucker hat with mesh back and the yellow newsboy shout icon printed on the front foam panel",
+   "gallery": [("merch-detail-trucker.jpg", "The newsboy shout icon print artwork on a dark background")],
+   "desc": "Foam front, mesh back, and the shout riding up front where it belongs.",
+   "specs": _HAT_SPECS, "buy": "one"},
+  {"slug": "wordmark-trucker", "key": "trucker_wordmark", "name": "The Wordmark Trucker", "price": "30",
+   "meta": "White &middot; One size",
+   "img": "merch-hat-trucker-wordmark.jpg",
+   "alt": "White foam trucker hat with the words extra medium. in black serif across the front panel",
+   "gallery": [("merch-detail-wordmark.jpg", "The extra medium. wordmark print artwork in black serif on a dark background")],
+   "desc": "The quiet trucker. White foam, mesh back, and the wordmark in black serif &mdash; no shouting on this one.",
+   "specs": _HAT_SPECS, "buy": "one"},
+]
+
+def _pcard(p):
+    return ('<a class="pcard rv" href="/merch/' + p["slug"] + '/">'
+            '<img src="/assets/img/' + p["img"] + '" alt="' + p["alt"] + '" loading="lazy">'
+            '<div class="pcard-b"><h3>' + p["name"] + '</h3>'
+            '<p class="pcard-meta">' + p["meta"] + '</p>'
+            '<div class="pcard-row"><span class="pcard-price">$' + p["price"] + '</span>'
+            '<span class="pcard-shop">Shop &rarr;</span></div></div></a>')
 
 _merch = """
 <section class="phero"><div class="wrap">
@@ -1171,61 +1299,64 @@ _merch = """
 [[layers:collage-extra|Black and white collage of a marble statue wearing a 1920s newsboy cap, mouth open yelling the news, with flying newspaper pages and a megaphone, over a yellow field]]
 <section><div class="wrap">
 <div class="sec-head rv"><h2>The first <span class="it">drop</span></h2><span class="mono">Ten pieces</span></div>
-<div class="grid2" style="margin-top:26px">
-""" + _merch_card("merch-tee-wordmark.jpg",
-                  "Cream t-shirt with the words extra medium. in black serif type across the chest",
-                  "The Wordmark Tee",
-                  "Cream tee. Just the wordmark, front and center, in the serif. No shout, no noise.", price="35", link="https://buy.stripe.com/3cI3cw9Ip0VV7uH9IX9R606") \
-  + _merch_card("merch-tee-wordmark-black.jpg",
-                  "Black t-shirt with the words extra medium. in white serif type across the upper chest",
-                  "The Wordmark Tee &mdash; Black",
-                  "Black tee. The same serif wordmark, flipped to white. The quiet one, after dark.", price="35", link="https://buy.stripe.com/3cI3cw9Ip0VV7uH9IX9R606") \
-  + _merch_card("merch-tee-lockup.jpg",
-                  "Black t-shirt with the yellow newsboy icon and the words extra medium. in white serif across the upper chest",
-                  "The Lockup Tee",
-                  "Black tee. The icon and the wordmark together, across the top center. The full masthead, worn.", price="35", link="https://buy.stripe.com/8x26oIaMt6gf2an1cr9R607") \
-  + _merch_card("merch-tee-longsleeve.jpg",
-                  "Black long sleeve t-shirt with the yellow newsboy icon and the words extra medium. in white serif across the upper chest",
-                  "The Lockup Long Sleeve",
-                  "The lockup on a long sleeve. Same shout, more sleeve.") \
-  + _merch_card("merch-tee-backprint.jpg",
-                  "Black t-shirt shown front and back: a small white serif wordmark on the front chest and the yellow newsboy icon printed large on the back",
-                  "The Back Print Tee",
-                  "Black tee. Small wordmark up front, business in the back &mdash; the newsboy, big, where everyone behind you can read him.", price="35", link="https://buy.stripe.com/28EcN6f2JfQPdT57AP9R60c") \
-  + _merch_card("merch-tee-collage-cloud.jpg",
-                  "Washed charcoal t-shirt with a collage of a marble statue profile, a cloud, a blue bar across the eyes and a warped grid",
-                  "The Cloud Tee",
-                  "Washed charcoal tee. The statue in profile, a cloud for a thought, and a blue bar where the eyes should be.", price="35", link="https://buy.stripe.com/28E14o9Ip9sr5mz7AP9R608") \
-  + _merch_card("merch-tee-collage-dove.jpg",
-                  "Black t-shirt with a collage of a marble statue bust, a white dove in flight, a magenta field and a checkerboard block",
-                  "The Dove Tee",
-                  "Black tee. The statue looks up, the dove takes off, and the magenta does the shouting.", price="35", link="https://buy.stripe.com/5kQeVe07Pawv6qDcV99R609") \
-  + _merch_card("merch-tee-collage-eyes.jpg",
-                  "Black t-shirt with a collage band of a marble statue's eyes, blue slash shapes and a grayscale flower",
-                  "The Eyes Tee",
-                  "Black tee. Just the statue&rsquo;s eyes, a blue slash, and a flower. It watches back.", price="35", link="https://buy.stripe.com/cNi4gAf2JfQPeX9f3h9R60a") \
-  + _merch_card("merch-tee-collage-mic.jpg",
-                  "Cream t-shirt with a collage of a vintage microphone, a retro TV with static, a blue circle and an eye close-up",
-                  "The Mic Tee",
-                  "Cream tee. A vintage mic, a TV full of static, and one eye keeping watch.", price="35", link="https://buy.stripe.com/4gMaEYaMtgUTg1dg7l9R60b") \
-  + _merch_card("merch-hat-trucker.jpg",
-                  "Black trucker hat with mesh back and the yellow newsboy shout icon printed on the front foam panel",
-                  "The Newsboy Trucker",
-                  "Black trucker. Foam front, mesh back, and the shout riding up front where it belongs.") + """
+<div class="shop-grid" style="margin-top:26px">
+""" + "".join(_pcard(p) for p in PRODUCTS) + """
 </div>
-<p class="rv" style="margin-top:26px;font-weight:500;line-height:1.6;max-width:62ch">The first drop is being set up now. Everything is printed to order and ships straight from the printer &mdash; no warehouse, no pile of boxes in a garage. When the buy buttons wake up, that&rsquo;s the deal.</p>
 </div></section>
 """ + CTA
 page("Merch — Extra Medium",
-     "Extra Medium merch: wordmark and newsboy tees and caps, plus four collage tees. Printed to order; the first drop is being set up now.",
+     "Extra Medium merch: the wordmark and lockup tees, four collage tees, a long sleeve and two trucker hats. Printed to order; prices include US shipping.",
      "/merch/", "merch", _merch, crumb_ld([("Home", "/"), ("Merch", "/merch/")]))
+
+def _product_page(p):
+    thumbs = "".join('<img src="/assets/img/' + g[0] + '" alt="' + g[1] + '" loading="lazy"' + (' class="' + g[2] + '"' if len(g) > 2 else '') + '>' for g in p["gallery"])
+    gal = ('<div class="pgal rv"><img class="pmain" src="/assets/img/' + p["img"] + '" alt="' + p["alt"] + '">'
+           '<div class="pthumbs">' + thumbs + '</div></div>')
+    if p["buy"] == "color":
+        buy = _color_groups(p["key"])
+        buyhead = "Pick your color &amp; size &mdash; tap to check out"
+    elif p["buy"] == "sizes":
+        buy = '<div class="sizes">' + _pills(p["key"]) + '</div>'
+        buyhead = "Pick your size &mdash; tap to check out"
+    else:
+        buy = _buy_btn(p["key"], p["price"])
+        buyhead = "One size &mdash; snapback"
+    specs = "".join("<li>" + s + "</li>" for s in p["specs"])
+    body = """
+<section><div class="wrap">
+<p class="mono rv"><a href="/merch/" style="color:var(--soft);text-decoration:none">&larr; All merch</a></p>
+<div class="pdetail" style="margin-top:18px">
+""" + gal + """
+<div class="rv">
+<p class="kick">The merch</p>
+<h1 style="font-size:clamp(2rem,4.5vw,3rem);line-height:1.02">""" + p["name"] + """</h1>
+<p class="pprice">$""" + p["price"] + """</p>
+<p style="line-height:1.65;font-weight:500">""" + p["desc"] + """</p>
+<div class="buybox">
+<p class="mono" style="margin:0">""" + buyhead + """</p>
+""" + buy + """
+<p class="shipnote">Printed to order, then shipped straight from the printer. The price includes US shipping &mdash; no surprises at checkout. Secure checkout by Stripe.</p>
+</div>
+<ul class="specs">""" + specs + """</ul>
+<a class="backlink" href="/merch/">&larr; Back to all merch</a>
+</div>
+</div>
+</div></section>
+""" + CTA
+    page(p["name"] + " — Merch | Extra Medium",
+         p["name"] + " — Extra Medium merch. " + p["meta"].replace("&middot;", "·").replace("&ndash;", "–") + ". $" + p["price"] + ", printed to order, US shipping included.",
+         "/merch/" + p["slug"] + "/", "merch", body,
+         crumb_ld([("Home", "/"), ("Merch", "/merch/"), (p["name"], "/merch/" + p["slug"] + "/")]))
+
+for _p in PRODUCTS:
+    _product_page(_p)
 print("merch done")
 
 
 # 404 in the new system
 pathlib.Path(ROOT / "404.html").write_text("""<!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Not found | Extra Medium</title><link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" href="/assets/img/em-icon-shout.png"><link rel="stylesheet" href="/assets/css/site.css?v=21">
+<title>Not found | Extra Medium</title><link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" href="/assets/img/em-icon-shout.png"><link rel="stylesheet" href="/assets/css/site.css?v=22">
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"></head>
 <body><section class="phero"><div class="wrap"><p class="kick">404</p><h1>This page is a Small. <span class="it">We don&rsquo;t stock those.</span></h1>
 <p class="lede">It doesn&rsquo;t exist anymore &mdash; the site was rebuilt around the work and our flagship product. Try one of these:</p>

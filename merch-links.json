@@ -1,0 +1,77 @@
+{
+  "wordmark": {
+    "Natural / S": "https://buy.stripe.com/14AdRa3k15cb16j7AP9R60d",
+    "Natural / M": "https://buy.stripe.com/6oU4gA07P7kj02f3kz9R60e",
+    "Natural / L": "https://buy.stripe.com/cNi5kE7Ah8ong1d1cr9R60f",
+    "Natural / XL": "https://buy.stripe.com/8x29AUg6NfQP16jcV99R60g",
+    "Natural / 2XL": "https://buy.stripe.com/28E8wQ1bT487bKX9IX9R60h",
+    "Natural / 3XL": "https://buy.stripe.com/5kQbJ27Ah343dT55sH9R60R",
+    "Black / S": "https://buy.stripe.com/cNi8wQ1bT4879CP2gv9R60i",
+    "Black / M": "https://buy.stripe.com/cNieVe6wd0VVcP1cV99R60j",
+    "Black / L": "https://buy.stripe.com/eVq00kf2J4874iv3kz9R60k",
+    "Black / XL": "https://buy.stripe.com/bJe9AU1bTdIHdT57AP9R60l",
+    "Black / 2XL": "https://buy.stripe.com/bJe28s3k14877uHf3h9R60m",
+    "Black / 3XL": "https://buy.stripe.com/bJe3cwcUB8oneX93kz9R60S"
+  },
+  "lockup": {
+    "S": "https://buy.stripe.com/fZudRaf2J9sr7uH1cr9R60n",
+    "M": "https://buy.stripe.com/aFabJ2aMt7kjcP1g7l9R60o",
+    "L": "https://buy.stripe.com/bJeeVeg6N1ZZ2ang7l9R60p",
+    "XL": "https://buy.stripe.com/6oU4gAcUB0VVg1daN19R60q",
+    "2XL": "https://buy.stripe.com/8x2fZibQx1ZZeX9cV99R60r",
+    "3XL": "https://buy.stripe.com/eVq9AU2fX8onbKX7AP9R60T"
+  },
+  "cloud": {
+    "S": "https://buy.stripe.com/aFa4gA9Ip5cb9CP2gv9R60s",
+    "M": "https://buy.stripe.com/28EeVe2fXcED4ivg7l9R60t",
+    "L": "https://buy.stripe.com/bJeeVe8EleML9CP6wL9R60u",
+    "XL": "https://buy.stripe.com/cNi7sMcUB0VVaGT1cr9R60v",
+    "2XL": "https://buy.stripe.com/3cI6oIaMteML7uH5sH9R60w",
+    "3XL": "https://buy.stripe.com/bJe28s7Ah4877uH5sH9R60U"
+  },
+  "dove": {
+    "S": "https://buy.stripe.com/6oU9AUg6N6gf9CPg7l9R60x",
+    "M": "https://buy.stripe.com/5kQ4gA5s99sr3er4oD9R60y",
+    "L": "https://buy.stripe.com/28E3cw2fX4872an9IX9R60z",
+    "XL": "https://buy.stripe.com/3cI4gA07PbAz02fcV99R60A",
+    "2XL": "https://buy.stripe.com/9B69AUbQx7kjeX92gv9R60B",
+    "3XL": "https://buy.stripe.com/cNi5kE2fX8ong1d4oD9R60V"
+  },
+  "eyes": {
+    "S": "https://buy.stripe.com/cNi00k3k16gfaGT7AP9R60C",
+    "M": "https://buy.stripe.com/5kQcN65s95cbbKX7AP9R60D",
+    "L": "https://buy.stripe.com/dRm28s07PfQP4ivdZd9R60E",
+    "XL": "https://buy.stripe.com/8x29AUf2JgUT7uH5sH9R60F",
+    "2XL": "https://buy.stripe.com/7sY28s8Elawv7uHg7l9R60G",
+    "3XL": "https://buy.stripe.com/dRm5kE2fXgUT4iv3kz9R60W"
+  },
+  "mic": {
+    "S": "https://buy.stripe.com/4gMeVe2fX9sr3erf3h9R60H",
+    "M": "https://buy.stripe.com/3cIbJ28El487g1d8ET9R60I",
+    "L": "https://buy.stripe.com/3cI6oIdYFgUT5mzdZd9R60J",
+    "XL": "https://buy.stripe.com/dRm7sMcUBfQPeX91cr9R60K",
+    "2XL": "https://buy.stripe.com/fZufZi07P0VV3erbR59R60L",
+    "3XL": "https://buy.stripe.com/28E8wQbQx8on02fg7l9R60X"
+  },
+  "backprint": {
+    "S": "https://buy.stripe.com/4gM7sM7Ah5cbcP11cr9R60M",
+    "M": "https://buy.stripe.com/3cIcN61bTcEDg1df3h9R60N",
+    "L": "https://buy.stripe.com/5kQ7sMdYF343bKX9IX9R60O",
+    "XL": "https://buy.stripe.com/dRm4gA1bTeML8yL2gv9R60P",
+    "2XL": "https://buy.stripe.com/28E14o9IpgUT7uH7AP9R60Q",
+    "3XL": "https://buy.stripe.com/bJedRa6wd0VV3eraN19R60Y"
+  },
+  "longsleeve": {
+    "S": "https://buy.stripe.com/28E28saMt1ZZcP1bR59R60Z",
+    "M": "https://buy.stripe.com/eVq9AU1bT487cP15sH9R610",
+    "L": "https://buy.stripe.com/cNi9AU6wd0VV2an9IX9R611",
+    "XL": "https://buy.stripe.com/bJecN62fXawv3erg7l9R612",
+    "2XL": "https://buy.stripe.com/14AbJ27Ah0VVcP16wL9R613"
+  },
+  "trucker_icon": {
+    "One size": "https://buy.stripe.com/3cI6oIf2J8on4iv4oD9R614"
+  },
+  "trucker_wordmark": {
+    "One size": "https://buy.stripe.com/bJe7sM6wdawvcP15sH9R615"
+  }
+}
