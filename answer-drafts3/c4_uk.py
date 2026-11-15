@@ -1,0 +1,106 @@
+PAGES = [
+    {
+        "slug": "gripped-alternative",
+        "q": "Looking for an alternative to Gripped in London?",
+        "title": "Gripped Alternative | Extra Medium",
+        "desc": "Gripped is a B2B SaaS demand agency; Extra Medium is a fractional CMO plus studio. An honest comparison of the two models in London.",
+        "answer": "Gripped is a London agency founded in 2017 for B2B SaaS, AI and tech companies, its 25-strong team running demand generation, paid media and SEO. Extra Medium is a marketing agency in London: a fractional CMO seat plus a studio under one roof, founder-led, senior-only, price in writing before work begins. Choose Gripped for pipeline, Extra Medium for leadership.",
+        "sections": [
+            [
+                "What Gripped does",
+                '''<p>Gripped is a B2B digital marketing agency based on Borough High Street in London, founded in 2017 by Steve Eveleigh and Ben Crouch. In its own words, it helps SaaS, AI and tech companies turn strategy and paid media into qualified pipeline that tracks straight to revenue, and it says it has done that for more than 160 companies.</p><p>The service list is a demand engine: go-to-market strategy, demand generation, account-based marketing, paid search, paid social, SEO, generative engine optimisation, content, martech automation and website design and development. Published clients include Ideagen, Epicor, Ravelin and Crownpeak. The team is around 25 people serving roughly 30 active clients, with an average client relationship of four years.</p>''',
+            ],
+            [
+                "Where Extra Medium is different",
+                '''<p>Extra Medium is not a channel agency and not a sector specialist. You hire a leadership seat: a named, founder-led senior operator sits in your leadership meetings and owns positioning, the plan and the budget, rather than handing you a department of channel specialists. That model is set out on our <a href="/fractional-cmo-london/">fractional CMO in London</a> page.</p><p>Behind that seat sits one studio executing brand, creative, digital, SEO, paid, social, influencer and PR work, so strategy and delivery live under the same roof. The full picture is on our <a href="/marketing-agency-london/">marketing agency in London</a> page. Engagements are not limited to one sector, and the engagement shape and price are put in writing before any work begins.</p>''',
+            ],
+            [
+                "Who should hire which",
+                '''<p>Hire Gripped if you are a B2B SaaS, AI or tech company, roughly Series A to growth stage with £2M to £50M in annual recurring revenue, and the problem is pipeline: you want a specialist demand team that lives in paid media, ABM and SEO for software buyers. That focus is deliberate. Gripped says it does not work with pre-seed companies, e-commerce or consumer brands.</p><p>Consider Extra Medium if the gap is leadership rather than a channel: no senior marketer owns the strategy, the board wants one accountable name, or your market sits outside SaaS entirely. If you need both, the honest sequence is leadership first, then channels pointed at a plan.</p>''',
+            ],
+        ],
+        "faqs": [
+            [
+                "Is Extra Medium a good alternative to Gripped?",
+                "It can be, if the thing you are missing is leadership rather than demand execution. Gripped is a specialist B2B SaaS agency; Extra Medium is a fractional CMO seat plus a studio, working across sectors. If your pipeline engine is the gap, Gripped is built for exactly that. If nobody senior owns your positioning, plan and budget, that is the gap Extra Medium fills.",
+            ],
+            [
+                "Does Gripped publish its pricing?",
+                "Yes, and credit to them for it. Gripped publishes retainers of £5,000 to £15,000 a month on its own site, says most marketing leaders invest £8,000 to £12,000 a month, and works on rolling contracts with three months' notice. Extra Medium does not publish a rate card; instead, the engagement shape and price are put in writing before work begins, once the seat has been scoped to your organisation.",
+            ],
+            [
+                "How does working with Extra Medium start?",
+                "It starts with a first conversation, free and specific to your situation. If the fractional CMO seat fits, you receive the engagement shape and price in writing before any work begins. If your need is smaller than the seat, we say so plainly. Engagements with UK companies run business to business, commonly structured outside IR35.",
+            ],
+        ],
+        "takeaways": [
+            "Gripped is a specialist demand agency for B2B SaaS; Extra Medium is a leadership seat with a studio behind it.",
+            "One hires channel execution on a retainer; the other puts a named senior operator in charge of the whole plan.",
+            "Extra Medium puts the engagement shape and price in writing before work begins.",
+        ],
+        "keys": [
+            "Gripped",
+            "Gripped alternative",
+            "marketing agency London",
+            "fractional CMO London",
+            "B2B SaaS marketing",
+            "demand generation",
+            "account-based marketing",
+        ],
+        "hero": "collage-work",
+        "market": "London",
+        "iso": "2026-11-15",
+    },
+    {
+        "slug": "embryo-alternative",
+        "q": "Looking for an alternative to Embryo in Manchester?",
+        "title": "Embryo Alternative | Extra Medium",
+        "desc": "Embryo is a Manchester growth agency running channels at scale; Extra Medium is a fractional CMO plus studio. The honest difference.",
+        "answer": "Embryo is a Manchester growth agency running SEO, PPC, paid social and digital PR, its PPC team managing over £2 million in monthly Google ad spend. Extra Medium is a marketing agency in Manchester: a fractional CMO seat plus a studio under one roof, founder-led, senior-only, price in writing before work begins. Choose Embryo for scale, Extra Medium for leadership.",
+        "sections": [
+            [
+                "What Embryo does",
+                '''<p>Embryo is a Manchester growth agency based on Portland Street, describing itself as a growth partner for ambitious businesses, under the line "Transforming potential. Fuelling growth." Its PPC team manages over £2 million of Google ad spend a month, and the agency now sits within The Embryo Group, alongside content and creative businesses that have merged into it. It is also a member of AMIN Worldwide, an alliance of over 50 independent marketing agencies.</p><p>The services cover the main growth channels: SEO, digital PR, content marketing, paid social, PPC, affiliate marketing and creative, plus web design and development and growth strategy. Published case studies and testimonials name the Inn Collection Group, TOTUM, MysteryFootball, The Piece Hall, I SAW IT FIRST and Native Communities, with lead generation and consumer and e-commerce brands featuring heavily.</p>''',
+            ],
+            [
+                "Where Extra Medium is different",
+                '''<p>Extra Medium does not sell channel execution by the department. You hire a leadership seat: a named, founder-led senior operator in your meetings who owns positioning, the plan and the budget. That model is set out on our <a href="/fractional-cmo-manchester-uk/">fractional CMO in Manchester</a> page.</p><p>Behind the seat, one studio executes brand, creative, digital, SEO, paid, social, influencer and PR work, so the strategy and the making stay under one roof. The full picture is on our <a href="/marketing-agency-manchester-uk/">marketing agency in Manchester</a> page. The engagement shape and price are put in writing before work begins.</p>''',
+            ],
+            [
+                "Who should hire which",
+                '''<p>Hire Embryo if you want a growth agency running serious paid budgets and several channels at once: a team whose PPC operation alone manages over £2 million of Google spend a month, with SEO, digital PR and creative alongside it. Ambitious consumer, e-commerce and lead generation brands are the centre of its case studies.</p><p>Consider Extra Medium if the gap is a person, not a channel: nobody senior owns the strategy, suppliers pull in different directions, or you want one accountable leader in place before scaling spend. Channels work harder once somebody owns the plan they serve.</p>''',
+            ],
+        ],
+        "faqs": [
+            [
+                "Is Extra Medium a good alternative to Embryo?",
+                "It depends on the gap. Embryo is a full-service growth agency running channels at scale. Extra Medium is a fractional CMO seat plus a studio: leadership first, execution behind it. If you need a larger team running paid media and SEO day to day, Embryo is built for that. If you need a senior leader to own the strategy those channels serve, that is Extra Medium's model.",
+            ],
+            [
+                "Does Embryo publish its pricing?",
+                "No. Embryo does not publish pricing on its website, checked in November 2026, so its fees emerge through a proposal process. Extra Medium does not publish a rate card either; instead, once the seat has been scoped to your organisation, the engagement shape and price are put in writing before work begins.",
+            ],
+            [
+                "How does working with Extra Medium start?",
+                "It starts with a first conversation, free and specific to your situation. If the fractional CMO seat fits, you receive the engagement shape and price in writing before any work begins. If your need is smaller than the seat, we say so plainly and point you at the smaller thing.",
+            ],
+        ],
+        "takeaways": [
+            "Embryo is a growth agency running channels at scale; Extra Medium is a leadership seat with a studio behind it.",
+            "One hires a team to execute across SEO, PPC and paid social; the other hires a named senior operator to own the plan.",
+            "Extra Medium puts the engagement shape and price in writing before work begins.",
+        ],
+        "keys": [
+            "Embryo",
+            "Embryo alternative",
+            "marketing agency Manchester",
+            "fractional CMO Manchester",
+            "SEO Manchester",
+            "PPC Manchester",
+            "digital PR",
+        ],
+        "hero": "collage-labs",
+        "market": "Manchester",
+        "iso": "2026-11-15",
+    },
+]
