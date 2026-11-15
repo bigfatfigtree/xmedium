@@ -317,3 +317,11 @@ footer.finale.plain{margin-top:0}
 .specs{margin-top:22px;padding-left:18px;line-height:1.75;font-size:.92rem}
 .backlink{display:inline-block;margin-top:26px;font-weight:700;text-decoration:none;color:var(--ink)}
 .pthumbs img.fit{object-fit:contain;background:#fff}
+
+/* footer link columns side by side on mobile (Jeff 2026-11-15): Explore left, Labs + Connect right */
+@media(max-width:899px){
+  .fin-grid{grid-template-columns:1fr 1fr;gap:22px}
+  .fin-grid>.fin-brand{grid-column:1/-1}
+  .fin-grid>div:nth-child(3){grid-column:2;grid-row:2}
+  .fin-grid>div:nth-child(4){grid-column:2;grid-row:3}
+}
