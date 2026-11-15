@@ -690,6 +690,33 @@ dict(slug="inside-the-lab", cat="The Lab", cover=False,
 <p>None of this makes the lab a side project. It&rsquo;s the reason the studio side works the way it does. The Launch, Reinvent, and Grow engagements we run for clients use the same process we use on Magpie, Hapsta, Roon, and JAWNRA, because it&rsquo;s the only process we have: settle the offer, tell the story plainly, prove it in the market, then make it look like what it is.</p>
 <p>If you&rsquo;re building something and want a team that has to follow its own advice to stay in business, that&rsquo;s the arrangement we&rsquo;re offering. The lab door is the same door as the studio door. Start a conversation and we&rsquo;ll show you both sides of it.</p>
 """),
+dict(slug="the-chart-that-lies", cat="Music", cover=False,
+     title="The Chart That Lies: Popularity Tells You Who Won. Momentum Tells You Who Is Next.",
+     dek="A chart is a photograph of the past. The useful question in music has always been what is moving, how fast, and why, before the photograph gets taken.",
+     date="November 15, 2026", iso="2026-11-15", mins=5,
+     hero=("layers", "collage-cmo"),
+     pull="Popularity is a result. Momentum is a cause you can still act on.",
+     body="""
+<p>Every music chart answers the same question: what already happened? A song sits at the top because a lot of people already found it, already played it, and already told other people about it. That information is real. It is also late. By the time a ranking can confirm a winner, the decisions that made the winner interesting have already been made by somebody else.</p>
+<p>This is not a complaint about charts. It is a complaint about how they get used. Labels, managers, promoters, and fans read a popularity chart as if it were a map of what to do next. It is not a map. It is a photograph, taken after the moment when acting on it would have mattered most.</p>
+<h2>A chart is a rearview mirror</h2>
+<p>Popularity compounds in a way that hides its own beginning. A song gets a little attention, the attention earns it placement, the placement earns it more attention, and soon the ranking is measuring the ranking. The biggest number in the room keeps getting bigger partly because it is already the biggest number in the room.</p>
+<p>That loop is good at confirming scale. It is bad at showing origin. It cannot tell you which small audience cared first, how fast that care is spreading, or whether the growth is deepening in one place or thinning out across many. Two songs can sit next to each other on a chart and be headed in opposite directions. One is arriving. The other is leaving slowly. The chart treats them as equals because, for one week, their totals look alike.</p>
+<p>Anyone who has worked in music knows the difference matters. The early signal is where the work is: the artist to sign, the song to push, the market to play first, the collaborator to call before everyone else does. None of those decisions can wait for a final total.</p>
+[[pull]]
+<h2>What momentum actually looks like</h2>
+<p>Momentum is not a smaller version of popularity. It is a different measurement. Popularity asks how much. Momentum asks how fast, from where, and in what pattern.</p>
+<p>Speed matters because a song gaining ground quickly in a small place is saying something a flat, large total cannot say. Direction matters because growth that holds week after week behaves differently from a single spike that fades. Source matters because listeners who find a song on their own, save it, and share it are a different signal from listeners who heard it once because it was placed in front of them.</p>
+<p>Read that way, a new artist with a modest total can be the most important story on the page. Not because the total is impressive today, but because the movement underneath it is. The audience is not just growing. It is behaving like an audience that intends to stay.</p>
+<h2>The same mistake, in every market</h2>
+<p>Music makes this mistake visible, but it does not own it. Marketing makes it constantly. A brand looks at the largest competitor and copies what that competitor is doing now, without asking what that competitor did when it was small and moving fast. A business chases the channel with the biggest reported audience and ignores the smaller one where its actual customers are gathering and gaining energy.</p>
+<p>The lesson is the same in both rooms. Do not only ask who is biggest. Ask what is moving, why it is moving, and whether you are early enough for the answer to change your decision. If you are not early, you are not deciding. You are confirming.</p>
+<h2>What we are building about it</h2>
+<p>That question is why JAWNRA exists in Extra Medium Labs. JAWNRA, in development now, is a global music discovery and chart platform that measures momentum instead of popularity. As we describe it on the Labs page, it is the chart that tells you what is about to win, not what already did.</p>
+<p>The work is deliberately narrow. Discovery first. Movement first. A way for listeners to find what is rising while it is still rising, and for the people who work in music to see the rise with enough time to act on it. It sits in the lab alongside Magpie and Hapsta for a reason: each of our products starts with a number the industry already trusts and asks whether that number is the honest one. For local marketing, the honest number was local reach, not total followers. For music, we think it is momentum, not total plays.</p>
+<p>Our founder&rsquo;s background is part of why this one is personal. Before Extra Medium, he built a digital music platform from idea to launch and grew it past 900,000 users. The pattern has not changed since then. The winners were rarely a surprise in hindsight. The signals were there earlier. They were just not what the chart was built to show.</p>
+<p>A chart will always have a use. It settles arguments about what happened. Just do not ask it to tell you what happens next. That job belongs to momentum, and momentum has to be measured on purpose, while there is still time to do something about it.</p>
+"""),
 ]
 
 def hero_html(a):
