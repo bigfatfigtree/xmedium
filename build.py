@@ -1156,7 +1156,7 @@ def _merch_card(img, alt, name, desc):
             'style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;margin-bottom:18px">'
             '<h3>' + name + '</h3><p>' + desc + '</p>'
             '<p style="margin-top:14px;font-size:.8rem;font-weight:600;color:var(--soft)">First drop &mdash; soon.</p>'
-            '<a class="btn" href="#" data-buy="PENDING" style="margin-top:12px">Buy</a></div>')
+            '<span class="btn" data-buy="PENDING" style="margin-top:12px;opacity:.45">Soon</span></div>')
 
 _merch = """
 <section class="phero"><div class="wrap">
