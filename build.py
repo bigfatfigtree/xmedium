@@ -54,7 +54,7 @@ def head(title, desc, path, extra_ld=""):
 <meta name="twitter:image" content="https://xmedium.co/assets/img/og-collage.jpg">
 <meta name="theme-color" content="#f5f1ea">
 <link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" href="/assets/img/em-icon-shout.png">
-<link rel="stylesheet" href="/assets/css/site.css?v=24">
+<link rel="stylesheet" href="/assets/css/site.css?v=25">
 {FONTS}
 {ORG_LD}
 {extra_ld}
@@ -550,10 +550,16 @@ def article_ld(a):
     d = {"@context": "https://schema.org", "@type": "Article",
          "headline": _plain(a["title"]), "description": _plain(a["dek"]),
          "datePublished": a["iso"], "dateModified": a["iso"],
-         "author": {"@type": "Person", "name": "Jeff Rimmer", "jobTitle": "Co-Founder & CEO, Extra Medium"},
-         "publisher": {"@type": "Organization", "name": "Extra Medium", "url": "https://xmedium.co/"},
+         "inLanguage": "en-US",
+         "author": {"@type": "Person", "name": "Jeff Rimmer", "jobTitle": "Co-Founder & CEO, Extra Medium",
+                    "url": "https://www.linkedin.com/in/jeffrimmer"},
+         "publisher": {"@type": "Organization", "name": "Extra Medium", "url": "https://xmedium.co/",
+                       "logo": {"@type": "ImageObject", "url": "https://xmedium.co/assets/img/em-icon-shout.png"}},
          "mainEntityOfPage": "https://xmedium.co/magazine/" + a["slug"] + "/",
          "articleSection": a["cat"]}
+    if a.get("keys"):
+        d["keywords"] = ", ".join(a["keys"])
+        d["about"] = [{"@type": "Thing", "name": k} for k in a["keys"]]
     return '<script type="application/ld+json">' + _j.dumps(d) + "</script>"
 
 ARTICLES = [
@@ -696,6 +702,19 @@ dict(slug="the-chart-that-lies", cat="Music", cover=False,
      date="November 15, 2026", iso="2026-11-15", mins=5,
      hero=("layers", "collage-cmo"),
      pull="Popularity is a result. Momentum is a cause you can still act on.",
+     answer="A popularity chart ranks what already won: it adds up total plays after the fact. Momentum measures how fast a song or artist is rising right now, which is the only version of the number you can still act on. The chart tells you what happened. Momentum tells you what is about to.",
+     takeaways=[
+       "A chart is a photograph of the past: it settles what happened, not what happens next.",
+       "Momentum, the speed of the rise, shows up while there is still time to act on it.",
+       "Every field has an honest number and a lazy one. For music it is momentum over total plays, the same way local reach beats total followers for creators."],
+     faq=[
+       ("What is the difference between popularity and momentum?",
+        "Popularity is a total: how many plays, sales or followers something has accumulated. Momentum is a rate: how fast that number is growing right now. Totals crown whoever is already biggest. Momentum surfaces whoever is rising, early enough to matter."),
+       ("Why can&rsquo;t charts predict hits?",
+        "Because a chart is built from totals, and totals only move after the rise has already happened. By the time a song tops a popularity chart, the window to sign it, book it or break it has usually closed."),
+       ("What is JAWNRA?",
+        "JAWNRA is a global music discovery and chart platform in development at Extra Medium Labs. Instead of ranking artists by total plays, it measures momentum, how fast they are rising, so listeners and the people who work in music can see what is next while it is still rising.")],
+     keys=["music charts", "momentum", "music discovery", "JAWNRA", "streaming data", "artist discovery"],
      body="""
 <p>Every music chart answers the same question: what already happened? A song sits at the top because a lot of people already found it, already played it, and already told other people about it. That information is real. It is also late. By the time a ranking can confirm a winner, the decisions that made the winner interesting have already been made by somebody else.</p>
 <p>This is not a complaint about charts. It is a complaint about how they get used. Labels, managers, promoters, and fans read a popularity chart as if it were a map of what to do next. It is not a map. It is a photograph, taken after the moment when acting on it would have mattered most.</p>
@@ -779,6 +798,20 @@ print("magazine index done")
 
 for _a in ARTICLES:
     _others = [x for x in _stream if x["slug"] != _a["slug"]][:3]
+    _ans = ('<div class="answer-first"><p class="kick" style="margin-bottom:10px">The short answer</p><p>'
+            + _a["answer"] + "</p></div>") if _a.get("answer") else ""
+    _tk = ""
+    if _a.get("takeaways"):
+        _tk = ('<div class="takeaways"><p class="kick" style="margin-bottom:10px">Key takeaways</p><ul>'
+               + "".join("<li>" + _t + "</li>" for _t in _a["takeaways"]) + "</ul></div>")
+    _faqhtml = ""
+    if _a.get("faq"):
+        _faqhtml = ('<div class="faq" style="margin-top:2.2em"><p class="kick" style="margin-bottom:6px">Straight answers</p>'
+                    + "".join("<details><summary>" + _q + "</summary><p>" + _answ + "</p></details>"
+                              for _q, _answ in _a["faq"]) + "</div>")
+    _ameta = ('<meta property="article:published_time" content="' + _a["iso"] + '">'
+              '<meta property="article:modified_time" content="' + _a["iso"] + '">'
+              '<meta property="article:section" content="' + _a["cat"] + '">')
     _body = """
 <section class="phero art-head"><div class="wrap">
 <p class="kick rv">""" + _a["cat"] + """ &middot; Extra Extra</p>
@@ -788,7 +821,7 @@ for _a in ARTICLES:
 """ + hero_html(_a) + """
 </div></section>
 <section><div class="wrap"><div class="article-body rv">
-""" + _a["body"].replace("[[pull]]", '<blockquote class="pull">' + _a["pull"] + "</blockquote>") + """
+""" + _ans + _a["body"].replace("[[pull]]", '<blockquote class="pull">' + _a["pull"] + "</blockquote>") + _tk + _faqhtml + """
 </div></div></section>
 <section><div class="wrap">
 <div class="sec-head block rv"><p class="kick">Keep reading</p><h2 style="margin-top:14px">More from <span class="it">Extra Extra.</span></h2></div>
@@ -798,7 +831,8 @@ for _a in ARTICLES:
     page(_a["title"] + " | Extra Extra",
          _a["dek"],
          "/magazine/" + _a["slug"] + "/", "magazine", _body,
-         article_ld(_a) + crumb_ld([("Home", "/"), ("Magazine", "/magazine/"), (_a["cat"], "/magazine/" + _a["slug"] + "/")]))
+         _ameta + article_ld(_a) + (faq_ld(_a["faq"]) if _a.get("faq") else "")
+         + crumb_ld([("Home", "/"), ("Magazine", "/magazine/"), (_a["cat"], "/magazine/" + _a["slug"] + "/")]))
     print("article done:", _a["slug"])
 
 # ============ STRAIGHT ANSWERS (search landing pages, not in the menu) ============
@@ -1383,7 +1417,7 @@ print("merch done")
 # 404 in the new system
 pathlib.Path(ROOT / "404.html").write_text("""<!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Not found | Extra Medium</title><link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" href="/assets/img/em-icon-shout.png"><link rel="stylesheet" href="/assets/css/site.css?v=24">
+<title>Not found | Extra Medium</title><link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" href="/assets/img/em-icon-shout.png"><link rel="stylesheet" href="/assets/css/site.css?v=25">
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"></head>
 <body><section class="phero"><div class="wrap"><p class="kick">404</p><h1>This page is a Small. <span class="it">We don&rsquo;t stock those.</span></h1>
 <p class="lede">It doesn&rsquo;t exist anymore &mdash; the site was rebuilt around the work and our flagship product. Try one of these:</p>

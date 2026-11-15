@@ -337,3 +337,7 @@ footer.finale.plain{margin-top:0}
 .form-done.mini img{height:46px;margin-bottom:10px}
 .form-done.mini .fd-head{font-size:1.6rem;margin-bottom:4px}
 .form-done.mini .fd-body{color:#fff;opacity:.92}
+/* article takeaways box */
+.takeaways{background:#fff;border:2px solid var(--ink);box-shadow:6px 6px 0 var(--yel);padding:24px 26px;margin:2em 0}
+.takeaways ul{margin:0;padding-left:1.2em}
+.takeaways li{margin:.45em 0;line-height:1.5}
