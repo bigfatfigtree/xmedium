@@ -1148,6 +1148,66 @@ print("answers hub done")
 
 
 
+# ============ MERCH (first drop — placeholder buy buttons until Stripe links land) ============
+def _merch_card(img, alt, name, desc):
+    return ('<div class="card rv"><img src="/assets/img/' + img + '" alt="' + alt + '" loading="lazy" '
+            'style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;margin-bottom:18px">'
+            '<h3>' + name + '</h3><p>' + desc + '</p>'
+            '<p style="margin-top:14px;font-size:.8rem;font-weight:600;color:var(--soft)">First drop &mdash; soon.</p>'
+            '<a class="btn" href="#" data-buy="PENDING" style="margin-top:12px">Buy</a></div>')
+
+_merch = """
+<section class="phero"><div class="wrap">
+<p class="kick rv">The merch</p>
+<h1 class="rv">Wear the <span class="it">shout.</span></h1>
+<p class="lede rv">Eight pieces: the serif wordmark, the newsboy who yells the news, two caps, and four collage tees cut from the same art as this site. Nothing with our name on it that we wouldn&rsquo;t wear ourselves.</p>
+</div></section>
+[[layers:collage-extra|Black and white collage of a marble statue wearing a 1920s newsboy cap, mouth open yelling the news, with flying newspaper pages and a megaphone, over a yellow field]]
+<section><div class="wrap">
+<div class="sec-head rv"><h2>The first <span class="it">drop</span></h2><span class="mono">Eight pieces</span></div>
+<div class="grid2" style="margin-top:26px">
+""" + _merch_card("merch-tee-wordmark.jpg",
+                  "Cream t-shirt with the words extra medium. in black serif type across the chest",
+                  "The Wordmark Tee",
+                  "Cream tee. Just the wordmark, front and center, in the serif. No shout, no noise.") \
+  + _merch_card("merch-tee-icon.jpg",
+                  "Black t-shirt with the yellow Extra Medium newsboy shout icon printed large on the chest",
+                  "The Newsboy Tee",
+                  "Black tee. The newsboy, big on the chest, mid-shout. The opposite of quiet.") \
+  + _merch_card("merch-hat-icon.jpg",
+                  "Black baseball cap with the yellow Extra Medium newsboy icon as a patch on the front",
+                  "The Newsboy Cap",
+                  "Black cap with the shout icon as a patch on the front panel.") \
+  + _merch_card("merch-hat-wordmark.jpg",
+                  "Cream baseball cap with the words extra medium. in black serif type across the front",
+                  "The Wordmark Cap",
+                  "Cream cap. The wordmark in serif across the front, nothing else.") \
+  + _merch_card("merch-tee-collage-cloud.jpg",
+                  "Washed charcoal t-shirt with a collage of a marble statue profile, a cloud, a blue bar across the eyes and a warped grid",
+                  "The Cloud Tee",
+                  "Washed charcoal tee. The statue in profile, a cloud for a thought, and a blue bar where the eyes should be.") \
+  + _merch_card("merch-tee-collage-dove.jpg",
+                  "Black t-shirt with a collage of a marble statue bust, a white dove in flight, a magenta field and a checkerboard block",
+                  "The Dove Tee",
+                  "Black tee. The statue looks up, the dove takes off, and the magenta does the shouting.") \
+  + _merch_card("merch-tee-collage-eyes.jpg",
+                  "Black t-shirt with a collage band of a marble statue's eyes, blue slash shapes and a grayscale flower",
+                  "The Eyes Tee",
+                  "Black tee. Just the statue&rsquo;s eyes, a blue slash, and a flower. It watches back.") \
+  + _merch_card("merch-tee-collage-mic.jpg",
+                  "Cream t-shirt with a collage of a vintage microphone, a retro TV with static, a blue circle and an eye close-up",
+                  "The Mic Tee",
+                  "Cream tee. A vintage mic, a TV full of static, and one eye keeping watch.") + """
+</div>
+<p class="rv" style="margin-top:26px;font-weight:500;line-height:1.6;max-width:62ch">The first drop is being set up now. Everything is printed to order and ships straight from the printer &mdash; no warehouse, no pile of boxes in a garage. When the buy buttons wake up, that&rsquo;s the deal.</p>
+</div></section>
+""" + CTA
+page("Merch — Extra Medium",
+     "Extra Medium merch: wordmark and newsboy tees and caps, plus four collage tees. Printed to order; the first drop is being set up now.",
+     "/merch/", "", _merch, crumb_ld([("Home", "/"), ("Merch", "/merch/")]))
+print("merch done")
+
+
 # 404 in the new system
 pathlib.Path(ROOT / "404.html").write_text("""<!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
