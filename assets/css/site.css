@@ -325,3 +325,15 @@ footer.finale.plain{margin-top:0}
   .fin-grid>div:nth-child(3){grid-column:2;grid-row:2}
   .fin-grid>div:nth-child(4){grid-column:2;grid-row:3}
 }
+/* branded form confirmations */
+.form-done{border:2px solid var(--ink);background:#fff;padding:30px 28px;box-shadow:8px 8px 0 var(--yel)}
+.form-done img{height:62px;width:auto;display:block;margin-bottom:16px}
+.fd-kick{font-size:.7rem;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--mag);margin-bottom:8px}
+.fd-head{font-family:'Instrument Serif',serif;font-weight:400;font-size:2.1rem;line-height:1.08;margin-bottom:10px}
+.fd-head em{font-style:italic}
+.fd-body{font-weight:500;line-height:1.55;color:#3d362c;max-width:44ch}
+.fd-link{display:inline-block;margin-top:16px;font-weight:700;text-decoration:none;border-bottom:2px solid var(--mag);color:var(--ink)}
+.form-done.mini{border:none;background:transparent;box-shadow:none;padding:6px 0;color:#fff}
+.form-done.mini img{height:46px;margin-bottom:10px}
+.form-done.mini .fd-head{font-size:1.6rem;margin-bottom:4px}
+.form-done.mini .fd-body{color:#fff;opacity:.92}

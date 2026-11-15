@@ -54,7 +54,7 @@ def head(title, desc, path, extra_ld=""):
 <meta name="twitter:image" content="https://xmedium.co/assets/img/og-collage.jpg">
 <meta name="theme-color" content="#f5f1ea">
 <link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" href="/assets/img/em-icon-shout.png">
-<link rel="stylesheet" href="/assets/css/site.css?v=23">
+<link rel="stylesheet" href="/assets/css/site.css?v=24">
 {FONTS}
 {ORG_LD}
 {extra_ld}
@@ -115,7 +115,7 @@ FOOTER = """<footer class="finale">
 <div class="fin-base"><span>&copy; 2026 Extra Medium LLC &middot; Virginia Beach &middot; Chicago &middot; London</span><span class="fin-clock">Virginia Beach <span class="vbclock">--:--</span> ET</span><span>Magpie is a product of Extra Medium Labs.</span></div>
 </div></div>
 </footer>
-<script src="/assets/js/site.js?v=14"></script></body></html>"""
+<script src="/assets/js/site.js?v=15"></script></body></html>"""
 
 # Pages that already end with their own CTA band use this footer (band headline
 # removed, Extra Idea form kept) so the CTA never doubles up.
@@ -1383,7 +1383,7 @@ print("merch done")
 # 404 in the new system
 pathlib.Path(ROOT / "404.html").write_text("""<!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Not found | Extra Medium</title><link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" href="/assets/img/em-icon-shout.png"><link rel="stylesheet" href="/assets/css/site.css?v=23">
+<title>Not found | Extra Medium</title><link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" href="/assets/img/em-icon-shout.png"><link rel="stylesheet" href="/assets/css/site.css?v=24">
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"></head>
 <body><section class="phero"><div class="wrap"><p class="kick">404</p><h1>This page is a Small. <span class="it">We don&rsquo;t stock those.</span></h1>
 <p class="lede">It doesn&rsquo;t exist anymore &mdash; the site was rebuilt around the work and our flagship product. Try one of these:</p>

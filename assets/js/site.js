@@ -106,24 +106,56 @@
     requestAnimationFrame(loop);
   }
 
-  /* ---- footer idea form: AJAX submit, Netlify Forms ---- */
-  var ideaForm = document.querySelector('form.idea-form');
-  if(ideaForm){
-    if(/[?&]idea=1/.test(location.search)) showIdeaDone();
-    ideaForm.addEventListener('submit', function(ev){
-      ev.preventDefault();
-      var data = new FormData(ideaForm);
-      fetch('/', {method:'POST', headers:{'Content-Type':'application/x-www-form-urlencoded'},
-        body: new URLSearchParams(data).toString()})
-        .then(function(r){ if(r.ok) showIdeaDone(); else ideaForm.submit(); })
-        .catch(function(){ ideaForm.submit(); });
-    });
-    function showIdeaDone(){
-      var cap = document.getElementById('ideaCap'); if(!cap) return;
-      var done = document.createElement('p');
-      done.className = 'idea-done';
-      done.textContent = "You're in. First idea lands this week — steal it well.";
-      ideaForm.replaceWith(done);
+  /* ---- branded form confirmations: AJAX submit, Netlify Forms ---- */
+  function donePanel(mini, headHTML, bodyText, linkHref, linkText){
+    var d = document.createElement('div');
+    d.className = 'form-done' + (mini ? ' mini' : '');
+    d.setAttribute('role', 'status');
+    var img = document.createElement('img');
+    img.src = '/assets/img/em-icon-shout.png'; img.alt = '';
+    d.appendChild(img);
+    if(!mini){
+      var k = document.createElement('p'); k.className = 'fd-kick';
+      k.textContent = 'Extra! Extra!'; d.appendChild(k);
     }
+    var h = document.createElement('p'); h.className = 'fd-head';
+    h.innerHTML = headHTML; d.appendChild(h);
+    var b = document.createElement('p'); b.className = 'fd-body';
+    b.textContent = bodyText; d.appendChild(b);
+    if(linkHref){
+      var a = document.createElement('a'); a.className = 'fd-link';
+      a.href = linkHref; a.textContent = linkText; d.appendChild(a);
+    }
+    return d;
   }
+  function wireForm(form, makePanel, sentParam){
+    if(!form) return;
+    if(sentParam && new RegExp('[?&]' + sentParam).test(location.search)){
+      var p = makePanel(); form.replaceWith(p);
+      p.scrollIntoView({block: 'center'});
+      return;
+    }
+    form.addEventListener('submit', function(ev){
+      ev.preventDefault();
+      var data = new FormData(form);
+      fetch('/', {method: 'POST', headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+        body: new URLSearchParams(data).toString()})
+        .then(function(r){
+          if(r.ok){ var p = makePanel(); form.replaceWith(p); p.scrollIntoView({block: 'center'}); }
+          else form.submit();
+        })
+        .catch(function(){ form.submit(); });
+    });
+  }
+  var leadForm = document.querySelector('form.lead');
+  wireForm(leadForm, function(){
+    return donePanel(false, 'Consider it <em>shouted.</em>',
+      'Your note just landed. A human reads every one \u2014 usually the founder \u2014 and replies within one business day.',
+      '/magazine/', 'While you wait, read Extra Extra \u2192');
+  }, 'sent=1');
+  var ideaForm = document.querySelector('form.idea-form');
+  wireForm(ideaForm, function(){
+    return donePanel(true, 'You\u2019re in.',
+      'First idea lands this week \u2014 steal it well.', null, null);
+  }, 'idea=1');
 })();
