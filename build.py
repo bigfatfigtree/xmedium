@@ -731,44 +731,44 @@ def art_cards(items):
         out.append('<a class="card rv art-card" href="/magazine/' + a["slug"] + '/"><span class="num">' + a["cat"] + ' &middot; ' + a["date"] + '</span><h3>' + a["title"] + '</h3><p>' + a["dek"] + '</p><span class="arrow">Read &rarr;</span></a>')
     return "".join(out)
 
-_cover = [a for a in ARTICLES if a.get("cover")][0]
-_rest = [a for a in ARTICLES if not a.get("cover")]
+_stream = [a for _, a in sorted(enumerate(ARTICLES), key=lambda t: (t[1]["iso"], t[0]), reverse=True)]
+_lead = _stream[0]
+_rest = _stream[1:]
 
 mag_index = """
 <section class="phero mag-mast"><div class="wrap">
 <p class="kick rv">Extra! Extra! Read all about it</p>
 <h1 class="mag-title rv">Extra <span class="it">Extra.</span></h1>
 <p class="lede rv">Notes on marketing, advertising, music and media &mdash; and dispatches from our own lab. Written by the people doing the work, published when there&rsquo;s something worth saying.</p>
-<p class="art-meta rv">Vol. 01 &middot; November 2026</p>
 </div></section>
 """ + DIVIDER + """
 [[layers:collage-extra|Black and white collage of a marble statue wearing a 1920s newsboy cap, mouth open yelling the news, with flying newspaper pages and a megaphone, over a yellow field]]
 <section><div class="wrap">
-<p class="kick rv">Cover story &middot; """ + _cover["cat"] + """</p>
+<p class="kick rv">The latest &middot; """ + _lead["cat"] + """</p>
 <div class="mag-cover rv">
-""" + hero_html(_cover) + """
-<div class="mag-cover-copy"><h2><a href="/magazine/""" + _cover["slug"] + """/">""" + _cover["title"] + """</a></h2>
-<p class="lede">""" + _cover["dek"] + """</p>
-<p class="art-meta">By Jeff Rimmer &middot; """ + _cover["date"] + """ &middot; """ + str(_cover["mins"]) + """ min read</p>
-<a class="btn p" href="/magazine/""" + _cover["slug"] + """/">Read the cover story</a></div>
+""" + hero_html(_lead) + """
+<div class="mag-cover-copy"><h2><a href="/magazine/""" + _lead["slug"] + """/">""" + _lead["title"] + """</a></h2>
+<p class="lede">""" + _lead["dek"] + """</p>
+<p class="art-meta">By Jeff Rimmer &middot; """ + _lead["date"] + """ &middot; """ + str(_lead["mins"]) + """ min read</p>
+<a class="btn p" href="/magazine/""" + _lead["slug"] + """/">Read the story</a></div>
 </div>
 </div></section>
 <section><div class="wrap">
-<div class="sec-head block rv"><p class="kick">The latest</p><h2 style="margin-top:14px">This <span class="it">issue.</span></h2></div>
+<div class="sec-head block rv"><p class="kick">The stream</p><h2 style="margin-top:14px">More <span class="it">stories.</span></h2></div>
 <div class="grid3" style="margin-top:26px">""" + art_cards(_rest) + """</div>
 </div></section>
 <section><div class="wrap"><div class="split">
-<div class="prose rv"><h2>Why a magazine?</h2>
+<div class="prose rv"><h2>Why a news site?</h2>
 <p>Because the answers clients pay for shouldn&rsquo;t live only in decks. Extra Extra is where Extra Medium publishes its thinking in the open: how marketing actually works, what we&rsquo;re learning from building our own products, and the occasional official announcement when the lab ships something.</p>
 <p>New pieces land here first, then travel to LinkedIn and Instagram. One new article a day, most days.</p></div>
 <div class="prose rv"><h2>Start with the work</h2>
-<p>The magazine is the thinking. The studio is the doing: launches, reinventions, growth systems and fractional CMO leadership for companies from startups to Fortune 100 &mdash; plus a lab that builds its own products, so the advice is always tested at home first.</p>
+<p>The stories are the thinking. The studio is the doing: launches, reinventions, growth systems and fractional CMO leadership for companies from startups to Fortune 100 &mdash; plus a lab that builds its own products, so the advice is always tested at home first.</p>
 <div class="cta-row"><a class="btn p" href="/services/">What the studio does</a><a class="btn" href="/labs/">Inside Labs</a></div></div>
 </div></div></section>
 """ + CTA
 
 import json as _json
-_mag_items = ",".join(_json.dumps({"@type": "ListItem", "position": i + 1, "url": "https://xmedium.co/magazine/" + a["slug"] + "/"}) for i, a in enumerate(ARTICLES))
+_mag_items = ",".join(_json.dumps({"@type": "ListItem", "position": i + 1, "url": "https://xmedium.co/magazine/" + a["slug"] + "/"}) for i, a in enumerate(_stream))
 _mag_ld = ('<script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Extra Extra — the Extra Medium magazine",'
            '"url":"https://xmedium.co/magazine/","mainEntity":{"@type":"ItemList","itemListElement":[' + _mag_items + "]}}</script>")
 
@@ -778,7 +778,7 @@ page("Extra Extra — Magazine | Extra Medium",
 print("magazine index done")
 
 for _a in ARTICLES:
-    _others = [x for x in ARTICLES if x["slug"] != _a["slug"]][:3]
+    _others = [x for x in _stream if x["slug"] != _a["slug"]][:3]
     _body = """
 <section class="phero art-head"><div class="wrap">
 <p class="kick rv">""" + _a["cat"] + """ &middot; Extra Extra</p>
