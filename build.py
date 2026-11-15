@@ -1162,7 +1162,7 @@ _merch = """
 <section class="phero"><div class="wrap">
 <p class="kick rv">The merch</p>
 <h1 class="rv">Wear the <span class="it">shout.</span></h1>
-<p class="lede rv">Eight pieces: the serif wordmark, the newsboy who yells the news, two caps, and four collage tees cut from the same art as this site. Nothing with our name on it that we wouldn&rsquo;t wear ourselves.</p>
+<p class="lede rv">We sell attention for a living, so we put some on a shirt. No ad spend, no algorithm &mdash; just the mark, walking around town doing its job.</p>
 </div></section>
 [[layers:collage-extra|Black and white collage of a marble statue wearing a 1920s newsboy cap, mouth open yelling the news, with flying newspaper pages and a megaphone, over a yellow field]]
 <section><div class="wrap">
