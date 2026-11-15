@@ -284,3 +284,7 @@ footer.finale{margin-top:64px}
 .brand .wm{font-family:"Instrument Serif",serif;font-weight:400;font-size:1.95rem;letter-spacing:-.015em;text-transform:none;line-height:1;white-space:nowrap}
 @media(max-width:900px){.brand .wm{font-size:1.45rem}}
 @media(max-width:900px){.brand img{height:36px}}
+
+/* plain footer (page already ended with its own CTA band): ink idea band, hard cut, no paper gap */
+footer.finale.plain{margin-top:0}
+.fin-cta-band.plain{background:var(--ink)}

@@ -54,7 +54,7 @@ def head(title, desc, path, extra_ld=""):
 <meta name="twitter:image" content="https://xmedium.co/assets/img/og-collage.jpg">
 <meta name="theme-color" content="#f5f1ea">
 <link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" href="/assets/img/em-icon-shout.png">
-<link rel="stylesheet" href="/assets/css/site.css?v=20">
+<link rel="stylesheet" href="/assets/css/site.css?v=21">
 {FONTS}
 {ORG_LD}
 {extra_ld}
@@ -120,7 +120,7 @@ FOOTER = """<footer class="finale">
 FOOTER_PLAIN = FOOTER.replace("""<h2 class="rv">Start a <span class="it">conversation.</span></h2>
 <p class="rv">A project, a bigger problem, or a marketing seat you need filled by someone senior. The first conversation is free and specific.</p>
 <div class="cta-row rv"><a class="btn white" href="/contact/">Start a project</a><a class="btn ghost" href="mailto:hello@xmedium.co">hello@xmedium.co</a></div>
-""", "")
+""", "").replace('<footer class="finale">', '<footer class="finale plain">').replace('<div class="fin-cta-band">', '<div class="fin-cta-band plain">')
 
 
 import json as _json, os as _os
@@ -1151,7 +1151,7 @@ print("answers hub done")
 # 404 in the new system
 pathlib.Path(ROOT / "404.html").write_text("""<!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Not found | Extra Medium</title><link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" href="/assets/img/em-icon-shout.png"><link rel="stylesheet" href="/assets/css/site.css?v=20">
+<title>Not found | Extra Medium</title><link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" href="/assets/img/em-icon-shout.png"><link rel="stylesheet" href="/assets/css/site.css?v=21">
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"></head>
 <body><section class="phero"><div class="wrap"><p class="kick">404</p><h1>This page is a Small. <span class="it">We don&rsquo;t stock those.</span></h1>
 <p class="lede">It doesn&rsquo;t exist anymore &mdash; the site was rebuilt around the work and our flagship product. Try one of these:</p>
