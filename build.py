@@ -1166,24 +1166,28 @@ _merch = """
 </div></section>
 [[layers:collage-extra|Black and white collage of a marble statue wearing a 1920s newsboy cap, mouth open yelling the news, with flying newspaper pages and a megaphone, over a yellow field]]
 <section><div class="wrap">
-<div class="sec-head rv"><h2>The first <span class="it">drop</span></h2><span class="mono">Eight pieces</span></div>
+<div class="sec-head rv"><h2>The first <span class="it">drop</span></h2><span class="mono">Ten pieces</span></div>
 <div class="grid2" style="margin-top:26px">
 """ + _merch_card("merch-tee-wordmark.jpg",
                   "Cream t-shirt with the words extra medium. in black serif type across the chest",
                   "The Wordmark Tee",
                   "Cream tee. Just the wordmark, front and center, in the serif. No shout, no noise.") \
-  + _merch_card("merch-tee-icon.jpg",
-                  "Black t-shirt with the yellow Extra Medium newsboy shout icon printed large on the chest",
-                  "The Newsboy Tee",
-                  "Black tee. The newsboy, big on the chest, mid-shout. The opposite of quiet.") \
-  + _merch_card("merch-hat-icon.jpg",
-                  "Black baseball cap with the yellow Extra Medium newsboy icon as a patch on the front",
-                  "The Newsboy Cap",
-                  "Black cap with the shout icon as a patch on the front panel.") \
-  + _merch_card("merch-hat-wordmark.jpg",
-                  "Cream baseball cap with the words extra medium. in black serif type across the front",
-                  "The Wordmark Cap",
-                  "Cream cap. The wordmark in serif across the front, nothing else.") \
+  + _merch_card("merch-tee-wordmark-black.jpg",
+                  "Black t-shirt with the words extra medium. in white serif type across the upper chest",
+                  "The Wordmark Tee &mdash; Black",
+                  "Black tee. The same serif wordmark, flipped to white. The quiet one, after dark.") \
+  + _merch_card("merch-tee-lockup.jpg",
+                  "Black t-shirt with the yellow newsboy icon and the words extra medium. in white serif across the upper chest",
+                  "The Lockup Tee",
+                  "Black tee. The icon and the wordmark together, across the top center. The full masthead, worn.") \
+  + _merch_card("merch-tee-longsleeve.jpg",
+                  "Black long sleeve t-shirt with the yellow newsboy icon and the words extra medium. in white serif across the upper chest",
+                  "The Lockup Long Sleeve",
+                  "The lockup on a long sleeve. Same shout, more sleeve.") \
+  + _merch_card("merch-tee-backprint.jpg",
+                  "Black t-shirt shown front and back: a small white serif wordmark on the front chest and the yellow newsboy icon printed large on the back",
+                  "The Back Print Tee",
+                  "Black tee. Small wordmark up front, business in the back &mdash; the newsboy, big, where everyone behind you can read him.") \
   + _merch_card("merch-tee-collage-cloud.jpg",
                   "Washed charcoal t-shirt with a collage of a marble statue profile, a cloud, a blue bar across the eyes and a warped grid",
                   "The Cloud Tee",
@@ -1199,7 +1203,11 @@ _merch = """
   + _merch_card("merch-tee-collage-mic.jpg",
                   "Cream t-shirt with a collage of a vintage microphone, a retro TV with static, a blue circle and an eye close-up",
                   "The Mic Tee",
-                  "Cream tee. A vintage mic, a TV full of static, and one eye keeping watch.") + """
+                  "Cream tee. A vintage mic, a TV full of static, and one eye keeping watch.") \
+  + _merch_card("merch-hat-trucker.jpg",
+                  "Black trucker hat with mesh back and the yellow newsboy shout icon printed on the front foam panel",
+                  "The Newsboy Trucker",
+                  "Black trucker. Foam front, mesh back, and the shout riding up front where it belongs.") + """
 </div>
 <p class="rv" style="margin-top:26px;font-weight:500;line-height:1.6;max-width:62ch">The first drop is being set up now. Everything is printed to order and ships straight from the printer &mdash; no warehouse, no pile of boxes in a garage. When the buy buttons wake up, that&rsquo;s the deal.</p>
 </div></section>
