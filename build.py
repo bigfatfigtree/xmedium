@@ -739,7 +739,7 @@ mag_index = """
 <p class="kick rv">Extra! Extra! Read all about it</p>
 <h1 class="mag-title rv">Extra <span class="it">Extra.</span></h1>
 <p class="lede rv">Notes on marketing, advertising, music and media &mdash; and dispatches from our own lab. Written by the people doing the work, published when there&rsquo;s something worth saying.</p>
-<p class="art-meta rv">Vol. 01 &middot; November 2026 &middot; Virginia Beach</p>
+<p class="art-meta rv">Vol. 01 &middot; November 2026</p>
 </div></section>
 """ + DIVIDER + """
 [[layers:collage-extra|Black and white collage of a marble statue wearing a 1920s newsboy cap, mouth open yelling the news, with flying newspaper pages and a megaphone, over a yellow field]]
