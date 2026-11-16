@@ -322,6 +322,7 @@ footer.finale.plain{margin-top:0}
 @media(max-width:899px){
   .fin-grid{grid-template-columns:1fr 1fr;gap:22px}
   .fin-grid>.fin-brand{grid-column:1/-1}
+  .fin-grid>div:nth-child(2){grid-column:1;grid-row:2/4}
   .fin-grid>div:nth-child(3){grid-column:2;grid-row:2}
   .fin-grid>div:nth-child(4){grid-column:2;grid-row:3}
 }
