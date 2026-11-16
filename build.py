@@ -753,6 +753,44 @@ dict(slug="the-chart-that-lies", cat="Music", cover=False,
 <p>Our founder&rsquo;s background is part of why this one is personal. Before Extra Medium, he built a digital music platform from idea to launch and grew it past 900,000 users. The pattern has not changed since then. The winners were rarely a surprise in hindsight. The signals were there earlier. They were just not what the chart was built to show.</p>
 <p>A chart will always have a use. It settles arguments about what happened. Just do not ask it to tell you what happens next. That job belongs to momentum, and momentum has to be measured on purpose, while there is still time to do something about it.</p>
 """),
+dict(slug="is-seo-dead", cat="Marketing", cover=False,
+     title="Is SEO Dead? What AI Search Actually Changed",
+     dek="People still search. They just get an answer before they get a list. That changes what your site has to do, not whether it matters.",
+     date="November 16, 2026", iso="2026-11-16", mins=5,
+     hero=("layers", "collage-home"),
+     pull="The list did not disappear. It moved one step behind the answer.",
+     answer="No. SEO is not dead, but the job changed. People still search, only now an AI answer often comes first and cites a few clear sources. Sites that answer real questions plainly, with proof and structure machines can read, get cited. Vague, keyword-stuffed pages get skipped.",
+     takeaways=[
+       "SEO is not dead. The click moved: an AI answer now sits between the search and your site.",
+       "Clear, direct answers with real proof are what AI tools can quote. Vague pages have nothing to lift.",
+       "The core work is unchanged: answer the question better than anyone else, in words a person and a machine can both follow."],
+     faq=[
+       ("Is SEO dead because of AI search?",
+        "No. People still search, and AI answers are built from pages that were written and published by someone. What died is the shortcut version: thin pages made to rank instead of to answer. Clear pages with real proof are the ones AI tools cite."),
+       ("What is answer engine optimization?",
+        "Answer engine optimization, or AEO, is structuring a page so an AI tool can lift its answer directly: the direct answer up top, in plain words, with headings phrased as real questions and the proof sitting right underneath the claim."),
+       ("What should a business do first for AI search?",
+        "Start with your most important pages. Put a plain, direct answer to the page&rsquo;s main question in the first few lines, show real proof where you make a claim, and keep publishing clear answers to the questions customers actually ask.")],
+     keys=["SEO", "AI search", "answer engine optimization", "AEO", "GEO", "search visibility", "AI marketing"],
+     body="""
+<p>Every few years someone declares SEO dead. This time the obituary has a better argument. Type a question into search now and you often get a finished answer at the top, written by an AI, before you get the familiar list of links. Ask a chatbot the same question and you may never see a list at all. If the answer arrives without a click, what is left for a website to do?</p>
+<p>Quite a lot, as it turns out. The answer did not appear from nowhere. It was assembled from pages someone wrote, structured, and published. The question for a business is no longer only whether it ranks. It is whether it is one of the sources the answer is built from.</p>
+<h2>What actually changed when you search?</h2>
+<p>Search used to be a directory. You typed words, you got pages, you did the reading yourself and decided who to trust. That job has moved. The reading and the first round of deciding now happen inside the result, before the click. The AI summary picks a few sources, pulls the clearest lines, and presents a version of the answer as if it were the answer.</p>
+<p>That shift rewards a different kind of page. A page that buries its point under a long introduction, repeats a keyword in every heading, and never quite says anything definite gives the machine nothing clean to lift. A page that answers the question in the first paragraph, in plain words, with the proof right underneath it, gives the machine exactly what it needs and gives the reader a reason to click through for the rest.</p>
+<p>People have not stopped searching. They have stopped doing all the work search used to require of them. The businesses that understand that write for both readers at once: the person who lands on the page, and the system that decides whether the page gets quoted at all.</p>
+[[pull]]
+<h2>So is SEO dead, or just different?</h2>
+<p>The old tactics are dead, and good riddance. Pages built to rank rather than to answer, thin posts written to hit a word count, and tricks aimed at an algorithm instead of a reader were always borrowing time. AI search collects that debt faster, because it does not need your page to be popular. It needs your page to be clear, specific, and right.</p>
+<p>The core of the work has not changed at all. It is the same job it always was when it was done honestly: understand the question a customer is really asking, answer it better and more plainly than anyone else, and back the answer with something real. What changed is the penalty for skipping that work. A vague page used to rank on effort and links. Now it gets passed over in silence, and the customer never learns it existed.</p>
+<p>This is why our <a href="/ai-marketing-consulting/">AI marketing consulting</a> work starts with the same audit as our search work. The two are no longer separate problems. If an AI tool cannot explain what your business does, who it serves, and why it is credible, using only what it can find on your site, then a human searcher is probably getting the same fuzzy picture, just more slowly.</p>
+<h2>What should you do about it now?</h2>
+<p>Start at the top of the page. Every important page should answer its main question in the first few lines, in words a new reader can repeat back. Not a slogan. An answer. Who this is for, what it does, and what makes it the right choice. Pages on this site carry a short answer box for exactly that reason. It helps the reader first. That it also helps machines is the point: clarity is not a trick for one audience or the other.</p>
+<p>Next, show the proof where the claim is made. Real work, real names where you have permission, real specifics about how a thing is done. AI answers lean on sources that sound sure of themselves because they are. A claim with evidence underneath it travels. A claim by itself does not.</p>
+<p>Then fix the structure underneath. Headings that are real questions. Answers that sit directly under them. Clean technical basics, so the page loads, reads well on a phone, and can be understood by a crawler without guesswork. None of this is new craft. It is the unglamorous base that the new layer stands on, which is why our <a href="/services/">Grow and Intelligence work</a> treats search, content, and AI visibility as one system instead of three separate purchases.</p>
+<p>Finally, keep publishing the thinking. A business that answers new questions in public, as they come up, builds the library that both readers and answer engines draw from. That is the whole idea behind this news site, and behind pieces like our look at <a href="/magazine/the-local-advertiser/">where local attention actually lives now</a>. Attention moved once, from outlets to people. It is moving again, from lists to answers. The businesses that keep showing up, plainly and with proof, in both places are the ones that get found either way.</p>
+<p>SEO is not dead. The shortcut version of it is. What replaced it is slower to fake and easier to check: say the true thing, clearly, where the question is being asked.</p>
+"""),
 ]
 
 def hero_html(a):
