@@ -791,7 +791,44 @@ dict(slug="is-seo-dead", cat="Marketing", cover=False,
 <p>Finally, keep publishing the thinking. A business that answers new questions in public, as they come up, builds the library that both readers and answer engines draw from. That is the whole idea behind this news site, and behind pieces like our look at <a href="/magazine/the-local-advertiser/">where local attention actually lives now</a>. Attention moved once, from outlets to people. It is moving again, from lists to answers. The businesses that keep showing up, plainly and with proof, in both places are the ones that get found either way.</p>
 <p>SEO is not dead. The shortcut version of it is. What replaced it is slower to fake and easier to check: say the true thing, clearly, where the question is being asked.</p>
 """),
+dict(slug="what-to-do-with-family-photos", cat="The Lab", cover=False,
+     title="What Do You Do With Thousands of Family Photos No One Ever Looks At?",
+     dek="The camera roll kept everything and organized nothing. The photos are not the problem. The missing story is.",
+     date="November 17, 2026", iso="2026-11-17", mins=5,
+     hero=("layers", "collage-labs"),
+     pull="A folder of photos is an archive. A story is what makes people stay and look.",
+     answer="Start by turning photos into a story, not a bigger folder. Pick one person, one place, or one chapter, gather the photos, videos, and voice notes around it, and add who, where, and why it mattered. That turns storage into something a family will actually watch and keep.",
+     takeaways=[
+       "Storage is not memory. A photo no one can find or explain is saved and lost at the same time.",
+       "A story needs a chapter, a cast, and a reason it mattered, not just a date on a file.",
+       "Start with one chapter. One finished story is worth more than a perfect plan for the whole archive."],
+     faq=[
+       ("What do you do with family photos stored on a phone?",
+        "Do not start by sorting all of them. Start with one chapter: one person, one place, or one period of family life. Gather the photos, videos, and voice notes around that chapter, add the names and the context, and finish that one story before you touch the rest."),
+       ("Why do families stop looking at their photos?",
+        "Because the archive grew faster than the story did. A camera roll is organized by date, not by meaning, so finding one moment means scrolling past hundreds of others. Without names, places, and a reason the moment mattered, most photos are never opened again."),
+       ("What is Roon?",
+        "Roon is a family memory platform in prototype at Extra Medium Labs. It turns the photos, videos, and voice notes a family already has into stories, organized as chapters rather than a book or a yearbook. A waitlist is open through the Labs page.")],
+     keys=["family photos", "photo organizing", "family memories", "digital photo archive", "Roon", "family stories"],
+     body="""
+<p>Every family now has the same quiet problem. The phone took the photos. The cloud kept them. Nobody looks at them. A birthday, a holiday, a grandparent at a kitchen table, a kid&rsquo;s first season of anything: they are all in there, somewhere, between screenshots, receipts, and forty near-identical shots of the same sunset.</p>
+<p>The usual advice is to organize. Make folders. Pick favorites. Delete the duplicates. That advice is not wrong, and it almost never happens, because organizing a whole archive feels like homework with no end. The deeper problem is not the mess. It is that a pile of photos, however tidy, is still not a story. And a story is the only form in which a family actually returns to its own past.</p>
+<h2>Why do we take so many photos and look at so few?</h2>
+<p>Taking a photo costs nothing now, so we take it just in case. Keeping it costs nothing either, so nothing gets chosen. The result is an archive built for storage, not for looking. It is sorted by the one fact nobody remembers a moment by: the date the file was created.</p>
+<p>Ask someone to find the photo of a specific afternoon from three years ago and watch what happens. They scroll. They guess at the month. They pass the moment twice without recognizing it, because a thumbnail does not say who was there, where it was, or why anyone laughed. The photo survived. The context around it did not, and context is what makes a photo findable, let alone worth finding.</p>
+<p>There is a second loss hiding inside the first one. The people who could explain the older photos are not always available to ask later. A voice note, a name written down, a short line about why a day mattered: those small pieces of context are the difference between an image a grandchild understands and one they scroll past.</p>
+[[pull]]
+<h2>What turns a photo into a memory?</h2>
+<p>A memory has a shape a folder does not. It has a chapter: this was the summer at the lake, the year the business started, the last holiday in that house. It has a cast: the people in the frame, named, so the next generation is not guessing. And it has a point: what changed, what was funny, what the family wants to keep about that time.</p>
+<p>Photos, videos, and voice notes each carry a different part of that shape. A photo shows the room. A short video brings back the noise in it. A voice, telling what the camera missed, is often the piece people replay. Put together around one chapter, they stop being files and start being something a family gathers around. That is the standard we use in <a href="/labs/">Extra Medium Labs</a> when we judge our own work: does it make the story get told, seen, or kept?</p>
+<h2>Where do you start if the archive feels too big?</h2>
+<p>You start small, on purpose. Pick one chapter and finish it. One person&rsquo;s story is a good first chapter. So is one place the family kept returning to, or one year that changed things. Gather what belongs to that chapter and leave everything else alone for now. Add the names while you still know them. Record the short version of what happened, in plain words, even if it is only a few lines.</p>
+<p>Then show it to the family before you start the next one. A finished chapter does two jobs at once: it proves the archive can become something worth watching, and it tells you what to ask for next, because relatives respond to a story by offering the pieces you were missing. The perfect system for the whole archive can wait. A story someone has actually seen cannot.</p>
+<p>This is the problem Roon exists to solve. Roon, in prototype in our lab, turns the archive a family already has, its photos, videos, and voice notes, into chapters and stories instead of leaving them as files. It is not a book and it is not a yearbook. It is the archive, given a shape a family will open. We wrote about why the lab builds products like this in <a href="/magazine/inside-the-lab/">Inside the Lab</a>, and Roon is the most personal example: the raw material is already in everyone&rsquo;s pocket, and what is missing is the telling.</p>
+<p>Your family&rsquo;s photos are not failing because there are too many of them. They are waiting for the same thing any good material waits for. A chapter, a cast, and someone to say why it mattered. Start with one chapter. The archive gets smaller the moment the first story exists.</p>
+"""),
 ]
+
 
 def hero_html(a):
     kind = a["hero"][0]
