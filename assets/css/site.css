@@ -137,7 +137,7 @@ nav.main a.on{color:var(--mag)}
 .mstats span{font-size:.62rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;opacity:.65}
 /* founder */
 .jeff{display:grid;grid-template-columns:112px 1fr;gap:20px;padding:28px 0 4px;align-items:center}
-.jeff img{width:112px;height:112px;object-fit:cover;border-radius:50%;filter:grayscale(1) contrast(1.05)}
+.jeff img{width:112px;height:112px;object-fit:cover;object-position:50% 8%;border-radius:50%;filter:grayscale(1) contrast(1.05)}
 .jeff h3{font-size:1.24rem}
 .jeff .role{font-size:.64rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--mag);margin:5px 0 9px}
 .jeff p{font-size:.96rem;line-height:1.58;font-weight:500;color:#4a4238}
