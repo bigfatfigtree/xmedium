@@ -827,6 +827,44 @@ dict(slug="what-to-do-with-family-photos", cat="The Lab", cover=False,
 <p>This is the problem Roon exists to solve. Roon, in prototype in our lab, turns the archive a family already has, its photos, videos, and voice notes, into chapters and stories instead of leaving them as files. It is not a book and it is not a yearbook. It is the archive, given a shape a family will open. We wrote about why the lab builds products like this in <a href="/magazine/inside-the-lab/">Inside the Lab</a>, and Roon is the most personal example: the raw material is already in everyone&rsquo;s pocket, and what is missing is the telling.</p>
 <p>Your family&rsquo;s photos are not failing because there are too many of them. They are waiting for the same thing any good material waits for. A chapter, a cast, and someone to say why it mattered. Start with one chapter. The archive gets smaller the moment the first story exists.</p>
 """),
+dict(slug="how-much-does-influencer-marketing-cost", cat="Advertising", cover=False,
+     title="How Much Does Influencer Marketing Cost for a Local Business?",
+     dek="It depends on which kind you buy. A comped visit costs the experience itself. A paid post costs the creator&rsquo;s rate. The expensive mistake is paying for reach your customers cannot use.",
+     date="November 18, 2026", iso="2026-11-18", mins=5,
+     hero=("layers", "collage-extra"),
+     pull="The cheapest local campaign is often the meal itself. The most expensive one is reach nobody nearby can act on.",
+     answer="For a local business, influencer marketing often costs the experience itself. Many local creators will visit for a comped meal, service, or experience and post honestly about it. A paid booking costs the creator\u2019s own listed rate. On Magpie, paid bookings start at a $50 rate floor, and creators keep 97 percent.",
+     takeaways=[
+       "There is no single price for local influencer marketing. There are two: the cost of the experience, or the creator\u2019s rate.",
+       "Follower count is the wrong price tag. Local reach, the share of an audience that can actually walk in, is the number that spends.",
+       "On Magpie, paid bookings start at a $50 rate floor and creators keep 97 percent. The terms are in writing before anyone posts."],
+     faq=[
+       ("How much do local influencers charge?",
+        "It varies by creator and by what is being asked. Many local creators will visit for a comped experience, where the meal, service, or visit itself is the payment. For a paid booking, the creator sets their own listed rate. On Magpie, paid bookings start at a $50 rate floor."),
+       ("Is a comped visit really free?",
+        "No. A comped visit costs the product, the table or appointment, and staff time, even when no fee changes hands. It also still needs terms in writing: what gets posted, when it goes up, and disclosure that the visit was comped."),
+       ("How is local influencer marketing different from paying a celebrity?",
+        "Geography and trust. A celebrity audience is spread across the country, so almost none of it can buy from a local business this week. A local creator\u2019s audience lives nearby, knows the creator\u2019s tastes, and can act on a recommendation today.")],
+     keys=["influencer marketing cost", "local influencer marketing", "local creators", "creator marketing", "comped visits", "Magpie", "local marketing", "local reach"],
+     body="""
+<p>Ask a local business what influencer marketing costs and the answer is usually a shrug, followed by a story. Someone paid a creator with a large following and got likes from three states away. Someone else comped a dinner and filled a slow Tuesday. Both were called influencer marketing. They cost completely different things, and only one of them bought customers who could actually walk in.</p>
+<p>That is why the honest answer starts with a second question: which kind are you buying? At the local level there are two arrangements, and they price differently. One trades the experience itself. The other buys a creator&rsquo;s time and posts at a rate the creator sets. Mixing them up is how a small budget turns into an expensive lesson.</p>
+<h2>What does a comped visit actually cost?</h2>
+<p>A comped visit costs what the visit itself costs you. A restaurant comps a meal. A salon comps a service. A shop or attraction comps the experience a customer would normally pay for. The creator comes in, has the real experience, and posts honestly about it. There is no separate fee for the post, because the experience is the payment.</p>
+<p>Comped does not mean free, and it does not mean casual. You still give up the product, the table, and the staff time, and you should still agree the basics in writing before anyone visits: what gets posted, when it goes up, and that the post is disclosed as a comped visit. The value is that the coverage is honest by construction. The creator actually ate there, sat in the chair, or walked through the door, and their followers can tell the difference. Our guide to <a href=\"/influencer-marketing-for-local-businesses/\">influencer marketing for local businesses</a> lays out when a comped experience fits and when it does not.</p>
+<p>The comped route works best when the experience is the story. If a visit photographs well, tastes good, or solves a visible problem, the post almost makes itself. If your business sells something a creator cannot honestly experience in one visit, a comp is the wrong tool.</p>
+[[pull]]
+<h2>What does a paid booking cost?</h2>
+<p>A paid booking costs the creator&rsquo;s own listed rate. The creator sets the rate, the business pays it, and in return the business gets defined deliverables: specific posts, agreed timing, and terms for how the content may be reused, all settled in writing before anything is posted. Paid is the right shape when timing matters, when a launch needs a date, or when you need more than a single honest visit can carry.</p>
+<p>On Magpie, the platform our lab built for exactly this work, the terms are stated up front. Paid bookings start at a $50 rate floor, the business pays the creator&rsquo;s rate plus 3 percent, and the creator keeps 97 percent. Creators join free and pay nothing to be listed, and 500 followers is enough to start, because at the local level the right 500 matter more than a borrowed 50,000. The full model is on the <a href=\"/labs/magpie/\">Magpie case study page</a>, including how local reach is shown before anyone books.</p>
+<p>Notice what is not in that price: a charge for follower count. The number a local business should price against is not the total at the top of the profile. It is the share of that audience that lives close enough to buy.</p>
+<h2>Why does follower count set the wrong price?</h2>
+<p>Every audience has a geography. A large following spread across a country is worth a great deal to a brand that ships nationally and very little to a business that sells within a few miles. Most of those followers cannot book your table, your chair, or your service this week, or any week. Paying a premium for them is paying for reach you cannot use.</p>
+<p>A local creator&rsquo;s audience is concentrated where your customers already live, and it comes with trust a distant account cannot offer. Their followers know their streets and their tastes, and they know when a recommendation is real. That is why Magpie ranks creators by local reach, the share of their audience that actually lives in the market, and shows that number before a business chooses. Check the map before you check the price. A smaller audience that can act today is worth more to a local business than a famous one that can only watch.</p>
+<h2>How do you know if the price was worth it?</h2>
+<p>Judge a local booking the way you would judge any local spend: by what happened nearby. Did people mention the post when they came in? Did bookings or visits move after it ran? A tracked visit, with terms and result together, can be judged. A post bought on a handshake and measured in likes cannot, and likes from outside your trade area are not a result a local business can deposit.</p>
+<p>Start with one booking, priced plainly, and read the result before you buy the second. That is the same order we use in our <a href=\"/services/\">Grow work</a> for clients: fix the offer, run the smallest honest test, and let the local result set the next budget. Influencer marketing for a local business does not need a large budget to be real. It needs the right creator, a price agreed in writing, and an audience that can actually walk through the door.</p>
+"""),
 ]
 
 
