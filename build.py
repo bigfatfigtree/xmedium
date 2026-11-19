@@ -865,6 +865,44 @@ dict(slug="how-much-does-influencer-marketing-cost", cat="Advertising", cover=Fa
 <p>Judge a local booking the way you would judge any local spend: by what happened nearby. Did people mention the post when they came in? Did bookings or visits move after it ran? A tracked visit, with terms and result together, can be judged. A post bought on a handshake and measured in likes cannot, and likes from outside your trade area are not a result a local business can deposit.</p>
 <p>Start with one booking, priced plainly, and read the result before you buy the second. That is the same order we use in our <a href=\"/services/\">Grow work</a> for clients: fix the offer, run the smallest honest test, and let the local result set the next budget. Influencer marketing for a local business does not need a large budget to be real. It needs the right creator, a price agreed in writing, and an audience that can actually walk through the door.</p>
 """),
+dict(slug="how-much-should-a-small-business-spend-on-marketing", cat="Marketing", cover=False,
+     title="How Much Should a Small Business Spend on Marketing?",
+     dek="There is no honest single percentage. The right budget starts with what a customer is worth, what growth you actually need, and what you can run well, not with a rule copied from a bigger company.",
+     date="November 19, 2026", iso="2026-11-19", mins=5,
+     hero=("layers", "collage-home"),
+     pull="A budget is not a percentage you copy. It is a decision about how many customers you need and what you will pay to earn them.",
+     answer="There is no honest single percentage. Start with what a new customer is worth and what growth you need this year, then fund the few channels that can reach those customers and that you can run consistently. A small, steady budget aimed well beats a large one spread thin.",
+     takeaways=[
+       "There is no honest single percentage. The right budget is built from customer value and the growth you actually need.",
+       "Fund consistency before scale. A channel run every week beats five channels touched once.",
+       "Judge the budget by customers gained and revenue kept, not by clicks, likes, or reports that look busy."],
+     faq=[
+       ("How much should a small business spend on marketing?",
+        "Enough to fund the few channels that reach your customers, run consistently, for long enough to judge the result. Build the number from what a customer is worth and how many more you need, not from a percentage copied from another company."),
+       ("Should a new business spend more than an established one?",
+        "Usually, yes, in effort if not always in cash. An established business has referrals, repeat customers, and a name people already know. A new business has to buy or earn that first attention, so more of its budget goes to being found and being believed."),
+       ("What should a small marketing budget pay for first?",
+        "First, a clear offer and a place to send people that explains it in plain words. Then one channel your customers actually use, run well every week. Then simple measurement, so you know which customers the spend brought in before you buy more of it.")],
+     keys=["small business marketing budget", "marketing budget", "how much to spend on marketing", "customer acquisition cost", "small business marketing", "fractional CMO", "marketing strategy"],
+     body="""
+<p>Every small business owner asks this question when marketing stops being optional. Referral work is thinner. A competitor is showing up where you used to. The website is old, the social accounts are quiet, and someone has quoted a number for ads that sounds like a second rent payment. How much is enough?</p>
+<p>The honest answer is uncomfortable because it is not a number. There are percentages repeated everywhere, and they can be a rough starting point for a conversation. They cannot tell you what your business should spend, because they do not know what a customer is worth to you, how much growth you actually need, or whether you have anyone who can run the work well. A budget copied from a rule is a guess wearing a suit.</p>
+<h2>Why is there no honest single percentage?</h2>
+<p>Because businesses do not buy marketing. They buy customers, at a cost, through specific channels. A service business where one new client pays for months of work can afford to spend more to win that client than a shop where each sale is small and has to repeat to matter. A company defending a steady base spends differently from one trying to open a new market. The percentage treats those situations as if they were the same. They are not, and the budget should not pretend they are.</p>
+<p>There is a second problem. A percentage says nothing about whether the money is aimed at anything. Spend spread across five channels, each touched once and abandoned, buys almost nothing except five small lessons you never finish learning. The same spend, held on one or two channels long enough to get competent at them, buys a result you can read. The size of the budget matters less than most owners think. The aim and the consistency matter more.</p>
+[[pull]]
+<h2>What should the budget actually start from?</h2>
+<p>Start from the customer, not the channel. What is a new customer worth over the time they stay with you, not just on the first purchase? How many more customers do you actually need this year for the business to be in a different place, and how many can you serve well if they show up? Those two numbers turn a vague wish to &ldquo;do more marketing&rdquo; into a target a budget can be built against.</p>
+<p>Then work backward. If you know roughly what it costs to earn a customer in a channel your buyers actually use, the budget is that cost multiplied by the number of customers you need, plus the cost of the basics that make the channel work: a clear offer, a page that explains it, and follow-up that does not leak the interest you paid to create. Our breakdown of <a href="/how-much-does-a-marketing-agency-cost/">what a marketing agency actually costs</a> shows the other half of the same math: what the help itself runs, so the two numbers can be judged together instead of in separate surprises.</p>
+<h2>What should the money pay for first?</h2>
+<p>First, the offer and the place it lives. If a stranger cannot tell in a few seconds what you sell, who it is for, and why you are the right choice, advertising will only pay to show more people a confusing message. A clear page, honest proof, and a simple next step are not decoration. They are the part of the budget every other dollar depends on.</p>
+<p>Second, one channel, run properly. Pick the place your customers already pay attention, whether that is search, a social feed, local creators, or the inbox, and fund it at a level you can sustain every week. Being findable has changed, too: search now often answers before it lists, which is why we wrote about <a href="/magazine/is-seo-dead/">what AI search actually changed</a>. A channel you can sustain teaches you something. A channel you sample teaches you nothing you can trust.</p>
+<p>Third, measurement simple enough that you will actually look at it. Which inquiries came from this spend? Which became customers? What did each one cost? If those questions cannot be answered, the budget debate will happen again every quarter, argued from feelings.</p>
+<h2>How do you know if the budget is working?</h2>
+<p>Give it a fair test, then judge it by customers. A fair test means the same channel, the same offer, and enough time for a pattern to form, not a verdict after one quiet week. Judge it by customers gained and revenue kept, not by clicks, likes, or a report that looks busy. Some of those signals are useful early warnings. None of them pay a bill.</p>
+<p>When a channel works, fund it a little more and protect the consistency that made it work. When it does not, that is not proof marketing failed. It is proof this offer, in this channel, at this cost, did not earn the next dollar. Change one on purpose and test again. That is the core of our <a href="/services/">Grow work</a>: fix the offer, run the smallest honest test, and let the result set the next budget.</p>
+<p>So, how much should a small business spend on marketing? Enough to be clear, to show up consistently where its customers are, and to learn what a customer costs it, and not a dollar more until those three things are true. Start there. A budget built that way can grow with evidence. A percentage copied from someone else&rsquo;s business can only grow with hope.</p>
+"""),
 ]
 
 
