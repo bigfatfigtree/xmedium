@@ -903,6 +903,42 @@ dict(slug="how-much-should-a-small-business-spend-on-marketing", cat="Marketing"
 <p>When a channel works, fund it a little more and protect the consistency that made it work. When it does not, that is not proof marketing failed. It is proof this offer, in this channel, at this cost, did not earn the next dollar. Change one on purpose and test again. That is the core of our <a href="/services/">Grow work</a>: fix the offer, run the smallest honest test, and let the result set the next budget.</p>
 <p>So, how much should a small business spend on marketing? Enough to be clear, to show up consistently where its customers are, and to learn what a customer costs it, and not a dollar more until those three things are true. Start there. A budget built that way can grow with evidence. A percentage copied from someone else&rsquo;s business can only grow with hope.</p>
 """),
+dict(slug="how-does-a-song-break-now", cat="Music", cover=False,
+     title="How Does a Song Break Now?",
+     dek="Not with one big moment. A song breaks when a small group of listeners chooses it again and again, carries it to the next room, and gives everyone else a reason to listen.",
+     date="November 20, 2026", iso="2026-11-20", mins=6,
+     hero=("img", "/assets/img/hapsta-studio.jpg", "A musician playing acoustic guitar in a recording studio"),
+     pull="A song does not break when everyone hears it. It breaks when the first people who hear it refuse to let it go.",
+     answer="A song breaks now in small rooms before it breaks in public: a few listeners save it, share it, and play it again, then creators and local scenes carry it wider. Radio and charts usually arrive last, confirming momentum that started with real listeners repeating a song they chose.",
+     takeaways=[
+       "A song breaks by repetition first: saves, shares, and second listens in a small circle come before any chart.",
+       "Momentum is the early signal. How fast a song is moving matters more than how big its total looks today.",
+       "Radio and charts usually confirm a break. They rarely start one. The start is listeners choosing the song again."],
+     faq=[
+       ("How does a song break now?",
+        "It starts small. A few listeners hear it, save it, share it, and play it again. Creators, playlists, and local scenes carry it to wider rooms, and only then do radio and charts tend to follow. The break is built from repetition by real listeners, not from one announcement."),
+       ("What is music momentum?",
+        "Momentum is how fast a song or artist is rising right now, compared with a flat total of plays. A total tells you what already happened. Momentum tells you what is changing, which is the part a listener, label, or partner can still act on."),
+       ("Do artists still need radio to break a song?",
+        "Radio can widen a song that is already moving, and it still matters for reach. It is rarely the first proof anymore. The first proof is listeners choosing the song on their own, saving it, and bringing it back into rooms the artist cannot buy.")],
+     keys=["how a song breaks", "music discovery", "song momentum", "music marketing", "JAWNRA", "music charts", "artist discovery"],
+     body="""
+<p>Ask how a song breaks and most people picture one big moment. A radio add. A chart debut. A famous account posting it. Those moments are visible, so they get the credit. They are also usually late. By the time a song looks like it broke, a smaller and quieter thing has already happened, in rooms nobody was watching.</p>
+<p>A few people heard it and chose it again. They saved it. They sent it to one person who would get it. They played it in a car, at work, in a kitchen, and then played it again the next day. That repetition is not the reward for breaking. It is the break, starting.</p>
+<h2>Where does a song actually break first?</h2>
+<p>It breaks in small circles with real taste. A local scene that knows its own sound. A creator whose followers trust their ear. A group chat, a team locker room, a barista who controls the speakers on a slow afternoon. Those rooms are small, and that is why they matter. In a small room, a song is not background. Someone chose it, and other people can ask why.</p>
+<p>That is a different test from reach. Reach asks how many people a song passed in front of. Breaking asks how many people stopped, kept it, and carried it to the next room. A song can be heard by a crowd and kept by no one. Another can be heard by a roomful and kept by almost everyone in it. The second song is the one moving, even if its total is still small.</p>
+<p>We made that distinction the center of an earlier piece, <a href="/magazine/the-chart-that-lies/">The Chart That Lies</a>: popularity tells you who won, momentum tells you who is next. A chart adds up what already happened. It cannot, by itself, tell you which small room is about to get bigger.</p>
+[[pull]]
+<h2>What signal should you watch, if not the total?</h2>
+<p>Watch the speed and the shape of the repetition. Is the song being saved, not just played? Are new listeners arriving from shares by people, not only from placement? Are listeners in one place finding it first, the way a local audience often claims a sound before the rest of the country has a name for it? Those are momentum signals. They are plain, and they are early.</p>
+<p>That is the idea behind JAWNRA, the music discovery and chart platform in development in <a href="/labs/">Extra Medium Labs</a>. JAWNRA measures momentum instead of popularity: the chart that tells you what is about to win, not what already did. The point is not a cleverer ranking. The point is timing. By the time a total is impressive, the useful decision, to book, sign, playlist, cover, or simply listen early, has often already passed.</p>
+<p>None of this makes craft less important. Momentum cannot save a song nobody wants to hear twice. It can only show, sooner and more honestly, which songs people are already choosing twice on their own.</p>
+<h2>So what should an artist do before radio or a chart notices?</h2>
+<p>Start with the rooms you can actually reach, and make it easy for a listener to keep the song and pass it on. Play the local rooms where taste is trusted. Put the song in the hands of creators and listeners who already talk about music like yours, and give them the real thing, not a pitch about how big it will be. Then pay attention to what repeats without you pushing it. That unpaid repetition is information. Follow it, and put your effort where the song is already being chosen.</p>
+<p>It also helps to think like a business with a clear offer. A song needs a place to land: a page, a profile, and a next step a new listener can take in seconds, whether that is saving the track, following the artist, or buying a ticket. Our <a href="/services/">studio work in launches and growth</a> starts the same way for any product: clear offer, a place it lives, and a system for learning what people actually do, not what a report wishes they did.</p>
+<p>A song breaks now the way it always did, only the rooms have changed. First a few people choose it. Then they choose it again, out loud, in front of other people. Everything louder, radio, press, and charts, is usually that choice, amplified. Listen for the quiet part. That is where the break is.</p>
+"""),
 ]
 
 
