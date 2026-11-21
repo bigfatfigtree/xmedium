@@ -939,6 +939,40 @@ dict(slug="how-does-a-song-break-now", cat="Music", cover=False,
 <p>It also helps to think like a business with a clear offer. A song needs a place to land: a page, a profile, and a next step a new listener can take in seconds, whether that is saving the track, following the artist, or buying a ticket. Our <a href="/services/">studio work in launches and growth</a> starts the same way for any product: clear offer, a place it lives, and a system for learning what people actually do, not what a report wishes they did.</p>
 <p>A song breaks now the way it always did, only the rooms have changed. First a few people choose it. Then they choose it again, out loud, in front of other people. Everything louder, radio, press, and charts, is usually that choice, amplified. Listen for the quiet part. That is where the break is.</p>
 """),
+dict(slug="how-long-does-marketing-take-to-work", cat="Marketing", cover=False,
+     title="How Long Does It Take for Marketing to Work?",
+     dek="Some channels move in days. Most move in months. The honest timeline depends on what you bought, how clear the offer is, and whether you stayed long enough to read the result.",
+     date="November 21, 2026", iso="2026-11-21", mins=5,
+     hero=("layers", "collage-work"),
+     pull="Marketing is not slow by accident. Trust is slow, and marketing is mostly the work of earning it in public.",
+     answer="Most marketing takes weeks to show a pattern and months to show a result you can trust. Paid ads can bring clicks in days, but search, content, and reputation compound over months. If nothing has moved at all after 90 days, the offer or the channel is usually wrong.",
+     takeaways=[
+       "Fast channels show activity in days. Trusted results, the kind you can budget on, usually take months to prove.",
+       "The clock starts when the offer is clear, not when the first post goes up. A confusing offer makes every channel look slow.",
+       "Judge early weeks by leading signals: inquiries, saves, and return visits. Judge the quarter by customers and revenue."],
+     faq=[
+       ("How long does it take for marketing to work?",
+        "Expect early signals in the first few weeks: more inquiries, better-fit visitors, and people repeating your offer back correctly. Expect a result you can trust, steady customers from a channel, in months rather than days. A fair first verdict on most programs lands around 90 days."),
+       ("Why is my marketing not working yet?",
+        "The usual causes are a vague offer, the wrong channel for your buyers, or stopping before a pattern can form. Our page on why marketing is not working walks through how to tell a timing problem from a targeting problem before you spend more."),
+       ("When should you stop a marketing channel?",
+        "Stop or change a channel when a fair test, the same offer run consistently long enough to form a pattern, produces no leading signals at all. Do not stop on one quiet week, and do not keep funding a channel that has shown nothing after a full quarter.")],
+     keys=["how long does marketing take", "marketing timeline", "marketing results", "small business marketing", "marketing strategy", "fractional CMO", "lead generation"],
+     body="""
+<p>It is the question every owner asks, usually in week three. The ads are running, the posts are going up, the site has been rebuilt, and the phone is not ringing any louder than it did before. So how long is this supposed to take?</p>
+<p>The honest answer has two parts, and both matter. Some parts of marketing move in days. Most of it moves in months. Confusing those two clocks is how good programs get cancelled early and weak programs get funded for a year on hope.</p>
+<h2>Why do some channels look instant and others look slow?</h2>
+<p>Paid media is the fast clock. An ad can be live today and clicks can arrive tonight. That speed is real, and it is also easy to misread. A click is not a customer. It is a stranger agreeing to look. Whether that look turns into an inquiry depends on the offer, the page it lands on, and the follow-up, none of which got faster just because the ad did.</p>
+<p>Search, content, and reputation run on the slow clock, because they are built on trust that has to accumulate. A useful article has to be found, read, and believed, often more than once, before it sends you a customer. A review profile, a local reputation, a name people have heard from two different friends: none of that can be bought in a weekend. It compounds, which is why it looks like nothing for a while and then looks obvious in hindsight. We covered the budget half of this question in <a href="/magazine/how-much-should-a-small-business-spend-on-marketing/">how much a small business should spend on marketing</a>: fund consistency before scale, because consistency is what the slow clock rewards.</p>
+[[pull]]
+<h2>What should you expect in the first 90 days?</h2>
+<p>In the first few weeks, expect signals, not proof. More of the right visitors. Inquiries that mention the offer in your own words. People saving a post, returning to the site, or asking a question that shows the message landed. Those are leading signals, and they are the only honest thing to judge early.</p>
+<p>By around 90 days, a fair test should show a pattern you can describe in one sentence: this channel, with this offer, brings this kind of customer at roughly this cost. If you cannot say that sentence yet, the test was not really a test. Either the offer kept changing, the channel kept changing, or the run was too broken up to learn from. Our <a href="/services/">Grow work</a> is built around that discipline for exactly this reason: fix the offer, run the smallest honest test, and let the result set the next step.</p>
+<h2>How do you know if it is working before revenue moves?</h2>
+<p>Watch whether the market is getting clearer about you. Are inquiries better fits than they were last month? Are people repeating your positioning back to you, in their own words, without prompting? Is the cost of earning attention in your best channel steady or falling as the message sharpens? Those movements come before revenue does, and they are not vanity numbers. They are the early shape of demand.</p>
+<p>The warning signs are just as plain. Traffic with no inquiries. Attention from people who cannot buy from you. A report full of activity and no sentence in it about customers. If that is the picture after a full quarter of consistent work, do not blame the calendar. Something in the offer or the targeting is wrong, and more time will not fix it. That diagnosis is where a senior eye earns its keep, which is why the <a href="/fractional-cmo/">fractional CMO seat</a> starts with an audit before it touches a campaign.</p>
+<p>So, how long does marketing take to work? Give a clear offer and a well-chosen channel a quarter to prove themselves, judge the early weeks by signals and the quarter by customers, and change one thing at a time when the answer is no. Marketing that is given that kind of fair test rarely stays a mystery. It either earns the next dollar or it tells you, plainly, where to put it instead.</p>
+"""),
 ]
 
 
