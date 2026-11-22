@@ -973,6 +973,43 @@ dict(slug="how-long-does-marketing-take-to-work", cat="Marketing", cover=False,
 <p>The warning signs are just as plain. Traffic with no inquiries. Attention from people who cannot buy from you. A report full of activity and no sentence in it about customers. If that is the picture after a full quarter of consistent work, do not blame the calendar. Something in the offer or the targeting is wrong, and more time will not fix it. That diagnosis is where a senior eye earns its keep, which is why the <a href="/fractional-cmo/">fractional CMO seat</a> starts with an audit before it touches a campaign.</p>
 <p>So, how long does marketing take to work? Give a clear offer and a well-chosen channel a quarter to prove themselves, judge the early weeks by signals and the quarter by customers, and change one thing at a time when the answer is no. Marketing that is given that kind of fair test rarely stays a mystery. It either earns the next dollar or it tells you, plainly, where to put it instead.</p>
 """),
+dict(slug="do-you-need-a-website-if-you-have-social-media", cat="Marketing", cover=False,
+     title="Do You Still Need a Website If You Have Social Media?",
+     dek="A profile is good at being found. It is bad at closing. Your website is the one place you own where the full offer, the proof, and the next step live together.",
+     date="November 22, 2026", iso="2026-11-22", mins=5,
+     hero=("layers", "collage-work"),
+     pull="Social media rents you attention. A website is where that attention becomes yours to keep.",
+     answer="Yes. Social media rents attention; a website is the place you own where that attention can become a customer. Profiles are good for discovery, but your site carries the full offer, proof, and next step, and it is what search and AI answers cite.",
+     takeaways=[
+       "Social media rents attention. A website owns the place that attention lands, and no platform can change its rules overnight.",
+       "A profile can introduce you. Only a site can carry the full offer, the proof, and a clear next step in one place.",
+       "Search and AI answers cite websites, not profiles. If you have no site, you are harder to find and harder to trust."],
+     faq=[
+       ("Do you need a website if you have social media?",
+        "Yes. Use social media for discovery and conversation, and a website for the decision. The site is where a visitor reads the full offer, sees proof, and takes the next step, on a page you control."),
+       ("Can a business run on social media alone?",
+        "It can start there, and many do. The risk is that the account, the reach, and the rules all belong to the platform. A change in any of them can cut off the only place customers can find and buy from you."),
+       ("What should a small business website have first?",
+        "A clear statement of what you sell and who it is for, proof that it works, and one simple next step. Those three things, on a page that loads well on a phone, matter more than a large site with many pages.")],
+     keys=["business website", "social media marketing", "do you need a website", "small business website", "AI search", "owned media", "website vs social media"],
+     body="""
+<p>It is a fair question, and more businesses are asking it out loud. The profile is free. The followers are already there. Posts take minutes, and a good one can reach more people in a day than a new website might in a month. So why pay for a site at all?</p>
+<p>Because a profile and a website do different jobs, and only one of them belongs to you. Social media is where people find you and get a first impression. A website is where they decide. Confusing those two jobs is how a business ends up busy online and quiet at the register.</p>
+<h2>What is social media actually good at?</h2>
+<p>Discovery, conversation, and proof that you are active. A feed shows your work in the places people already spend time. It lets a customer ask a quick question, see you respond like a person, and watch other people react to what you do. For a local business, a creator, or a new brand, that visibility is real and it is worth having.</p>
+<p>What a profile cannot do well is close an argument. Space is limited, the order of information is set by the platform, and every post pushes the last one down. A visitor who wants your prices, your full range, your story, and a way to book has to piece it together from fragments, if they bother at all. Most do not bother. They move on to the business that made the decision easy.</p>
+[[pull]]
+<h2>What happens when the platform changes the rules?</h2>
+<p>Every business on social media is a tenant. The platform owns the account, sets who sees your posts, and can change both without asking. Accounts get limited, reach gets throttled, formats change, and a feature you built your routine around can disappear in an update. None of that is a conspiracy. It is simply not your property.</p>
+<p>A website is the opposite arrangement. You choose what it says, how it is ordered, and what happens next. It does not compete with your competitors in the same feed, and it does not expire when a trend does. That control is the reason our <a href="/services/">studio work</a> treats a site as the center of a marketing system, not an extra: social posts, ads, and search results all point somewhere, and that somewhere should be a place you own.</p>
+<h2>Where do search and AI answers send people?</h2>
+<p>To websites. When someone searches for what you sell, or asks an AI tool for a recommendation, the answer is built from pages that can be read, checked, and cited. A clear website gives those systems your offer, your location, your proof, and your services in a form they can use. A profile gives them fragments, often behind a login, in an order they cannot rely on.</p>
+<p>We wrote about that shift in <a href="/magazine/is-seo-dead/">what AI search actually changed</a>: the list moved one step behind the answer, and clear pages are the ones that get quoted. Our <a href="/ai-marketing-consulting/">AI marketing consulting</a> work starts from the same point. If there is no site, there is very little for an answer engine to cite, and the business becomes harder to find at exactly the moment a customer is ready to choose.</p>
+<h2>What should each one do, then?</h2>
+<p>Let social media do the finding, and let the website do the convincing. Post the work, the people, and the point of view where people already are. Then give every interested person one clear place to land: the full offer in plain words, proof close to the claim, and a next step that takes seconds, whether that is booking, buying, or starting a conversation.</p>
+<p>That division also makes both sides better. Posts get simpler, because they no longer have to carry the whole sale. The site gets clearer, because it knows its one job is to turn attention into action. A business does not need a large site for that. It needs an honest one, kept current, that loads well on a phone and says the true thing plainly.</p>
+<p>So, do you still need a website if you have social media? Yes, for the same reason a shop needs its own door even when the street outside is busy. The street brings people past. The door, and what is behind it, is what turns passing attention into a customer you can serve again.</p>
+"""),
 ]
 
 
