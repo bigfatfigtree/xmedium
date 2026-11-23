@@ -1010,6 +1010,43 @@ dict(slug="do-you-need-a-website-if-you-have-social-media", cat="Marketing", cov
 <p>That division also makes both sides better. Posts get simpler, because they no longer have to carry the whole sale. The site gets clearer, because it knows its one job is to turn attention into action. A business does not need a large site for that. It needs an honest one, kept current, that loads well on a phone and says the true thing plainly.</p>
 <p>So, do you still need a website if you have social media? Yes, for the same reason a shop needs its own door even when the street outside is busy. The street brings people past. The door, and what is behind it, is what turns passing attention into a customer you can serve again.</p>
 """),
+dict(slug="what-makes-a-good-ad-for-a-local-business", cat="Advertising", cover=False,
+     title="What Makes a Good Ad for a Local Business?",
+     dek="A good local ad does not try to impress everyone. It names one customer, one problem, and one clear next step, in words a neighbor would actually use.",
+     date="November 23, 2026", iso="2026-11-23", mins=5,
+     hero=("layers", "collage-home"),
+     pull="The best local ad sounds less like an announcement and more like a neighbor who understood the problem exactly.",
+     answer="A good ad for a local business names one specific customer, speaks to one problem that customer already feels, and offers one clear next step. It uses plain words, real proof from the work itself, and a place the customer can act in seconds.",
+     takeaways=[
+       "One customer, one problem, one next step. An ad that tries to say everything ends up saying nothing a person can act on.",
+       "Plain words beat clever words. If a neighbor would not say it out loud, the ad should not say it either.",
+       "Proof closes the gap between interest and action. A real photo, a real review, or a real result does more than any claim."],
+     faq=[
+       ("What makes a good ad for a local business?",
+        "A clear audience, a single problem, plain language, honest proof, and one easy next step. The ad should make it obvious who it is for, why it matters now, and what to do next."),
+       ("How much text should a local ad have?",
+        "As little as the idea allows. Most local ads need a headline a person can grasp in seconds, one supporting line, and a next step. If the reader has to study it, the ad is asking for too much."),
+       ("Should a local business advertise a discount first?",
+        "Not by default. Lead with the problem you solve and the proof you can show. A discount can help a ready buyer decide, but it cannot create trust on its own, and leading with price trains people to wait for the next cut.")],
+     keys=["local advertising", "what makes a good ad", "small business advertising", "local business marketing", "ad copy", "advertising for local business"],
+     body="""
+<p>Most local ads fail before anyone judges the offer. They fail because they try to speak to everyone at once. The ad lists every service, every reason, and every deal, and the person reading it cannot find the one line that was meant for them. So they keep scrolling, and the business concludes that advertising does not work.</p>
+<p>Advertising usually does work, when it is built the way a good conversation is built. One person in mind. One problem named plainly. One thing to do next. That sounds simple, and it is. It is also the part most ads skip, because saying less takes more discipline than saying everything.</p>
+<h2>Who is the ad actually for?</h2>
+<p>Not everyone in town. A good ad starts with one customer the business serves well: the homeowner with a leak tonight, the parent booking a first lesson, the office manager who needs lunch for twenty people on Friday. Each of those people is looking for something different, and each will stop for a different sentence.</p>
+<p>When the audience is that specific, the words get easier. You stop writing about your business in general and start writing about their situation in particular. That shift is the whole craft. Our guide to <a href="/how-local-businesses-get-more-customers/">how local businesses get more customers</a> makes the same point from the other side: customers choose the business that understood their problem first, not the business that described itself longest.</p>
+[[pull]]
+<h2>What should the ad say first?</h2>
+<p>The problem, in the words the customer would use for it. Not the company name, not a slogan, and not a list of features. A person decides in the first seconds whether an ad is about them. If the opening line names their situation, they give it the next few seconds. If it opens with the business talking about itself, they do not.</p>
+<p>Plain words do this better than clever ones. Clever copy asks to be admired. Plain copy asks to be understood, and understanding is what leads to a call, a booking, or a visit. If a neighbor would not say the line out loud to another neighbor, the ad should not say it either. That test catches most weak copy before it costs anyone money.</p>
+<h2>Where does proof fit in?</h2>
+<p>Right next to the claim, every time. A real photo of the work, a short line from a real customer, or a specific result the business can stand behind does more than any adjective. Local buyers are not looking for the most polished business in town. They are looking for one they can trust with their money and their time, and proof is how trust gets built at a distance.</p>
+<p>This is also where small businesses hold an advantage larger advertisers cannot copy. The owner is a real person. The work happens in real places, for people who live nearby. Showing that, plainly and without dressing it up, is not a limitation of a small budget. It is the strongest material a local ad can use.</p>
+<h2>What happens after someone is interested?</h2>
+<p>One clear next step, and nothing competing with it. Call this number. Book this day. Order here. An ad that offers four ways to respond usually gets none of them, because choosing between options is work, and people do not do extra work for an ad. We make the same case in our breakdown of <a href="/are-paid-ads-worth-it-for-small-business/">whether paid ads are worth it for a small business</a>: the money is rarely wasted on the ad itself. It is wasted in the gap between interest and action.</p>
+<p>That gap is a design problem, and it is fixable. The landing page, the phone greeting, and the booking step should all say the same thing the ad said, in the same words. When the promise changes between the ad and the next step, people hesitate, and hesitation is where local sales quietly end. Our <a href="/services/">services</a> work treats the ad and what follows it as one system for exactly that reason.</p>
+<p>So what makes a good ad for a local business? It respects the reader. It speaks to one person, names a real problem in plain words, proves the claim with something true, and makes the next step take seconds. None of that requires a large budget. It requires deciding, before the ad runs, exactly who it is for and what it is asking them to do.</p>
+"""),
 ]
 
 

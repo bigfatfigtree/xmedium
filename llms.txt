@@ -35,6 +35,7 @@
 
 ## Magazine — Extra Extra (https://xmedium.co/magazine/)
 - Extra Extra is Extra Medium's magazine: marketing, advertising, music, media, and dispatches from the lab. New article most days.
+- [What Makes a Good Ad for a Local Business?](https://xmedium.co/magazine/what-makes-a-good-ad-for-a-local-business/): One customer, one problem, one clear next step. Why plain words and real proof beat a long list of services, and where local ads lose the sale after the click.
 - [The Room Got Small](https://xmedium.co/magazine/the-room-got-small/): Hapsta and the shift from watching celebrities to being in the room with them.
 - [Magpie announcement (press release)](https://xmedium.co/magazine/magpie-announcement/): Extra Medium Labs announces Magpie, the local creator marketing platform ranked by local reach.
 - [What a Fractional CMO Actually Does All Week](https://xmedium.co/magazine/what-a-fractional-cmo-does/)
