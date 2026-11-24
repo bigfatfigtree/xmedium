@@ -1047,6 +1047,43 @@ dict(slug="what-makes-a-good-ad-for-a-local-business", cat="Advertising", cover=
 <p>That gap is a design problem, and it is fixable. The landing page, the phone greeting, and the booking step should all say the same thing the ad said, in the same words. When the promise changes between the ad and the next step, people hesitate, and hesitation is where local sales quietly end. Our <a href="/services/">services</a> work treats the ad and what follows it as one system for exactly that reason.</p>
 <p>So what makes a good ad for a local business? It respects the reader. It speaks to one person, names a real problem in plain words, proves the claim with something true, and makes the next step take seconds. None of that requires a large budget. It requires deciding, before the ad runs, exactly who it is for and what it is asking them to do.</p>
 """),
+dict(slug="why-local-reach-matters-more-than-follower-count", cat="Marketing", cover=False,
+     title="Why Does Local Reach Matter More Than Follower Count?",
+     dek="A large audience in the wrong places cannot walk through your door. For a local business, the number that matters is how many of a creator&rsquo;s followers actually live close enough to visit.",
+     date="November 24, 2026", iso="2026-11-24", mins=5,
+     hero=("layers", "collage-labs"),
+     pull="A follower who cannot visit you is not a customer waiting to happen. A neighbor who follows a creator they trust is.",
+     answer="For a local business, local reach matters more than total follower count because only followers who live nearby can visit, book, or buy. A smaller creator whose audience is mostly local can bring in real customers, while a large audience spread across the country may bring none.",
+     takeaways=[
+       "Total followers count everyone, everywhere. Local reach counts only the people who can actually walk through your door.",
+       "A smaller, mostly local audience can be worth more to a local business than a large audience spread across the country.",
+       "Ask for local followers and local percentage before you book, and judge the work by counted customers, not views alone."],
+     faq=[
+       ("Why does local reach matter more than follower count?",
+        "Because a local business can only sell to people who can reach it. Followers in other cities and countries may watch a post, but they cannot book a table, book an appointment, or walk in and buy."),
+       ("What is a good local percentage for a creator?",
+        "There is no single right number. What matters is the actual count of local followers and whether that audience matches the people your business serves. A clear local count, shown before you choose, is more useful than a percentage on its own."),
+       ("How can a business check a creator&rsquo;s local reach?",
+        "Ask the creator, or the platform you are using, for local followers and local percentage by city before you book. Then track what happened after the visit, so the next choice is based on counted customers, not a guess.")],
+     keys=["local reach", "follower count", "local influencer marketing", "Magpie", "local creators", "creator marketing for local business", "local followers"],
+     body="""
+<p>Every creator profile leads with the same number: total followers. It is the biggest number on the page, so it is the number most businesses use to decide. For a national brand selling online, that can make sense. For a local business, it is often the wrong number to lead with.</p>
+<p>A restaurant, a salon, a gym, or a shop does not need attention from everywhere. It needs attention from people who can actually get there. That is the difference between follower count and local reach, and it changes who a business should book, what it should pay, and how it should judge whether the work worked.</p>
+<h2>Why does follower count mislead a local business?</h2>
+<p>Follower count adds up everyone, everywhere, with no distinction. A creator can have a large audience built over years, in many cities and countries, and only a small share of those people may live anywhere near your business. The post can perform well by every platform measure and still bring in no one, because almost no one who saw it could visit.</p>
+<p>That is not the creator&rsquo;s fault, and it does not make the creator a bad choice in general. It makes them a bad fit for this particular job. The same creator could be the right choice for an online brand and the wrong choice for a business on one street, in one city. Fit, not size, is the question. We make the same case in our guide to <a href="/influencer-marketing-for-local-businesses/">influencer marketing for local businesses</a>: start with who can buy, then look at who can reach them.</p>
+[[pull]]
+<h2>What is local reach, exactly?</h2>
+<p>Local reach is the number of a creator&rsquo;s followers who live in your market, and the share they make up of the creator&rsquo;s total audience. Both numbers matter. The share tells you how local the audience is. The count tells you how many real people that actually is. A high percentage of a very small audience and a modest percentage of a larger one can lead to the same local count, and a business should be able to see both before it chooses.</p>
+<p>That is the idea behind <a href="https://magpielocal.com">Magpie</a>, the local creator platform built in our lab. On Magpie, a business can see a creator&rsquo;s local reach before it spends anything, and creators are approved before a business sees them. The point is not a bigger number. The point is a number a local business can act on: neighbors, not just followers.</p>
+<h2>How should a business compare two creators?</h2>
+<p>Put the local numbers first. If one creator has a large total audience but only a small number of followers in your city, and another has a smaller total audience that is mostly local, the second creator is often the stronger choice for a local visit, even if the first profile looks more impressive at a glance.</p>
+<p>Then look at the work itself. Does the creator post about places like yours, in a voice their audience trusts? Do people respond like neighbors, asking where something is and whether it is worth the trip? That kind of response is a better sign than a view count on its own. Our earlier piece on <a href="/magazine/how-much-does-influencer-marketing-cost/">how much influencer marketing costs for a local business</a> covers the other half of the choice: a comped visit costs the experience itself, and a paid booking costs the creator&rsquo;s own listed rate, so the price should be judged against local reach, not against the total at the top of the profile.</p>
+<h2>What should you ask before you book a creator?</h2>
+<p>Ask three plain questions. How many of your followers live here? What share of your audience is that? And how will we know who came in because of the visit? If those answers are clear before the booking, the decision gets much simpler, and so does judging the result afterward.</p>
+<p>That last question matters more than it sounds. A local business does not just need a post. It needs a counted result it can learn from, so the next booking is a decision, not a repeat of a hope. You can read more about how we built that thinking into a product in our <a href="/labs/magpie/">Magpie case study</a>.</p>
+<p>So, why does local reach matter more than follower count? Because a local business lives or dies on people nearby choosing it, again and again. Count those people first. A creator whose audience is already your neighborhood is not a smaller choice than a creator with a bigger audience somewhere else. For a local business, they are the larger one.</p>
+"""),
 ]
 
 
