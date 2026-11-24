@@ -53,6 +53,8 @@ def head(title, desc, path, extra_ld=""):
 <meta name="twitter:title" content="{title}"><meta name="twitter:description" content="{desc}">
 <meta name="twitter:image" content="https://xmedium.co/assets/img/og-collage.jpg">
 <meta name="theme-color" content="#f5f1ea">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-66VWYP4TE3"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('js',new Date());gtag('config','G-66VWYP4TE3');</script>
 <link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" href="/assets/img/em-icon-square.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="stylesheet" href="/assets/css/site.css?v=27">
 {FONTS}
