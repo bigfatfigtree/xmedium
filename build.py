@@ -1086,6 +1086,43 @@ dict(slug="why-local-reach-matters-more-than-follower-count", cat="Marketing", c
 <p>That last question matters more than it sounds. A local business does not just need a post. It needs a counted result it can learn from, so the next booking is a decision, not a repeat of a hope. You can read more about how we built that thinking into a product in our <a href="/labs/magpie/">Magpie case study</a>.</p>
 <p>So, why does local reach matter more than follower count? Because a local business lives or dies on people nearby choosing it, again and again. Count those people first. A creator whose audience is already your neighborhood is not a smaller choice than a creator with a bigger audience somewhere else. For a local business, they are the larger one.</p>
 """),
+dict(slug="should-a-small-business-advertise-on-google-or-social-media-first", cat="Advertising", cover=False,
+     title="Should a Small Business Advertise on Google or Social Media First?",
+     dek="The right first channel depends on one thing: whether people are already searching for what you sell. Start where the intent is, not where the platform is loudest.",
+     date="November 25, 2026", iso="2026-11-25", mins=5,
+     hero=("layers", "collage-work"),
+     pull="Google meets a person who is already looking. Social media has to give a person a reason to look. That difference should decide the first dollar.",
+     answer="Start where intent already exists. If people search for what you sell by name, start on Google, where an ad meets a person already looking to buy. If your offer is new, visual, or bought on discovery, start on social media, where the ad has to create the interest first.",
+     takeaways=[
+       "Google search ads meet existing intent. Social ads have to create interest that was not there yet.",
+       "If people search for your service by name, start on Google. If your offer is new or visual, start on social media.",
+       "Pick one channel first, run it long enough to read the result, and judge it by customers gained, not clicks alone."],
+     faq=[
+       ("Should a small business advertise on Google or social media first?",
+        "Start on Google if people already search for what you sell by name, because that ad meets a person who is ready to act. Start on social media if the offer is new, visual, or usually bought after someone discovers it."),
+       ("Are Google ads or social media ads cheaper for a small business?",
+        "Neither is cheaper in general. A click costs what the competition for that customer is worth in that market. What matters is what a gained customer costs in each channel, not what a single click costs."),
+       ("Should a small business run Google and social media ads at the same time?",
+        "Usually not at the start. Splitting a small budget across both channels often leaves each one with too little to learn from. Run one well, read the result, then add the second with a clear job.")],
+     keys=["Google ads vs social media ads", "small business advertising", "paid search", "social media advertising", "where to advertise first", "PPC for small business", "advertising channels"],
+     body="""
+<p>Most small businesses ask this question as if one platform is simply better than the other. It is not. Google and social media do different jobs, and the right first choice depends on how people already buy what you sell. Get that one fact right and the channel decision mostly makes itself.</p>
+<p>The difference is intent. A person on Google is usually looking for something specific, right now. A person on social media is usually looking at something else entirely, and your ad has to earn a pause. One channel harvests demand that already exists. The other has to create demand that does not yet. Our guide to <a href="/are-paid-ads-worth-it-for-small-business/">whether paid ads are worth it for a small business</a> makes the same starting point: ads work when they meet a real need, clearly, at the moment it appears.</p>
+<h2>When should a small business start on Google?</h2>
+<p>Start on Google when people search for your service by name. A plumber, a dentist, a lawyer, a repair shop, a restaurant taking bookings: for work like this, the customer already knows they have a problem and is typing it into a search box. The ad does not need to convince them the problem exists. It needs to be present, clear, and easy to act on when they search.</p>
+<p>That is also why search ads punish a weak landing page so fast. The click was expensive because the intent was real. If the page that follows is slow, vague, or hard to contact, you paid for a ready buyer and then made them work to buy. A search ad and the page behind it are one system, not two separate jobs. That is how our <a href="/ppc-agency/">PPC work</a> is set up: the query, the ad, and the page are written to answer the same question in the same words.</p>
+[[pull]]
+<h2>When should a small business start on social media?</h2>
+<p>Start on social media when the offer has to be discovered to be wanted. A new product, a visual service, a class, an experience, a style of work people did not know existed: nobody is searching for it by name, because nobody knows to ask. A good social ad puts it in front of the right people, in a form they can see and judge in seconds, and gives them a reason to care now.</p>
+<p>Social ads also work when the buying decision is driven by seeing. Food, interiors, clothing, events, and anything where a photo or a short video carries the proof will usually read better in a feed than in a line of search text. The risk is the opposite of search: attention is cheap to buy and easy to waste. A vague ad to a broad audience will spend quietly and teach you nothing. A specific ad, to a defined local audience, with one clear next step, is a test you can actually read. We made that case in our piece on <a href="/magazine/what-makes-a-good-ad-for-a-local-business/">what makes a good ad for a local business</a>: one customer, one problem, one next step.</p>
+<h2>What if people both search and scroll?</h2>
+<p>Many businesses sit in both places. People search for a roofer and also notice a roofer a neighbor used. People search for a gym and also stop on a video of a class. In that case, start with the channel closest to the sale, which is usually search, and add social once search is running cleanly and you can afford to build awareness above it.</p>
+<p>The order matters because a small budget split two ways often proves nothing in either place. Each channel needs enough spend, held steady long enough, to show a pattern: which searches brought customers, which audience responded, what a gained customer actually cost. Half a test in two channels is not two tests. It is no test, twice.</p>
+<h2>How should you judge the first channel?</h2>
+<p>Judge it by customers, not by clicks, impressions, or likes. A cheap click that never becomes a customer is expensive. A costly click that regularly becomes work is cheap. Before the first ad runs, decide how you will know a customer came from it: a tracked call, a form that asks, a booking code, a simple question at the counter. Without that, you are reading platform reports that were written to sell you more platform.</p>
+<p>Give the first channel a fair run, then decide from the record. If search brings ready buyers and the page converts them, keep it and add social for reach. If nobody searches for what you sell, stop paying to wait for them and put the budget where people can discover it. Our <a href="/services/">services</a> work starts from that same discipline: one channel, aimed well, read honestly, before anything is scaled.</p>
+<p>So, should a small business advertise on Google or social media first? Start where the intent already is. If your customers are searching, be there when they search. If they have to discover you first, go where they are looking at other things, and earn the pause. The platform is not the strategy. The customer&rsquo;s state of mind is.</p>
+"""),
 ]
 
 
