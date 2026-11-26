@@ -1123,6 +1123,44 @@ dict(slug="should-a-small-business-advertise-on-google-or-social-media-first", c
 <p>Give the first channel a fair run, then decide from the record. If search brings ready buyers and the page converts them, keep it and add social for reach. If nobody searches for what you sell, stop paying to wait for them and put the budget where people can discover it. Our <a href="/services/">services</a> work starts from that same discipline: one channel, aimed well, read honestly, before anything is scaled.</p>
 <p>So, should a small business advertise on Google or social media first? Start where the intent already is. If your customers are searching, be there when they search. If they have to discover you first, go where they are looking at other things, and earn the pause. The platform is not the strategy. The customer&rsquo;s state of mind is.</p>
 """),
+dict(slug="how-to-get-more-google-reviews", cat="Marketing", cover=False,
+     title="How Do You Get More Google Reviews for a Local Business?",
+     dek="Reviews do not grow by hoping happy customers remember. They grow when asking is built into the job, at the right moment, with a link that takes under a minute to use.",
+     date="November 26, 2026", iso="2026-11-26", mins=5,
+     hero=("layers", "collage-home"),
+     pull="Happy customers are busy, not unwilling. The businesses with the most reviews simply asked, clearly, at the right moment.",
+     answer="Ask at the moment the customer is happiest, make it take under a minute with a direct link, and ask every customer, not just the ones you expect to be kind. Reviews grow when asking is part of the job, not an afterthought, and when you reply to each one.",
+     takeaways=[
+       "Ask every customer, at the moment they are happiest, not days later when the feeling has faded.",
+       "Make it take under a minute: one direct link, no searching for your business name, no extra steps.",
+       "Reply to every review. A reply shows the next customer that a real person is listening."],
+     faq=[
+       ("How do you get more Google reviews for a local business?",
+        "Ask in person at the end of a good experience, then follow up once with a direct review link by text or email. Ask every customer, keep the request short and plain, and make leaving the review take under a minute."),
+       ("Is it okay to ask customers for a Google review?",
+        "Yes, asking is fine. Offering a reward for a review, asking only happy customers, or writing reviews yourself is not. Ask everyone the same plain question and let the honest mix of answers build trust."),
+       ("Should a business reply to Google reviews?",
+        "Yes. Reply to positive and negative reviews in a calm, specific voice. Thank the customer, name what they mentioned, and for a negative review, offer a direct way to make it right. Future customers read the replies as closely as the reviews.")],
+     keys=["Google reviews", "local business reviews", "Google Business Profile", "local SEO", "online reputation", "customer reviews", "local marketing"],
+     body="""
+<p>Most local businesses have the same review problem, and it is not quality. Happy customers leave, mean to say something kind, and then get busy. The unhappy ones are more motivated. So the public record ends up tilted: a few strong opinions at both ends, and silence from the large, satisfied middle.</p>
+<p>That silence is not a verdict. It is a missing system. Businesses with steady, growing reviews rarely have dramatically happier customers than everyone else. They have a habit the others do not: they ask, at the right moment, in a way that takes almost no effort to answer.</p>
+<h2>When is the best time to ask for a review?</h2>
+<p>At the moment the customer is happiest, which is almost always right after the good experience, not days later. The meal just ended well. The repair works. The appointment solved the problem the customer came in with. That is when gratitude is real and specific, and when a review written in that moment tends to name the details future customers actually want to read.</p>
+<p>Waiting weakens the ask in two ways. The feeling fades, and the details fade with it. A follow-up a day or two later can still work as a reminder, especially with a direct link, but it should be the second step, not the first. Ask in person first, while the experience is still in the room. Our guide to <a href="/how-local-businesses-get-more-customers/">how local businesses get more customers</a> makes the same point about referrals: the best time to ask for the next customer is while this customer is still glad they came.</p>
+[[pull]]
+<h2>How do you make a review easy to leave?</h2>
+<p>Remove every step you can. A customer should never have to search for your business name, guess which listing is yours, or create an account flow in their head before they can start. Use the direct review link from your Google Business Profile, shorten the path to one tap, and put that link where the customer already is: a text after the visit, a code on the receipt or the table card, a line in the follow-up email.</p>
+<p>Keep the words plain, too. One short sentence is enough: we would value a Google review, here is the link, it takes a minute. Long explanations and pressure both backfire. The customer is doing you a favor. Ask like you know that, and make the favor small. This is the same discipline we described in <a href="/magazine/what-makes-a-good-ad-for-a-local-business/">what makes a good ad for a local business</a>: one person, one clear request, one easy next step.</p>
+<h2>Who should you ask, and what should you never do?</h2>
+<p>Ask everyone. That is both the honest rule and the practical one. Asking only the customers you expect to be kind, sometimes called review gating, breaks Google&rsquo;s rules and produces a profile nobody fully trusts. A steady run of honest reviews, including the occasional mixed one answered well, reads as real. A perfect wall of five stars with no texture reads as managed, because customers know real businesses are not flawless.</p>
+<p>Never offer a discount, a gift, or anything of value in exchange for a review. Never write reviews for your own business, and never ask staff or family to pose as customers. Those shortcuts risk the whole profile, which for many local businesses is now the front door. Local search work, including the profile and its reviews, is part of how customers choose before they ever visit a website, which is why our <a href="/seo-agency-hampton-roads/">local SEO work in Hampton Roads</a> treats the profile as a working asset, not an afterthought.</p>
+<h2>Why does replying to reviews matter?</h2>
+<p>Because the reply is written for the next customer, not just the last one. A short, specific reply to a positive review, thanking the person and naming what they praised, shows that a real person is paying attention. A calm reply to a negative review does even more work. It shows a future customer how this business behaves when something goes wrong, which is often the moment they are really shopping for.</p>
+<p>Reply in your own voice, without a template&rsquo;s fingerprints. Do not argue in public, do not blame the customer, and do not paste the same sentence under every review. For a negative review, acknowledge the problem plainly and offer one direct way to continue the conversation off the page. Some of those customers update their review after a real fix. Even when they do not, the reply stands as proof of how you handle a bad day.</p>
+<p>So, how do you get more Google reviews for a local business? Build the ask into the end of every good experience, make it take under a minute, ask everyone honestly, and answer every review like a person who intends to stay in business on this street. Reviews compound the same way reputation always has. The only new part is that now the compounding is public, searchable, and read by customers and answer engines alike. That is a reason to tend it weekly, not a reason to fear it.</p>
+"""),
+
 ]
 
 
