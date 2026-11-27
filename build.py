@@ -1160,6 +1160,39 @@ dict(slug="how-to-get-more-google-reviews", cat="Marketing", cover=False,
 <p>Reply in your own voice, without a template&rsquo;s fingerprints. Do not argue in public, do not blame the customer, and do not paste the same sentence under every review. For a negative review, acknowledge the problem plainly and offer one direct way to continue the conversation off the page. Some of those customers update their review after a real fix. Even when they do not, the reply stands as proof of how you handle a bad day.</p>
 <p>So, how do you get more Google reviews for a local business? Build the ask into the end of every good experience, make it take under a minute, ask everyone honestly, and answer every review like a person who intends to stay in business on this street. Reviews compound the same way reputation always has. The only new part is that now the compounding is public, searchable, and read by customers and answer engines alike. That is a reason to tend it weekly, not a reason to fear it.</p>
 """),
+dict(slug="how-often-should-a-small-business-post-on-social-media", cat="Marketing", cover=False,
+     title="How Often Should a Small Business Post on Social Media?",
+     dek="The honest answer is not a magic number. It is the pace you can hold every week, with posts worth a customer&rsquo;s time, long enough for the habit to compound.",
+     date="November 27, 2026", iso="2026-11-27", mins=5,
+     hero=("layers", "collage-work"),
+     pull="A pace you can hold beats a burst you cannot. Three useful posts a week, every week, will do more than twenty posts in one excited month.",
+     answer="Post as often as you can do it well and keep doing it: for most small businesses that is two to four useful posts a week on one or two platforms. Consistency and usefulness matter more than volume. A steady pace customers can count on beats a burst followed by silence.",
+     takeaways=[
+       "Pick a pace you can hold every week. Two to four useful posts beats a burst followed by silence.",
+       "Post where your customers already are, on one or two platforms, before adding more.",
+       "Judge posts by replies, saves, visits and inquiries, not by how many you published."],
+     faq=[
+       ("How often should a small business post on social media?",
+        "For most small businesses, two to four useful posts a week on one or two platforms is a pace worth starting with. The right number is the one you can keep up every week without the quality dropping."),
+       ("Is it bad to post every day on social media?",
+        "Not if every post is genuinely useful and you can sustain it. Daily posting hurts when it forces filler, repeats the same offer, or burns out the person doing it until the account goes quiet."),
+       ("What should a small business post about?",
+        "Post the things customers ask about: the work itself, before and after results, answers to common questions, the people doing the work, and one clear offer at a time. If a customer asked it in the shop, it can be a post.")],
+     keys=["social media posting frequency", "small business social media", "social media marketing", "content consistency", "local business marketing", "social media strategy"],
+     body="""
+<p>Ask how often a small business should post on social media and you will get a different number from everyone. Daily. Three times a day. Twice a week. The numbers are not the point, and chasing someone else&rsquo;s number is how accounts end up busy for a month and silent for a season.</p>
+<p>The better question is simpler: what pace can you hold, every week, with posts that are actually worth a customer&rsquo;s time? For most small businesses the honest answer lands at two to four useful posts a week, on the one or two platforms where their customers already spend time. That is not a rule handed down by a platform. It is what consistency looks like at the scale of a real business with real work to do.</p>
+<h2>Why does consistency matter more than volume?</h2>
+<p>Because social media is a habit on both sides. Customers learn to expect you, and platforms learn who your posts are for, only when you show up on a rhythm. A burst of twenty posts in one month followed by two quiet months teaches the opposite lesson: this account is not really here. We made the same point about timing in <a href=\"/magazine/how-long-does-marketing-take-to-work/\">how long marketing takes to work</a>: most channels reward the business that is still standing there when the compounding starts.</p>
+<p>Volume has a cost that rarely shows in the advice. Every post takes time to make, and a small business has the least time of anyone. A pace that eats the week will be dropped, and a dropped pace is worse than a modest one, because the silence is public. Start smaller than you think you should. A pace you keep for six months will outperform a heroic pace you keep for six weeks.</p>
+[[pull]]
+<h2>What should you post, if not more?</h2>
+<p>Useful beats frequent. The posts that earn replies, saves and visits are rarely the polished announcements. They are the work itself: a job in progress, a before and after, the answer to a question three customers asked this week, the person behind the counter explaining one thing plainly. If a customer asked it in person, it can be a post. That test keeps the feed close to the business and gives you more material than any content calendar template.</p>
+<p>Mix the kinds, but keep each post to one job. One post teaches, one shows proof, one makes an offer. A post trying to do all three usually does none of them clearly, the same failure we see in weak local ads: one person, one point, one clear next step, or the post does none of them. And remember where the post is sending people. As we argued in <a href=\"/magazine/do-you-need-a-website-if-you-have-social-media/\">whether you still need a website if you have social media</a>, the feed rents attention; your own site is where that attention can become a booking, an order or an inquiry.</p>
+<h2>How do you know if the pace is working?</h2>
+<p>Count what a customer would count. Replies and real comments. Saves and shares from people nearby. Profile visits that turn into calls, directions, bookings and orders. A smaller account with local customers acting on its posts is doing more business than a larger one collecting distant likes, which is the same local logic behind <a href=\"/magazine/why-local-reach-matters-more-than-follower-count/\">why local reach matters more than follower count</a>.</p>
+<p>Review the pace monthly, not daily. If the posts are holding up and the responses are growing, you can add one more a week and see if the quality survives it. If you are missing weeks, cut the number before you cut the quality. The goal was never to post the most. The goal is to be the business that is reliably there, saying something worth hearing, when a customer is ready to choose.</p>
+"""),
 
 ]
 
