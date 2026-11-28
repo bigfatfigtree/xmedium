@@ -1193,6 +1193,43 @@ dict(slug="how-often-should-a-small-business-post-on-social-media", cat="Marketi
 <p>Count what a customer would count. Replies and real comments. Saves and shares from people nearby. Profile visits that turn into calls, directions, bookings and orders. A smaller account with local customers acting on its posts is doing more business than a larger one collecting distant likes, which is the same local logic behind <a href=\"/magazine/why-local-reach-matters-more-than-follower-count/\">why local reach matters more than follower count</a>.</p>
 <p>Review the pace monthly, not daily. If the posts are holding up and the responses are growing, you can add one more a week and see if the quality survives it. If you are missing weeks, cut the number before you cut the quality. The goal was never to post the most. The goal is to be the business that is reliably there, saying something worth hearing, when a customer is ready to choose.</p>
 """),
+dict(slug="what-should-be-on-a-small-business-homepage", cat="Marketing", cover=False,
+     title="What Should Be on a Small Business Homepage?",
+     dek="Most visitors decide in seconds whether a business is for them. A homepage that says what you do, who it serves, and what to do next, in that order, earns the rest of the visit.",
+     date="November 28, 2026", iso="2026-11-28", mins=5,
+     hero=("layers", "collage-home"),
+     pull="A homepage has one first job: make a stranger certain, in seconds, that they are in the right place and know what to do next.",
+     answer="A small business homepage should say, in the first screen, what you do, who it is for, and where you work, then give one clear next step. Below that, add proof, your main services, plain answers to common questions, and an easy way to contact you.",
+     takeaways=[
+       "The first screen should say what you do, who it is for, and where you work, with one clear next step.",
+       "Proof comes before promises: real work, real reviews, and specific results a visitor can check.",
+       "Every section should answer one customer question. If a section answers none, it is decoration."],
+     faq=[
+       ("What should be on a small business homepage?",
+        "Start with what you do, who it is for, and where you work, plus one clear next step. Then add proof, your main services in plain words, answers to the questions customers ask most, and contact details that are easy to find and use."),
+       ("How long should a small business homepage be?",
+        "Long enough to answer the main questions a customer arrives with, and no longer. Most small business homepages work as a focused page a visitor can read in a few minutes, with links to deeper pages for services and detail."),
+       ("What is the most common homepage mistake?",
+        "Leading with the business instead of the customer: a slogan, a history, or a list of everything the business can do, while the visitor still cannot tell what is offered, whether it is for them, or what to do next.")],
+     keys=["small business homepage", "website homepage content", "small business website", "homepage design", "website conversion", "local business website", "what to put on a homepage"],
+     body="""
+<p>Most homepage advice starts with design. That is the wrong end. A visitor does not arrive hoping to admire a layout. They arrive with a question, usually an urgent one: do you do the thing I need, can I trust you to do it well, and how do I start? A homepage that answers those three questions in order will outperform a prettier page that answers none of them.</p>
+<p>This matters more for a small business than for a large one. A large brand can survive a vague homepage because the visitor already knows it. A small business gets one short visit from a stranger who is comparing it against two or three others in open tabs. The page has to do the whole job of an introduction, quickly and plainly. We made the wider case in <a href="/magazine/do-you-need-a-website-if-you-have-social-media/">whether you still need a website if you have social media</a>: the site is the place you own where attention becomes a customer, and the homepage is its front door.</p>
+<h2>What should the first screen of a homepage say?</h2>
+<p>Four things, in plain words: what you do, who it is for, where you work, and what to do next. One clear headline that names the work and the customer beats a slogan that could belong to anyone. A short line under it can add the place and the difference that matters. Then one button or one clear action, call, book, or ask for a quote, repeated in the same words wherever it appears on the page.</p>
+<p>Leave the company history, the mission statement, and the full list of services for later, if they belong on the page at all. The first screen is not a summary of your business. It is a filter that lets the right visitor say, in seconds, this is for me, and lets everyone else leave without wasting your time or theirs.</p>
+[[pull]]
+<h2>What proof should a homepage show?</h2>
+<p>Proof comes before promises. A visitor has no reason to believe a claim yet, so the page should show the work itself: photographs of real jobs, names of real customers where you have permission, reviews in the customer&rsquo;s own words, and specific outcomes stated plainly, without inflated numbers. One true, checkable detail is worth more than a paragraph of adjectives.</p>
+<p>Reviews deserve a place high on the page, because they answer the trust question in a voice the visitor believes more than yours. That is the same reason we treat them as a working system in <a href="/magazine/how-to-get-more-google-reviews/">how to get more Google reviews</a>: a steady run of honest reviews, answered like a person, is proof that keeps compounding after the page is built.</p>
+<h2>Which services and questions belong on the page?</h2>
+<p>List your main services in the words customers use, not the words your industry uses. Each service gets a line or two and a link to its own page, where the detail, the price shape, and the next step can live. A homepage that tries to explain everything ends up explaining nothing clearly. Its job is to route the visitor to the right next page, or to the phone.</p>
+<p>Then answer, on the page, the questions customers actually ask before they buy: what it costs or how pricing works, how long it takes, where you work, and what happens first if they contact you. These are the questions a good salesperson answers in the first conversation. Putting them on the homepage does not replace that conversation. It starts it further along, with a visitor who already understands the shape of the work. Our <a href="/services/">services page</a> is built on that same order: the work, in plain words, with a clear way to start.</p>
+<h2>What should you remove from a homepage?</h2>
+<p>Anything that answers no customer question. The welcome message that welcomes no one to anything specific. The stock photograph of a smiling team that is not your team. The paragraph about your passion, when the visitor came to solve a problem. The five competing buttons asking for five different actions at once. Each of these costs attention, and attention is the one budget a homepage cannot refill.</p>
+<p>Test every section with one question: what does a customer learn here that helps them decide? If the honest answer is nothing, cut the section or rewrite it until it earns its place. A shorter homepage that answers the real questions will beat a long one that performs the business at the visitor.</p>
+<p>So, what should be on a small business homepage? Say what you do, who it is for, and where you work in the first screen. Give one clear next step. Show proof before promises. Name the main services in the customer&rsquo;s words, answer the questions they always ask, and make contact effortless. That is the whole list. Everything else on the page should have to argue its way in.</p>
+"""),
 
 ]
 
